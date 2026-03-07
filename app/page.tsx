@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-b from-midnight to-navy pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-linear-to-b from-ivory dark:from-midnight to-navy pt-20">
         <div className="absolute inset-0 z-0 opacity-[0.04] text-gold pointer-events-none">
           <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -86,7 +86,7 @@ export default function Home() {
               className="flex flex-col items-center"
             >
               <motion.h1 className="flex flex-col items-center mb-6">
-                <span className="font-cinzel text-cream text-4xl sm:text-6xl md:text-7xl lg:text-[80px] tracking-widest leading-tight">
+                <span className="font-cinzel text-midnight dark:text-cream text-4xl sm:text-6xl md:text-7xl lg:text-[80px] tracking-widest leading-tight">
                   WHERE ROOTS RUN DEEP
                 </span>
                 <span className="font-playfair italic text-amber text-3xl sm:text-5xl md:text-6xl lg:text-[72px] mt-2">
@@ -102,7 +102,7 @@ export default function Home() {
                 2:31]
               </motion.p>
 
-              <motion.p className="font-sans text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
+              <motion.p className="font-sans text-midnight/70 dark:text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
                 Rawdatul Atfaal is a school where your child learns the Qur?an,
                 the Arabic language, Islamic sciences, and the knowledge of the
                 modern world all under one roof, with excellence as the
@@ -130,7 +130,7 @@ export default function Home() {
       </section>
 
       {/* 2. STATS STRIP */}
-      <section className="bg-deep border-y border-white/5 py-12 md:py-16">
+      <section className="bg-warm dark:bg-deep border-y border-midnight/ dark:border-white/ py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/5">
             {[
@@ -146,7 +146,7 @@ export default function Home() {
                 <span className="font-playfair text-5xl md:text-6xl text-amber mb-2">
                   {stat.number}
                 </span>
-                <span className="font-cinzel text-xs md:text-sm text-muted tracking-widest uppercase">
+                <span className="font-cinzel text-xs md:text-sm text-midnight/70 dark:text-muted tracking-widest uppercase">
                   {stat.label}
                 </span>
               </div>
@@ -156,7 +156,7 @@ export default function Home() {
       </section>
 
       {/* 3. SCHOOL STORY */}
-      <section className="bg-cream text-midnight py-24 lg:py-32 relative overflow-hidden">
+      <section className="bg-white dark:bg-cream text-midnight py-24 lg:py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative pl-6 md:pl-10">
@@ -220,17 +220,17 @@ export default function Home() {
       </section>
 
       {/* 4. TWO PROGRAMMES */}
-      <section className="bg-midnight py-24 lg:py-32">
+      <section className="bg-ivory dark:bg-midnight py-24 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-3xl md:text-5xl text-cream tracking-wider mb-4">
+            <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream tracking-wider mb-4">
               Our Dual Curriculum
             </h2>
             <div className="w-24 h-px bg-gold mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="group relative bg-navy/50 border border-white/5 rounded-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-gold/30 hover:shadow-2xl hover:shadow-gold/10 p-10 flex flex-col items-center text-center">
+            <div className="group relative bg-white/ dark:bg-navy/ border border-midnight/ dark:border-white/ rounded-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-gold/30 hover:shadow-2xl hover:shadow-gold/10 p-10 flex flex-col items-center text-center">
               <div className="absolute inset-0 bg-linear-to-br from-blue-900/20 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="text-gold mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
@@ -246,19 +246,19 @@ export default function Home() {
                 </svg>
               </div>
 
-              <h3 className="font-cinzel text-2xl tracking-widest text-cream mb-2">
+              <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-2">
                 THE ISLAMIC PROGRAMME
               </h3>
               <p className="font-amiri text-gold text-xl mb-6">
                 ???????? ????????
               </p>
 
-              <p className="font-sans text-muted mb-8 text-sm uppercase tracking-wide">
+              <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
                 Qur?an Arabic Tawheed Fiqh Hadith Mutoon
               </p>
 
               <div className="mt-auto flex flex-col items-center space-y-4 w-full">
-                <div className="text-cream/90 font-cormorant text-lg">
+                <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
                   Individual courses from{" "}
                   <span className="text-amber">$1,200</span> / year
                   <br />
@@ -274,7 +274,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="group relative bg-[#12221b] border border-white/5 rounded-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-green/50 hover:shadow-2xl hover:shadow-green/10 p-10 flex flex-col items-center text-center">
+            <div className="group relative bg-[#12221b] border border-midnight/ dark:border-white/ rounded-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-green/50 hover:shadow-2xl hover:shadow-green/10 p-10 flex flex-col items-center text-center">
               <div className="absolute inset-0 bg-linear-to-br from-green/20 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="text-gold gap-2 mb-6 opacity-80 group-hover:opacity-100 transition-opacity flex justify-center">
@@ -292,16 +292,16 @@ export default function Home() {
                 </svg>
               </div>
 
-              <h3 className="font-cinzel text-2xl tracking-widest text-cream mb-6 mt-11">
+              <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-6 mt-11">
                 THE WESTERN PROGRAMME
               </h3>
 
-              <p className="font-sans text-muted mb-8 text-sm uppercase tracking-wide">
+              <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
                 Mathematics Sciences Programming
               </p>
 
               <div className="mt-auto flex flex-col items-center space-y-4 w-full">
-                <div className="text-cream/90 font-cormorant text-lg">
+                <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
                   Individual courses from{" "}
                   <span className="text-amber">$2,000</span> / year
                   <br />
@@ -321,9 +321,9 @@ export default function Home() {
       </section>
 
       {/* INDIVIDUAL COURSE CARDS */}
-      <section className="bg-midnight pb-24 overflow-hidden">
+      <section className="bg-ivory dark:bg-midnight pb-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <h3 className="font-cinzel text-xl text-cream/80 uppercase tracking-widest pl-4 border-l border-gold/50">
+          <h3 className="font-cinzel text-xl text-midnight/ dark:text-cream/ uppercase tracking-widest pl-4 border-l border-gold/50">
             All 9 Courses At A Glance
           </h3>
         </div>
@@ -387,17 +387,17 @@ export default function Home() {
           ].map((course, idx) => (
             <div
               key={idx}
-              className={`min-w-70 sm:min-w-80 bg-navy/40 p-6 rounded-sm border border-white/5 snap-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-gold/30 ${course.color} border-t-2`}
+              className={`min-w-70 sm:min-w-80 bg-white/ dark:bg-navy/ p-6 rounded-sm border border-midnight/ dark:border-white/ snap-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-gold/30 ${course.color} border-t-2`}
             >
-              <h4 className="font-playfair text-2xl text-cream mb-2">
+              <h4 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
                 {course.name}
               </h4>
-              <p className="font-sans text-muted text-sm mb-6">
+              <p className="font-sans text-midnight/70 dark:text-muted text-sm mb-6">
                 {course.levels}
               </p>
               <div className="font-cormorant text-xl text-amber">
                 From {course.price}{" "}
-                <span className="text-sm text-muted">/ year</span>
+                <span className="text-sm text-midnight/70 dark:text-muted">/ year</span>
               </div>
             </div>
           ))}
@@ -405,9 +405,9 @@ export default function Home() {
       </section>
 
       {/* 5. TESTIMONIALS */}
-      <section className="bg-deep py-24 border-t border-white/5 relative">
+      <section className="bg-warm dark:bg-deep py-24 border-t border-midnight/ dark:border-white/ relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-cream tracking-wider mb-16">
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream tracking-wider mb-16">
             What Families Say
           </h2>
 
@@ -422,7 +422,7 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
                 className="w-full"
               >
-                <p className="font-playfair italic text-2xl md:text-4xl text-cream/90 leading-relaxed mb-8">
+                <p className="font-playfair italic text-2xl md:text-4xl text-midnight/ dark:text-cream/ leading-relaxed mb-8">
                   &quot;{testimonials[testimonialIndex].quote}&quot;
                 </p>
                 <div className="flex flex-col items-center">
@@ -430,7 +430,7 @@ export default function Home() {
                   <p className="font-cinzel text-gold tracking-widest text-sm mb-1 uppercase">
                     {testimonials[testimonialIndex].author}
                   </p>
-                  <p className="font-sans text-muted text-sm">
+                  <p className="font-sans text-midnight/70 dark:text-muted text-sm">
                     {testimonials[testimonialIndex].location}
                   </p>
                 </div>
@@ -445,7 +445,7 @@ export default function Home() {
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     idx === testimonialIndex
                       ? "bg-gold w-6"
-                      : "bg-white/20 hover:bg-white/40"
+                      : "bg-midnight/ dark:bg-white/ hover:bg-midnight/ dark:bg-white/"
                   }`}
                   aria-label={`Go to testimonial ${idx + 1}`}
                 />
@@ -456,7 +456,7 @@ export default function Home() {
       </section>
 
       {/* 6. FEE SUMMARY TEASER */}
-      <section className="bg-cream py-24 border-y border-gold/10 text-midnight relative">
+      <section className="bg-white dark:bg-cream py-24 border-y border-gold/10 text-midnight relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-cinzel text-3xl md:text-5xl text-midnight tracking-wider mb-6">
             Transparent, Fair Pricing
@@ -483,10 +483,10 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 text-xs font-sans tracking-wider uppercase text-midnight/50 mb-10">
-              <span className="px-4 py-2 bg-midnight/5 rounded-sm">
+              <span className="px-4 py-2 bg-ivory/ dark:bg-midnight/ rounded-sm">
                 Monthly
               </span>
-              <span className="px-4 py-2 bg-midnight/5 rounded-sm">
+              <span className="px-4 py-2 bg-ivory/ dark:bg-midnight/ rounded-sm">
                 Semester
               </span>
               <span className="px-4 py-2 bg-gold/10 text-gold font-bold rounded-sm border border-gold/20">
@@ -504,18 +504,18 @@ export default function Home() {
       </section>
 
       {/* 7. FINAL CTA */}
-      <section className="relative py-32 bg-midnight overflow-hidden border-t-[3px] border-t-gold/50">
+      <section className="relative py-32 bg-ivory dark:bg-midnight overflow-hidden border-t-[3px] border-t-gold/50">
         <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-gold to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-gold to-transparent"></div>
-        <div className="absolute inset-0 bg-linear-to-b from-navy/50 to-midnight -z-10"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-white dark:from-navy/50 to-ivory dark:to-midnight -z-10"></div>
 
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-playfair italic text-4xl md:text-6xl text-cream mb-6 leading-tight">
+          <h2 className="font-playfair italic text-4xl md:text-6xl text-midnight dark:text-cream mb-6 leading-tight">
             &quot;Give your child the
             <br />
             foundation they deserve.&quot;
           </h2>
-          <p className="font-sans text-muted text-xl mb-12">
+          <p className="font-sans text-midnight/70 dark:text-muted text-xl mb-12">
             Registration for the 20242025 academic year is now open.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6">

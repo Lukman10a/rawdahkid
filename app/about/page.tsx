@@ -5,10 +5,10 @@ import { BookOpen, Compass, Shield, Star, Award, Heart } from "lucide-react";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-cream text-midnight pt-24">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-cream text-midnight pt-24">
       {/* 1. HERO SECTION */}
-      <section className="relative py-24 md:py-32 bg-midnight overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-linear-to-b from-navy to-midnight pointer-events-none"></div>
+      <section className="relative py-24 md:py-32 bg-ivory dark:bg-midnight overflow-hidden">
+        <div className="absolute inset-0 z-0 bg-linear-to-b from-white dark:from-navy to-ivory dark:to-midnight pointer-events-none"></div>
 
         {/* Decorative Pattern */}
         <div className="absolute inset-0 z-0 opacity-[0.03] text-gold pointer-events-none">
@@ -50,7 +50,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-cinzel text-5xl md:text-7xl lg:text-8xl text-cream tracking-widest mb-6 uppercase">
+            <h1 className="font-cinzel text-5xl md:text-7xl lg:text-8xl text-midnight dark:text-cream tracking-widest mb-6 uppercase">
               Our Story
             </h1>
             <div className="w-32 h-px bg-gold mx-auto mb-8"></div>
@@ -100,18 +100,18 @@ export default function AboutPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-deep p-10 md:p-14 shadow-2xl rounded-sm relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500"
+            className="bg-warm dark:bg-deep p-10 md:p-14 shadow-2xl rounded-sm relative overflow-hidden group hover:-translate-y-2 transition-transform duration-500"
           >
-            <div className="absolute inset-0 bg-linear-to-br from-navy/30 to-midnight/80 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-linear-to-br from-white dark:from-navy/30 to-ivory dark:to-midnight/80 pointer-events-none"></div>
             <div className="absolute top-0 left-0 w-full h-2 bg-green/80"></div>
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-8">
-                <Star className="w-10 h-10 text-cream" />
-                <h2 className="font-cinzel text-3xl md:text-4xl text-cream tracking-wider">
+                <Star className="w-10 h-10 text-midnight dark:text-cream" />
+                <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream tracking-wider">
                   Our Vision
                 </h2>
               </div>
-              <p className="font-sans text-lg text-cream/80 leading-relaxed space-y-4">
+              <p className="font-sans text-lg text-midnight/ dark:text-cream/ leading-relaxed space-y-4">
                 <span className="block">
                   To be the standard-bearer for holistic Islamic education,
                   producing graduates who embody the prophetic character
@@ -129,7 +129,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. THE RAWDAH DIFFERENCE (Philosophy) */}
-      <section className="py-24 bg-navy text-cream border-y border-white/5">
+      <section className="py-24 bg-white dark:bg-navy text-midnight dark:text-cream border-y border-midnight/ dark:border-white/">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -150,7 +150,7 @@ export default function AboutPage() {
 
               <div className="w-20 h-px bg-gold/50"></div>
 
-              <div className="font-sans text-cream/80 text-lg leading-relaxed space-y-6">
+              <div className="font-sans text-midnight/ dark:text-cream/ text-lg leading-relaxed space-y-6">
                 <p>
                   For too long, Muslim families have been forced into a false
                   dichotomy: choose a rigorous academic school with a secular
@@ -180,21 +180,21 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative h-125 w-full bg-deep rounded-sm border border-gold/20 overflow-hidden flex items-center justify-center group"
+              className="relative h-125 w-full bg-warm dark:bg-deep rounded-sm border border-gold/20 overflow-hidden flex items-center justify-center group"
             >
-              <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-gold/40 via-midnight to-midnight"></div>
+              <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-gold/40 via-midnight to-ivory dark:to-midnight"></div>
 
               {/* Abstract Representation of Dual Curriculum */}
               <div className="relative z-10 flex items-center justify-center w-full h-full">
                 <div className="absolute left-1/2 -ml-32 w-64 h-64 border border-gold/30 rounded-full flex items-center justify-start pl-8 transition-transform duration-700 group-hover:-translate-x-4">
                   <span className="font-amiri text-4xl text-amber">الدين</span>
                 </div>
-                <div className="absolute right-1/2 -mr-32 w-64 h-64 border border-white/20 rounded-full flex items-center justify-end pr-8 transition-transform duration-700 group-hover:translate-x-4">
-                  <span className="font-cinzel text-xl text-cream tracking-widest">
+                <div className="absolute right-1/2 -mr-32 w-64 h-64 border border-midnight/ dark:border-white/ rounded-full flex items-center justify-end pr-8 transition-transform duration-700 group-hover:translate-x-4">
+                  <span className="font-cinzel text-xl text-midnight dark:text-cream tracking-widest">
                     DUNIYA
                   </span>
                 </div>
-                <div className="z-20 w-32 h-32 bg-midnight border-2 border-gold rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(212,175,55,0.2)]">
+                <div className="z-20 w-32 h-32 bg-ivory dark:bg-midnight border-2 border-gold rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(212,175,55,0.2)]">
                   <Award className="w-12 h-12 text-gold" />
                 </div>
               </div>
@@ -204,7 +204,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. CORE VALUES */}
-      <section className="py-24 bg-cream">
+      <section className="py-24 bg-white dark:bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="font-cinzel text-4xl md:text-5xl text-midnight tracking-wider mb-6">
@@ -244,7 +244,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className="bg-white p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border-b-4 border-gold rounded-sm flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300"
               >
-                <div className="w-16 h-16 rounded-full bg-midnight/5 flex items-center justify-center mb-6">
+                <div className="w-16 h-16 rounded-full bg-ivory/ dark:bg-midnight/ flex items-center justify-center mb-6">
                   <val.icon className="w-8 h-8 text-gold" />
                 </div>
                 <h3 className="font-playfair text-2xl text-midnight mb-4">

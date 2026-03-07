@@ -7,21 +7,21 @@ import { Button } from "@/components/ui/Button";
 
 export default function FeesPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-cream text-midnight pt-24">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-cream text-midnight pt-24">
       {/* 1. HERO SECTION */}
-      <section className="py-24 bg-midnight text-cream border-b border-gold/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-b from-navy to-midnight pointer-events-none z-0"></div>
+      <section className="py-24 bg-ivory dark:bg-midnight text-midnight dark:text-cream border-b border-gold/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-b from-white dark:from-navy to-ivory dark:to-midnight pointer-events-none z-0"></div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-cinzel text-4xl md:text-6xl text-cream tracking-widest mb-6 uppercase">
+            <h1 className="font-cinzel text-4xl md:text-6xl text-midnight dark:text-cream tracking-widest mb-6 uppercase">
               Tuition & Fees
             </h1>
             <div className="w-24 h-px bg-gold mx-auto mb-8"></div>
-            <p className="font-sans text-xl text-cream/80 max-w-3xl mx-auto leading-relaxed">
+            <p className="font-sans text-xl text-midnight/ dark:text-cream/ max-w-3xl mx-auto leading-relaxed">
               Transparent pricing designed to make exceptional dual-curriculum
               education accessible.
             </p>
@@ -35,7 +35,7 @@ export default function FeesPage() {
           <h2 className="font-cinzel text-3xl md:text-4xl text-midnight tracking-wider mb-4">
             Complete Programmes
           </h2>
-          <p className="font-sans text-muted">
+          <p className="font-sans text-midnight/70 dark:text-muted">
             Our most comprehensive offerings for holistic development.
           </p>
         </div>
@@ -46,20 +46,20 @@ export default function FeesPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-navy border border-white/5 p-10 rounded-sm relative overflow-hidden text-cream"
+            className="bg-white dark:bg-navy border border-midnight/ dark:border-white/ p-10 rounded-sm relative overflow-hidden text-midnight dark:text-cream"
           >
             <div className="absolute top-0 right-0 p-3 bg-gold/10 text-gold text-xs font-cinzel tracking-widest uppercase border-b border-l border-gold/20">
               Popular
             </div>
             <h3 className="font-playfair text-3xl mb-2">Islamic Bundle</h3>
-            <p className="font-sans text-cream/60 mb-6 h-12">
+            <p className="font-sans text-midnight/ dark:text-cream/ mb-6 h-12">
               All 6 Islamic disciplines from foundation to advanced.
             </p>
             <div className="mb-8">
               <span className="font-cormorant text-5xl text-gold">$5,000</span>
-              <span className="font-sans text-cream/50 ml-2">/ year</span>
+              <span className="font-sans text-midnight/ dark:text-cream/ ml-2">/ year</span>
             </div>
-            <ul className="space-y-4 mb-10 font-sans text-cream/80">
+            <ul className="space-y-4 mb-10 font-sans text-midnight/ dark:text-cream/">
               {[
                 "Qurʾān (Hifdh & Tajweed)",
                 "Arabic Language",
@@ -92,14 +92,14 @@ export default function FeesPage() {
             <h3 className="font-playfair text-3xl text-midnight mb-2">
               Western Bundle
             </h3>
-            <p className="font-sans text-muted mb-6 h-12">
+            <p className="font-sans text-midnight/70 dark:text-muted mb-6 h-12">
               Rigorous academic progression for modern excellence.
             </p>
             <div className="mb-8">
               <span className="font-cormorant text-5xl text-midnight">
                 $5,000
               </span>
-              <span className="font-sans text-muted ml-2">/ year</span>
+              <span className="font-sans text-midnight/70 dark:text-muted ml-2">/ year</span>
             </div>
             <ul className="space-y-4 mb-10 font-sans text-midnight/80">
               {[
@@ -117,7 +117,7 @@ export default function FeesPage() {
               ))}
             </ul>
             <Link href="/enrol" className="block w-full">
-              <button className="w-full border border-midnight text-midnight px-8 py-3 uppercase tracking-widest text-sm font-sans hover:bg-midnight hover:text-cream transition-colors">
+              <button className="w-full border border-midnight text-midnight px-8 py-3 uppercase tracking-widest text-sm font-sans hover:bg-ivory dark:bg-midnight hover:text-midnight dark:text-cream transition-colors">
                 Enrol Now
               </button>
             </Link>
@@ -126,7 +126,7 @@ export default function FeesPage() {
       </section>
 
       {/* 3. A LA CARTE PRICING */}
-      <section className="py-24 bg-deep/5 border-t border-gold/10">
+      <section className="py-24 bg-warm/ dark:bg-deep/ border-t border-gold/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-cinzel text-3xl md:text-4xl text-midnight tracking-wider mb-4">
@@ -157,7 +157,7 @@ export default function FeesPage() {
                       <span className="font-playfair text-lg text-midnight">
                         {course.name}
                       </span>
-                      <span className="font-sans font-medium text-muted">
+                      <span className="font-sans font-medium text-midnight/70 dark:text-muted">
                         {course.price}{" "}
                         <span className="text-xs font-normal">/yr</span>
                       </span>
@@ -183,7 +183,7 @@ export default function FeesPage() {
                       <span className="font-playfair text-lg text-midnight">
                         {course.name}
                       </span>
-                      <span className="font-sans font-medium text-muted">
+                      <span className="font-sans font-medium text-midnight/70 dark:text-muted">
                         {course.price}{" "}
                         <span className="text-xs font-normal">/yr</span>
                       </span>
@@ -201,7 +201,7 @@ export default function FeesPage() {
               <h4 className="font-playfair text-xl text-midnight mb-2">
                 Discounts & Grants
               </h4>
-              <p className="font-sans text-muted leading-relaxed">
+              <p className="font-sans text-midnight/70 dark:text-muted leading-relaxed">
                 We offer a 10% sibling discount starting from the second
                 enrolled child, and an additional 10% discount for families
                 paying the full annual tuition upfront. Means-tested educational

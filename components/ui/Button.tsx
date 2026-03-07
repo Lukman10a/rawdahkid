@@ -17,7 +17,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               variant === "primary",
             "bg-transparent border border-gold text-gold hover:bg-gold hover:text-midnight":
               variant === "secondary",
-            "bg-transparent border border-cream text-cream hover:bg-cream hover:text-midnight":
+            "bg-transparent border border-cream text-midnight dark:text-cream hover:bg-white dark:bg-cream hover:text-midnight":
               variant === "ghost",
           },
           className,

@@ -8,6 +8,7 @@ import {
 } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -37,13 +38,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${cinzel.variable} ${dmSans.variable} ${amiri.variable} ${cormorant.variable} antialiased bg-midnight text-cream min-h-screen flex flex-col`}
+        className={`${playfair.variable} ${cinzel.variable} ${dmSans.variable} ${amiri.variable} ${cormorant.variable} antialiased bg-ivory dark:bg-midnight text-midnight dark:text-cream min-h-screen flex flex-col transition-colors duration-300`}
       >
-        <Navbar />
-        <main className="grow">{children}</main>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Navbar />
+          <main className="grow">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -28,7 +28,7 @@ const courses = [
 
 export default function WesternProgramme() {
   return (
-    <div className="flex flex-col min-h-screen bg-cream text-midnight pt-24">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-cream text-midnight pt-24">
       {/* 1. HERO SECTION */}
       <section className="relative py-24 md:py-32 overflow-hidden border-b border-gold/10">
         <div className="absolute inset-0 z-0 opacity-[0.02] text-midnight pointer-events-none">
@@ -89,7 +89,7 @@ export default function WesternProgramme() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="bg-white border border-gold/10 p-10 rounded-sm hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 flex flex-col group text-center items-center"
             >
-              <div className="mb-6 w-20 h-20 bg-midnight/5 rounded-full flex items-center justify-center">
+              <div className="mb-6 w-20 h-20 bg-ivory/ dark:bg-midnight/ rounded-full flex items-center justify-center">
                 <course.icon className="w-10 h-10 text-midnight opacity-70 group-hover:opacity-100 transition-opacity" />
               </div>
               <h3 className="font-playfair text-3xl text-midnight mb-4">
@@ -118,20 +118,20 @@ export default function WesternProgramme() {
             from <span className="text-midnight font-bold">$2,000/year</span>,
             we highly recommend the complete bundle.
           </p>
-          <div className="bg-midnight p-8 md:p-12 shadow-2xl rounded-sm inline-block w-full max-w-2xl relative overflow-hidden text-cream">
-            <div className="absolute inset-0 bg-linear-to-b from-navy/50 to-transparent"></div>
+          <div className="bg-ivory dark:bg-midnight p-8 md:p-12 shadow-2xl rounded-sm inline-block w-full max-w-2xl relative overflow-hidden text-midnight dark:text-cream">
+            <div className="absolute inset-0 bg-linear-to-b from-white dark:from-navy/50 to-transparent"></div>
             <div className="relative z-10">
-              <h3 className="font-cinzel text-2xl text-cream tracking-widest mb-2 uppercase">
+              <h3 className="font-cinzel text-2xl text-midnight dark:text-cream tracking-widest mb-2 uppercase">
                 Full Western Bundle
               </h3>
-              <p className="font-sans text-cream/70 mb-6">
+              <p className="font-sans text-midnight/ dark:text-cream/ mb-6">
                 Mathematics, Sciences, and Programming
               </p>
               <div className="font-cormorant text-6xl text-gold mb-2">
                 $5,000{" "}
-                <span className="text-xl text-cream/50 font-sans">/ year</span>
+                <span className="text-xl text-midnight/ dark:text-cream/ font-sans">/ year</span>
               </div>
-              <p className="font-sans text-sm text-cream/60 mb-8 uppercase tracking-widest">
+              <p className="font-sans text-sm text-midnight/ dark:text-cream/ mb-8 uppercase tracking-widest">
                 Equivalent to $416 / month
               </p>
               <Link href="/fees">
