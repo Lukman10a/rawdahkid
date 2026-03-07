@@ -87,10 +87,10 @@ export default function Home() {
             >
               <motion.h1 className="flex flex-col items-center mb-6">
                 <span className="font-cinzel text-midnight dark:text-cream text-4xl sm:text-6xl md:text-7xl lg:text-[80px] tracking-widest leading-tight">
-                  WHERE ROOTS RUN DEEP
+                  Where Children Love to Learn
                 </span>
                 <span className="font-playfair italic text-amber text-3xl sm:text-5xl md:text-6xl lg:text-[72px] mt-2">
-                  and wings take flight.
+                  Islam and worldly knowledge
                 </span>
               </motion.h1>
 
@@ -98,15 +98,14 @@ export default function Home() {
                 ???? ??? ??????? ????
               </motion.p>
               <motion.p className="text-xs md:text-sm text-amber/60 font-cinzel tracking-widest mb-8 uppercase -mt-6">
-                &quot;And He taught Adam the names of all things.&quot; [Qurʾān
-                2:31]
+                &quot;Seeking knowledge is an obligation upon every
+                Muslim..&quot; [Hadith]
               </motion.p>
 
               <motion.p className="font-sans text-midnight/70 dark:text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-12">
-                Rawdatul Atfaal is a school where your child learns the Qur?an,
-                the Arabic language, Islamic sciences, and the knowledge of the
-                modern world all under one roof, with excellence as the
-                standard.
+                Rawdatul Atfaal provides structured learning in Qur’an, Hadith,
+                Aqeedah, Fiqh, and essential academic subjects, helping children
+                grow with knowledge, discipline, and Islamic character.
               </motion.p>
 
               <motion.div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
@@ -254,7 +253,7 @@ export default function Home() {
               </p>
 
               <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
-                Qur?an Arabic Tawheed Fiqh Hadith Mutoon
+                Qur&apos;an | Arabic | Tawheed | Fiqh | Hadith | Mutoon
               </p>
 
               <div className="mt-auto flex flex-col items-center space-y-4 w-full">
@@ -267,7 +266,7 @@ export default function Home() {
                 </div>
                 <Link
                   href="/programmes/islamic"
-                  className="w-full text-center py-3 border border-gold text-gold hover:bg-gold hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block"
+                  className="w-full cursor-pointer text-center py-3 border border-gold text-gold hover:bg-gold hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block"
                 >
                   Explore Islamic Courses &rarr;
                 </Link>
@@ -292,9 +291,12 @@ export default function Home() {
                 </svg>
               </div>
 
-              <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-6 mt-11">
+              <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-2">
                 THE WESTERN PROGRAMME
               </h3>
+              <p className="font-amiri text-gold text-xl mb-6">
+                ???????? ????????
+              </p>
 
               <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
                 Mathematics Sciences Programming
@@ -310,7 +312,7 @@ export default function Home() {
                 </div>
                 <Link
                   href="/programmes/western"
-                  className="w-full text-center py-3 border border-gold text-gold hover:bg-gold hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block"
+                  className="w-full cursor-pointer text-center py-3 border border-gold text-gold hover:bg-gold hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block"
                 >
                   Explore Western Courses &rarr;
                 </Link>
@@ -397,7 +399,9 @@ export default function Home() {
               </p>
               <div className="font-cormorant text-xl text-amber">
                 From {course.price}{" "}
-                <span className="text-sm text-midnight/70 dark:text-muted">/ year</span>
+                <span className="text-sm text-midnight/70 dark:text-muted">
+                  / year
+                </span>
               </div>
             </div>
           ))}
