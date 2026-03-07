@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-display: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-cinzel: var(--font-cinzel), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-amiri: var(--font-amiri), "Traditional Arabic", "Arabic Typesetting", serif;
+  --font-cormorant: var(--font-cormorant), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-midnight: #09111f;
+  --color-navy: #0e1e38;
+  --color-deep: #152848;
+  --color-gold: #c9972a;
+  --color-amber: #e8b84b;
+  --color-cream: #fdf8ee;
+  --color-warm: #f5e9cc;
+  --color-ivory: #fefcf5;
+  --color-muted: #8a9bb0;
+  --color-green: #1d5c3a;
+  --color-purple: #3a1a6b;
+  --color-rust: #7a1a1a;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Custom Aesthetic Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09111f;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9972a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e8b84b;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@utility hide-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
