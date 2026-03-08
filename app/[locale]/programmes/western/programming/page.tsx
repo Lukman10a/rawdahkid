@@ -12,7 +12,11 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
+import { useTranslations } from "next-intl";
+
 export default function ProgrammingProgramme() {
+  const t = useTranslations("ProgProgramming");
+
   return (
     <div className="flex flex-col min-h-screen bg-ivory dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* 1. HERO SECTION */}
@@ -29,25 +33,18 @@ export default function ProgrammingProgramme() {
             <div className="inline-flex items-center justify-center p-3 bg-indigo-500/10 dark:bg-indigo-400/10 rounded-full mb-6">
               <Code2 className="w-10 h-10 text-indigo-600 dark:text-indigo-400" />
             </div>
-            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
-              Programming
-            </h1>
-            <h2 className="font-sans text-xl md:text-2xl text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-6 font-semibold">
-              Scratch → Python → Web → Full-Stack
-            </h2>
+            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">{t("t0")}</h1>
+            <h2 className="font-sans text-xl md:text-2xl text-indigo-600 dark:text-indigo-400 uppercase tracking-widest mb-6 font-semibold">{t("t1")}</h2>
 
             <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-8 flex flex-wrap justify-center gap-2">
-              <span>Logic</span>
-              <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
-              <span>Algorithms</span>
-              <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
-              <span>Engineering</span>
+              <span>{t("t2")}</span>
+              <span className="hidden sm:inline">{t("t3")}</span>
+              <span>{t("t4")}</span>
+              <span className="hidden sm:inline">{t("t3")}</span>
+              <span>{t("t6")}</span>
             </div>
 
-            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">
-              &quot;The emphasis is on problem-solving, project work, and
-              genuine understanding — not rote coding.&quot;
-            </p>
+            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">{t("t7")}</p>
           </motion.div>
         </div>
       </section>
@@ -62,26 +59,11 @@ export default function ProgrammingProgramme() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-cinzel text-3xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <Compass className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-              Programme Overview
-            </h2>
+              <Compass className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />{t("t8")}</h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
-              <p>
-                The Programming curriculum is the most comprehensive in the
-                programme — a ten-level journey that takes students from their
-                very first block of code at age 6 to deploying a real full-stack
-                web application with a professional portfolio by age 16.
-              </p>
-              <p>
-                At every stage, students are engaged in building interactive
-                projects, progressing seamlessly from block-based programming to
-                complex algorithms and data structures using Python and modern
-                web frameworks.
-              </p>
-              <p className="font-semibold text-midnight dark:text-cream italic border-s-4 border-indigo-600 dark:border-indigo-400 ps-4 py-1">
-                We produce engineers who are technically capable,
-                algorithmically literate, and career-ready.
-              </p>
+              <p>{t("t9")}</p>
+              <p>{t("t10")}</p>
+              <p className="font-semibold text-midnight dark:text-cream italic border-s-4 border-indigo-600 dark:border-indigo-400 ps-4 py-1">{t("t11")}</p>
             </div>
           </motion.div>
 
@@ -93,9 +75,7 @@ export default function ProgrammingProgramme() {
             className="bg-white/80 dark:bg-navy/80 p-8 md:p-10 border border-midnight/5 dark:border-white/5 rounded-sm"
           >
             <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <Terminal className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />
-              Core Progression
-            </h2>
+              <Terminal className="w-7 h-7 text-indigo-600 dark:text-indigo-400" />{t("t12")}</h2>
             <ul className="space-y-6">
               {[
                 {
@@ -136,9 +116,7 @@ export default function ProgrammingProgramme() {
       <section className="py-20 bg-indigo-50/50 dark:bg-indigo-900/10 border-y border-midnight/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
-              Programming at a Glance
-            </h2>
+            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">{t("t13")}</h2>
             <div className="w-24 h-px bg-indigo-600/50 dark:bg-indigo-400/50 mx-auto"></div>
           </div>
 
@@ -146,15 +124,9 @@ export default function ProgrammingProgramme() {
             <table className="w-full text-start border-collapse min-w-200">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
-                  <th className="py-4 px-6 font-cinzel text-indigo-700 dark:text-indigo-400 text-lg w-20">
-                    Lvl
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">
-                    Age
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Primary Focus
-                  </th>
+                  <th className="py-4 px-6 font-cinzel text-indigo-700 dark:text-indigo-400 text-lg w-20">{t("t14")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">{t("t15")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t16")}</th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
@@ -198,16 +170,14 @@ export default function ProgrammingProgramme() {
       {/* 4. DETAILED COURSE OUTLINES */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
-            Detailed Master Plans
-          </h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t17")}</h2>
           <div className="w-24 h-px bg-indigo-600/50 dark:bg-indigo-400/50 mx-auto"></div>
         </div>
 
         <div className="space-y-24">
           <LevelCard
             levelNumber="1"
-            title="Unplugged + Scratch Jr"
+            title={t("t41")}
             subtitle="Computational Thinking Foundations"
             ageGroup="Ages 6–7"
             duration="36 Weeks | 1–2 Sessions/Week | 30–40 Min/Session"
@@ -258,7 +228,7 @@ export default function ProgrammingProgramme() {
 
           <LevelCard
             levelNumber="2"
-            title="Scratch 3.0 — Block Coding"
+            title={t("t37")}
             subtitle="Beginner Coding"
             ageGroup="Ages 7–8"
             duration="36 Weeks | 2 Sessions/Week | 40 Min/Session"
@@ -297,7 +267,7 @@ export default function ProgrammingProgramme() {
 
           <LevelCard
             levelNumber="3"
-            title="Intermediate Scratch & CS Concepts"
+            title={t("t34")}
             subtitle="Deepening Logic"
             ageGroup="Ages 8–9"
             duration="36 Weeks | 2 Sessions/Week | 45 Min/Session"
@@ -336,7 +306,7 @@ export default function ProgrammingProgramme() {
 
           <LevelCard
             levelNumber="4"
-            title="Python 3 — Fundamentals"
+            title={t("t39")}
             subtitle="Text-based Programming"
             ageGroup="Ages 9–10"
             duration="36 Weeks | 2 Sessions/Week | 45 Min/Session"
@@ -381,7 +351,7 @@ export default function ProgrammingProgramme() {
 
           <LevelCard
             levelNumber="5"
-            title="Python 3 — Intermediate"
+            title={t("t40")}
             subtitle="Object-Oriented & Applied Python"
             ageGroup="Ages 10–11"
             duration="36 Weeks | 2 Sessions/Week | 50 Min/Session"
@@ -434,7 +404,7 @@ export default function ProgrammingProgramme() {
 
           <LevelCard
             levelNumber="6"
-            title="HTML & CSS — Web Design Fundamentals"
+            title={t("t32")}
             subtitle="Web Development Basics"
             ageGroup="Ages 11–12"
             duration="36 Weeks | 2 Sessions/Week | 50 Min/Session"
@@ -491,7 +461,7 @@ export default function ProgrammingProgramme() {
 
           <LevelCard
             levelNumber="7"
-            title="JavaScript — Interactive Web Pages"
+            title={t("t35")}
             subtitle="Frontend Engineering"
             ageGroup="Ages 12–13"
             duration="36 Weeks | 2 Sessions/Week | 55 Min/Session"
@@ -552,7 +522,7 @@ export default function ProgrammingProgramme() {
 
           <LevelCard
             levelNumber="8"
-            title="Python Advanced — Data & Automation"
+            title={t("t33")}
             subtitle="Applied Programming Skills"
             ageGroup="Ages 13–14"
             duration="36 Weeks | 2 Sessions/Week | 55 Min/Session"
@@ -609,7 +579,7 @@ export default function ProgrammingProgramme() {
 
           <LevelCard
             levelNumber="9"
-            title="Computer Science — Theory"
+            title={t("t38")}
             subtitle="GCSE / A-Level CS Preparation"
             ageGroup="Ages 14–15"
             duration="36 Weeks | 2 Sessions/Week | 60 Min/Session"
@@ -670,7 +640,7 @@ export default function ProgrammingProgramme() {
 
           <LevelCard
             levelNumber="10"
-            title="Capstone — Full-Stack Development"
+            title={t("t36")}
             subtitle="Professional Portfolio"
             ageGroup="Ages 15–16"
             duration="36 Weeks | 2 Sessions/Week | 60 Min/Session"
@@ -735,45 +705,28 @@ export default function ProgrammingProgramme() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-indigo-600 dark:text-indigo-400 mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
-            Architect the Future
-          </h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
-            From basic logic to deployed web applications, empower your child to
-            create technology, not just consume it.
-          </p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t18")}</h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t19")}</p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-indigo-600/30 dark:border-indigo-400/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
-              Programming Programme
-            </h3>
-            <div className="font-cormorant text-5xl text-indigo-600 dark:text-indigo-400 mb-6">
-              Core
-            </div>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t20")}</h3>
+            <div className="font-cormorant text-5xl text-indigo-600 dark:text-indigo-400 mb-6">{t("t21")}</div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Full-Stack Capability
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t22")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Python & Web Dev Focus
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t23")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Project-Based Learning
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t24")}</span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">
-                Enrol Now
-              </Button>
+              <Button variant="primary" className="w-full py-4 text-lg">{t("t25")}</Button>
             </Link>
           </div>
 
@@ -781,9 +734,7 @@ export default function ProgrammingProgramme() {
             <Link
               href="/programmes/western"
               className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors font-sans underline underline-offset-4"
-            >
-              ← Back to Core Programmes
-            </Link>
+            >{t("t26")}</Link>
           </div>
         </div>
       </section>
@@ -809,6 +760,7 @@ function LevelCard({
   aim: string;
   units: { no: number; topic: string; skills: string }[];
 }) {
+  const t = useTranslations("ProgProgramming");
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -839,13 +791,13 @@ function LevelCard({
 
         <div className="grid md:grid-cols-1 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
           <div>
-            <strong className="text-white">Duration / Frequency:</strong>{" "}
+            <strong className="text-white">{t("t27")}</strong>{" "}
             {duration}
           </div>
         </div>
 
         <div className="text-sm text-cream/80 leading-relaxed text-justify md:text-start">
-          <strong className="text-white block mb-1">Aim:</strong> {aim}
+          <strong className="text-white block mb-1">{t("t28")}</strong> {aim}
         </div>
       </div>
 
@@ -854,15 +806,9 @@ function LevelCard({
           <table className="w-full text-start border-collapse min-w-200">
             <thead>
               <tr className="border-b-2 border-indigo-100 dark:border-white/10 bg-indigo-50/50 dark:bg-white/5">
-                <th className="py-4 px-6 font-cinzel text-indigo-700 dark:text-indigo-400 font-bold w-16 text-center">
-                  Unit
-                </th>
-                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold w-1/2">
-                  Unit / Topic
-                </th>
-                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold">
-                  Key Skills / Outcomes
-                </th>
+                <th className="py-4 px-6 font-cinzel text-indigo-700 dark:text-indigo-400 font-bold w-16 text-center">{t("t29")}</th>
+                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold w-1/2">{t("t30")}</th>
+                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold">{t("t31")}</th>
               </tr>
             </thead>
             <tbody className="font-sans text-midnight/80 dark:text-cream/80 text-sm">

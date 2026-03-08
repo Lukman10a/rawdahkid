@@ -41,9 +41,7 @@ export default function Navbar() {
                 <span className="font-amiri text-gold text-2xl leading-none group-hover:text-amber transition-colors">
                   روضة الأطفال
                 </span>
-                <span className="font-cinzel text-midnight dark:text-cream text-sm tracking-[0.2em] group-hover:text-white transition-colors">
-                  RAWDATUL ATFAAL
-                </span>
+                <span className="font-cinzel text-midnight dark:text-cream text-sm tracking-[0.2em] group-hover:text-white transition-colors">{t("t14")}</span>
               </div>
             </Link>
 
@@ -123,7 +121,7 @@ export default function Navbar() {
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
                 className="p-2 text-midnight dark:text-cream hover:text-gold transition-colors"
-                aria-label="Open menu"
+                aria-label={t("t16")}
               >
                 <Menu className="w-6 h-6" />
               </button>
@@ -144,14 +142,12 @@ export default function Navbar() {
             <span className="font-amiri text-gold text-2xl leading-none">
               روضة الأطفال
             </span>
-            <span className="font-cinzel text-midnight dark:text-cream text-sm tracking-[0.2em]">
-              RAWDATUL ATFAAL
-            </span>
+            <span className="font-cinzel text-midnight dark:text-cream text-sm tracking-[0.2em]">{t("t14")}</span>
           </div>
           <button
             onClick={() => setIsMobileMenuOpen(false)}
             className="p-2 text-midnight dark:text-cream hover:text-gold transition-colors"
-            aria-label="Close menu"
+            aria-label={t("t15")}
           >
             <X className="w-8 h-8" />
           </button>

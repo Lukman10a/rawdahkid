@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
@@ -6,6 +7,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function ThemeToggle() {
+  const t = useTranslations("Navigation");
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -22,7 +24,7 @@ export function ThemeToggle() {
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="relative flex items-center justify-center w-9 h-9 rounded-full bg-ivory/50 dark:bg-midnight/50 hover:bg-gold/20 dark:hover:bg-gold/20 transition-colors text-midnight dark:text-cream focus:outline-hidden"
-      aria-label="Toggle Dark Mode"
+      aria-label={t("t18")}
     >
       <AnimatePresence mode="wait" initial={false}>
         {theme === "dark" ? (

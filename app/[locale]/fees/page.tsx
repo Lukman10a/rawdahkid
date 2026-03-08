@@ -5,7 +5,10 @@ import { Check, Info } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
+import { useTranslations } from "next-intl"
+
 export default function FeesPage() {
+  const t = useTranslations("Fees");
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-cream text-midnight pt-24">
       {/* 1. HERO SECTION */}
@@ -18,12 +21,11 @@ export default function FeesPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-cinzel text-4xl md:text-6xl text-midnight dark:text-cream tracking-widest mb-6 uppercase">
-              Tuition & Fees
+              {t("hero.title")}
             </h1>
             <div className="w-24 h-px bg-gold mx-auto mb-8"></div>
             <p className="font-sans text-xl text-midnight/ dark:text-cream/ max-w-3xl mx-auto leading-relaxed">
-              Transparent pricing designed to make exceptional dual-curriculum
-              education accessible.
+              {t("hero.desc")}
             </p>
           </motion.div>
         </div>
@@ -33,11 +35,10 @@ export default function FeesPage() {
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream tracking-wider mb-4">
-            Complete Programmes
+            {t("bundles.title")}
           </h2>
           <p className="font-sans text-midnight/70 dark:text-muted">
-            Our most comprehensive offerings for holistic development. Showing
-            annual fees.
+            {t("bundles.desc")}
           </p>
         </div>
 
@@ -49,31 +50,31 @@ export default function FeesPage() {
             viewport={{ once: true }}
             className="bg-white dark:bg-navy border border-midnight/10 dark:border-white/10 p-8 rounded-sm relative overflow-hidden text-midnight dark:text-cream flex flex-col"
           >
-            <h3 className="font-playfair text-2xl mb-2">Islamic Bundle</h3>
+            <h3 className="font-playfair text-2xl mb-2">{t("bundles.islamic.title")}</h3>
             <p className="font-sans text-sm text-midnight/70 dark:text-cream/70 mb-6 min-h-10">
-              All 6 Islamic disciplines from foundation to advanced.
+              {t("bundles.islamic.desc")}
             </p>
             <div className="mb-8 space-y-4">
               <div className="flex justify-between items-end border-b border-midnight/5 dark:border-white/5 pb-2">
                 <div>
                   <div className="text-xs font-cinzel text-midnight/60 dark:text-cream/60 tracking-widest uppercase mb-1">
-                    Group Class
+                    {t("bundles.labels.group")}
                   </div>
                   <div className="font-cormorant text-4xl text-midnight dark:text-cream">
                     $5,000
                     <span className="text-lg text-midnight/60 dark:text-cream/60 font-sans">
-                      /yr
+                      {t("bundles.labels.yr")}
                     </span>
                   </div>
                 </div>
                 <div className="text-end">
                   <div className="text-xs font-cinzel text-midnight/60 dark:text-cream/60 tracking-widest uppercase mb-1">
-                    1-on-1
+                    {t("bundles.labels.oneOnOne")}
                   </div>
                   <div className="font-cormorant text-2xl text-midnight/80 dark:text-cream/80">
                     $7,500
                     <span className="text-sm font-sans text-midnight/60 dark:text-cream/60">
-                      /yr
+                      {t("bundles.labels.yr")}
                     </span>
                   </div>
                 </div>
@@ -81,12 +82,12 @@ export default function FeesPage() {
             </div>
             <ul className="space-y-3 mb-10 font-sans text-sm text-midnight/80 dark:text-cream/80 grow">
               {[
-                "Qurʾān (Hifdh & Tajweed)",
-                "Arabic Language",
-                "Tawheed & Aqeedah",
-                "Islamic Jurisprudence (Fiqh)",
-                "Hadith Studies",
-                "Classical Texts (Mutoon)",
+                t("bundles.islamic.c1"),
+                t("bundles.islamic.c2"),
+                t("bundles.islamic.c3"),
+                t("bundles.islamic.c4"),
+                t("bundles.islamic.c5"),
+                t("bundles.islamic.c6"),
               ].map((item, i) => (
                 <li key={i} className="flex flex-row items-start gap-3">
                   <Check className="w-4 h-4 text-gold shrink-0 mt-0.5" />
@@ -96,7 +97,7 @@ export default function FeesPage() {
             </ul>
             <Link href="/enrol" className="block w-full mt-auto">
               <Button variant="primary" className="w-full">
-                Enrol Now
+                {t("bundles.labels.enrolNow")}
               </Button>
             </Link>
           </motion.div>
@@ -109,31 +110,31 @@ export default function FeesPage() {
             transition={{ delay: 0.1 }}
             className="bg-white dark:bg-navy border border-midnight/10 dark:border-white/10 p-8 rounded-sm relative overflow-hidden text-midnight dark:text-cream flex flex-col"
           >
-            <h3 className="font-playfair text-2xl mb-2">Western Bundle</h3>
+            <h3 className="font-playfair text-2xl mb-2">{t("bundles.western.title")}</h3>
             <p className="font-sans text-sm text-midnight/70 dark:text-cream/70 mb-6 min-h-10">
-              Rigorous academic progression for modern excellence.
+              {t("bundles.western.desc")}
             </p>
             <div className="mb-8 space-y-4">
               <div className="flex justify-between items-end border-b border-midnight/5 dark:border-white/5 pb-2">
                 <div>
                   <div className="text-xs font-cinzel text-midnight/60 dark:text-cream/60 tracking-widest uppercase mb-1">
-                    Group Class
+                    {t("bundles.labels.group")}
                   </div>
                   <div className="font-cormorant text-4xl text-midnight dark:text-cream">
                     $5,000
                     <span className="text-lg text-midnight/60 dark:text-cream/60 font-sans">
-                      /yr
+                      {t("bundles.labels.yr")}
                     </span>
                   </div>
                 </div>
                 <div className="text-end">
                   <div className="text-xs font-cinzel text-midnight/60 dark:text-cream/60 tracking-widest uppercase mb-1">
-                    1-on-1
+                    {t("bundles.labels.oneOnOne")}
                   </div>
                   <div className="font-cormorant text-2xl text-midnight/80 dark:text-cream/80">
                     $7,500
                     <span className="text-sm font-sans text-midnight/60 dark:text-cream/60">
-                      /yr
+                      {t("bundles.labels.yr")}
                     </span>
                   </div>
                 </div>
@@ -141,12 +142,12 @@ export default function FeesPage() {
             </div>
             <ul className="space-y-3 mb-10 font-sans text-sm text-midnight/80 dark:text-cream/80 grow">
               {[
-                "Core Mathematics",
-                "Physical Sciences",
-                "Biological Sciences",
-                "Programming & CompSci",
-                "Lab & Practical Sessions",
-                "Project-Based Learning",
+                t("bundles.western.c1"),
+                t("bundles.western.c2"),
+                t("bundles.western.c3"),
+                t("bundles.western.c4"),
+                t("bundles.western.c5"),
+                t("bundles.western.c6"),
               ].map((item, i) => (
                 <li key={i} className="flex flex-row items-start gap-3">
                   <Check className="w-4 h-4 text-midnight dark:text-cream shrink-0 mt-0.5" />
@@ -156,7 +157,7 @@ export default function FeesPage() {
             </ul>
             <Link href="/enrol" className="block w-full mt-auto">
               <button className="w-full border border-midnight text-midnight dark:border-cream dark:text-cream px-8 py-3 uppercase tracking-widest text-sm font-sans hover:bg-midnight hover:text-cream dark:hover:bg-cream dark:hover:text-midnight transition-colors">
-                Enrol Now
+                {t("bundles.labels.enrolNow")}
               </button>
             </Link>
           </motion.div>
@@ -170,36 +171,35 @@ export default function FeesPage() {
             className="bg-ivory dark:bg-[#12221b] border-2 border-gold/40 p-8 rounded-sm relative overflow-hidden text-midnight dark:text-cream shadow-2xl flex flex-col"
           >
             <div className="absolute top-0 inset-e-0 p-3 bg-gold/20 text-gold text-xs font-cinzel tracking-widest uppercase border-b border-s border-gold/30 font-bold">
-              Best Value
+              {t("bundles.dual.bestValue")}
             </div>
             <h3 className="font-playfair text-2xl mb-2 text-gold">
-              Dual Curriculum
+              {t("bundles.dual.title")}
             </h3>
             <p className="font-sans text-sm text-midnight/70 dark:text-cream/70 mb-6 min-h-10">
-              All 9 courses from both the Islamic and Western Programmes (15%
-              off).
+              {t("bundles.dual.desc")}
             </p>
             <div className="mb-8 space-y-4">
               <div className="flex justify-between items-end border-b border-gold/20 pb-2">
                 <div>
                   <div className="text-xs font-cinzel text-midnight/60 dark:text-cream/60 tracking-widest uppercase mb-1">
-                    Group Class
+                    {t("bundles.labels.group")}
                   </div>
                   <div className="font-cormorant text-4xl text-gold">
                     $8,500
                     <span className="text-lg text-midnight/60 dark:text-cream/60 font-sans">
-                      /yr
+                      {t("bundles.labels.yr")}
                     </span>
                   </div>
                 </div>
                 <div className="text-end">
                   <div className="text-xs font-cinzel text-midnight/60 dark:text-cream/60 tracking-widest uppercase mb-1">
-                    1-on-1
+                    {t("bundles.labels.oneOnOne")}
                   </div>
                   <div className="font-cormorant text-2xl text-amber">
                     $12,750
                     <span className="text-sm font-sans text-midnight/60 dark:text-cream/60">
-                      /yr
+                      {t("bundles.labels.yr")}
                     </span>
                   </div>
                 </div>
@@ -207,11 +207,11 @@ export default function FeesPage() {
             </div>
             <ul className="space-y-3 mb-10 font-sans text-sm text-midnight/80 dark:text-cream/80 grow">
               {[
-                "All 6 Islamic Courses",
-                "All 3 Western Courses",
-                "Complete holistic education",
-                "Maximum sibling overlap",
-                "15% Bundle Discount applied",
+                t("bundles.dual.c1"),
+                t("bundles.dual.c2"),
+                t("bundles.dual.c3"),
+                t("bundles.dual.c4"),
+                t("bundles.dual.c5"),
               ].map((item, i) => (
                 <li key={i} className="flex flex-row items-start gap-3">
                   <Check className="w-4 h-4 text-gold shrink-0 mt-0.5" />
@@ -221,7 +221,7 @@ export default function FeesPage() {
             </ul>
             <Link href="/enrol" className="block w-full mt-auto">
               <Button variant="primary" className="w-full">
-                Enrol Now
+                {t("bundles.labels.enrolNow")}
               </Button>
             </Link>
           </motion.div>
@@ -233,7 +233,7 @@ export default function FeesPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream tracking-wider mb-4">
-              Individual Courses
+              {t("alacarte.title")}
             </h2>
             <div className="w-16 h-px bg-gold mx-auto"></div>
           </div>
@@ -242,20 +242,20 @@ export default function FeesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-midnight/10 dark:divide-white/10">
               <div className="p-8">
                 <h3 className="font-cinzel text-xl text-gold tracking-widest mb-6 uppercase">
-                  Islamic Courses
+                  {t("alacarte.islamic")}
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { name: "Qurʾān", group: "$2,000", oneOnOne: "$3,000" },
+                    { name: t("alacarte.courses.quran"), group: "$2,000", oneOnOne: "$3,000" },
                     {
-                      name: "Arabic Language",
+                      name: t("alacarte.courses.arabic"),
                       group: "$1,500",
                       oneOnOne: "$2,250",
                     },
-                    { name: "Tawheed", group: "$1,200", oneOnOne: "$1,800" },
-                    { name: "Fiqh", group: "$1,200", oneOnOne: "$1,800" },
-                    { name: "Hadith", group: "$1,200", oneOnOne: "$1,800" },
-                    { name: "Mutoon", group: "$1,200", oneOnOne: "$1,800" },
+                    { name: t("alacarte.courses.tawheed"), group: "$1,200", oneOnOne: "$1,800" },
+                    { name: t("alacarte.courses.fiqh"), group: "$1,200", oneOnOne: "$1,800" },
+                    { name: t("alacarte.courses.hadith"), group: "$1,200", oneOnOne: "$1,800" },
+                    { name: t("alacarte.courses.mutoon"), group: "$1,200", oneOnOne: "$1,800" },
                   ].map((course, i) => (
                     <div
                       key={i}
@@ -266,18 +266,16 @@ export default function FeesPage() {
                       </span>
                       <div className="flex gap-6 text-sm font-sans">
                         <div className="text-midnight/70 dark:text-cream/70">
-                          <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">
-                            Group
-                          </span>
+                          <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">{t("bundles.labels.group")}</span>
                           <span className="font-medium">{course.group}</span>
-                          <span className="text-[10px]">/yr</span>
+                          <span className="text-[10px]">{t("bundles.labels.yr")}</span>
                         </div>
                         <div className="text-midnight/70 dark:text-cream/70">
                           <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">
-                            1-on-1
+                            {t("bundles.labels.oneOnOne")}
                           </span>
                           <span className="font-medium">{course.oneOnOne}</span>
-                          <span className="text-[10px]">/yr</span>
+                          <span className="text-[10px]">{t("bundles.labels.yr")}</span>
                         </div>
                       </div>
                     </div>
@@ -287,18 +285,18 @@ export default function FeesPage() {
 
               <div className="p-8">
                 <h3 className="font-cinzel text-xl text-midnight dark:text-cream tracking-widest mb-6 uppercase">
-                  Western Courses
+                  {t("alacarte.western")}
                 </h3>
                 <div className="space-y-4">
                   {[
                     {
-                      name: "Mathematics",
+                      name: t("alacarte.courses.math"),
                       group: "$2,000",
                       oneOnOne: "$3,000",
                     },
-                    { name: "Sciences", group: "$2,000", oneOnOne: "$3,000" },
+                    { name: t("alacarte.courses.science"), group: "$2,000", oneOnOne: "$3,000" },
                     {
-                      name: "Programming",
+                      name: t("alacarte.courses.programming"),
                       group: "$2,000",
                       oneOnOne: "$3,000",
                     },
@@ -312,18 +310,16 @@ export default function FeesPage() {
                       </span>
                       <div className="flex gap-6 text-sm font-sans">
                         <div className="text-midnight/70 dark:text-cream/70">
-                          <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">
-                            Group
-                          </span>
+                          <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">{t("bundles.labels.group")}</span>
                           <span className="font-medium">{course.group}</span>
-                          <span className="text-[10px]">/yr</span>
+                          <span className="text-[10px]">{t("bundles.labels.yr")}</span>
                         </div>
                         <div className="text-midnight/70 dark:text-cream/70">
                           <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">
-                            1-on-1
+                            {t("bundles.labels.oneOnOne")}
                           </span>
                           <span className="font-medium">{course.oneOnOne}</span>
-                          <span className="text-[10px]">/yr</span>
+                          <span className="text-[10px]">{t("bundles.labels.yr")}</span>
                         </div>
                       </div>
                     </div>
@@ -338,39 +334,37 @@ export default function FeesPage() {
             <Info className="w-8 h-8 text-gold shrink-0 mt-1" />
             <div className="w-full">
               <h4 className="font-playfair text-2xl text-midnight dark:text-cream mb-4">
-                Discounts & Loyalty Rewards
+                {t("discounts.title")}
               </h4>
 
               <div className="grid md:grid-cols-2 gap-8 text-midnight/80 dark:text-cream/80 font-sans text-sm leading-relaxed mb-6">
                 <div>
                   <h5 className="font-semibold text-midnight dark:text-cream mb-2">
-                    Sibling Enrolment
+                    {t("discounts.sibling.title")}
                   </h5>
                   <ul className="space-y-1 list-disc list-inside">
-                    <li>2nd Child: 10% off all enrolled courses</li>
-                    <li>3rd Child: 20% off all enrolled courses</li>
-                    <li>4th+ Child: 30% off all enrolled courses</li>
+                    <li>{t("discounts.sibling.d1")}</li>
+                    <li>{t("discounts.sibling.d2")}</li>
+                    <li>{t("discounts.sibling.d3")}</li>
                   </ul>
                   <p className="mt-2 text-xs italic opacity-80">
-                    (Can be applied on top of bundle pricing)
+                    {t("discounts.sibling.note")}
                   </p>
                 </div>
                 <div>
                   <h5 className="font-semibold text-midnight dark:text-cream mb-2">
-                    Payment Timing
+                    {t("discounts.payment.title")}
                   </h5>
                   <ul className="space-y-1 list-disc list-inside">
-                    <li>Annual Upfront: 10% off the total fee</li>
-                    <li>Semester Upfront: 5% off the semester fee</li>
-                    <li>Monthly Plan: No discount</li>
+                    <li>{t("discounts.payment.d1")}</li>
+                    <li>{t("discounts.payment.d2")}</li>
+                    <li>{t("discounts.payment.d3")}</li>
                   </ul>
                 </div>
               </div>
 
               <p className="font-sans text-sm text-midnight/70 dark:text-cream/60 py-3 border-t border-midnight/5 dark:border-white/5">
-                Note: A non-refundable registration fee of $100 per student is
-                due upon enrolment to cover administrative processing, placement
-                assessments, and baseline learning materials.
+                {t("discounts.footerNote")}
               </p>
             </div>
           </div>

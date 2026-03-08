@@ -3,7 +3,10 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
+import { useTranslations } from "next-intl"
+
 export default function ContactPage() {
+  const t = useTranslations("Contact");
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* HEADER */}
@@ -11,11 +14,10 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent pointer-events-none"></div>
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h1 className="font-cinzel text-4xl md:text-6xl tracking-widest mb-6 uppercase">
-            Get In Touch
+            {t("header.title")}
           </h1>
           <p className="font-sans text-xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto">
-            We are here to answer your questions and welcome you to the Rawdatul
-            Atfaal community.
+            {t("header.desc")}
           </p>
         </div>
       </section>
@@ -34,31 +36,31 @@ export default function ContactPage() {
               {[
                 {
                   icon: MapPin,
-                  title: "Our Campus",
-                  content: ["123 Knowledge Avenue", "Leicester, UK LE1 2AB"],
+                  title: t("info.campus.title"),
+                  content: [t("info.campus.c1"), t("info.campus.c2")],
                 },
                 {
                   icon: Phone,
-                  title: "Phone",
+                  title: t("info.phone.title"),
                   content: [
-                    "Admissions: +44 116 123 4567",
-                    "Main Office: +44 116 123 4568",
+                    t("info.phone.c1"),
+                    t("info.phone.c2"),
                   ],
                 },
                 {
                   icon: Mail,
-                  title: "Email",
+                  title: t("info.email.title"),
                   content: [
-                    "admissions@rawdatulatfaal.org",
-                    "info@rawdatulatfaal.org",
+                    t("info.email.c1"),
+                    t("info.email.c2"),
                   ],
                 },
                 {
                   icon: Clock,
-                  title: "Office Hours",
+                  title: t("info.hours.title"),
                   content: [
-                    "Mon - Fri: 8:00 AM - 4:00 PM",
-                    "Sat - Sun: Closed",
+                    t("info.hours.c1"),
+                    t("info.hours.c2"),
                   ],
                 },
               ].map((item, i) => (
@@ -94,48 +96,48 @@ export default function ContactPage() {
               className="bg-white dark:bg-navy p-10 lg:p-14 rounded-sm shadow-xl border border-midnight/5 dark:border-white/5 relative text-midnight dark:text-cream"
             >
               <h2 className="font-playfair text-3xl mb-2 text-midnight dark:text-cream">
-                Send a Message
+                {t("form.title")}
               </h2>
               <p className="font-sans text-midnight/80 dark:text-cream/80 mb-8">
-                We usually respond within one business day.
+                {t("form.desc")}
               </p>
 
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div>
                   <label className="block font-sans text-xs font-semibold uppercase tracking-widest text-midnight dark:text-cream mb-2">
-                    Name *
+                    {t("form.nameLabel")} *
                   </label>
                   <input
                     type="text"
                     required
                     className="w-full bg-white dark:bg-[#1a2b22] border border-midnight/10 dark:border-white/10 px-4 py-3 text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all"
-                    placeholder="e.g. John Doe"
+                    placeholder={t("form.namePlaceholder")}
                   />
                 </div>
                 <div>
                   <label className="block font-sans text-xs font-semibold uppercase tracking-widest text-midnight dark:text-cream mb-2">
-                    Email *
+                    {t("form.emailLabel")} *
                   </label>
                   <input
                     type="email"
                     required
                     className="w-full bg-white dark:bg-[#1a2b22] border border-midnight/10 dark:border-white/10 px-4 py-3 text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all"
-                    placeholder="john@example.com"
+                    placeholder={t("form.emailPlaceholder")}
                   />
                 </div>
                 <div>
                   <label className="block font-sans text-xs font-semibold uppercase tracking-widest text-midnight dark:text-cream mb-2">
-                    Message *
+                    {t("form.messageLabel")} *
                   </label>
                   <textarea
                     rows={5}
                     required
                     className="w-full bg-white dark:bg-[#1a2b22] border border-midnight/10 dark:border-white/10 px-4 py-3 text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all resize-none"
-                    placeholder="How can we help?"
+                    placeholder={t("form.messagePlaceholder")}
                   ></textarea>
                 </div>
                 <button className="w-full bg-gold text-midnight py-4 rounded-sm font-sans font-bold tracking-widest uppercase text-sm hover:bg-white border border-transparent hover:border-gold transition-all duration-300 shadow-lg hover:shadow-gold/20">
-                  Send Message
+                  {t("form.submitBtn")}
                 </button>
               </form>
             </motion.div>

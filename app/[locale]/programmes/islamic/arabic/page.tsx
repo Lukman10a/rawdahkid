@@ -9,10 +9,13 @@ import {
   BookText,
   Speech,
 } from "lucide-react";
-import Link from "next/link";
+
 import { Button } from "@/components/ui/Button";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function ArabicProgramme() {
+  const t = useTranslations("ProgArabic");
   return (
     <div className="flex flex-col min-h-screen bg-ivory dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* 1. HERO SECTION */}
@@ -30,47 +33,34 @@ export default function ArabicProgramme() {
               بسم الله الرحمان الرحيم
             </p>
             <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
-              Arabic Language Curriculum
+              {t("hero.title")}
             </h1>
             <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">
               منهج تعليم اللغة العربية
             </p>
             <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-6 flex flex-wrap justify-center gap-2">
-              <span>Letters</span>
+              <span>{t("hero.subtitle1")}</span>
               <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
-              <span>Reading</span>
+              <span>{t("hero.subtitle2")}</span>
               <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
-              <span>Conversation</span>
+              <span>{t("hero.subtitle3")}</span>
               <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
-              <span>Grammar</span>
+              <span>{t("hero.subtitle4")}</span>
             </div>
 
-            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">
-              &quot;The language of the Qurʼān — taught with care, structure,
-              and love&quot;
-            </p>
+            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">{t("t9")}</p>
 
             {/* Path visualization */}
             <div className="flex flex-wrap justify-center items-center gap-4 mt-12 text-sm font-cinzel font-bold text-midnight/70 dark:text-cream/70">
-              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">
-                L1 Qaaʼidah
-              </span>
+              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">{t("t31")}</span>
               <span className="text-gold">→</span>
-              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">
-                L2 Reading
-              </span>
+              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">{t("t32")}</span>
               <span className="text-gold">→</span>
-              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">
-                L3 Speech
-              </span>
+              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">{t("t35")}</span>
               <span className="text-gold">→</span>
-              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">
-                L4 Grammar
-              </span>
+              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">{t("t33")}</span>
               <span className="text-gold">→</span>
-              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">
-                L5 Text
-              </span>
+              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">{t("t41")}</span>
             </div>
           </motion.div>
         </div>
@@ -88,25 +78,17 @@ export default function ArabicProgramme() {
           >
             <h2 className="font-cinzel text-3xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
               <BookOpen className="w-8 h-8 text-gold" />
-              Programme Overview
+              {t("overview.title")}
             </h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
               <p>
-                The Rawdatul Atfaal Arabic Language Curriculum is a structured
+                The Rawdatul Atfaal {t("hero.title")} is a structured
                 five-level programme designed to take a student from their very
                 first encounter with the Arabic alphabet all the way through to
                 a confident reading of grammatical Arabic texts.
               </p>
-              <p>
-                Arabic is the language of the Qurʼān, the hadith, and classical
-                Islamic scholarship. A child who learns Arabic properly is a
-                child who can engage with the primary sources of their religion
-                directly, without the barrier of translation.
-              </p>
-              <p className="font-semibold text-midnight dark:text-cream italic border-s-4 border-gold ps-4 py-1">
-                Our programme treats Arabic not merely as a foreign language to
-                be learnt — but as a sacred inheritance to be reclaimed.
-              </p>
+              <p>{t("t2")}</p>
+              <p className="font-semibold text-midnight dark:text-cream italic border-s-4 border-gold ps-4 py-1">{t("t3")}</p>
             </div>
           </motion.div>
 
@@ -120,7 +102,7 @@ export default function ArabicProgramme() {
           >
             <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
               <BookText className="w-7 h-7 text-gold" />
-              Key Resources Used
+              {t("resources.title")}
             </h2>
             <ul className="space-y-6">
               {[
@@ -163,7 +145,7 @@ export default function ArabicProgramme() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
-              Programme at a Glance
+              {t("glance.title")}
             </h2>
             <div className="w-24 h-px bg-gold/50 mx-auto"></div>
           </div>
@@ -172,18 +154,10 @@ export default function ArabicProgramme() {
             <table className="w-full text-start border-collapse min-w-200">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
-                  <th className="py-4 px-6 font-cinzel text-gold text-lg w-20">
-                    Lvl
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-64">
-                    Resource / Focus
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">
-                    Duration
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    What Your Child Will Achieve
-                  </th>
+                  <th className="py-4 px-6 font-cinzel text-gold text-lg w-20">{t("t44")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-64">{t("t28")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">{t("t39")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t15")}</th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
@@ -191,66 +165,41 @@ export default function ArabicProgramme() {
                   <td className="py-4 px-6 font-bold font-cinzel text-xl text-center">
                     1
                   </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Qaaʼidah Nooraaniyyah
-                  </td>
-                  <td className="py-4 px-6">16 Weeks</td>
-                  <td className="py-4 px-6 leading-relaxed text-sm">
-                    Recognise and correctly pronounce all 28 Arabic letters with
-                    full diacritical marks
-                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t21")}</td>
+                  <td className="py-4 px-6">{t("t40")}</td>
+                  <td className="py-4 px-6 leading-relaxed text-sm">{t("t8")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
                   <td className="py-4 px-6 font-bold font-cinzel text-xl text-center">
                     2
                   </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Noorul Bayāan
-                  </td>
-                  <td className="py-4 px-6">16 Weeks</td>
-                  <td className="py-4 px-6 leading-relaxed text-sm">
-                    Join letters into words and read short Qurʼānic phrases with
-                    confidence
-                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t30")}</td>
+                  <td className="py-4 px-6">{t("t40")}</td>
+                  <td className="py-4 px-6 leading-relaxed text-sm">{t("t10")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
                   <td className="py-4 px-6 font-bold font-cinzel text-xl text-center">
                     3
                   </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Basic Conversations
-                  </td>
-                  <td className="py-4 px-6">16 Weeks</td>
-                  <td className="py-4 px-6 leading-relaxed text-sm">
-                    Hold simple Arabic conversations, name objects and people,
-                    use basic sentence structures
-                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t25")}</td>
+                  <td className="py-4 px-6">{t("t40")}</td>
+                  <td className="py-4 px-6 leading-relaxed text-sm">{t("t6")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
                   <td className="py-4 px-6 font-bold font-cinzel text-xl text-center">
                     4
                   </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Madīnah Arabic Book 1
-                  </td>
-                  <td className="py-4 px-6">16 Weeks</td>
-                  <td className="py-4 px-6 leading-relaxed text-sm">
-                    Read and understand basic Arabic grammar — pronouns, nouns,
-                    past tense verbs, adjectives
-                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t22")}</td>
+                  <td className="py-4 px-6">{t("t40")}</td>
+                  <td className="py-4 px-6 leading-relaxed text-sm">{t("t7")}</td>
                 </tr>
                 <tr className="hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
                   <td className="py-4 px-6 font-bold font-cinzel text-xl text-center">
                     5
                   </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Madīnah Arabic Book 2
-                  </td>
-                  <td className="py-4 px-6">16 Weeks</td>
-                  <td className="py-4 px-6 leading-relaxed text-sm">
-                    Command intermediate Arabic grammar — present tense,
-                    imperatives, plurals, relative clauses
-                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t23")}</td>
+                  <td className="py-4 px-6">{t("t40")}</td>
+                  <td className="py-4 px-6 leading-relaxed text-sm">{t("t5")}</td>
                 </tr>
               </tbody>
             </table>
@@ -261,9 +210,7 @@ export default function ArabicProgramme() {
       {/* 4. DETAILED COURSE OUTLINES */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
-            Detailed Master Plans
-          </h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t24")}</h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
 
@@ -271,11 +218,11 @@ export default function ArabicProgramme() {
           {/* LEVEL 1 */}
           <LevelCard
             levelNumber="1"
-            title="Qaaʼidah Nooraaniyyah"
+            title={t("t21")}
             arabicTitle="القاعدة النورانية"
             subtitle="Reading & Recognising Arabic Letters"
             resource="Qaaʼidah Nooraaniyyah — Shaykh Noor Muhammad Hāqiqānī"
-            duration="16 Weeks"
+            duration={t("t40")}
             frequency="3–4 Sessions per Week"
             aim="To teach students to correctly recognise, name, and pronounce all 28 Arabic letters in their isolated forms, with all short vowels, sukoon, tanween, shaddah, and madd letters."
             listTitle="What Students Learn"
@@ -298,11 +245,11 @@ export default function ArabicProgramme() {
           {/* LEVEL 2 */}
           <LevelCard
             levelNumber="2"
-            title="Noorul Bayāan"
+            title={t("t30")}
             arabicTitle="نور البيان"
             subtitle="Joining Letters & Words"
             resource="Noorul Bayāan — universally acclaimed Qurʼān primer"
-            duration="16 Weeks"
+            duration={t("t40")}
             frequency="3–4 Sessions per Week"
             aim="To teach students to join Arabic letters into complete words, read multi-letter words with diacritical marks, and begin reading short Qurʼānic āyāt and familiar phrases with fluency."
             listTitle="What Students Learn"
@@ -325,11 +272,11 @@ export default function ArabicProgramme() {
           {/* LEVEL 3 */}
           <LevelCard
             levelNumber="3"
-            title="Basic Arabic Conversations"
+            title={t("t19")}
             arabicTitle="المحادثة العربية الأساسية"
             subtitle="Speaking, Listening & Vocabulary"
             resource="Rawdatul Atfaal Applied Conversational Arabic"
-            duration="16 Weeks"
+            duration={t("t40")}
             frequency="3 Sessions per Week"
             aim="To equip students with practical Arabic communication skills — greeting, introducing themselves, describing objects, asking simple questions, and using MSA and Qurʼānic vocabulary."
             icon={<Speech className="w-5 h-5 text-gold" />}
@@ -356,11 +303,11 @@ export default function ArabicProgramme() {
           {/* LEVEL 4 */}
           <LevelCard
             levelNumber="4"
-            title="Madīnah Arabic Book 1"
+            title={t("t22")}
             arabicTitle="كتاب المدينة — الكتاب الأول"
             subtitle="Foundational Arabic Grammar & Reading"
             resource="Madīnah Arabic Reader Book 1 (Dr. V. Abdúr-Raḥeem)"
-            duration="16 Weeks"
+            duration={t("t40")}
             frequency="3–4 Sessions per Week"
             aim="To introduce formal Arabic grammar — covering demonstrative pronouns, noun gender, definite/indefinite nouns, adjective agreement, past tense verbs, and prepositions."
             listTitle="Grammar & Text Topics"
@@ -399,15 +346,9 @@ export default function ArabicProgramme() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
                 <div>
                   <div className="text-gold font-cinzel font-bold tracking-widest text-sm mb-2 flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-                    LEVEL 5 — ADVANCED
-                  </div>
-                  <h3 className="font-playfair text-2xl md:text-4xl text-white mb-2">
-                    Madīnah Arabic Book 2
-                  </h3>
-                  <p className="font-sans text-cream/70 text-sm md:text-base">
-                    Intermediate Arabic Grammar & Reading
-                  </p>
+                    <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>{t("t27")}</div>
+                  <h3 className="font-playfair text-2xl md:text-4xl text-white mb-2">{t("t23")}</h3>
+                  <p className="font-sans text-cream/70 text-sm md:text-base">{t("t13")}</p>
                 </div>
                 <div className="font-amiri text-2xl md:text-3xl text-gold/90 text-end">
                   كتاب المدينة — الكتاب الثاني
@@ -416,27 +357,17 @@ export default function ArabicProgramme() {
 
               <div className="grid md:grid-cols-2 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
                 <div>
-                  <strong className="text-white">Duration:</strong> 16 Weeks
-                </div>
+                  <strong className="text-white">{t("t36")}</strong>{t("t40")}</div>
                 <div>
-                  <strong className="text-white">Sessions:</strong> 3–4 Sessions
-                  per Week
-                </div>
+                  <strong className="text-white">{t("t37")}</strong>{t("t11")}</div>
               </div>
               <div className="text-sm text-cream/80 leading-relaxed">
-                <strong className="text-white block mb-1">Aim:</strong> To build
-                upon the grammar foundation of Book 1 and introduce intermediate
-                Arabic grammar structures: present tense verbs, relative
-                pronouns, active/passive participles, dual forms, imperatives,
-                and independent composition.
-              </div>
+                <strong className="text-white block mb-1">{t("t43")}</strong>{t("t1")}</div>
             </div>
 
             <div className="p-8 md:p-10 bg-white dark:bg-transparent relative z-10">
               <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-8 inline-flex items-center gap-3 border-b-2 border-gold/40 pb-2">
-                <LayoutList className="w-5 h-5 text-gold" /> Advanced Grammar
-                Focus
-              </h4>
+                <LayoutList className="w-5 h-5 text-gold" />{t("t12")}</h4>
               <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4 mb-12">
                 {[
                   "Mubtadaʼ and Khabar (in depth)",
@@ -469,16 +400,8 @@ export default function ArabicProgramme() {
               </div>
 
               <div className="bg-ivory dark:bg-midnight p-6 rounded-md border border-midnight/10 dark:border-white/10 text-center space-y-4">
-                <h5 className="font-cinzel font-bold text-midnight dark:text-cream text-lg">
-                  What Comes Next?
-                </h5>
-                <p className="font-sans text-midnight/80 dark:text-cream/80 text-sm max-w-2xl mx-auto leading-relaxed">
-                  Upon completing Level 5, students will have a solid grounding
-                  in Arabic grammar and will be ready to progress to Madīnah
-                  Arabic Book 3 and beyond — opening the door to reading
-                  classical Islamic texts, Qurʼānic tafsīr, and hadith
-                  literature directly in Arabic.
-                </p>
+                <h5 className="font-cinzel font-bold text-midnight dark:text-cream text-lg">{t("t29")}</h5>
+                <p className="font-sans text-midnight/80 dark:text-cream/80 text-sm max-w-2xl mx-auto leading-relaxed">{t("t0")}</p>
                 <p className="font-amiri text-gold text-lg italic tracking-widest pt-2">
                   وما توفيقي إلا بالله — عليه توكلت وإليه أنيب
                 </p>
@@ -492,48 +415,31 @@ export default function ArabicProgramme() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-gold mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
-            Begin Your Child&apos;s Journey
-          </h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
-            Give your child the key to the Qurʼān. Enrol them in the
-            comprehensive 5-level Arabic Language curriculum today.
-          </p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t14")}</h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t4")}</p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
-              Arabic Language Mentorship
-            </h3>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t18")}</h3>
             <div className="font-cormorant text-5xl text-gold mb-6">
               $1,200{" "}
-              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">
-                / year
-              </span>
+              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">{t("t42")}</span>
             </div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Guided 5-Level Path
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t26")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Reading to Advanced Grammar
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t17")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Madīnah Arabic Integrated
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t20")}</span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">
-                Enrol Now
-              </Button>
+              <Button variant="primary" className="w-full py-4 text-lg">{t("t38")}</Button>
             </Link>
           </div>
 
@@ -541,9 +447,7 @@ export default function ArabicProgramme() {
             <Link
               href="/programmes/islamic"
               className="text-gold hover:text-amber transition-colors font-sans underline underline-offset-4"
-            >
-              ← Back to Islamic Programmes
-            </Link>
+            >{t("t16")}</Link>
           </div>
         </div>
       </section>
@@ -577,6 +481,7 @@ function LevelCard({
   listItems: string[];
   icon?: React.ReactNode;
 }) {
+  const t = useTranslations("ProgArabic");
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -606,15 +511,15 @@ function LevelCard({
 
         <div className="grid md:grid-cols-2 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
           <div>
-            <strong className="text-white">Duration:</strong> {duration}
+            <strong className="text-white">{t("t36")}</strong> {duration}
           </div>
           <div>
-            <strong className="text-white">Frequency:</strong> {frequency}
+            <strong className="text-white">{t("t34")}</strong> {frequency}
           </div>
         </div>
 
         <div className="text-sm text-cream/80 leading-relaxed text-justify md:text-start">
-          <strong className="text-white block mb-1">Aim:</strong> {aim}
+          <strong className="text-white block mb-1">{t("t43")}</strong> {aim}
         </div>
       </div>
 

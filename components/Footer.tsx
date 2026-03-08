@@ -1,7 +1,10 @@
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Instagram, Facebook, PhoneIcon as WhatsappIcon } from "lucide-react";
 
 export default function Footer() {
+  const t = useTranslations("Navigation");
+
   return (
     <footer className="bg-ivory dark:bg-midnight border-t border-midnight/ dark:border-white/ pt-20 pb-10 text-midnight dark:text-cream relative overflow-hidden">
       {/* Background Star Texture */}
@@ -39,35 +42,28 @@ export default function Footer() {
               <span className="font-amiri text-gold/30 text-5xl md:text-6xl -mb-4 select-none pe-4">
                 روضة الأطفال
               </span>
-              <span className="font-cinzel text-midnight dark:text-cream text-2xl tracking-[0.2em] relative z-10">
-                RAWDATUL
-                <br />
-                ATFAAL
-              </span>
+              <span className="font-cinzel text-midnight dark:text-cream text-2xl tracking-[0.2em] relative z-10">{t("t7")}<br />{t("t13")}</span>
             </div>
-            <p className="font-playfair italic text-midnight/ dark:text-cream/ max-w-sm text-lg">
-              &quot;Where the roots of faith and the wings of knowledge grow
-              together.&quot;
-            </p>
+            <p className="font-playfair italic text-midnight/ dark:text-cream/ max-w-sm text-lg">{t("t0")}</p>
             <div className="flex space-x-4 pt-4">
               <a
                 href="#"
                 className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors block"
-                aria-label="Instagram"
+                aria-label={t("t6")}
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
                 className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors block"
-                aria-label="Facebook"
+                aria-label={t("t9")}
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
                 className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors block"
-                aria-label="WhatsApp"
+                aria-label={t("t10")}
               >
                 <WhatsappIcon className="w-5 h-5" />
               </a>
@@ -76,64 +72,49 @@ export default function Footer() {
 
           {/* Column 2 - Quick Links */}
           <div className="lg:ps-16">
-            <h3 className="font-cinzel text-lg tracking-wider text-gold mb-6">
-              Explore
-            </h3>
+            <h3 className="font-cinzel text-lg tracking-wider text-gold mb-6">{t("t11")}</h3>
             <ul className="space-y-4">
               <li>
                 <Link
                   href="/"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >
-                  Home
-                </Link>
+                >{t("home")}</Link>
               </li>
               <li>
                 <Link
                   href="/about"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >
-                  About Us
-                </Link>
+                >{t("t8")}</Link>
               </li>
               <li>
                 <Link
                   href="/programmes/islamic"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >
-                  Islamic Programme
-                </Link>
+                >{t("islamicProgramme")}</Link>
               </li>
               <li>
                 <Link
                   href="/programmes/western"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >
-                  Western Programme
-                </Link>
+                >{t("westernProgramme")}</Link>
               </li>
               <li>
                 <Link
                   href="/fees"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >
-                  Fees & Tuition
-                </Link>
+                >{t("t4")}</Link>
               </li>
               <li>
                 <Link
                   href="/contact"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >
-                  Contact
-                </Link>
+                >{t("t12")}</Link>
               </li>
               <li>
                 <Link
                   href="/enrol"
                   className="text-gold font-medium hover:text-amber transition-colors opacity-100 font-sans text-sm tracking-wide flex items-center"
-                >
-                  Enrol Now <span className="ms-1">→</span>
+                >{t("enroll")}<span className="ms-1">→</span>
                 </Link>
               </li>
             </ul>
@@ -141,17 +122,13 @@ export default function Footer() {
 
           {/* Column 3 - Contact */}
           <div>
-            <h3 className="font-cinzel text-lg tracking-wider text-gold mb-6">
-              Get in Touch
-            </h3>
+            <h3 className="font-cinzel text-lg tracking-wider text-gold mb-6">{t("t5")}</h3>
             <ul className="space-y-4 text-sm font-sans tracking-wide">
               <li>
                 <a
                   href="mailto:hello@rawdatulatfaal.edu"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors"
-                >
-                  hello@rawdatulatfaal.edu
-                </a>
+                >{t("t2")}</a>
               </li>
               <li>
                 <a
@@ -161,9 +138,7 @@ export default function Footer() {
                   +1 (234) 567-890
                 </a>
               </li>
-              <li className="text-midnight/ dark:text-cream/ pt-4 italic font-playfair pe-8">
-                Enquiries responded to within 24 hours.
-              </li>
+              <li className="text-midnight/ dark:text-cream/ pt-4 italic font-playfair pe-8">{t("t1")}</li>
             </ul>
           </div>
         </div>
@@ -176,9 +151,7 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Rawdatul Atfaal. All rights
               reserved.
             </p>
-            <p className="mt-2 md:mt-0 font-cormorant text-sm">
-              Academic Year 2024–2025
-            </p>
+            <p className="mt-2 md:mt-0 font-cormorant text-sm">{t("t3")}</p>
           </div>
         </div>
       </div>

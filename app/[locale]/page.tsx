@@ -7,29 +7,26 @@ import { ChevronDown, ArrowRight, Quote } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 
-const testimonials = [
-  {
-    quote:
-      "My son's tajweed has improved so much, and yet he still loves building robots in the programming class. This school is exactly what we were looking for.",
-    author: "ZAYNAB A.",
-    location: "Parent of Grade 3 Student",
-  },
-  {
-    quote:
-      "I used to worry about the balance between Islam and academics. Now I see my daughter thriving in both. It's a weight off our shoulders.",
-    author: "OMAR F.",
-    location: "Parent of Grade 5 Student",
-  },
-  {
-    quote:
-      "The teachers truly care. It's not just a school; it feels like a community that supports our family's values.",
-    author: "FATIMA S.",
-    location: "Parent of Grade 1 Student",
-  },
-];
-
 export default function Home() {
   const t = useTranslations("Hero");
+  const h = useTranslations("Home");
+  const testimonials = [
+    {
+      quote: h("testimonials.t1.quote"),
+      author: h("testimonials.t1.author"),
+      location: h("testimonials.t1.role"),
+    },
+    {
+      quote: h("testimonials.t2.quote"),
+      author: h("testimonials.t2.author"),
+      location: h("testimonials.t2.role"),
+    },
+    {
+      quote: h("testimonials.t3.quote"),
+      author: h("testimonials.t3.author"),
+      location: h("testimonials.t3.role"),
+    },
+  ];
   const [mounted, setMounted] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
 
@@ -132,10 +129,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/5">
             {[
-              { number: "9", label: "Programmes Offered" },
-              { number: "5", label: "Age to Begin" },
-              { number: "6", label: "Levels Per Course" },
-              { number: "100%", label: "Commitment to Excellence" },
+              { number: "9", label: h("stats.programmes") },
+              { number: "5", label: h("stats.age") },
+              { number: "6", label: h("stats.levels") },
+              { number: "100%", label: h("stats.commitment") },
             ].map((stat, i) => (
               <div
                 key={i}
@@ -161,21 +158,11 @@ export default function Home() {
               <div className="absolute inset-s-0 top-0 bottom-0 w-px bg-gold"></div>
               <Quote className="text-gold w-12 h-12 mb-6 opacity-50" />
               <blockquote className="font-playfair italic text-3xl md:text-4xl leading-snug text-midnight mb-8">
-                &quot;We don&apos;t just teach children. We nurture the people
-                they are becoming.&quot;
+                {h("story.quote")}
               </blockquote>
               <div className="space-y-6 text-midnight/80 font-sans leading-relaxed text-lg">
-                <p>
-                  Founded on a simple but profound belief: a Muslim child
-                  deserves both a strong Islamic identity AND a rigorous
-                  academic education. There should be no compromise between deen
-                  and duniya.
-                </p>
-                <p>
-                  At Rawdatul Atfaal, we demand excellence in both, raising a
-                  generation grounded in their faith and fully equipped to
-                  navigate and lead in the modern world.
-                </p>
+                <p>{h("story.p1")}</p>
+                <p>{h("story.p2")}</p>
               </div>
             </div>
 
@@ -222,7 +209,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream tracking-wider mb-4">
-              Our Dual Curriculum
+              {h("dualCurriculum.title")}
             </h2>
             <div className="w-24 h-px bg-gold mx-auto"></div>
           </div>
@@ -246,26 +233,27 @@ export default function Home() {
                 </div>
 
                 <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-2">
-                  THE ISLAMIC PROGRAMME
+                  {h("dualCurriculum.islamic.title")}
                 </h3>
                 <p className="font-amiri text-gold text-xl mb-6">
                   ???????? ????????
                 </p>
 
                 <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
-                  Qur&apos;an | Arabic | Tawheed | Fiqh | Hadith | Mutoon
+                  {h("dualCurriculum.islamic.courses")}
                 </p>
 
                 <div className="mt-auto flex flex-col items-center space-y-4 w-full">
                   <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
-                    Individual courses from{" "}
-                    <span className="text-amber">$1,200</span> / year
+                    {h("dualCurriculum.islamic.indivFrom")}{" "}
+                    <span className="text-amber">$1,200</span>{" "}
+                    {h("fees.perYear")}
                     <br />
-                    Full Bundle from{" "}
+                    {h("dualCurriculum.islamic.bundleFrom")}{" "}
                     <span className="text-gold font-bold">$5,000</span>
                   </div>
                   <div className="w-full text-center py-3 border border-gold text-gold group-hover:bg-gold group-hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block">
-                    Explore Islamic Courses &rarr;
+                    {h("dualCurriculum.islamic.explore")}
                   </div>
                 </div>
               </div>
@@ -291,26 +279,25 @@ export default function Home() {
                 </div>
 
                 <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-2">
-                  THE WESTERN PROGRAMME
+                  {h("dualCurriculum.western.title")}
                 </h3>
                 <p className="font-amiri text-gold text-xl mb-6">
                   ???????? ????????
                 </p>
 
-                <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
-                  Mathematics Sciences Programming
-                </p>
+                <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">{t("tNaN")}</p>
 
                 <div className="mt-auto flex flex-col items-center space-y-4 w-full">
                   <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
-                    Individual courses from{" "}
-                    <span className="text-amber">$2,000</span> / year
+                    {h("dualCurriculum.islamic.indivFrom")}{" "}
+                    <span className="text-amber">$2,000</span>{" "}
+                    {h("fees.perYear")}
                     <br />
-                    Full Bundle from{" "}
+                    {h("dualCurriculum.islamic.bundleFrom")}{" "}
                     <span className="text-gold font-bold">$5,000</span>
                   </div>
                   <div className="w-full text-center py-3 border border-gold text-gold group-hover:bg-gold group-hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block">
-                    Explore Western Courses &rarr;
+                    {h("dualCurriculum.western.explore")}
                   </div>
                 </div>
               </div>
@@ -322,9 +309,7 @@ export default function Home() {
       {/* INDIVIDUAL COURSE CARDS */}
       <section className="bg-ivory dark:bg-midnight pb-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <h3 className="font-cinzel text-xl text-midnight/ dark:text-cream/ uppercase tracking-widest ps-4 border-s border-gold/50">
-            All 9 Courses At A Glance
-          </h3>
+          <h3 className="font-cinzel text-xl text-midnight/ dark:text-cream/ uppercase tracking-widest ps-4 border-s border-gold/50">{t("tNaN")}</h3>
         </div>
 
         <div className="flex overflow-x-auto pb-8 hide-scrollbar snap-x snap-mandatory px-4 md:px-8 gap-6 max-w-[100vw]">
@@ -401,9 +386,7 @@ export default function Home() {
                   <h4 className="font-playfair text-2xl text-midnight dark:text-cream">
                     {course.name}
                   </h4>
-                  <span className="text-midnight/30 dark:text-cream/30 group-hover:text-gold transition-colors font-sans">
-                    &rarr;
-                  </span>
+                  <span className="text-midnight/30 dark:text-cream/30 group-hover:text-gold transition-colors font-sans">{t("tNaN")}</span>
                 </div>
                 <p className="font-sans text-midnight/70 dark:text-muted text-sm mb-6">
                   {course.levels}
@@ -411,7 +394,7 @@ export default function Home() {
                 <div className="font-cormorant text-xl text-amber">
                   From {course.price}{" "}
                   <span className="text-sm text-midnight/70 dark:text-muted">
-                    / year
+                    {h("fees.perYear")}
                   </span>
                 </div>
               </div>
@@ -424,7 +407,7 @@ export default function Home() {
       <section className="bg-warm dark:bg-deep py-24 border-t border-midnight/ dark:border-white/ relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream tracking-wider mb-16">
-            What Families Say
+            {h("testimonials.title")}
           </h2>
 
           <div className="relative min-h-62.5 flex items-center justify-center">
@@ -475,44 +458,43 @@ export default function Home() {
       <section className="bg-white dark:bg-cream py-24 border-y border-gold/10 text-midnight relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-cinzel text-3xl md:text-5xl text-midnight tracking-wider mb-6">
-            Transparent, Fair Pricing
+            {h("fees.title")}
           </h2>
           <p className="font-sans text-midnight/70 max-w-2xl mx-auto mb-12 text-lg">
-            No hidden fees. No surprises. Just exceptional education. Families
-            first.
+            {h("fees.description")}
           </p>
 
           <div className="bg-white rounded-md shadow-2xl p-8 md:p-12 mb-10 border border-gold/20 max-w-2xl mx-auto relative overflow-hidden">
             <div className="absolute top-0 inset-e-0 w-32 h-32 bg-gold/5 rounded-es-full"></div>
 
             <div className="text-sm font-cinzel text-gold tracking-widest mb-4 uppercase">
-              All Islamic Courses Bundle
+              {h("fees.bundleName")}
             </div>
             <div className="font-cormorant text-5xl md:text-7xl text-midnight mb-2 font-medium">
               $5,000{" "}
               <span className="text-xl md:text-2xl text-midnight/50 font-sans">
-                / year
+                {h("fees.perYear")}
               </span>
             </div>
             <p className="text-midnight/60 mb-10 italic font-playfair text-lg">
-              Equivalent to exactly $416 / month
+              {h("fees.monthlyEquiv")}
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 text-xs font-sans tracking-wider uppercase text-midnight/50 mb-10">
               <span className="px-4 py-2 bg-ivory/ dark:bg-midnight/ rounded-sm">
-                Monthly
+                {h("fees.monthlyTag")}
               </span>
               <span className="px-4 py-2 bg-ivory/ dark:bg-midnight/ rounded-sm">
-                Semester
+                {h("fees.semesterTag")}
               </span>
               <span className="px-4 py-2 bg-gold/10 text-gold font-bold rounded-sm border border-gold/20">
-                Annual (10% Off)
+                {h("fees.annualTag")}
               </span>
             </div>
 
             <Link href="/fees">
               <Button variant="primary" className="w-full sm:w-auto px-12 py-4">
-                See Full Pricing Grid
+                {h("fees.seeGrid")}
               </Button>
             </Link>
           </div>
@@ -527,22 +509,27 @@ export default function Home() {
 
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="font-playfair italic text-4xl md:text-6xl text-midnight dark:text-cream mb-6 leading-tight">
-            &quot;Give your child the
-            <br />
-            foundation they deserve.&quot;
+            {h("cta.quote")
+              .split("\\n")
+              .map((line, i) => (
+                <span key={i}>
+                  {line}
+                  <br />
+                </span>
+              ))}
           </h2>
           <p className="font-sans text-midnight/70 dark:text-muted text-xl mb-12">
-            Registration for the 20242025 academic year is now open.
+            {h("cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
             <Link href="/enrol">
               <Button variant="primary" className="px-10 py-4 text-lg">
-                Enrol Now
+                {h("cta.enrol")}
               </Button>
             </Link>
             <Link href="/contact">
               <Button variant="ghost" className="px-10 py-4 text-lg">
-                Contact Us
+                {h("cta.contact")}
               </Button>
             </Link>
           </div>

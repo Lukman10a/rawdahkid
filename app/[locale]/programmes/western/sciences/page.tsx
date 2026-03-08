@@ -12,7 +12,11 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
+import { useTranslations } from "next-intl";
+
 export default function SciencesProgramme() {
+  const t = useTranslations("ProgSciences");
+
   return (
     <div className="flex flex-col min-h-screen bg-ivory dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* 1. HERO SECTION */}
@@ -29,25 +33,18 @@ export default function SciencesProgramme() {
             <div className="inline-flex items-center justify-center p-3 bg-emerald-500/10 dark:bg-emerald-400/10 rounded-full mb-6">
               <Atom className="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
             </div>
-            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
-              Sciences
-            </h1>
-            <h2 className="font-sans text-xl md:text-2xl text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-6 font-semibold">
-              NGSS → GCSE/IGCSE Track
-            </h2>
+            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">{t("t0")}</h1>
+            <h2 className="font-sans text-xl md:text-2xl text-emerald-600 dark:text-emerald-400 uppercase tracking-widest mb-6 font-semibold">{t("t1")}</h2>
 
             <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-8 flex flex-wrap justify-center gap-2">
-              <span>Biology</span>
-              <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
-              <span>Chemistry</span>
-              <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
-              <span>Physics</span>
+              <span>{t("t2")}</span>
+              <span className="hidden sm:inline">{t("t3")}</span>
+              <span>{t("t4")}</span>
+              <span className="hidden sm:inline">{t("t3")}</span>
+              <span>{t("t6")}</span>
             </div>
 
-            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">
-              &quot;Students do not just learn science — they think,
-              investigate, and communicate like scientists.&quot;
-            </p>
+            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">{t("t7")}</p>
           </motion.div>
         </div>
       </section>
@@ -62,23 +59,11 @@ export default function SciencesProgramme() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-cinzel text-3xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <Compass className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
-              Programme Overview
-            </h2>
+              <Compass className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />{t("t8")}</h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
-              <p>
-                Science is taught as an inquiry-driven discipline from the
-                earliest years, transitioning from integrated NGSS-aligned
-                science in Levels 1–5, to disciplinary science from Level 6.
-              </p>
-              <p>
-                This culminates in full GCSE/IGCSE preparation with an A-Level
-                bridge in Level 10, giving students a serious academic edge.
-              </p>
-              <p className="font-semibold text-midnight dark:text-cream italic border-s-4 border-emerald-600 dark:border-emerald-400 ps-4 py-1">
-                We believe in hands-on exploration, rigorous data analysis, and
-                an appreciation for the precision of the natural world.
-              </p>
+              <p>{t("t9")}</p>
+              <p>{t("t10")}</p>
+              <p className="font-semibold text-midnight dark:text-cream italic border-s-4 border-emerald-600 dark:border-emerald-400 ps-4 py-1">{t("t11")}</p>
             </div>
           </motion.div>
 
@@ -90,9 +75,7 @@ export default function SciencesProgramme() {
             className="bg-white/80 dark:bg-navy/80 p-8 md:p-10 border border-midnight/5 dark:border-white/5 rounded-sm"
           >
             <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <Microscope className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />
-              Core Progression
-            </h2>
+              <Microscope className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />{t("t12")}</h2>
             <ul className="space-y-6">
               {[
                 {
@@ -133,9 +116,7 @@ export default function SciencesProgramme() {
       <section className="py-20 bg-emerald-50/50 dark:bg-emerald-900/10 border-y border-midnight/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
-              Sciences at a Glance
-            </h2>
+            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">{t("t13")}</h2>
             <div className="w-24 h-px bg-emerald-600/50 dark:bg-emerald-400/50 mx-auto"></div>
           </div>
 
@@ -143,15 +124,9 @@ export default function SciencesProgramme() {
             <table className="w-full text-start border-collapse min-w-200">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
-                  <th className="py-4 px-6 font-cinzel text-emerald-700 dark:text-emerald-400 text-lg w-20">
-                    Lvl
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">
-                    Age
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Primary Focus
-                  </th>
+                  <th className="py-4 px-6 font-cinzel text-emerald-700 dark:text-emerald-400 text-lg w-20">{t("t14")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">{t("t15")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t16")}</th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
@@ -231,17 +206,15 @@ export default function SciencesProgramme() {
       {/* 4. DETAILED COURSE OUTLINES */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
-            Detailed Master Plans
-          </h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t17")}</h2>
           <div className="w-24 h-px bg-emerald-600/50 dark:bg-emerald-400/50 mx-auto"></div>
         </div>
 
         <div className="space-y-24">
           <LevelCard
             levelNumber="1"
-            title="Curiosity & the Natural World"
-            subtitle="Grade 1"
+            title={t("t36")}
+            subtitle={t("t44")}
             ageGroup="Ages 6–7 | NGSS Kindergarten–Grade 1"
             duration="36 Weeks | 2–3 Sessions/Week | 40 Min/Session"
             aim="To develop curiosity about the natural world through observation, questioning, and hands-on exploration of weather, plants, animals, and materials."
@@ -291,8 +264,8 @@ export default function SciencesProgramme() {
 
           <LevelCard
             levelNumber="2"
-            title="Life Cycles & Matter"
-            subtitle="Grade 2"
+            title={t("t41")}
+            subtitle={t("t45")}
             ageGroup="Ages 7–8 | NGSS Grade 2"
             duration="36 Weeks | 2–3 Sessions/Week | 40 Min/Session"
             aim="To investigate life cycles, properties of matter, Earth materials, and the engineering design process through inquiry-based learning."
@@ -342,8 +315,8 @@ export default function SciencesProgramme() {
 
           <LevelCard
             levelNumber="3"
-            title="Forces, Ecosystems & Climate"
-            subtitle="Grade 3"
+            title={t("t37")}
+            subtitle={t("t46")}
             ageGroup="Ages 8–9 | NGSS Grade 3"
             duration="36 Weeks | 2–3 Sessions/Week | 45 Min/Session"
             aim="To investigate forces, traits and inheritance, fossils, ecosystems, and climate patterns through structured scientific inquiry."
@@ -393,8 +366,8 @@ export default function SciencesProgramme() {
 
           <LevelCard
             levelNumber="4"
-            title="Energy, Waves & Earth's History"
-            subtitle="Grade 4"
+            title={t("t42")}
+            subtitle={t("t47")}
             ageGroup="Ages 9–10 | NGSS Grade 4"
             duration="36 Weeks | 2–3 Sessions/Week | 45 Min/Session"
             aim="To study energy transfer, wave behaviour, Earth's geological history, and plant and animal internal structures."
@@ -444,8 +417,8 @@ export default function SciencesProgramme() {
 
           <LevelCard
             levelNumber="5"
-            title="Matter, Space & Body Systems"
-            subtitle="Grade 5"
+            title={t("t38")}
+            subtitle={t("t48")}
             ageGroup="Ages 10–11 | NGSS Grade 5"
             duration="36 Weeks | 2–3 Sessions/Week | 50 Min/Session"
             aim="To study matter at the atomic level, Earth's systems, the solar system, and human body systems — preparing students for secondary science."
@@ -495,8 +468,8 @@ export default function SciencesProgramme() {
 
           <LevelCard
             levelNumber="6"
-            title="Cells, Chemistry & Earth Science"
-            subtitle="Grade 6"
+            title={t("t34")}
+            subtitle={t("t49")}
             ageGroup="Ages 11–12 | Lower Secondary Science"
             duration="36 Weeks | 3 Sessions/Week | 50 Min/Session"
             aim="To introduce cell biology, foundational chemistry, Earth structure, and begin the transition to disciplinary science study."
@@ -546,8 +519,8 @@ export default function SciencesProgramme() {
 
           <LevelCard
             levelNumber="7"
-            title="Biology, Physics & Chemistry"
-            subtitle="Grade 7"
+            title={t("t39")}
+            subtitle={t("t50")}
             ageGroup="Ages 12–13 | Lower Secondary Science"
             duration="36 Weeks | 3 Sessions/Week | 55 Min/Session"
             aim="To study fundamental biology, physics, and chemistry in a structured, discipline-aware manner, building towards GCSE/IGCSE-level work."
@@ -597,8 +570,8 @@ export default function SciencesProgramme() {
 
           <LevelCard
             levelNumber="8"
-            title="Advanced Biology, Chemistry & Physics"
-            subtitle="Grade 8"
+            title={t("t32")}
+            subtitle={t("t51")}
             ageGroup="Ages 13–14 | GCSE/IGCSE Foundation"
             duration="36 Weeks | 3 Sessions/Week | 55 Min/Session"
             aim="To advance in all three sciences at GCSE/IGCSE foundation level, developing the analytical skills needed for formal examinations."
@@ -648,8 +621,8 @@ export default function SciencesProgramme() {
 
           <LevelCard
             levelNumber="9"
-            title="GCSE Biology, Chemistry, Physics"
-            subtitle="Grade 9"
+            title={t("t35")}
+            subtitle={t("t52")}
             ageGroup="Ages 14–15 | GCSE/IGCSE Year 1"
             duration="36 Weeks | 3 Sessions/Week | 60 Min/Session"
             aim="To complete GCSE/IGCSE core content across all three sciences, developing exam skills, required practicals, and scientific communication."
@@ -699,8 +672,8 @@ export default function SciencesProgramme() {
 
           <LevelCard
             levelNumber="10"
-            title="GCSE Completion & A-Level Preparation"
-            subtitle="Grade 10"
+            title={t("t33")}
+            subtitle={t("t43")}
             ageGroup="Ages 15–16 | GCSE/IGCSE Year 2 & Beyond"
             duration="36 Weeks | 3 Sessions/Week | 60 Min/Session"
             aim="To complete GCSE/IGCSE preparation, master all required content, and introduce students to A-Level/pre-university science thinking."
@@ -754,45 +727,28 @@ export default function SciencesProgramme() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-emerald-600 dark:text-emerald-400 mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
-            Empower Their Discovery
-          </h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
-            Give your child the scientific literacy to thrive in higher
-            academics and understand the world around them deeply.
-          </p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t18")}</h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t19")}</p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-emerald-600/30 dark:border-emerald-400/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
-              Sciences Programme
-            </h3>
-            <div className="font-cormorant text-5xl text-emerald-600 dark:text-emerald-400 mb-6">
-              Core
-            </div>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t20")}</h3>
+            <div className="font-cormorant text-5xl text-emerald-600 dark:text-emerald-400 mb-6">{t("t21")}</div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Biology, Chemistry, Physics
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t22")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  GCSE/IGCSE Track
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t23")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Inquiry-Driven Labs
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t24")}</span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">
-                Enrol Now
-              </Button>
+              <Button variant="primary" className="w-full py-4 text-lg">{t("t25")}</Button>
             </Link>
           </div>
 
@@ -800,9 +756,7 @@ export default function SciencesProgramme() {
             <Link
               href="/programmes/western"
               className="text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors font-sans underline underline-offset-4"
-            >
-              ← Back to Core Programmes
-            </Link>
+            >{t("t26")}</Link>
           </div>
         </div>
       </section>
@@ -828,6 +782,7 @@ function LevelCard({
   aim: string;
   units: { no: number; topic: string; skills: string }[];
 }) {
+  const t = useTranslations("ProgSciences");
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -858,13 +813,13 @@ function LevelCard({
 
         <div className="grid md:grid-cols-1 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
           <div>
-            <strong className="text-white">Duration / Frequency:</strong>{" "}
+            <strong className="text-white">{t("t27")}</strong>{" "}
             {duration}
           </div>
         </div>
 
         <div className="text-sm text-cream/80 leading-relaxed text-justify md:text-start">
-          <strong className="text-white block mb-1">Aim:</strong> {aim}
+          <strong className="text-white block mb-1">{t("t28")}</strong> {aim}
         </div>
       </div>
 
@@ -873,15 +828,9 @@ function LevelCard({
           <table className="w-full text-start border-collapse min-w-200">
             <thead>
               <tr className="border-b-2 border-emerald-100 dark:border-white/10 bg-emerald-50/50 dark:bg-white/5">
-                <th className="py-4 px-6 font-cinzel text-emerald-700 dark:text-emerald-400 font-bold w-16 text-center">
-                  Unit
-                </th>
-                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold w-1/2">
-                  Unit / Topic
-                </th>
-                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold">
-                  Key Skills / Outcomes
-                </th>
+                <th className="py-4 px-6 font-cinzel text-emerald-700 dark:text-emerald-400 font-bold w-16 text-center">{t("t29")}</th>
+                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold w-1/2">{t("t30")}</th>
+                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold">{t("t31")}</th>
               </tr>
             </thead>
             <tbody className="font-sans text-midnight/80 dark:text-cream/80 text-sm">

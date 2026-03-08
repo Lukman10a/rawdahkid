@@ -5,7 +5,11 @@ import { BookOpen, CheckCircle, GraduationCap, LayoutList } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
+import { useTranslations } from "next-intl";
+
 export default function TawheedProgramme() {
+  const t = useTranslations("ProgTawheed");
+
   return (
     <div className="flex flex-col min-h-screen bg-ivory dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* 1. HERO SECTION */}
@@ -19,27 +23,18 @@ export default function TawheedProgramme() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-amiri text-gold text-2xl md:text-3xl mb-4">
-              بسم الله الرحمن الرحيم
-            </p>
-            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
-              Tawheed Curriculum
-            </h1>
-            <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">
-              التوحيد
-            </p>
+            <p className="font-amiri text-gold text-2xl md:text-3xl mb-4">{t("t0")}</p>
+            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">{t("t1")}</h1>
+            <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">{t("t2")}</p>
             <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-6 flex flex-wrap justify-center items-center gap-2">
-              <span>Islamic Monotheism</span>
-              <span className="hidden sm:inline">&nbsp;|&nbsp;</span>
-              <span>Levels 1–5</span>
-              <span className="hidden sm:inline">&nbsp;|&nbsp;</span>
-              <span>Basic Programme</span>
+              <span>{t("t3")}</span>
+              <span className="hidden sm:inline">{t("t4")}</span>
+              <span>{t("t5")}</span>
+              <span className="hidden sm:inline">{t("t4")}</span>
+              <span>{t("t7")}</span>
             </div>
 
-            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">
-              &quot;Equipping young Muslims with sound knowledge of their
-              religion&quot;
-            </p>
+            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">{t("t8")}</p>
           </motion.div>
         </div>
       </section>
@@ -55,26 +50,11 @@ export default function TawheedProgramme() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-cinzel text-3xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <BookOpen className="w-8 h-8 text-gold" />
-              Programme Overview
-            </h2>
+              <BookOpen className="w-8 h-8 text-gold" />{t("t9")}</h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
-              <p>
-                The Rawdatul Atfaal Tawheed Curriculum is a structured,
-                progressive programme designed to instill in young learners a
-                firm and correct understanding of Islamic monotheism (Tawheed).
-              </p>
-              <p>
-                Rooted in the renowned Saudi Arabia school curriculum, the
-                programme guides students through five carefully sequenced
-                levels — from foundational beliefs about Allah&apos;s Lordship
-                to a comprehensive study of Al-Usool Ath-Thalaathah.
-              </p>
-              <p>
-                Each level builds upon the previous, ensuring depth of
-                understanding, retention of core Islamic principles, and an
-                unshakeable belief system.
-              </p>
+              <p>{t("t10")}</p>
+              <p>{t("t11")}</p>
+              <p>{t("t12")}</p>
             </div>
           </motion.div>
 
@@ -86,9 +66,7 @@ export default function TawheedProgramme() {
             transition={{ duration: 0.6 }}
             className="bg-white/80 dark:bg-navy/80 p-8 md:p-10 border border-midnight/5 dark:border-white/5 rounded-sm"
           >
-            <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6">
-              Core Methodologies
-            </h2>
+            <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6">{t("t13")}</h2>
             <ul className="space-y-5">
               {[
                 "Established upon the authentic methodology and Saudi Arabia school curriculum.",
@@ -113,9 +91,7 @@ export default function TawheedProgramme() {
       <section className="py-20 bg-warm/30 dark:bg-deep/30 border-y border-midnight/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
-              Curriculum at a Glance
-            </h2>
+            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">{t("t14")}</h2>
             <div className="w-24 h-px bg-gold/50 mx-auto"></div>
           </div>
 
@@ -123,80 +99,42 @@ export default function TawheedProgramme() {
             <table className="w-full text-start border-collapse">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
-                  <th className="py-4 px-6 font-cinzel text-gold text-lg">
-                    Level
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Class Name
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Duration
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Key Focus
-                  </th>
+                  <th className="py-4 px-6 font-cinzel text-gold text-lg">{t("t15")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t16")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t17")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t18")}</th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
-                    Basic 1
-                  </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Aaisha&apos;s Rawdah
-                  </td>
-                  <td className="py-4 px-6">12 Weeks</td>
-                  <td className="py-4 px-6 leading-relaxed">
-                    Allah&apos;s Lordship & tenets of faith
-                  </td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t19")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t20")}</td>
+                  <td className="py-4 px-6">{t("t21")}</td>
+                  <td className="py-4 px-6 leading-relaxed">{t("t22")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
-                    Basic 2
-                  </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Faatimah&apos;s Rawdah
-                  </td>
-                  <td className="py-4 px-6">16 Weeks</td>
-                  <td className="py-4 px-6 leading-relaxed">
-                    Fundamentals of the deen & pillars of Islam
-                  </td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t23")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t24")}</td>
+                  <td className="py-4 px-6">{t("t25")}</td>
+                  <td className="py-4 px-6 leading-relaxed">{t("t26")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
-                    Basic 3
-                  </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Hafsah&apos;s Rawdah
-                  </td>
-                  <td className="py-4 px-6">16 Weeks</td>
-                  <td className="py-4 px-6 leading-relaxed">
-                    Levels of the religion in depth
-                  </td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t27")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t28")}</td>
+                  <td className="py-4 px-6">{t("t25")}</td>
+                  <td className="py-4 px-6 leading-relaxed">{t("t30")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
-                    Basic 4
-                  </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Khadeejah&apos;s Rawdah
-                  </td>
-                  <td className="py-4 px-6">16 Weeks</td>
-                  <td className="py-4 px-6 leading-relaxed">
-                    Tawheed, its types and nullifiers
-                  </td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t31")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t32")}</td>
+                  <td className="py-4 px-6">{t("t25")}</td>
+                  <td className="py-4 px-6 leading-relaxed">{t("t34")}</td>
                 </tr>
                 <tr className="hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
-                    Basic 5
-                  </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Zainab&apos;s Rawdah
-                  </td>
-                  <td className="py-4 px-6">16 Weeks</td>
-                  <td className="py-4 px-6 leading-relaxed">
-                    Al-Usool Ath-Thalaathah: memorisation & explanation
-                  </td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t35")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t36")}</td>
+                  <td className="py-4 px-6">{t("t25")}</td>
+                  <td className="py-4 px-6 leading-relaxed">{t("t38")}</td>
                 </tr>
               </tbody>
             </table>
@@ -207,9 +145,7 @@ export default function TawheedProgramme() {
       {/* 4. DETAILED COURSE OUTLINES */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
-            Detailed Lesson Plans by Level
-          </h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t39")}</h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
 
@@ -217,7 +153,7 @@ export default function TawheedProgramme() {
           {/* LEVEL 1 */}
           <SingleSectionLevelCard
             levelNumber="1"
-            title="Aaisha's Rawdah"
+            title={t("t20")}
             duration="12 Weeks"
             classDuration="40 Minutes per Session"
             aim="To provide foundational knowledge about Allah's Lordship, the reason for existence and the basic tenets of the religion."
@@ -238,7 +174,7 @@ export default function TawheedProgramme() {
           {/* LEVEL 2 */}
           <DualSectionLevelCard
             levelNumber="2"
-            title="Faatimah's Rawdah"
+            title={t("t24")}
             duration="16 Weeks"
             classDuration="40 Minutes per Session"
             aim="To teach the fundamentals of the deen, the pillars of Islam, to understand the reason for creation and tawheed."
@@ -267,7 +203,7 @@ export default function TawheedProgramme() {
           {/* LEVEL 3 */}
           <SingleSectionLevelCard
             levelNumber="3"
-            title="Hafsah's Rawdah"
+            title={t("t28")}
             duration="16 Weeks"
             classDuration="40 Minutes per Session"
             aim="To learn the levels of the religion, what each level necessitates and how to attain perfection in each."
@@ -290,7 +226,7 @@ export default function TawheedProgramme() {
           {/* LEVEL 4 */}
           <SingleSectionLevelCard
             levelNumber="4"
-            title="Khadeejah's Rawdah"
+            title={t("t32")}
             duration="16 Weeks"
             classDuration="40 Minutes per Session"
             aim="To teach the true tawheed, types of tawheed and some of its nullifiers."
@@ -327,80 +263,41 @@ export default function TawheedProgramme() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
                 <div>
                   <div className="text-gold font-cinzel font-bold tracking-widest text-sm mb-2 flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-                    LEVEL 5 — CAPSTONE
-                  </div>
-                  <h3 className="font-playfair text-2xl md:text-3xl text-white mb-2">
-                    Zainab&apos;s Rawdah
-                  </h3>
-                  <p className="font-sans text-cream/70">
-                    Al-Usool Ath-Thalaathah (The Three Fundamental Principles)
-                  </p>
+                    <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>{t("t40")}</div>
+                  <h3 className="font-playfair text-2xl md:text-3xl text-white mb-2">{t("t36")}</h3>
+                  <p className="font-sans text-cream/70">{t("t42")}</p>
                 </div>
-                <div className="font-amiri text-2xl md:text-3xl text-gold/90 text-end">
-                  الأصول الثلاثة
-                </div>
+                <div className="font-amiri text-2xl md:text-3xl text-gold/90 text-end">{t("t43")}</div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
                 <div>
-                  <strong className="text-white">Duration:</strong> 16 Weeks
-                </div>
+                  <strong className="text-white">{t("t44")}</strong>{t("t25")}</div>
                 <div>
-                  <strong className="text-white">Sessions:</strong> 40 Minutes
-                  per Session
-                </div>
+                  <strong className="text-white">{t("t46")}</strong>{t("t47")}</div>
               </div>
               <div className="text-sm text-cream/80 leading-relaxed">
-                <strong className="text-white block mb-1">Aim:</strong> To
-                study, memorize and understand the foundational text Al-Usool
-                Ath-Thalaathah in its entirety.
-              </div>
+                <strong className="text-white block mb-1">{t("t48")}</strong>{t("t49")}</div>
             </div>
 
             <div className="p-8 md:p-10 bg-white dark:bg-transparent relative z-10">
               <div className="mb-10 text-midnight/80 dark:text-muted font-sans space-y-4">
                 <p>
-                  <strong className="text-midnight dark:text-cream font-cinzel text-lg">
-                    About This Capstone Text
-                  </strong>
-                  <br />
-                  This level marks the pinnacle of the Tawheed curriculum.
-                  Moving beyond topical units, the entire 16-week term is
-                  dedicated to the comprehensive study of the fundamental
-                  creedal manual, <em>Al-Usool Ath-Thalaathah</em> (The Three
-                  Fundamental Principles), authored by Shaykh al-Islam Muhammad
-                  ibn &apos;Abdil-Wahhaab.
-                </p>
+                  <strong className="text-midnight dark:text-cream font-cinzel text-lg">{t("t50")}</strong>
+                  <br />{t("t51")}<em>{t("t52")}</em>{t("t53")}</p>
                 <div className="bg-ivory dark:bg-midnight p-5 rounded-md border border-midnight/5 dark:border-white/5 my-6">
-                  <p className="font-semibold mb-2 text-midnight dark:text-cream">
-                    Across all sessions, students will engage in:
-                  </p>
+                  <p className="font-semibold mb-2 text-midnight dark:text-cream">{t("t54")}</p>
                   <ul className="list-disc list-inside ms-5 space-y-1 text-midnight/70 dark:text-cream/70">
-                    <li>
-                      Committing the Arabic text to memory with correct
-                      pronunciation.
-                    </li>
-                    <li>
-                      Understanding the direct evidences from the Qur&apos;an
-                      and Sunnah.
-                    </li>
-                    <li>
-                      Grasping the reality of who Allah is, the religion of
-                      Islam, and the Prophet Muhammad (صلى الله عليه وسلم).
-                    </li>
+                    <li>{t("t55")}</li>
+                    <li>{t("t56")}</li>
+                    <li>{t("t57")}</li>
                   </ul>
                 </div>
-                <p>
-                  Mastery of this foundational text ensures the student
-                  possesses an unshakable creed, equipped to answer the three
-                  questions of the grave.
-                </p>
+                <p>{t("t58")}</p>
               </div>
 
               <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-                <LayoutList className="w-5 h-5 text-gold" /> Key Outcomes
-              </h4>
+                <LayoutList className="w-5 h-5 text-gold" />{t("t59")}</h4>
               <div className="grid sm:grid-cols-1 gap-x-8 gap-y-4">
                 <div className="flex items-start gap-4 p-4 border border-midnight/5 dark:border-white/5 rounded-lg bg-gray-50/50 dark:bg-navy/50">
                   <span className="flex items-center justify-center min-w-8 h-8 rounded-full bg-gold/20 text-gold text-sm font-bold shrink-0 mt-0.5">
@@ -408,10 +305,7 @@ export default function TawheedProgramme() {
                   </span>
                   <span className="font-sans text-midnight/80 dark:text-cream/90 leading-relaxed text-base">
                     Memorization and detailed explanation of the text{" "}
-                    <strong>Al-Usool Ath-Thalaathah</strong> of Shaykh al-Islam
-                    Muhammad ibn &apos;Abdil-Wahhaab — encompassing the complete
-                    study of the text across all class sessions.
-                  </span>
+                    <strong>{t("t52")}</strong>{t("t61")}</span>
                 </div>
               </div>
             </div>
@@ -423,48 +317,31 @@ export default function TawheedProgramme() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-gold mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
-            Begin Your Child&apos;s Journey
-          </h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
-            Enrol your child in our complete Tawheed curriculum to secure their
-            foundation in monotheism, protecting their faith from an early age.
-          </p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t62")}</h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t63")}</p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
-              Tawheed Mentorship
-            </h3>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t64")}</h3>
             <div className="font-cormorant text-5xl text-gold mb-6">
               $1,200{" "}
-              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">
-                / year
-              </span>
+              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">{t("t65")}</span>
             </div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Guided 5-Level Syllabus
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t66")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Saudi School Curriculum Standard
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t67")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  From Basics to Deep Mastery
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t68")}</span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">
-                Enrol Now
-              </Button>
+              <Button variant="primary" className="w-full py-4 text-lg">{t("t69")}</Button>
             </Link>
           </div>
 
@@ -472,9 +349,7 @@ export default function TawheedProgramme() {
             <Link
               href="/programmes/islamic"
               className="text-gold hover:text-amber transition-colors font-sans underline underline-offset-4"
-            >
-              ← Back to Islamic Programmes
-            </Link>
+            >{t("t70")}</Link>
           </div>
         </div>
       </section>
@@ -498,6 +373,7 @@ function SingleSectionLevelCard({
   aim: string;
   topics: string[];
 }) {
+  const t = useTranslations("ProgTawheed");
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -518,21 +394,20 @@ function SingleSectionLevelCard({
 
         <div className="grid md:grid-cols-2 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
           <div>
-            <strong className="text-white">Duration:</strong> {duration}
+            <strong className="text-white">{t("t44")}</strong> {duration}
           </div>
           <div>
-            <strong className="text-white">Sessions:</strong> {classDuration}
+            <strong className="text-white">{t("t46")}</strong> {classDuration}
           </div>
         </div>
         <div className="text-sm text-cream/80 leading-relaxed">
-          <strong className="text-white block mb-1">Aim:</strong> {aim}
+          <strong className="text-white block mb-1">{t("t48")}</strong> {aim}
         </div>
       </div>
 
       <div className="p-8 md:p-10 bg-white dark:bg-transparent">
         <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-          <LayoutList className="w-5 h-5 text-gold" /> Learning Units
-        </h4>
+          <LayoutList className="w-5 h-5 text-gold" />{t("t74")}</h4>
         <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
           {topics.map((topic, idx) => (
             <div
@@ -575,6 +450,7 @@ function DualSectionLevelCard({
   section1: string[];
   section2: string[];
 }) {
+  const t = useTranslations("ProgTawheed");
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -595,15 +471,15 @@ function DualSectionLevelCard({
 
         <div className="grid md:grid-cols-2 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
           <div>
-            <strong className="text-white">Duration:</strong> {duration}
+            <strong className="text-white">{t("t44")}</strong> {duration}
           </div>
           <div>
-            <strong className="text-white">Sessions:</strong> {classDuration}
+            <strong className="text-white">{t("t46")}</strong> {classDuration}
           </div>
         </div>
         <div className="text-sm text-cream/80 leading-relaxed space-y-3">
           <div>
-            <strong className="text-white">Aim:</strong> {aim}
+            <strong className="text-white">{t("t48")}</strong> {aim}
           </div>
         </div>
       </div>

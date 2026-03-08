@@ -1,0 +1,878 @@
+
+====== app/[locale]/programmes/islamic/tawheed/page.tsx ======
+>
+              Tawheed Curriculum
+            <
+>Islamic Monotheism<
+>Levels 1–5<
+>Basic Programme<
+>
+              &quot;Equipping young Muslims with sound knowledge of their
+              religion&quot;
+            <
+>
+              Programme Overview
+            <
+>
+                The Rawdatul Atfaal Tawheed Curriculum is a structured,
+                progressive programme designed to instill in young learners a
+                firm and correct understanding of Islamic monotheism (Tawheed).
+              <
+>
+                Rooted in the renowned Saudi Arabia school curriculum, the
+                programme guides students through five carefully sequenced
+                levels — from foundational beliefs about Allah&apos;s Lordship
+                to a comprehensive study of Al-Usool Ath-Thalaathah.
+              <
+>
+                Each level builds upon the previous, ensuring depth of
+                understanding, retention of core Islamic principles, and an
+                unshakeable belief system.
+              <
+>
+              Core Methodologies
+            <
+>
+              Curriculum at a Glance
+            <
+>
+                    Level
+                  <
+>
+                    Class Name
+                  <
+>
+                    Duration
+                  <
+>
+                    Key Focus
+                  <
+>
+                    Basic 1
+                  <
+>
+                    Aaisha&apos;s Rawdah
+                  <
+>12 Weeks<
+>
+                    Allah&apos;s Lordship & tenets of faith
+                  <
+>
+                    Basic 2
+                  <
+>
+                    Faatimah&apos;s Rawdah
+                  <
+>16 Weeks<
+>
+                    Fundamentals of the deen & pillars of Islam
+                  <
+>
+                    Basic 3
+                  <
+>
+                    Hafsah&apos;s Rawdah
+                  <
+>16 Weeks<
+>
+                    Levels of the religion in depth
+                  <
+>
+                    Basic 4
+                  <
+>
+                    Khadeejah&apos;s Rawdah
+                  <
+>16 Weeks<
+>
+                    Tawheed, its types and nullifiers
+                  <
+>
+                    Basic 5
+                  <
+>
+                    Zainab&apos;s Rawdah
+                  <
+>16 Weeks<
+>
+                    Al-Usool Ath-Thalaathah: memorisation & explanation
+                  <
+>
+            Detailed Lesson Plans by Level
+          <
+>
+                    LEVEL 5 — CAPSTONE
+                  <
+>
+                    Zainab&apos;s Rawdah
+                  <
+>
+                    Al-Usool Ath-Thalaathah (The Three Fundamental Principles)
+                  <
+>Duration:<
+> 16 Weeks
+                <
+>Sessions:<
+> 40 Minutes
+                  per Session
+                <
+> To
+                study, memorize and understand the foundational text Al-Usool
+                Ath-Thalaathah in its entirety.
+              <
+>
+                    About This Capstone Text
+                  <
+>
+                  This level marks the pinnacle of the Tawheed curriculum.
+                  Moving beyond topical units, the entire 16-week term is
+                  dedicated to the comprehensive study of the fundamental
+                  creedal manual, <
+>Al-Usool Ath-Thalaathah<
+> (The Three
+                  Fundamental Principles), authored by Shaykh al-Islam Muhammad
+                  ibn &apos;Abdil-Wahhaab.
+                <
+>
+                    Across all sessions, students will engage in:
+                  <
+>
+                      Committing the Arabic text to memory with correct
+                      pronunciation.
+                    <
+>
+                      Understanding the direct evidences from the Qur&apos;an
+                      and Sunnah.
+                    <
+>
+                      Grasping the reality of who Allah is, the religion of
+                      Islam, and the Prophet Muhammad (صلى الله عليه وسلم).
+                    <
+>
+                  Mastery of this foundational text ensures the student
+                  possesses an unshakable creed, equipped to answer the three
+                  questions of the grave.
+                <
+> Key Outcomes
+              <
+>Al-Usool Ath-Thalaathah<
+> of Shaykh al-Islam
+                    Muhammad ibn &apos;Abdil-Wahhaab — encompassing the complete
+                    study of the text across all class sessions.
+                  <
+>
+            Begin Your Child&apos;s Journey
+          <
+>
+            Enrol your child in our complete Tawheed curriculum to secure their
+            foundation in monotheism, protecting their faith from an early age.
+          <
+>
+              Tawheed Mentorship
+            <
+>
+                  Guided 5-Level Syllabus
+                <
+>
+                  Saudi School Curriculum Standard
+                <
+>
+                  From Basics to Deep Mastery
+                <
+>
+                Enrol Now
+              <
+>
+              ← Back to Islamic Programmes
+            <
+>Duration:<
+>Sessions:<
+> Learning Units
+        <
+>Duration:<
+>Sessions:<
+====== app/[locale]/programmes/islamic/fiqh/page.tsx ======
+>
+              Fiqh Curriculum
+            <
+>
+              Islamic Jurisprudence &nbsp;|&nbsp; Levels 1–5 &nbsp;|&nbsp; Basic
+              Programme
+            <
+>
+              &quot;Nurturing sound worship through authentic Fiqh
+              education&quot;
+            <
+>
+              Programme Overview
+            <
+>
+                The Rawdatul Atfaal Fiqh Curriculum is a progressive programme
+                in Islamic jurisprudence (Fiqh), focused deeply on the chapter
+                of worship (ʿIbaadaat).
+              <
+>
+                Beginning with the fundamentals of purification and prayer, the
+                curriculum advances systematically through the rulings of
+                ablution, conditions and pillars of Salah, congregational
+                prayer, voluntary prayers and beyond.
+              <
+>
+                Each level effectively revises prior knowledge before
+                introducing new material, ensuring students develop a sound and
+                lasting understanding of how to worship Allah correctly.
+              <
+>
+              Core Methodologies
+            <
+>
+              Curriculum at a Glance
+            <
+>
+                    Level
+                  <
+>
+                    Class Name
+                  <
+>
+                    Key Topics Covered
+                  <
+>
+                    Level 1
+                  <
+>
+                    Abu Bakr&apos;s Rawdah
+                  <
+>
+                    Purification, Ablution, Obligatory Prayers, Tashahhud,
+                    Nullifiers of Prayer
+                  <
+>
+                    Level 2
+                  <
+>
+                    Umar&apos;s Rawdah
+                  <
+>
+                    Cleanliness, Ablution & nullifiers, Opening supplication,
+                    Prayer
+                  <
+>
+                    Level 3
+                  <
+>
+                    Uthmān&apos;s Rawdah
+                  <
+>
+                    Lavatory manners, Removal of impurity, Conditions of
+                    wudhooʼ, Tayammum, Prayer pillars
+                  <
+>
+                    Level 4
+                  <
+>
+                    Ali&apos;s Rawdah
+                  <
+>
+                    Full wudhooʼ, Adhaan, Prayer conditions, Surah Al-Faatihah,
+                    Tashahhud explanation
+                  <
+>
+                    Level 5
+                  <
+>
+                    Level 5 Rawdah
+                  <
+>
+                    Water classification, Khuff wiping, Congregational prayer,
+                    Voluntary prayers
+                  <
+>
+            Detailed Lesson Plans by Level
+          <
+>
+            Begin Your Child&apos;s Journey
+          <
+>
+            Enrol your child in our complete Fiqh curriculum to master the
+            authentic rulings of Islamic worship, directly structured from the
+            classical foundational texts.
+          <
+>
+              Fiqh Mentorship
+            <
+>
+                  Guided 5-Level Syllabus
+                <
+>
+                  Authentic Jurisprudence
+                <
+>
+                  Perfecting Ablution & Prayer
+                <
+>
+                Enrol Now
+              <
+>
+              ← Back to Islamic Programmes
+            <
+>Focus:<
+> Core Lessons
+        <
+>Focus:<
+====== app/[locale]/programmes/islamic/hadith/page.tsx ======
+>
+              Hadith Curriculum
+            <
+>
+              Prophetic Traditions &nbsp;|&nbsp; Levels 1–4 &nbsp;|&nbsp; Basic
+              Programme
+            <
+>
+              &quot;Building character and knowledge through the Sunnah of the
+              Prophet صلى الله عليه وسلم&quot;
+            <
+>
+              Programme Overview
+            <
+>
+                The Rawdatul Atfaal Hadith Curriculum is a four-level programme
+                designed to connect young Muslims with the teachings of the
+                Prophet صلى الله عليه وسلم through authentic hadith.
+              <
+>
+                The programme progresses from foundational values and noble
+                character in Level 1, through spiritual discipline and social
+                responsibility in Levels 2 and 3.
+              <
+>
+                It culminates in the complete memorisation and study of the
+                renowned <
+>Al-Arbaʼeen An-Nawawiyyah<
+> in Level 4.
+                At every stage, students are equipped to understand,
+                internalise, and live by the prophetic guidance.
+              <
+>
+              Core Objectives
+            <
+>
+              Curriculum at a Glance
+            <
+>
+                    Level
+                  <
+>
+                    Theme
+                  <
+>
+                    Focus Areas
+                  <
+>
+                    Level 1
+                  <
+>
+                    Foundations of Faith & Character
+                  <
+>
+                    Heart purification, Sunnah, Prayer, Qurʼaan, Character,
+                    Brotherhood, Etiquette
+                  <
+>
+                    Level 2
+                  <
+>
+                    Spiritual Discipline & Accountability
+                  <
+>
+                    Prayer refinement, Mosque etiquette, Tongue, Repentance,
+                    Charity, Dhikr, Knowledge
+                  <
+>
+                    Level 3
+                  <
+>
+                    Advanced Principles & Maturity
+                  <
+>
+                    Tawheed, Bidʼah, Consistency, Patience, Ghurbah, Judgement
+                    Day, Lasting deeds
+                  <
+>
+                    Level 4
+                  <
+>
+                    Al-Arbaʼeen An-Nawawiyyah
+                  <
+>
+                    Complete memorisation & explanation of Imam
+                    An-Nawawee&apos;s Forty Hadith
+                  <
+>
+            Detailed Course Outlines
+          <
+>
+            Begin Your Child&apos;s Journey
+          <
+>
+            Enrol your child in our complete Hadith curriculum to foster
+            deep-rooted character and Islamic identity modeled directly from the
+            Prophetic Sunnah.
+          <
+>
+              Hadith Mentorship
+            <
+>
+                  Guided 4-Level Syllabus
+                <
+>
+                  Authentic Prophetic Traditions
+                <
+>
+                  Character Building Focus
+                <
+>
+                Enrol Now
+              <
+>
+              ← Back to Islamic Programmes
+            <
+>Amount:<
+>Duration:<
+>Sessions:<
+> Topics & Aspects Covered
+        <
+>
+              LEVEL 4 — CAPSTONE
+            <
+>
+              Al-Arbaʼeen An-Nawawiyyah
+            <
+>
+              The Forty Hadith of Imam An-Nawawī
+            <
+>Amount:<
+> 42 Hadiths
+          <
+>Duration:<
+> 16 Weeks
+          <
+>Sessions:<
+> 40 Minutes per
+            Session
+          <
+> Complete
+          study, understanding, and memorisation of the Forty Hadith collection
+          of Imam An-Nawawee — one of the most important collections in Islamic
+          scholarship, covering the foundations of the religion.
+        <
+>
+              About This Level
+            <
+>
+            This level differs from Levels 1–3 in structure. Rather than
+            thematic topic units, the entire 16-week term is dedicated to the
+            complete study of <
+>Al-Arbaʼeen An-Nawawiyyah<
+> — the
+            celebrated collection of forty foundational hadith compiled by Imam
+            Yahyaa ibn Sharaf An-Nawawee (631–676 AH, may Allah have mercy on
+            him).
+          <
+>
+              Each session is devoted to one or more hadith, covering:
+            <
+>Memorisation of the Arabic text of the hadith<
+>Translation and clear explanation of the meaning<
+>Lessons and principles derived from the hadith<
+>Application to daily life and worship<
+>
+            This collection covers the pillars of Islam and Emaan, sincerity of
+            intention, halal and haram, rights of others, the hereafter, and the
+            etiquettes of seeking knowledge, making it the ideal capstone text
+            for the Rawdatul Atfaal Hadith programme.
+          <
+> Topics at a Glance
+        <
+====== app/[locale]/programmes/islamic/mutoon/page.tsx ======
+>
+              Mutoon Curriculum
+            <
+>Memorised Islamic Texts<
+>Levels 1–2 (Ongoing)<
+>Basic Programme<
+>
+              &quot;Rooting students in the classical texts of Islamic
+              scholarship&quot;
+            <
+>
+              Programme Overview
+            <
+>
+                The Rawdatul Atfaal Mutoon Curriculum dedicates a portion of
+                weekly study explicitly to the memorisation, understanding, and
+                application of classical Islamic texts (mutoon).
+              <
+>
+                These are the identical foundational texts that have been
+                studied in structured Islamic institutions for centuries.
+                Beginning with short but highly consequential works on Tawheed
+                and its nullifiers, students progress through increasingly
+                substantive texts.
+              <
+>
+                By building this repository of memorised knowledge, we aim to
+                furnish our children with protective theological frameworks that
+                will serve them throughout their lives.
+              <
+>
+              Weekly Class Rhythm
+            <
+>
+              Each week follows a strictly consistent pedagogical pattern. This
+              rhythm ensures that new material is effectively consolidated
+              before the student advances, preventing knowledge from
+              accumulating without deep understanding.
+            <
+>
+                    3 Teaching Days
+                  <
+>
+                    Focusing strictly on new sections, accurate recitation, and
+                    detailed comprehension of the classical texts.
+                  <
+>
+                    1 Dedicated Revision Day
+                  <
+>
+                    A completely dedicated day explicitly for reviewing the
+                    previous 3 days, solidifying retention, testing memory, and
+                    active Q&A.
+                  <
+>
+              Curriculum at a Glance
+            <
+>
+                    Level
+                  <
+>
+                    Duration
+                  <
+>
+                    Objective Summary
+                  <
+>
+                    Level 1
+                  <
+>4 Weeks<
+>
+                    Memorise & understand the 10 nullifiers of Islam with their
+                    evidences
+                  <
+>
+                    Level 2
+                  <
+>6 Weeks<
+>
+                    Study the 4 principles distinguishing Tawheed from shirk,
+                    ancient and modern
+                  <
+>
+                    Level 3+
+                  <
+>
+                    Progressing into Al-Usool Ath-Thalaathah & Kitaab At-Tawheed
+                    (Development phase)
+                  <
+>
+            Detailed Master Plans
+          <
+>
+                Levels 3 and Beyond
+              <
+>
+                Future Master Texts
+              <
+>
+                The Rawdatul Atfaal Mutoon programme follows a deliberate upward
+                trajectory. While Levels 1 & 2 establish the immediate
+                protective boundaries, subsequent levels will immerse students
+                in deeper foundational treatises, subject to teacher discretion
+                and student readiness.
+              <
+>
+                Planned Classical Corpus
+              <
+>Level 3<
+> —
+                    Al-Usool Ath-Thalaathah (The Three Fundamentals)
+                  <
+>Level 4<
+> —
+                    Kashf Ash-Shubuhaat (Removal of the Doubts)
+                  <
+>Level 5<
+> —
+                    Kitaab At-Tawheed (The Book of Monotheism)
+                  <
+>
+              &quot;And say: My Lord, increase me in knowledge.&quot;
+            <
+>
+            Begin Your Child&apos;s Journey
+          <
+>
+            Enrol your child in our Mutoon foundational curriculum. Secure their
+            faith with immutable texts memorised generation after generation.
+          <
+>
+              Mutoon Mentorship
+            <
+>
+                  Structured Memorisation
+                <
+>
+                  3 Teaching Days + 1 Revision
+                <
+>
+                  Classical Foundational Texts
+                <
+>
+                Enrol Now
+              <
+>
+              ← Back to Islamic Programmes
+            <
+>Duration:<
+>Schedule:<
+>Objective:<
+>Overview:<
+> Comprehensive Lesson Plan
+        <
+====== app/[locale]/programmes/western/mathematics/page.tsx ======
+>
+              Mathematics
+            <
+>
+              Horizons Math + Pre-Calculus
+            <
+>Primary<
+>Secondary<
+>10 Levels<
+>
+              &quot;Spiral Learning • Conceptual Mastery • Algebraic Thinking •
+              University Readiness&quot;
+            <
+>
+              Programme Overview
+            <
+>
+                The Mathematics curriculum begins with the Horizons Math
+                Curriculum (HMC) in the primary years — a proven spiral-learning
+                approach used widely in the United States.
+              <
+>
+                From Grade 6 onwards, students advance through pre-algebra,
+                Algebra I, Algebra II, and culminate in Pre-Calculus with an
+                introduction to differentiation and integration by age 16.
+              <
+>
+                This trajectory prepares students fully for A-Level or
+                university entrance mathematics.
+              <
+>
+              Core Progression
+            <
+>
+              Mathematics at a Glance
+            <
+>
+                    Primary Focus
+                  <
+>
+            Detailed Master Plans
+          <
+>
+            Equip Your Child for Excellence
+          <
+>
+            Build a bulletproof mathematical foundation that prepares them for
+            global opportunities, critical thinking, and the highest levels of
+            academia.
+          <
+>
+              Mathematics Programme
+            <
+>
+                  Guided 10-Level Path
+                <
+>
+                  HMC to Pre-Calculus
+                <
+>
+                  Expert Instructors
+                <
+>
+                Enrol Now
+              <
+>
+              ← Back to Core Programmes
+            <
+>Duration / Frequency:<
+>
+                  Unit / Topic
+                <
+>
+                  Key Skills / Outcomes
+                <
+====== app/[locale]/programmes/western/sciences/page.tsx ======
+>
+              Sciences
+            <
+>
+              NGSS → GCSE/IGCSE Track
+            <
+>Biology<
+>Chemistry<
+>Physics<
+>
+              &quot;Students do not just learn science — they think,
+              investigate, and communicate like scientists.&quot;
+            <
+>
+              Programme Overview
+            <
+>
+                Science is taught as an inquiry-driven discipline from the
+                earliest years, transitioning from integrated NGSS-aligned
+                science in Levels 1–5, to disciplinary science from Level 6.
+              <
+>
+                This culminates in full GCSE/IGCSE preparation with an A-Level
+                bridge in Level 10, giving students a serious academic edge.
+              <
+>
+                We believe in hands-on exploration, rigorous data analysis, and
+                an appreciation for the precision of the natural world.
+              <
+>
+              Core Progression
+            <
+>
+              Sciences at a Glance
+            <
+>
+                    Primary Focus
+                  <
+>
+            Detailed Master Plans
+          <
+>
+            Empower Their Discovery
+          <
+>
+            Give your child the scientific literacy to thrive in higher
+            academics and understand the world around them deeply.
+          <
+>
+              Sciences Programme
+            <
+>
+                  Biology, Chemistry, Physics
+                <
+>
+                  GCSE/IGCSE Track
+                <
+>
+                  Inquiry-Driven Labs
+                <
+>
+                Enrol Now
+              <
+>
+              ← Back to Core Programmes
+            <
+>Duration / Frequency:<
+>
+                  Unit / Topic
+                <
+>
+                  Key Skills / Outcomes
+                <
+====== app/[locale]/programmes/western/programming/page.tsx ======
+>
+              Programming
+            <
+>
+              Scratch → Python → Web → Full-Stack
+            <
+>Logic<
+>Algorithms<
+>Engineering<
+>
+              &quot;The emphasis is on problem-solving, project work, and
+              genuine understanding — not rote coding.&quot;
+            <
+>
+              Programme Overview
+            <
+>
+                The Programming curriculum is the most comprehensive in the
+                programme — a ten-level journey that takes students from their
+                very first block of code at age 6 to deploying a real full-stack
+                web application with a professional portfolio by age 16.
+              <
+>
+                At every stage, students are engaged in building interactive
+                projects, progressing seamlessly from block-based programming to
+                complex algorithms and data structures using Python and modern
+                web frameworks.
+              <
+>
+                We produce engineers who are technically capable,
+                algorithmically literate, and career-ready.
+              <
+>
+              Core Progression
+            <
+>
+              Programming at a Glance
+            <
+>
+                    Primary Focus
+                  <
+>
+            Detailed Master Plans
+          <
+>
+            Architect the Future
+          <
+>
+            From basic logic to deployed web applications, empower your child to
+            create technology, not just consume it.
+          <
+>
+              Programming Programme
+            <
+>
+                  Full-Stack Capability
+                <
+>
+                  Python & Web Dev Focus
+                <
+>
+                  Project-Based Learning
+                <
+>
+                Enrol Now
+              <
+>
+              ← Back to Core Programmes
+            <
+>Duration / Frequency:<
+>
+                  Unit / Topic
+                <
+>
+                  Key Skills / Outcomes
+                <

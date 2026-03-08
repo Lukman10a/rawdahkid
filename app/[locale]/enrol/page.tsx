@@ -4,7 +4,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ClipboardList, MailCheck, GraduationCap } from "lucide-react";
 
+import { useTranslations } from "next-intl"
+
 export default function EnrolPage() {
+  const t = useTranslations("Enrol");
   const [programme, setProgramme] = useState("");
   const [classFormat, setClassFormat] = useState("");
   const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
@@ -23,11 +26,10 @@ export default function EnrolPage() {
       <section className="py-20 bg-ivory dark:bg-[#12221b] text-midnight dark:text-cream border-b border-gold/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="font-cinzel text-4xl md:text-6xl tracking-widest mb-6 uppercase">
-            Admissions
+            {t("header.title")}
           </h1>
           <p className="font-sans text-xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto">
-            Take the first step towards a holistic, uncompromising education for
-            your child.
+            {t("header.desc")}
           </p>
         </div>
       </section>
@@ -37,7 +39,7 @@ export default function EnrolPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream tracking-wider mb-4">
-              The Process
+              {t("process.title")}
             </h2>
             <div className="w-16 h-px bg-gold mx-auto"></div>
           </div>
@@ -49,21 +51,21 @@ export default function EnrolPage() {
             {[
               {
                 icon: ClipboardList,
-                step: "Step 1",
-                title: "Submit Application",
-                desc: "Fill out the online enrolment form with your child's basic details and programme interest.",
+                step: t("process.steps.s1.step"),
+                title: t("process.steps.s1.title"),
+                desc: t("process.steps.s1.desc"),
               },
               {
                 icon: MailCheck,
-                step: "Step 2",
-                title: "Assessment",
-                desc: "Your child may undergo a brief assessment to determine their starting level in Arabic or Math.",
+                step: t("process.steps.s2.step"),
+                title: t("process.steps.s2.title"),
+                desc: t("process.steps.s2.desc"),
               },
               {
                 icon: GraduationCap,
-                step: "Step 3",
-                title: "Enrolment & Onboarding",
-                desc: "Upon acceptance, complete the fee payment to secure the seat and receive the student welcome pack.",
+                step: t("process.steps.s3.step"),
+                title: t("process.steps.s3.title"),
+                desc: t("process.steps.s3.desc"),
               },
             ].map((s, i) => (
               <motion.div
@@ -98,11 +100,10 @@ export default function EnrolPage() {
           <div className="bg-white dark:bg-navy p-10 md:p-14 shadow-2xl rounded-sm border-t-4 border-t-gold border-x border-b border-midnight/5 dark:border-white/5">
             <div className="text-center mb-10">
               <h2 className="font-playfair text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
-                Registration Form
+                {t("form.title")}
               </h2>
               <p className="font-sans text-midnight/70 dark:text-cream/70">
-                Please provide your details below and our admissions team will
-                contact you within 48 hours to secure your child's placement.
+                {t("form.desc")}
               </p>
             </div>
 
@@ -110,52 +111,52 @@ export default function EnrolPage() {
               {/* Parent Details */}
               <div className="space-y-6">
                 <h3 className="font-cinzel text-lg text-gold border-b border-gold/20 pb-2">
-                  Parent / Guardian Details
+                  {t("form.parent.title")}
                 </h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="font-sans text-sm font-semibold text-midnight dark:text-cream uppercase tracking-wider">
-                      Full Name *
+                      {t("form.parent.name")} *
                     </label>
                     <input
                       type="text"
                       required
                       className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-[#1a2b22] text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all font-sans"
-                      placeholder="e.g. Abdullah Rahman"
+                      placeholder={t("form.parent.namePlaceholder")}
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="font-sans text-sm font-semibold text-midnight dark:text-cream uppercase tracking-wider">
-                      Email Address *
+                      {t("form.parent.email")} *
                     </label>
                     <input
                       type="email"
                       required
                       className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-[#1a2b22] text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all font-sans"
-                      placeholder="abdullah@example.com"
+                      placeholder={t("form.parent.emailPlaceholder")}
                     />
                   </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="font-sans text-sm font-semibold text-midnight dark:text-cream uppercase tracking-wider">
-                      Phone Number *
+                      {t("form.parent.phone")} *
                     </label>
                     <input
                       type="tel"
                       required
                       className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-[#1a2b22] text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all font-sans"
-                      placeholder="+44 123 456 7890"
+                      placeholder={t("form.parent.phonePlaceholder")}
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="font-sans text-sm font-semibold text-midnight dark:text-cream uppercase tracking-wider">
-                      City / Country
+                      {t("form.parent.city")}
                     </label>
                     <input
                       type="text"
                       className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-[#1a2b22] text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all font-sans"
-                      placeholder="e.g. London, UK"
+                      placeholder={t("form.parent.cityPlaceholder")}
                     />
                   </div>
                 </div>
@@ -164,23 +165,23 @@ export default function EnrolPage() {
               {/* Student Details */}
               <div className="space-y-6 pt-4">
                 <h3 className="font-cinzel text-lg text-gold border-b border-gold/20 pb-2">
-                  Student Details
+                  {t("form.student.title")}
                 </h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="font-sans text-sm font-semibold text-midnight dark:text-cream uppercase tracking-wider">
-                      Child's Name *
+                      {t("form.student.name")} *
                     </label>
                     <input
                       type="text"
                       required
                       className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-[#1a2b22] text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all font-sans"
-                      placeholder="e.g. Yusuf Rahman"
+                      placeholder={t("form.student.namePlaceholder")}
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="font-sans text-sm font-semibold text-midnight dark:text-cream uppercase tracking-wider">
-                      Child's Age *
+                      {t("form.student.age")} *
                     </label>
                     <input
                       type="number"
@@ -188,14 +189,14 @@ export default function EnrolPage() {
                       min="4"
                       max="18"
                       className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-[#1a2b22] text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all font-sans"
-                      placeholder="e.g. 8"
+                      placeholder={t("form.student.agePlaceholder")}
                     />
                   </div>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="font-sans text-sm font-semibold text-midnight dark:text-cream uppercase tracking-wider">
-                      Programme Interest *
+                      {t("form.student.programme")} *
                     </label>
                     <select
                       required
@@ -204,21 +205,21 @@ export default function EnrolPage() {
                       className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-[#1a2b22] text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all font-sans appearance-none"
                     >
                       <option value="" disabled>
-                        Select a program...
+                        {t("form.student.programmeSelect")}
                       </option>
                       <option value="dual">
-                        Dual Curriculum (Islamic & Western Bundle) - Best Value
+                        {t("form.student.progDual")}
                       </option>
-                      <option value="islamic">Islamic Programme Only</option>
-                      <option value="western">Western Programme Only</option>
+                      <option value="islamic">{t("form.student.progIslamic")}</option>
+                      <option value="western">{t("form.student.progWestern")}</option>
                       <option value="individual">
-                        Individual Specialized Courses
+                        {t("form.student.progIndividual")}
                       </option>
                     </select>
                   </div>
                   <div className="space-y-2">
                     <label className="font-sans text-sm font-semibold text-midnight dark:text-cream uppercase tracking-wider">
-                      Class Format *
+                      {t("form.student.format")} *
                     </label>
                     <select
                       required
@@ -227,12 +228,12 @@ export default function EnrolPage() {
                       className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-[#1a2b22] text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all font-sans appearance-none"
                     >
                       <option value="" disabled>
-                        Select format...
+                        {t("form.student.formatSelect")}
                       </option>
                       <option value="group">
-                        Group Class (Max 5 Students)
+                        {t("form.student.formatGroup")}
                       </option>
-                      <option value="one-on-one">One-on-One Class</option>
+                      <option value="one-on-one">{t("form.student.formatOneOnOne")}</option>
                     </select>
                   </div>
                 </div>
@@ -246,10 +247,10 @@ export default function EnrolPage() {
                   >
                     <div className="text-center md:text-start">
                       <h4 className="font-cinzel text-lg text-midnight dark:text-cream tracking-wider mb-1">
-                        Select Individual Courses
+                        {t("form.student.individualCourses.title")}
                       </h4>
                       <p className="text-sm font-sans text-midnight/70 dark:text-cream/70">
-                        Select as many courses as you wish across disciplines.
+                        {t("form.student.individualCourses.desc")}
                       </p>
                     </div>
 
@@ -257,16 +258,16 @@ export default function EnrolPage() {
                       {/* Islamic Courses */}
                       <div>
                         <h5 className="font-sans font-bold text-sm text-amber mb-4 uppercase tracking-wider border-b border-gold/10 pb-2">
-                          Islamic Sciences
+                          {t("form.student.individualCourses.islamicTitle")}
                         </h5>
                         <div className="space-y-3">
                           {[
-                            "Arabic",
-                            "Quran Memorisation",
-                            "Tawheed",
-                            "Fiqh",
-                            "Hadith",
-                            "Mutoon",
+                            t("form.student.individualCourses.arabic"),
+                            t("form.student.individualCourses.quran"),
+                            t("form.student.individualCourses.tawheed"),
+                            t("form.student.individualCourses.fiqh"),
+                            t("form.student.individualCourses.hadith"),
+                            t("form.student.individualCourses.mutoon"),
                           ].map((c) => (
                             <label
                               key={c}
@@ -304,10 +305,10 @@ export default function EnrolPage() {
                       {/* Western Courses */}
                       <div>
                         <h5 className="font-sans font-bold text-sm text-amber mb-4 uppercase tracking-wider border-b border-gold/10 pb-2">
-                          Western Academics
+                          {t("form.student.individualCourses.westernTitle")}
                         </h5>
                         <div className="space-y-3">
-                          {["Mathematics", "Sciences", "Programming"].map(
+                          {[t("form.student.individualCourses.math"), t("form.student.individualCourses.science"), t("form.student.individualCourses.programming")].map(
                             (c) => (
                               <label
                                 key={c}
@@ -348,18 +349,18 @@ export default function EnrolPage() {
 
                 <div className="space-y-2">
                   <label className="font-sans text-sm font-semibold text-midnight dark:text-cream uppercase tracking-wider">
-                    Additional Information / Questions
+                    {t("form.student.additional")}
                   </label>
                   <textarea
                     rows={4}
                     className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-[#1a2b22] text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all font-sans resize-none"
-                    placeholder="Tell us about your child's current academic or Islamic level, or ask any questions here..."
+                    placeholder={t("form.student.additionalPlaceholder")}
                   ></textarea>
                 </div>
               </div>
 
               <button className="w-full bg-gold text-midnight py-4 rounded-sm font-sans font-bold tracking-widest uppercase text-sm hover:bg-white border border-transparent hover:border-gold transition-all duration-300 shadow-lg hover:shadow-gold/20">
-                Submit Registration Inquiry
+                {t("form.submit")}
               </button>
             </form>
           </div>

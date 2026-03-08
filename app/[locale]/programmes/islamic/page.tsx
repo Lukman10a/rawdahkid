@@ -2,55 +2,59 @@
 
 import { motion } from "framer-motion";
 import { Book, Award } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/components/ui/Button";
 
-const courses = [
-  {
-    name: "Qurʾān",
-    arabic: "القرآن الكريم",
-    desc: "Memorization (Hifdh), Tajweed, and Tafseer to connect deeply with the literal word of Allah.",
-    levels: "4 Terms",
-    slug: "quran-memorisation",
-  },
-  {
-    name: "Arabic Language",
-    arabic: "اللغة العربية",
-    desc: "Grammar (Nahw), Morphology (Sarf), and Literature (Adab) to understand the Deen from its original sources.",
-    levels: "5 Levels",
-    slug: "arabic",
-  },
-  {
-    name: "Tawheed",
-    arabic: "التوحيد",
-    desc: "Understanding the oneness of Allah and the core beliefs of Ahlus-Sunnah wal-Jama''ah.",
-    levels: "5 Levels",
-    slug: "tawheed",
-  },
-  {
-    name: "Fiqh",
-    arabic: "الفقه",
-    desc: "Islamic Jurisprudence focusing on worship (Ibadat) and daily transactions (Mu''amalat).",
-    levels: "6 Levels",
-    slug: "fiqh",
-  },
-  {
-    name: "Hadith",
-    arabic: "الحديث",
-    desc: "Studying the prophetic traditions, their sciences, and practical application.",
-    levels: "4 Levels",
-    slug: "hadith",
-  },
-  {
-    name: "Mutoon",
-    arabic: "المتون العلمية",
-    desc: "Memorization and explanation of classical foundational texts across various Islamic sciences.",
-    levels: "Classical Texts",
-    slug: "mutoon",
-  },
-];
+import { Button } from "@/components/ui/Button";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+
+
 
 export default function IslamicProgramme() {
+  const t = useTranslations("ProgIslamic");
+  const courses = [
+    {
+      name: t("courses.quran.name"),
+      arabic: "القرآن الكريم",
+      desc: t("courses.quran.desc"),
+      levels: t("courses.quran.levels"),
+      slug: "quran-memorisation",
+    },
+    {
+      name: t("courses.arabic.name"),
+      arabic: "اللغة العربية",
+      desc: t("courses.arabic.desc"),
+      levels: t("courses.arabic.levels"),
+      slug: "arabic",
+    },
+    {
+      name: t("courses.tawheed.name"),
+      arabic: "التوحيد",
+      desc: t("courses.tawheed.desc"),
+      levels: t("courses.tawheed.levels"),
+      slug: "tawheed",
+    },
+    {
+      name: t("courses.fiqh.name"),
+      arabic: "الفقه",
+      desc: t("courses.fiqh.desc"),
+      levels: t("courses.fiqh.levels"),
+      slug: "fiqh",
+    },
+    {
+      name: t("courses.hadith.name"),
+      arabic: "الحديث",
+      desc: t("courses.hadith.desc"),
+      levels: t("courses.hadith.levels"),
+      slug: "hadith",
+    },
+    {
+      name: t("courses.mutoon.name"),
+      arabic: "المتون العلمية",
+      desc: t("courses.mutoon.desc"),
+      levels: t("courses.mutoon.levels"),
+      slug: "mutoon",
+    },
+  ];
   return (
     <div className="flex flex-col min-h-screen bg-ivory dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* 1. HERO SECTION */}
@@ -65,16 +69,14 @@ export default function IslamicProgramme() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
-              The Islamic Programme
+              {t("hero.title")}
             </h1>
             <p className="font-amiri text-gold text-3xl md:text-5xl mb-8">
               البرنامج الإسلامي
             </p>
             <div className="w-32 h-px bg-gold mx-auto mb-8"></div>
             <p className="font-sans text-xl text-midnight/70 dark:text-muted max-w-3xl mx-auto leading-relaxed">
-              Rooted in the authentic understanding of the pious predecessors,
-              our curriculum guides students from foundational knowledge to
-              advanced classical sciences.
+              {t("hero.desc")}
             </p>
           </motion.div>
         </div>
@@ -84,7 +86,7 @@ export default function IslamicProgramme() {
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream tracking-wider mb-4">
-            Core Disciplines
+            {t("core.title")}
           </h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
@@ -126,33 +128,28 @@ export default function IslamicProgramme() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <Award className="w-12 h-12 text-gold mx-auto mb-6 opacity-80" />
           <h2 className="font-playfair italic text-4xl text-midnight dark:text-cream mb-6">
-            Investment in the Hereafter
+            {t("investment.title")}
           </h2>
           <p className="font-sans text-lg text-midnight/70 dark:text-muted mb-12">
             While courses can be taken individually starting from{" "}
-            <span className="text-amber">$1,200/year</span>, we highly recommend
-            the complete Islamic Programme bundle for a holistic educational
-            experience.
-          </p>
+            <span className="text-amber">{t("t1")}</span>{t("t0")}</p>
           <div className="bg-ivory/ dark:bg-midnight/ p-8 md:p-12 border border-gold/20 rounded-sm inline-block w-full max-w-2xl">
             <h3 className="font-cinzel text-2xl text-gold tracking-widest mb-2 uppercase">
-              Full Islamic Bundle
+              {t("investment.bundle.title")}
             </h3>
             <p className="font-sans text-midnight/70 dark:text-muted mb-6">
-              Access to all 6 core disciplines
+              {t("investment.bundle.desc")}
             </p>
             <div className="font-cormorant text-6xl text-midnight dark:text-cream mb-2">
               $5,000{" "}
-              <span className="text-xl text-midnight/70 dark:text-muted font-sans">
-                / year
-              </span>
+              <span className="text-xl text-midnight/70 dark:text-muted font-sans">{t("t2")}</span>
             </div>
             <p className="font-sans text-sm text-amber mb-8 uppercase tracking-widest">
-              Equivalent to $416 / month
+              {t("investment.equivalent")}
             </p>
             <Link href="/fees">
               <Button variant="primary" className="px-10 py-3">
-                View Fee Schedule
+                {t("investment.cta")}
               </Button>
             </Link>
           </div>

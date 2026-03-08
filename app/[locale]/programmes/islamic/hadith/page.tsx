@@ -5,7 +5,11 @@ import { BookOpen, CheckCircle, GraduationCap, LayoutList } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
+import { useTranslations } from "next-intl";
+
 export default function HadithProgramme() {
+  const t = useTranslations("ProgHadith");
+
   return (
     <div className="flex flex-col min-h-screen bg-ivory dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* 1. HERO SECTION */}
@@ -19,24 +23,12 @@ export default function HadithProgramme() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-amiri text-gold text-2xl md:text-3xl mb-4">
-              بسم الله الرحمان الرحيم
-            </p>
-            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
-              Hadith Curriculum
-            </h1>
-            <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">
-              الحديث النبوي
-            </p>
-            <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-6">
-              Prophetic Traditions &nbsp;|&nbsp; Levels 1–4 &nbsp;|&nbsp; Basic
-              Programme
-            </div>
+            <p className="font-amiri text-gold text-2xl md:text-3xl mb-4">{t("t0")}</p>
+            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">{t("t1")}</h1>
+            <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">{t("t2")}</p>
+            <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-6">{t("t3")}</div>
 
-            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">
-              &quot;Building character and knowledge through the Sunnah of the
-              Prophet صلى الله عليه وسلم&quot;
-            </p>
+            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">{t("t4")}</p>
           </motion.div>
         </div>
       </section>
@@ -52,26 +44,11 @@ export default function HadithProgramme() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-cinzel text-3xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <BookOpen className="w-8 h-8 text-gold" />
-              Programme Overview
-            </h2>
+              <BookOpen className="w-8 h-8 text-gold" />{t("t5")}</h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
-              <p>
-                The Rawdatul Atfaal Hadith Curriculum is a four-level programme
-                designed to connect young Muslims with the teachings of the
-                Prophet صلى الله عليه وسلم through authentic hadith.
-              </p>
-              <p>
-                The programme progresses from foundational values and noble
-                character in Level 1, through spiritual discipline and social
-                responsibility in Levels 2 and 3.
-              </p>
-              <p>
-                It culminates in the complete memorisation and study of the
-                renowned <strong>Al-Arbaʼeen An-Nawawiyyah</strong> in Level 4.
-                At every stage, students are equipped to understand,
-                internalise, and live by the prophetic guidance.
-              </p>
+              <p>{t("t6")}</p>
+              <p>{t("t7")}</p>
+              <p>{t("t8")}<strong>{t("t9")}</strong>{t("t10")}</p>
             </div>
           </motion.div>
 
@@ -83,9 +60,7 @@ export default function HadithProgramme() {
             transition={{ duration: 0.6 }}
             className="bg-white/80 dark:bg-navy/80 p-8 md:p-10 border border-midnight/5 dark:border-white/5 rounded-sm"
           >
-            <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6">
-              Core Objectives
-            </h2>
+            <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6">{t("t11")}</h2>
             <ul className="space-y-5">
               {[
                 "To build a strong foundation in belief, worship, and Islamic identity.",
@@ -110,9 +85,7 @@ export default function HadithProgramme() {
       <section className="py-20 bg-warm/30 dark:bg-deep/30 border-y border-midnight/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
-              Curriculum at a Glance
-            </h2>
+            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">{t("t12")}</h2>
             <div className="w-24 h-px bg-gold/50 mx-auto"></div>
           </div>
 
@@ -120,65 +93,31 @@ export default function HadithProgramme() {
             <table className="w-full text-start border-collapse">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
-                  <th className="py-4 px-6 font-cinzel text-gold text-lg">
-                    Level
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Theme
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Focus Areas
-                  </th>
+                  <th className="py-4 px-6 font-cinzel text-gold text-lg">{t("t13")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t14")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t15")}</th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
-                    Level 1
-                  </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Foundations of Faith & Character
-                  </td>
-                  <td className="py-4 px-6 leading-relaxed">
-                    Heart purification, Sunnah, Prayer, Qurʼaan, Character,
-                    Brotherhood, Etiquette
-                  </td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t16")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t17")}</td>
+                  <td className="py-4 px-6 leading-relaxed">{t("t18")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
-                    Level 2
-                  </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Spiritual Discipline & Accountability
-                  </td>
-                  <td className="py-4 px-6 leading-relaxed">
-                    Prayer refinement, Mosque etiquette, Tongue, Repentance,
-                    Charity, Dhikr, Knowledge
-                  </td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t19")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t20")}</td>
+                  <td className="py-4 px-6 leading-relaxed">{t("t21")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
-                    Level 3
-                  </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Advanced Principles & Maturity
-                  </td>
-                  <td className="py-4 px-6 leading-relaxed">
-                    Tawheed, Bidʼah, Consistency, Patience, Ghurbah, Judgement
-                    Day, Lasting deeds
-                  </td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t22")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t23")}</td>
+                  <td className="py-4 px-6 leading-relaxed">{t("t24")}</td>
                 </tr>
                 <tr className="hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
-                    Level 4
-                  </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
-                    Al-Arbaʼeen An-Nawawiyyah
-                  </td>
-                  <td className="py-4 px-6 leading-relaxed">
-                    Complete memorisation & explanation of Imam
-                    An-Nawawee&apos;s Forty Hadith
-                  </td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t25")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t9")}</td>
+                  <td className="py-4 px-6 leading-relaxed">{t("t27")}</td>
                 </tr>
               </tbody>
             </table>
@@ -189,9 +128,7 @@ export default function HadithProgramme() {
       {/* 4. DETAILED COURSE OUTLINES */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
-            Detailed Course Outlines
-          </h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t28")}</h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
 
@@ -199,7 +136,7 @@ export default function HadithProgramme() {
           {/* LEVEL 1 */}
           <LevelCard
             levelNumber="1"
-            title="Foundations of Faith & Character"
+            title={t("t17")}
             hadithCount="71 Short Hadiths"
             duration="16 Weeks"
             classDuration="40 Minutes per Session"
@@ -221,7 +158,7 @@ export default function HadithProgramme() {
           {/* LEVEL 2 */}
           <LevelCard
             levelNumber="2"
-            title="Spiritual Discipline & Accountability"
+            title={t("t20")}
             hadithCount="50 Hadiths"
             duration="16 Weeks"
             classDuration="40 Minutes per Session"
@@ -243,7 +180,7 @@ export default function HadithProgramme() {
           {/* LEVEL 3 */}
           <LevelCard
             levelNumber="3"
-            title="Advanced Islamic Principles & Maturity in Practice"
+            title={t("t66")}
             hadithCount="50 Hadiths"
             duration="16 Weeks"
             classDuration="40 Minutes per Session"
@@ -271,49 +208,31 @@ export default function HadithProgramme() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-gold mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
-            Begin Your Child&apos;s Journey
-          </h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
-            Enrol your child in our complete Hadith curriculum to foster
-            deep-rooted character and Islamic identity modeled directly from the
-            Prophetic Sunnah.
-          </p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t29")}</h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t30")}</p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
-              Hadith Mentorship
-            </h3>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t31")}</h3>
             <div className="font-cormorant text-5xl text-gold mb-6">
               $1,200{" "}
-              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">
-                / year
-              </span>
+              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">{t("t32")}</span>
             </div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Guided 4-Level Syllabus
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t33")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Authentic Prophetic Traditions
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t34")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Character Building Focus
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t35")}</span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">
-                Enrol Now
-              </Button>
+              <Button variant="primary" className="w-full py-4 text-lg">{t("t36")}</Button>
             </Link>
           </div>
 
@@ -321,9 +240,7 @@ export default function HadithProgramme() {
             <Link
               href="/programmes/islamic"
               className="text-gold hover:text-amber transition-colors font-sans underline underline-offset-4"
-            >
-              ← Back to Islamic Programmes
-            </Link>
+            >{t("t37")}</Link>
           </div>
         </div>
       </section>
@@ -349,6 +266,7 @@ function LevelCard({
   aim: string;
   topics: string[];
 }) {
+  const t = useTranslations("ProgHadith");
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -369,24 +287,23 @@ function LevelCard({
 
         <div className="grid md:grid-cols-3 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
           <div>
-            <strong className="text-white">Amount:</strong> {hadithCount}
+            <strong className="text-white">{t("t38")}</strong> {hadithCount}
           </div>
           <div>
-            <strong className="text-white">Duration:</strong> {duration}
+            <strong className="text-white">{t("t39")}</strong> {duration}
           </div>
           <div>
-            <strong className="text-white">Sessions:</strong> {classDuration}
+            <strong className="text-white">{t("t40")}</strong> {classDuration}
           </div>
         </div>
         <div className="text-sm text-cream/80 leading-relaxed">
-          <strong className="text-white block mb-1">Aim:</strong> {aim}
+          <strong className="text-white block mb-1">{t("t41")}</strong> {aim}
         </div>
       </div>
 
       <div className="p-8 md:p-10 bg-white dark:bg-transparent">
         <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-          <LayoutList className="w-5 h-5 text-gold" /> Topics & Aspects Covered
-        </h4>
+          <LayoutList className="w-5 h-5 text-gold" />{t("t42")}</h4>
         <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
           {topics.map((topic, idx) => (
             <div key={idx} className="flex items-start gap-3">
@@ -406,6 +323,7 @@ function LevelCard({
 
 // Special Sub-component for Level 4
 function Level4Card() {
+  const t = useTranslations("ProgHadith");
   const hadiths = [
     "Actions are by intentions",
     "Islam, Emaan and Ihsaan (Jibreel hadith)",
@@ -468,77 +386,44 @@ function Level4Card() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
           <div>
             <div className="text-gold font-cinzel font-bold tracking-widest text-sm mb-2 flex items-center gap-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-              LEVEL 4 — CAPSTONE
-            </div>
-            <h3 className="font-playfair text-2xl md:text-3xl text-white mb-2">
-              Al-Arbaʼeen An-Nawawiyyah
-            </h3>
-            <p className="font-sans text-cream/70">
-              The Forty Hadith of Imam An-Nawawī
-            </p>
+              <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>{t("t43")}</div>
+            <h3 className="font-playfair text-2xl md:text-3xl text-white mb-2">{t("t9")}</h3>
+            <p className="font-sans text-cream/70">{t("t45")}</p>
           </div>
-          <div className="font-amiri text-3xl md:text-4xl text-gold/90 text-end">
-            الأربعون النووية
-          </div>
+          <div className="font-amiri text-3xl md:text-4xl text-gold/90 text-end">{t("t46")}</div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
           <div>
-            <strong className="text-white">Amount:</strong> 42 Hadiths
-          </div>
+            <strong className="text-white">{t("t38")}</strong>{t("t48")}</div>
           <div>
-            <strong className="text-white">Duration:</strong> 16 Weeks
-          </div>
+            <strong className="text-white">{t("t39")}</strong>{t("t50")}</div>
           <div>
-            <strong className="text-white">Sessions:</strong> 40 Minutes per
-            Session
-          </div>
+            <strong className="text-white">{t("t40")}</strong>{t("t52")}</div>
         </div>
         <div className="text-sm text-cream/80 leading-relaxed">
-          <strong className="text-white block mb-1">Aim:</strong> Complete
-          study, understanding, and memorisation of the Forty Hadith collection
-          of Imam An-Nawawee — one of the most important collections in Islamic
-          scholarship, covering the foundations of the religion.
-        </div>
+          <strong className="text-white block mb-1">{t("t41")}</strong>{t("t54")}</div>
       </div>
 
       <div className="p-8 md:p-10 bg-white dark:bg-transparent">
         <div className="mb-10 text-midnight/80 dark:text-muted font-sans space-y-4">
           <p>
-            <strong className="text-midnight dark:text-cream font-cinzel text-lg">
-              About This Level
-            </strong>
-            <br />
-            This level differs from Levels 1–3 in structure. Rather than
-            thematic topic units, the entire 16-week term is dedicated to the
-            complete study of <em>Al-Arbaʼeen An-Nawawiyyah</em> — the
-            celebrated collection of forty foundational hadith compiled by Imam
-            Yahyaa ibn Sharaf An-Nawawee (631–676 AH, may Allah have mercy on
-            him).
-          </p>
+            <strong className="text-midnight dark:text-cream font-cinzel text-lg">{t("t55")}</strong>
+            <br />{t("t56")}<em>{t("t9")}</em>{t("t58")}</p>
           <div className="bg-ivory dark:bg-midnight p-5 rounded-md border border-midnight/5 dark:border-white/5 my-6">
-            <p className="font-semibold mb-2 text-midnight dark:text-cream">
-              Each session is devoted to one or more hadith, covering:
-            </p>
+            <p className="font-semibold mb-2 text-midnight dark:text-cream">{t("t59")}</p>
             <ul className="list-disc list-inside ms-5 space-y-1 text-midnight/70 dark:text-cream/70">
-              <li>Memorisation of the Arabic text of the hadith</li>
-              <li>Translation and clear explanation of the meaning</li>
-              <li>Lessons and principles derived from the hadith</li>
-              <li>Application to daily life and worship</li>
+              <li>{t("t60")}</li>
+              <li>{t("t61")}</li>
+              <li>{t("t62")}</li>
+              <li>{t("t63")}</li>
             </ul>
           </div>
-          <p>
-            This collection covers the pillars of Islam and Emaan, sincerity of
-            intention, halal and haram, rights of others, the hereafter, and the
-            etiquettes of seeking knowledge, making it the ideal capstone text
-            for the Rawdatul Atfaal Hadith programme.
-          </p>
+          <p>{t("t64")}</p>
         </div>
 
         <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-          <LayoutList className="w-5 h-5 text-gold" /> Topics at a Glance
-        </h4>
+          <LayoutList className="w-5 h-5 text-gold" />{t("t65")}</h4>
 
         {/* Compact Grid for 42 hadiths */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-3">

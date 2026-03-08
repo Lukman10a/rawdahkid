@@ -2,10 +2,13 @@
 
 import { motion } from "framer-motion";
 import { BookOpen, CheckCircle, Calendar, GraduationCap } from "lucide-react";
-import Link from "next/link";
+
 import { Button } from "@/components/ui/Button";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function QuranMemorisation() {
+  const t = useTranslations("ProgQuran");
   return (
     <div className="flex flex-col min-h-screen bg-ivory dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* 1. HERO SECTION */}
@@ -23,23 +26,23 @@ export default function QuranMemorisation() {
               بسم الله الرحمان الرحيم
             </p>
             <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
-              Qurʼān Memorisation Programme
+              {t("hero.title")}
             </h1>
             <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">
               برنامج حفظ القرآن الكريم
             </p>
             <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-6">
-              Juzʼ ʿAmma &nbsp;|&nbsp; Terms 1–4 &nbsp;|&nbsp; Basic Programme
+              <span dangerouslySetInnerHTML={{ __html: t("hero.subtitle") }} />
             </div>
 
             <div className="inline-flex items-center gap-4 bg-white/50 dark:bg-navy/50 px-6 py-3 rounded-full border border-midnight/5 dark:border-white/5 mb-8">
-              <span className="font-amiri text-xl">Sūrat An-Nās (114)</span>
+              <span className="font-amiri text-xl">{t("t22")}</span>
               <span className="text-gold">⟶</span>
-              <span className="font-amiri text-xl">Sūrat An-Nabaʼ (78)</span>
+              <span className="font-amiri text-xl">{t("t20")}</span>
             </div>
 
             <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto">
-              &quot;Connecting young hearts to the Book of Allah&quot;
+              {t("hero.quote")}
             </p>
           </motion.div>
         </div>
@@ -57,24 +60,16 @@ export default function QuranMemorisation() {
           >
             <h2 className="font-cinzel text-3xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
               <BookOpen className="w-8 h-8 text-gold" />
-              Programme Overview
+              {t("overview.title")}
             </h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
               <p>
-                The Rawdatul Atfaal Qurʼān Memorisation Programme guides
-                students through the systematic memorisation of Juzʼ ʿAmma — the
-                thirtieth part of the Qurʼān — across four structured terms.
+                The Rawdatul Atfaal {t("hero.title")} guides students through
+                the systematic memorisation of Juzʼ ʿAmma — the thirtieth part
+                of the Qurʼān — across four structured terms.
               </p>
-              <p>
-                Each term covers a defined range of surahs, progressing from the
-                shorter surahs at the end of the Qurʼān toward the longer surahs
-                earlier in Juzʼ ʿAmma.
-              </p>
-              <p>
-                Every term concludes with a dedicated revision week followed by
-                a formal examination, ensuring that memorised material is
-                retained and built upon.
-              </p>
+              <p>{t("t0")}</p>
+              <p>{t("t1")}</p>
             </div>
           </motion.div>
 
@@ -87,7 +82,7 @@ export default function QuranMemorisation() {
             className="bg-white/80 dark:bg-navy/80 p-8 md:p-10 border border-midnight/5 dark:border-white/5 rounded-sm"
           >
             <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6">
-              Programme Principles
+              {t("principles.title")}
             </h2>
             <ul className="space-y-5">
               {[
@@ -114,7 +109,7 @@ export default function QuranMemorisation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
-              Programme at a Glance
+              {t("glance.title")}
             </h2>
             <div className="w-24 h-px bg-gold/50 mx-auto"></div>
           </div>
@@ -124,51 +119,51 @@ export default function QuranMemorisation() {
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
                   <th className="py-4 px-6 font-cinzel text-gold text-lg">
-                    Term
+                    {t("glance.h_term")}
                   </th>
                   <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Surah Range
+                    {t("glance.h_range")}
                   </th>
                   <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Surahs
+                    {t("glance.h_surahs")}
                   </th>
                   <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Weeks
+                    {t("glance.h_weeks")}
                   </th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold">Term 1</td>
-                  <td className="py-4 px-6">
-                    Sūrat An-Nās (114) → Sūrat Az-Zalzalah (99)
+                  <td className="py-4 px-6 font-semibold">
+                    {t("glance.term1")}
                   </td>
-                  <td className="py-4 px-6">16 Surahs</td>
-                  <td className="py-4 px-6">8 Weeks</td>
+                  <td className="py-4 px-6">{t("t4")}</td>
+                  <td className="py-4 px-6">{t("t26")}</td>
+                  <td className="py-4 px-6">{t("glance.w8")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold">Term 2</td>
-                  <td className="py-4 px-6">
-                    Sūrat Al-Bayyinah (98) → Sūrat Al-Fajr (89)
+                  <td className="py-4 px-6 font-semibold">
+                    {t("glance.term2")}
                   </td>
-                  <td className="py-4 px-6">10 Surahs</td>
-                  <td className="py-4 px-6">8 Weeks</td>
+                  <td className="py-4 px-6">{t("t5")}</td>
+                  <td className="py-4 px-6">{t("t27")}</td>
+                  <td className="py-4 px-6">{t("glance.w8")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold">Term 3</td>
-                  <td className="py-4 px-6">
-                    Sūrat Al-Ghāshiyah (88) → Sūrat Al-Muṭaffifīn (83)
+                  <td className="py-4 px-6 font-semibold">
+                    {t("glance.term3")}
                   </td>
-                  <td className="py-4 px-6">6 Surahs</td>
-                  <td className="py-4 px-6">8 Weeks</td>
+                  <td className="py-4 px-6">{t("t3")}</td>
+                  <td className="py-4 px-6">{t("t30")}</td>
+                  <td className="py-4 px-6">{t("glance.w8")}</td>
                 </tr>
                 <tr className="hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold">Term 4</td>
-                  <td className="py-4 px-6">
-                    Sūrat Al-Infiṭār (82) → Sūrat An-Nabaʼ (78)
+                  <td className="py-4 px-6 font-semibold">
+                    {t("glance.term4")}
                   </td>
-                  <td className="py-4 px-6">5 Surahs</td>
-                  <td className="py-4 px-6">8 Weeks</td>
+                  <td className="py-4 px-6">{t("t6")}</td>
+                  <td className="py-4 px-6">{t("t31")}</td>
+                  <td className="py-4 px-6">{t("glance.w8")}</td>
                 </tr>
               </tbody>
             </table>
@@ -178,21 +173,15 @@ export default function QuranMemorisation() {
           <div className="mt-12 flex flex-wrap justify-center gap-6 md:gap-12">
             <div className="flex items-center gap-3">
               <div className="w-4 h-4 rounded-sm bg-white dark:bg-navy border border-midnight/10 dark:border-white/10"></div>
-              <span className="font-sans text-sm text-midnight/70 dark:text-muted">
-                Memorisation Week (Learning new surahs)
-              </span>
+              <span className="font-sans text-sm text-midnight/70 dark:text-muted">{t("t8")}</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-4 h-4 rounded-sm bg-green-500/20 border border-green-500/30"></div>
-              <span className="font-sans text-sm text-midnight/70 dark:text-muted">
-                Revision Week (Full review of term)
-              </span>
+              <span className="font-sans text-sm text-midnight/70 dark:text-muted">{t("t10")}</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-4 h-4 rounded-sm bg-amber-500/20 border border-amber-500/30"></div>
-              <span className="font-sans text-sm text-midnight/70 dark:text-muted">
-                Examination Week (Formal assessment)
-              </span>
+              <span className="font-sans text-sm text-midnight/70 dark:text-muted">{t("t9")}</span>
             </div>
           </div>
         </div>
@@ -201,9 +190,7 @@ export default function QuranMemorisation() {
       {/* 4. DETAILED TERM PLANS */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
-            Detailed Term Plans
-          </h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t21")}</h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
 
@@ -211,10 +198,10 @@ export default function QuranMemorisation() {
           {/* TERM 1 */}
           <TermCard
             number="1"
-            title="Sūrat An-Nās → Sūrat Az-Zalzalah"
+            title={t("t13")}
             subtitle="Juzʼ ʿAmma — Part 1"
             arabic="سورة الناس — سورة الزلزلة"
-            totalSurahs="16 Surahs"
+            totalSurahs={t("t26")}
             duration="8 Weeks"
             structure="6 Memorisation weeks → 1 Revision week → 1 Exam week"
             objective="To memorise the short surahs of Juzʼ ʿAmma from Sūrat An-Nās through to Sūrat Az-Zalzalah with correct pronunciation and fluency."
@@ -270,10 +257,10 @@ export default function QuranMemorisation() {
           {/* TERM 2 */}
           <TermCard
             number="2"
-            title="Sūrat Al-Bayyinah → Sūrat Al-Fajr"
+            title={t("t11")}
             subtitle="Juzʼ ʿAmma — Part 2"
             arabic="سورة البينة — سورة الفجر"
-            totalSurahs="10 Surahs"
+            totalSurahs={t("t27")}
             duration="8 Weeks"
             structure="6 Memorisation weeks → 1 Revision week → 1 Exam week"
             objective="To memorise Sūrat Al-Bayyinah through Sūrat Al-Fajr with accuracy and correct tajweed, building upon the surahs learnt in Term 1."
@@ -317,10 +304,10 @@ export default function QuranMemorisation() {
           {/* TERM 3 */}
           <TermCard
             number="3"
-            title="Sūrat Al-Ghāshiyah → Sūrat Al-Muṭaffifīn"
+            title={t("t7")}
             subtitle="Juzʼ ʿAmma — Part 3"
             arabic="سورة الغاشية — سورة المطففين"
-            totalSurahs="6 Surahs"
+            totalSurahs={t("t30")}
             duration="8 Weeks"
             structure="4 Memorisation weeks → 1 Revision week → 2 Extended weeks → 1 Exam week"
             objective="To memorise Sūrat Al-Ghāshiyah through Sūrat Al-Muṭaffifīn with correct recitation, giving appropriate attention to the longer surahs."
@@ -370,10 +357,10 @@ export default function QuranMemorisation() {
           {/* TERM 4 */}
           <TermCard
             number="4"
-            title="Sūrat Al-Infiṭār → Sūrat An-Nabaʼ"
+            title={t("t12")}
             subtitle="Juzʼ ʿAmma — Part 4"
             arabic="سورة الانفطار — سورة النبأ"
-            totalSurahs="5 Surahs"
+            totalSurahs={t("t31")}
             duration="8 Weeks"
             structure="3 Single-surah weeks → 2 Half-surah weeks → 2 Half-surah weeks → 1 Exam week"
             objective="To memorise Sūrat Al-Infiṭār through Sūrat An-Nabaʼ with fluency and correct tajweed, completing Juzʼ ʿAmma in this programme."
@@ -427,48 +414,31 @@ export default function QuranMemorisation() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-gold mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
-            Begin Your Child&apos;s Journey
-          </h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
-            Enrol your child in our complete Qurʼān memorisation programme. The
-            journey of a lifetime starts with a single verse.
-          </p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t14")}</h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t2")}</p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
-              Qurʼān Mentorship
-            </h3>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t23")}</h3>
             <div className="font-cormorant text-5xl text-gold mb-6">
               $1,200{" "}
-              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">
-                / year
-              </span>
+              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">{t("t33")}</span>
             </div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Guided 4-Term Syllabus
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t19")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Expert Tajweed Instruction
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t16")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  End of Term Assessments
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t18")}</span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">
-                Enrol Now
-              </Button>
+              <Button variant="primary" className="w-full py-4 text-lg">{t("t28")}</Button>
             </Link>
           </div>
 
@@ -476,9 +446,7 @@ export default function QuranMemorisation() {
             <Link
               href="/programmes/islamic"
               className="text-gold hover:text-amber transition-colors font-sans underline underline-offset-4"
-            >
-              ← Back to Islamic Programmes
-            </Link>
+            >{t("t15")}</Link>
           </div>
         </div>
       </section>
@@ -510,6 +478,7 @@ function TermCard({
   note?: string;
   weeks: { w: number; type: string; content: string }[];
 }) {
+  const t = useTranslations("ProgQuran");
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -536,20 +505,20 @@ function TermCard({
 
         <div className="grid md:grid-cols-2 gap-6 text-sm text-cream/80">
           <div>
-            <strong className="text-white">Duration:</strong> {duration}
+            <strong className="text-white">{t("t29")}</strong> {duration}
           </div>
           <div>
-            <strong className="text-white">Surahs:</strong> {totalSurahs}
+            <strong className="text-white">{t("t32")}</strong> {totalSurahs}
           </div>
           <div className="md:col-span-2">
-            <strong className="text-white">Structure:</strong> {structure}
+            <strong className="text-white">{t("t24")}</strong> {structure}
           </div>
           <div className="md:col-span-2">
-            <strong className="text-white">Objective:</strong> {objective}
+            <strong className="text-white">{t("t25")}</strong> {objective}
           </div>
           {note && (
             <div className="md:col-span-2 text-gold italic">
-              <strong className="text-white not-italic">Note:</strong> {note}
+              <strong className="text-white not-italic">{t("t34")}</strong> {note}
             </div>
           )}
         </div>
@@ -557,8 +526,7 @@ function TermCard({
 
       <div className="p-8 md:p-10 bg-white dark:bg-transparent">
         <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-          <Calendar className="w-5 h-5 text-gold" /> Weekly Memorisation Plan
-        </h4>
+          <Calendar className="w-5 h-5 text-gold" />{t("t17")}</h4>
         <div className="space-y-3">
           {weeks.map((week, idx) => {
             const isRev = week.type === "rev";

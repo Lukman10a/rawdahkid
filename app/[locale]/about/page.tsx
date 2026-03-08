@@ -3,7 +3,10 @@
 import { motion } from "framer-motion";
 import { BookOpen, Compass, Shield, Star, Award, Heart } from "lucide-react";
 
+import { useTranslations } from "next-intl";
+
 export default function AboutPage() {
+  const t = useTranslations("About");
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-cream text-midnight pt-24">
       {/* 1. HERO SECTION */}
@@ -51,12 +54,11 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-cinzel text-5xl md:text-7xl lg:text-8xl text-midnight dark:text-cream tracking-widest mb-6 uppercase">
-              Our Story
+              {t("hero.title")}
             </h1>
             <div className="w-32 h-px bg-gold mx-auto mb-8"></div>
             <p className="font-playfair italic text-2xl md:text-4xl text-amber/90 max-w-4xl mx-auto leading-relaxed">
-              &quot;Nurturing a generation grounded in their faith, fully
-              equipped for the world.&quot;
+              {t("hero.quote")}
             </p>
           </motion.div>
         </div>
@@ -77,19 +79,15 @@ export default function AboutPage() {
             <div className="flex items-center gap-4 mb-8">
               <Compass className="w-10 h-10 text-gold" />
               <h2 className="font-cinzel text-3xl md:text-4xl text-midnight tracking-wider">
-                Our Mission
+                {t("mission.title")}
               </h2>
             </div>
             <p className="font-sans text-lg text-midnight/80 leading-relaxed space-y-4">
               <span className="block">
-                To provide an uncompromising educational experience where
-                traditional Islamic sciences and modern academics are taught
-                with equal rigor and excellence.
+                {t("mission.p1")}
               </span>
               <span className="block mt-4">
-                We strive to nurture students who are proud of their Muslim
-                identity, deeply connected to the Qurʾān, and capable of leading
-                with integrity in any field they choose to pursue.
+                {t("mission.p2")}
               </span>
             </p>
           </motion.div>
@@ -108,20 +106,14 @@ export default function AboutPage() {
               <div className="flex items-center gap-4 mb-8">
                 <Star className="w-10 h-10 text-midnight dark:text-cream" />
                 <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream tracking-wider">
-                  Our Vision
+                  {t("vision.title")}
                 </h2>
               </div>
               <p className="font-sans text-lg text-midnight/ dark:text-cream/ leading-relaxed space-y-4">
                 <span className="block">
-                  To be the standard-bearer for holistic Islamic education,
-                  producing graduates who embody the prophetic character
-                  (Akhlaq).
+                  {t("vision.p1")}
                 </span>
-                <span className="block mt-4 text-amber/90 font-medium">
-                  We envision a future where our alumni stand as pillars in
-                  their communities—possessing deep knowledge of their Deen and
-                  demonstrating exceptional competence in worldly sciences.
-                </span>
+                <span className="block mt-4 text-amber/90 font-medium">{t("t0")}</span>
               </p>
             </div>
           </motion.div>
@@ -141,10 +133,10 @@ export default function AboutPage() {
             >
               <div>
                 <h2 className="font-cinzel text-sm text-gold tracking-[0.2em] uppercase mb-4">
-                  Our Philosophy
+                  {t("philosophy.subtitle")}
                 </h2>
                 <h3 className="font-playfair text-4xl md:text-5xl leading-tight">
-                  No Compromise Between Deen & Duniya
+                  {t("philosophy.title")}
                 </h3>
               </div>
 
@@ -152,24 +144,17 @@ export default function AboutPage() {
 
               <div className="font-sans text-midnight/ dark:text-cream/ text-lg leading-relaxed space-y-6">
                 <p>
-                  For too long, Muslim families have been forced into a false
-                  dichotomy: choose a rigorous academic school with a secular
-                  environment, or choose a traditional Islamic school that lacks
-                  academic competitiveness.
+                  {t("philosophy.p1")}
                 </p>
                 <p>
                   At{" "}
                   <strong className="text-amber font-medium tracking-wide">
-                    Rawdatul Atfaal
+                    {t("philosophy.p2_bold")}
                   </strong>
-                  , we reject this compromise.
+                  {t("philosophy.p2_suffix")}
                 </p>
                 <p>
-                  Our dual-curriculum approach ensures that when a child is
-                  learning mathematics or programming, they are doing so with
-                  the same intensity as when they are memorizing the Qurʾān or
-                  studying Fiqh. Excellence is not segmented; it is a holistic
-                  mindset we cultivate across all disciplines.
+                  {t("philosophy.p3")}
                 </p>
               </div>
             </motion.div>
@@ -190,9 +175,7 @@ export default function AboutPage() {
                   <span className="font-amiri text-4xl text-amber">الدين</span>
                 </div>
                 <div className="absolute inset-e-1/2 -me-32 w-64 h-64 border border-midnight/ dark:border-white/ rounded-full flex items-center justify-end pe-8 transition-transform duration-700 group-hover:translate-x-4">
-                  <span className="font-cinzel text-xl text-midnight dark:text-cream tracking-widest">
-                    DUNIYA
-                  </span>
+                  <span className="font-cinzel text-xl text-midnight dark:text-cream tracking-widest">{t("t1")}</span>
                 </div>
                 <div className="z-20 w-32 h-32 bg-ivory dark:bg-midnight border-2 border-gold rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(212,175,55,0.2)]">
                   <Award className="w-12 h-12 text-gold" />
@@ -208,7 +191,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="font-cinzel text-4xl md:text-5xl text-midnight tracking-wider mb-6">
-              Our Core Values
+              {t("values.title")}
             </h2>
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
@@ -217,23 +200,23 @@ export default function AboutPage() {
             {[
               {
                 icon: Award,
-                title: "Excellence (Ihsan)",
-                desc: "Striving for perfection in both our worship and our studies, knowing Allah loves when a task is done well.",
+                title: t("values.v1_title"),
+                desc: t("values.v1_desc"),
               },
               {
                 icon: Shield,
-                title: "Integrity (Amanah)",
-                desc: "Upholding honesty, immense responsibility, and moral uprightness in every action.",
+                title: t("values.v2_title"),
+                desc: t("values.v2_desc"),
               },
               {
                 icon: BookOpen,
-                title: "Authenticity",
-                desc: "Unapologetically rooting our knowledge and methodology in the Qurʾān and the authentic Sunnah.",
+                title: t("values.v3_title"),
+                desc: t("values.v3_desc"),
               },
               {
                 icon: Heart,
-                title: "Brotherhood",
-                desc: "Fostering deeply rooted care, empathy, and community among students, staff, and parents.",
+                title: t("values.v4_title"),
+                desc: t("values.v4_desc"),
               },
             ].map((val, idx) => (
               <motion.div
@@ -264,31 +247,24 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <BookOpen className="w-12 h-12 text-gold mx-auto mb-8 opacity-80" />
           <h2 className="font-cinzel text-3xl md:text-5xl text-midnight tracking-wider mb-8">
-            How We Began
+            {t("origin.title")}
           </h2>
           <div className="prose prose-lg mx-auto text-midnight/80 font-sans leading-relaxed text-start md:text-center space-y-6">
             <p>
-              Rawdatul Atfaal was founded circa 2021 as the foundational
+              {t("philosophy.p2_bold")} was founded circa 2021 as the foundational
               children&apos;s school under the umbrella of Markazul Bayaan. What
               started as a focused initiative has since blossomed into a global
               learning community, answering the call of families across the US,
               UK, Australia, Germany, Canada, India, Nigeria, Ghana, and beyond.
             </p>
             <p>
-              Our Islamic curriculum is firmly rooted in authenticity. We are
-              proud to feature highly qualified Islamic tutors who have spent
-              years studying under the recognized scholars of this era, adhering
-              strictly to the methodology of the pious predecessors (Salaf).
+              {t("origin.p2")}
             </p>
             <p>
-              Simultaneously, we ensure no compromise in secular academics. Our
-              Western education department is spearheaded by highly experienced
-              educators specializing in mathematics, programming, and the
-              sciences, giving our students the absolute best of both worlds.
+              {t("origin.p3")}
             </p>
             <p className="font-playfair italic text-xl text-amber pt-4">
-              &quot;We didn&apos;t just want to build a school; we wanted to
-              revive a tradition of holistic, unapologetic scholarship.&quot;
+              {t("origin.quote")}
             </p>
           </div>
         </div>

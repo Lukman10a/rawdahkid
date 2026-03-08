@@ -11,7 +11,11 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
+import { useTranslations } from "next-intl";
+
 export default function MathematicsProgramme() {
+  const t = useTranslations("ProgMathematics");
+
   return (
     <div className="flex flex-col min-h-screen bg-ivory dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* 1. HERO SECTION */}
@@ -28,27 +32,20 @@ export default function MathematicsProgramme() {
             <div className="inline-flex items-center justify-center p-3 bg-blue-500/10 dark:bg-blue-400/10 rounded-full mb-6">
               <Sigma className="w-10 h-10 text-blue-600 dark:text-blue-400" />
             </div>
-            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
-              Mathematics
-            </h1>
-            <h2 className="font-sans text-xl md:text-2xl text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-6 font-semibold">
-              Horizons Math + Pre-Calculus
-            </h2>
+            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">{t("t0")}</h1>
+            <h2 className="font-sans text-xl md:text-2xl text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-6 font-semibold">{t("t1")}</h2>
 
             <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-8 flex flex-wrap justify-center gap-2">
-              <span>Primary</span>
-              <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
-              <span>Secondary</span>
-              <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
-              <span>10 Levels</span>
-              <span className="hidden sm:inline">&nbsp;•&nbsp;</span>
-              <span>Ages 6–16</span>
+              <span>{t("t2")}</span>
+              <span className="hidden sm:inline">{t("t3")}</span>
+              <span>{t("t4")}</span>
+              <span className="hidden sm:inline">{t("t3")}</span>
+              <span>{t("t6")}</span>
+              <span className="hidden sm:inline">{t("t3")}</span>
+              <span>{t("t8")}</span>
             </div>
 
-            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">
-              &quot;Spiral Learning • Conceptual Mastery • Algebraic Thinking •
-              University Readiness&quot;
-            </p>
+            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">{t("t9")}</p>
           </motion.div>
         </div>
       </section>
@@ -63,24 +60,11 @@ export default function MathematicsProgramme() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-cinzel text-3xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <Compass className="w-8 h-8 text-blue-600 dark:text-blue-400" />
-              Programme Overview
-            </h2>
+              <Compass className="w-8 h-8 text-blue-600 dark:text-blue-400" />{t("t10")}</h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
-              <p>
-                The Mathematics curriculum begins with the Horizons Math
-                Curriculum (HMC) in the primary years — a proven spiral-learning
-                approach used widely in the United States.
-              </p>
-              <p>
-                From Grade 6 onwards, students advance through pre-algebra,
-                Algebra I, Algebra II, and culminate in Pre-Calculus with an
-                introduction to differentiation and integration by age 16.
-              </p>
-              <p className="font-semibold text-midnight dark:text-cream italic border-s-4 border-blue-600 dark:border-blue-400 ps-4 py-1">
-                This trajectory prepares students fully for A-Level or
-                university entrance mathematics.
-              </p>
+              <p>{t("t11")}</p>
+              <p>{t("t12")}</p>
+              <p className="font-semibold text-midnight dark:text-cream italic border-s-4 border-blue-600 dark:border-blue-400 ps-4 py-1">{t("t13")}</p>
             </div>
           </motion.div>
 
@@ -92,9 +76,7 @@ export default function MathematicsProgramme() {
             className="bg-white/80 dark:bg-navy/80 p-8 md:p-10 border border-midnight/5 dark:border-white/5 rounded-sm"
           >
             <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <Calculator className="w-7 h-7 text-blue-600 dark:text-blue-400" />
-              Core Progression
-            </h2>
+              <Calculator className="w-7 h-7 text-blue-600 dark:text-blue-400" />{t("t14")}</h2>
             <ul className="space-y-6">
               {[
                 {
@@ -135,9 +117,7 @@ export default function MathematicsProgramme() {
       <section className="py-20 bg-blue-50/50 dark:bg-blue-900/10 border-y border-midnight/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
-              Mathematics at a Glance
-            </h2>
+            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">{t("t15")}</h2>
             <div className="w-24 h-px bg-blue-600/50 dark:bg-blue-400/50 mx-auto"></div>
           </div>
 
@@ -145,15 +125,9 @@ export default function MathematicsProgramme() {
             <table className="w-full text-start border-collapse min-w-200">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
-                  <th className="py-4 px-6 font-cinzel text-blue-700 dark:text-blue-400 text-lg w-20">
-                    Lvl
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">
-                    Age
-                  </th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
-                    Primary Focus
-                  </th>
+                  <th className="py-4 px-6 font-cinzel text-blue-700 dark:text-blue-400 text-lg w-20">{t("t16")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">{t("t17")}</th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t18")}</th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
@@ -221,16 +195,14 @@ export default function MathematicsProgramme() {
       {/* 4. DETAILED COURSE OUTLINES */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
-            Detailed Master Plans
-          </h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t19")}</h2>
           <div className="w-24 h-px bg-blue-600/50 dark:bg-blue-400/50 mx-auto"></div>
         </div>
 
         <div className="space-y-24">
           <LevelCard
             levelNumber="1"
-            title="Foundations of Number"
+            title={t("t40")}
             subtitle="Grade 1"
             ageGroup="Ages 6–7 | HMC Grade 1"
             duration="36 Weeks | 4–5 Sessions/Week | 40 Min/Session"
@@ -291,7 +263,7 @@ export default function MathematicsProgramme() {
 
           <LevelCard
             levelNumber="2"
-            title="Building Fluency"
+            title={t("t43")}
             subtitle="Grade 2"
             ageGroup="Ages 7–8 | HMC Grade 2"
             duration="36 Weeks | 4–5 Sessions/Week | 40 Min/Session"
@@ -352,7 +324,7 @@ export default function MathematicsProgramme() {
 
           <LevelCard
             levelNumber="3"
-            title="Multiplication & Division Mastery"
+            title={t("t37")}
             subtitle="Grade 3"
             ageGroup="Ages 8–9 | HMC Grade 3"
             duration="36 Weeks | 4–5 Sessions/Week | 45 Min/Session"
@@ -413,7 +385,7 @@ export default function MathematicsProgramme() {
 
           <LevelCard
             levelNumber="4"
-            title="Multi-digit Operations & Fractions"
+            title={t("t36")}
             subtitle="Grade 4"
             ageGroup="Ages 9–10 | HMC Grade 4"
             duration="36 Weeks | 4–5 Sessions/Week | 45 Min/Session"
@@ -474,7 +446,7 @@ export default function MathematicsProgramme() {
 
           <LevelCard
             levelNumber="5"
-            title="Ratios, Decimals & Pre-Algebra"
+            title={t("t38")}
             subtitle="Grade 5"
             ageGroup="Ages 10–11 | HMC Grade 5"
             duration="36 Weeks | 4–5 Sessions/Week | 50 Min/Session"
@@ -535,7 +507,7 @@ export default function MathematicsProgramme() {
 
           <LevelCard
             levelNumber="6"
-            title="Foundations of Algebra"
+            title={t("t39")}
             subtitle="Grade 6"
             ageGroup="Ages 11–12 | Pre-Algebra / HMC Grade 6"
             duration="36 Weeks | 4–5 Sessions/Week | 50 Min/Session"
@@ -596,7 +568,7 @@ export default function MathematicsProgramme() {
 
           <LevelCard
             levelNumber="7"
-            title="Algebra I Foundations"
+            title={t("t41")}
             subtitle="Grade 7"
             ageGroup="Ages 12–13 | Algebra I Preparation"
             duration="36 Weeks | 4–5 Sessions/Week | 55 Min/Session"
@@ -657,7 +629,7 @@ export default function MathematicsProgramme() {
 
           <LevelCard
             levelNumber="8"
-            title="Algebra I & Geometry"
+            title={t("t42")}
             subtitle="Grade 8"
             ageGroup="Ages 13–14 | Algebra I / Geometry"
             duration="36 Weeks | 4–5 Sessions/Week | 55 Min/Session"
@@ -718,7 +690,7 @@ export default function MathematicsProgramme() {
 
           <LevelCard
             levelNumber="9"
-            title="Algebra II & Trigonometry Foundations"
+            title={t("t34")}
             subtitle="Grade 9"
             ageGroup="Ages 14–15 | Algebra II"
             duration="36 Weeks | 4–5 Sessions/Week | 55–60 Min/Session"
@@ -779,7 +751,7 @@ export default function MathematicsProgramme() {
 
           <LevelCard
             levelNumber="10"
-            title="Pre-Calculus & Advanced Mathematics"
+            title={t("t35")}
             subtitle="Grade 10"
             ageGroup="Ages 15–16 | Pre-Calculus"
             duration="36 Weeks | 4–5 Sessions/Week | 60 Min/Session"
@@ -844,46 +816,28 @@ export default function MathematicsProgramme() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-blue-600 dark:text-blue-400 mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
-            Equip Your Child for Excellence
-          </h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
-            Build a bulletproof mathematical foundation that prepares them for
-            global opportunities, critical thinking, and the highest levels of
-            academia.
-          </p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t20")}</h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t21")}</p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-blue-600/30 dark:border-blue-400/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
-              Mathematics Programme
-            </h3>
-            <div className="font-cormorant text-5xl text-blue-600 dark:text-blue-400 mb-6">
-              Core
-            </div>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t22")}</h3>
+            <div className="font-cormorant text-5xl text-blue-600 dark:text-blue-400 mb-6">{t("t23")}</div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Guided 10-Level Path
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t24")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  HMC to Pre-Calculus
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t25")}</span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">
-                  Expert Instructors
-                </span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t26")}</span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">
-                Enrol Now
-              </Button>
+              <Button variant="primary" className="w-full py-4 text-lg">{t("t27")}</Button>
             </Link>
           </div>
 
@@ -891,9 +845,7 @@ export default function MathematicsProgramme() {
             <Link
               href="/programmes/western"
               className="text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors font-sans underline underline-offset-4"
-            >
-              ← Back to Core Programmes
-            </Link>
+            >{t("t28")}</Link>
           </div>
         </div>
       </section>
@@ -919,6 +871,7 @@ function LevelCard({
   aim: string;
   units: { no: number; topic: string; skills: string }[];
 }) {
+  const t = useTranslations("ProgMathematics");
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -949,13 +902,13 @@ function LevelCard({
 
         <div className="grid md:grid-cols-1 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
           <div>
-            <strong className="text-white">Duration / Frequency:</strong>{" "}
+            <strong className="text-white">{t("t29")}</strong>{" "}
             {duration}
           </div>
         </div>
 
         <div className="text-sm text-cream/80 leading-relaxed text-justify md:text-start">
-          <strong className="text-white block mb-1">Aim:</strong> {aim}
+          <strong className="text-white block mb-1">{t("t30")}</strong> {aim}
         </div>
       </div>
 
@@ -964,15 +917,9 @@ function LevelCard({
           <table className="w-full text-start border-collapse min-w-200">
             <thead>
               <tr className="border-b-2 border-blue-100 dark:border-white/10 bg-blue-50/50 dark:bg-white/5">
-                <th className="py-4 px-6 font-cinzel text-blue-700 dark:text-blue-400 font-bold w-16 text-center">
-                  Unit
-                </th>
-                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold w-1/2">
-                  Unit / Topic
-                </th>
-                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold">
-                  Key Skills / Outcomes
-                </th>
+                <th className="py-4 px-6 font-cinzel text-blue-700 dark:text-blue-400 font-bold w-16 text-center">{t("t31")}</th>
+                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold w-1/2">{t("t32")}</th>
+                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold">{t("t33")}</th>
               </tr>
             </thead>
             <tbody className="font-sans text-midnight/80 dark:text-cream/80 text-sm">

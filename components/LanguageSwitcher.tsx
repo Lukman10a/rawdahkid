@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 
 import { useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/routing";
@@ -7,6 +8,7 @@ import { Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function LanguageSwitcher({ className }: { className?: string }) {
+  const t = useTranslations("Navigation");
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -15,7 +17,6 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   const toggleLanguage = () => {
     const nextLocale = locale === "en" ? "ar" : "en";
     startTransition(() => {
-      // @ts-expect-error - Route forwarding handles the locale
       router.replace(pathname, { locale: nextLocale });
     });
   };
@@ -28,7 +29,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         "flex items-center space-x-2 text-midnight/80 dark:text-cream/80 hover:text-gold transition-colors text-sm uppercase tracking-wider",
         className,
       )}
-      aria-label="Toggle language"
+      aria-label={t("t17")}
     >
       <Globe className="w-4 h-4" />
       <span>{locale === "en" ? "عربي" : "EN"}</span>

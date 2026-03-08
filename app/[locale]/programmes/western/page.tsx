@@ -2,34 +2,38 @@
 
 import { motion } from "framer-motion";
 import { Calculator, FlaskConical, Code2, Globe } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/components/ui/Button";
 
-const courses = [
-  {
-    name: "Mathematics",
-    icon: Calculator,
-    desc: "A rigorous progression from arithmetic to advanced calculus, developing critical problem-solving skills.",
-    levels: "10 Levels",
-    slug: "mathematics",
-  },
-  {
-    name: "Sciences",
-    icon: FlaskConical,
-    desc: "Physics, Chemistry, and Biology taught through inquiry-based learning and practical experimentation.",
-    levels: "10 Levels",
-    slug: "sciences",
-  },
-  {
-    name: "Programming",
-    icon: Code2,
-    desc: "Computational thinking, algorithmic design, and full-stack software development.",
-    levels: "10 Levels",
-    slug: "programming",
-  },
-];
+import { Button } from "@/components/ui/Button";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
+
+
 
 export default function WesternProgramme() {
+  const t = useTranslations("ProgWestern");
+  const courses = [
+    {
+      name: t("courses.math.name"),
+      icon: Calculator,
+      desc: t("courses.math.desc"),
+      levels: t("courses.math.levels"),
+      slug: "mathematics",
+    },
+    {
+      name: t("courses.science.name"),
+      icon: FlaskConical,
+      desc: t("courses.science.desc"),
+      levels: t("courses.science.levels"),
+      slug: "sciences",
+    },
+    {
+      name: t("courses.programming.name"),
+      icon: Code2,
+      desc: t("courses.programming.desc"),
+      levels: t("courses.programming.levels"),
+      slug: "programming",
+    },
+  ];
   return (
     <div className="flex flex-col min-h-screen bg-ivory dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* 1. HERO SECTION */}
@@ -44,12 +48,11 @@ export default function WesternProgramme() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="font-cinzel text-4xl md:text-6xl lg:text-7xl text-midnight dark:text-cream tracking-widest mb-6 uppercase">
-              The Western Programme
+              {t("hero.title")}
             </h1>
             <div className="w-32 h-px bg-gold mx-auto mb-8"></div>
             <p className="font-sans text-xl text-midnight/70 dark:text-muted max-w-3xl mx-auto leading-relaxed">
-              Equipping our students with the skills and knowledge required to
-              excel and lead in the modern academic and professional world.
+              {t("hero.desc")}
             </p>
           </motion.div>
         </div>
@@ -59,7 +62,7 @@ export default function WesternProgramme() {
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream tracking-wider mb-4">
-            Core Disciplines
+            {t("core.title")}
           </h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
@@ -98,34 +101,28 @@ export default function WesternProgramme() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <Globe className="w-12 h-12 text-gold mx-auto mb-6 opacity-80" />
           <h2 className="font-playfair italic text-4xl text-midnight dark:text-cream mb-6">
-            World-Class Preparation
+            {t("investment.title")}
           </h2>
-          <p className="font-sans text-lg text-midnight/70 dark:text-muted mb-12">
-            While Western Programme courses can be taken individually starting
-            from <span className="text-amber">$2,000/year</span>, we highly
-            recommend the complete bundle.
-          </p>
+          <p className="font-sans text-lg text-midnight/70 dark:text-muted mb-12">{t("t0")}<span className="text-amber">{t("t2")}</span>{t("t1")}</p>
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/20 rounded-sm inline-block w-full max-w-2xl relative overflow-hidden text-midnight dark:text-cream">
             <div className="absolute inset-0 bg-linear-to-b from-white/50 dark:from-navy/50 to-transparent"></div>
             <div className="relative z-10">
               <h3 className="font-cinzel text-2xl text-gold tracking-widest mb-2 uppercase">
-                Full Western Bundle
+                {t("investment.bundle.title")}
               </h3>
               <p className="font-sans text-midnight/70 dark:text-muted mb-6">
-                Mathematics, Sciences, and Programming
+                {t("investment.bundle.desc")}
               </p>
               <div className="font-cormorant text-6xl text-midnight dark:text-cream mb-2">
                 $5,000{" "}
-                <span className="text-xl text-midnight/70 dark:text-muted font-sans">
-                  / year
-                </span>
+                <span className="text-xl text-midnight/70 dark:text-muted font-sans">{t("t3")}</span>
               </div>
               <p className="font-sans text-sm text-amber mb-8 uppercase tracking-widest">
-                Equivalent to $416 / month
+                {t("investment.equivalent")}
               </p>
               <Link href="/fees">
                 <Button variant="primary" className="px-10 py-3">
-                  View Fee Schedule
+                  {t("investment.cta")}
                 </Button>
               </Link>
             </div>
