@@ -42,9 +42,15 @@ export default function Footer() {
               <span className="font-amiri text-gold/30 text-5xl md:text-6xl -mb-4 select-none pe-4">
                 روضة الأطفال
               </span>
-              <span className="font-cinzel text-midnight dark:text-cream text-2xl tracking-[0.2em] relative z-10">{t("t7")}<br />{t("t13")}</span>
+              <span className="font-cinzel text-midnight dark:text-cream text-2xl tracking-[0.2em] relative z-10">
+                {t("t7")}
+                <br />
+                {t("t13")}
+              </span>
             </div>
-            <p className="font-playfair italic text-midnight/ dark:text-cream/ max-w-sm text-lg">{t("t0")}</p>
+            <p className="font-playfair italic text-midnight/ dark:text-cream/ max-w-sm text-lg">
+              {t("t0")}
+            </p>
             <div className="flex space-x-4 pt-4">
               <a
                 href="#"
@@ -72,49 +78,65 @@ export default function Footer() {
 
           {/* Column 2 - Quick Links */}
           <div className="lg:ps-16">
-            <h3 className="font-cinzel text-lg tracking-wider text-gold mb-6">{t("t11")}</h3>
+            <h3 className="font-cinzel text-lg tracking-wider text-gold mb-6">
+              {t("t11")}
+            </h3>
             <ul className="space-y-4">
               <li>
                 <Link
                   href="/"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >{t("home")}</Link>
+                >
+                  {t("home")}
+                </Link>
               </li>
               <li>
                 <Link
                   href="/about"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >{t("t8")}</Link>
+                >
+                  {t("t8")}
+                </Link>
               </li>
               <li>
                 <Link
                   href="/programmes/islamic"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >{t("islamicProgramme")}</Link>
+                >
+                  {t("islamicProgramme")}
+                </Link>
               </li>
               <li>
                 <Link
                   href="/programmes/western"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >{t("westernProgramme")}</Link>
+                >
+                  {t("westernProgramme")}
+                </Link>
               </li>
               <li>
                 <Link
                   href="/fees"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >{t("t4")}</Link>
+                >
+                  {t("t4")}
+                </Link>
               </li>
               <li>
                 <Link
                   href="/contact"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
-                >{t("t12")}</Link>
+                >
+                  {t("t12")}
+                </Link>
               </li>
               <li>
                 <Link
                   href="/enrol"
                   className="text-gold font-medium hover:text-amber transition-colors opacity-100 font-sans text-sm tracking-wide flex items-center"
-                >{t("enroll")}<span className="ms-1">→</span>
+                >
+                  {t("enroll")}
+                  <span className="ms-1">→</span>
                 </Link>
               </li>
             </ul>
@@ -122,13 +144,17 @@ export default function Footer() {
 
           {/* Column 3 - Contact */}
           <div>
-            <h3 className="font-cinzel text-lg tracking-wider text-gold mb-6">{t("t5")}</h3>
+            <h3 className="font-cinzel text-lg tracking-wider text-gold mb-6">
+              {t("t5")}
+            </h3>
             <ul className="space-y-4 text-sm font-sans tracking-wide">
               <li>
                 <a
                   href="mailto:hello@rawdatulatfaal.edu"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors"
-                >{t("t2")}</a>
+                >
+                  {t("t2")}
+                </a>
               </li>
               <li>
                 <a
@@ -138,7 +164,9 @@ export default function Footer() {
                   +1 (234) 567-890
                 </a>
               </li>
-              <li className="text-midnight/ dark:text-cream/ pt-4 italic font-playfair pe-8">{t("t1")}</li>
+              <li className="text-midnight/ dark:text-cream/ pt-4 italic font-playfair pe-8">
+                {t("t1")}
+              </li>
             </ul>
           </div>
         </div>
@@ -147,10 +175,7 @@ export default function Footer() {
         <div className="pt-8 mt-8 border-t border-gradient-to-r from-transparent via-gold/25 to-transparent relative">
           <div className="absolute top-0 inset-s-0 w-full h-px bg-linear-to-r from-transparent via-gold/25 to-transparent"></div>
           <div className="flex flex-col md:flex-row justify-between items-center text-xs text-midnight/ dark:text-cream/ font-sans uppercase tracking-widest">
-            <p>
-              &copy; {new Date().getFullYear()} Rawdatul Atfaal. All rights
-              reserved.
-            </p>
+            <p>{t("copyright", { year: new Date().getFullYear() })}</p>
             <p className="mt-2 md:mt-0 font-cormorant text-sm">{t("t3")}</p>
           </div>
         </div>

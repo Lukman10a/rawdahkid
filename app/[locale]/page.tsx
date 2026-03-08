@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/Button";
 export default function Home() {
   const t = useTranslations("Hero");
   const h = useTranslations("Home");
+  const t_isl = useTranslations("ProgIslamic.courses");
+  const t_wst = useTranslations("ProgWestern.courses");
   const testimonials = [
     {
       quote: h("testimonials.t1.quote"),
@@ -236,7 +238,7 @@ export default function Home() {
                   {h("dualCurriculum.islamic.title")}
                 </h3>
                 <p className="font-amiri text-gold text-xl mb-6">
-                  ???????? ????????
+                  العلوم الشرعية
                 </p>
 
                 <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
@@ -282,10 +284,12 @@ export default function Home() {
                   {h("dualCurriculum.western.title")}
                 </h3>
                 <p className="font-amiri text-gold text-xl mb-6">
-                  ???????? ????????
+                  العلوم العصرية
                 </p>
 
-                <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">{t("tNaN")}</p>
+                <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
+                  {h("all_courses_title")}
+                </p>
 
                 <div className="mt-auto flex flex-col items-center space-y-4 w-full">
                   <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
@@ -309,71 +313,73 @@ export default function Home() {
       {/* INDIVIDUAL COURSE CARDS */}
       <section className="bg-ivory dark:bg-midnight pb-24 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-          <h3 className="font-cinzel text-xl text-midnight/ dark:text-cream/ uppercase tracking-widest ps-4 border-s border-gold/50">{t("tNaN")}</h3>
+          <h3 className="font-cinzel text-xl text-midnight/ dark:text-cream/ uppercase tracking-widest ps-4 border-s border-gold/50">
+            {h("all_courses_title")}
+          </h3>
         </div>
 
         <div className="flex overflow-x-auto pb-8 hide-scrollbar snap-x snap-mandatory px-4 md:px-8 gap-6 max-w-[100vw]">
           {[
             {
-              name: "Qurʼan",
+              name: t_isl("quran.name"),
               color: "border-t-green",
-              levels: "4 Terms",
+              levels: t_isl("quran.levels"),
               price: "$2,000",
               link: "/programmes/islamic/quran-memorisation",
             },
             {
-              name: "Arabic",
+              name: t_isl("arabic.name"),
               color: "border-t-amber",
-              levels: "5 Levels",
+              levels: t_isl("arabic.levels"),
               price: "$1,500",
               link: "/programmes/islamic/arabic",
             },
             {
-              name: "Tawheed",
+              name: t_isl("tawheed.name"),
               color: "border-t-blue-500",
-              levels: "5 Levels",
+              levels: t_isl("tawheed.levels"),
               price: "$1,200",
               link: "/programmes/islamic/tawheed",
             },
             {
-              name: "Fiqh",
+              name: t_isl("fiqh.name"),
               color: "border-t-purple",
-              levels: "6 Levels",
+              levels: t_isl("fiqh.levels"),
               price: "$1,200",
               link: "/programmes/islamic/fiqh",
             },
             {
-              name: "Hadith",
+              name: t_isl("hadith.name"),
               color: "border-t-rust",
-              levels: "4 Levels",
+              levels: t_isl("hadith.levels"),
               price: "$1,200",
               link: "/programmes/islamic/hadith",
             },
             {
-              name: "Mutoon",
+              name: t_isl("mutoon.name"),
               color: "border-t-[#556b2f]",
-              levels: "Classical texts",
+              levels: t_isl("mutoon.levels"),
               price: "$1,200",
               link: "/programmes/islamic/mutoon",
             },
             {
-              name: "Mathematics",
+              name: t_wst("math.name"),
               color: "border-t-white",
-              levels: "10 Levels",
+              levels: t_wst("math.levels"),
               price: "$2,000",
               link: "/programmes/western/mathematics",
             },
             {
-              name: "Sciences",
+              name: t_wst("science.name"),
               color: "border-t-green",
-              levels: "10 Levels",
+              levels: t_wst("science.levels"),
               price: "$2,000",
               link: "/programmes/western/sciences",
             },
             {
-              name: "Programming",
+              name: t_wst("programming.name"),
               color: "border-t-purple",
-              levels: "10 Levels",
+              levels: t_wst("programming.levels"),
               price: "$2,000",
               link: "/programmes/western/programming",
             },
@@ -386,13 +392,15 @@ export default function Home() {
                   <h4 className="font-playfair text-2xl text-midnight dark:text-cream">
                     {course.name}
                   </h4>
-                  <span className="text-midnight/30 dark:text-cream/30 group-hover:text-gold transition-colors font-sans">{t("tNaN")}</span>
+                  <span className="text-midnight/30 dark:text-cream/30 group-hover:text-gold transition-colors font-sans">
+                    {h("all_courses_title")}
+                  </span>
                 </div>
                 <p className="font-sans text-midnight/70 dark:text-muted text-sm mb-6">
                   {course.levels}
                 </p>
                 <div className="font-cormorant text-xl text-amber">
-                  From {course.price}{" "}
+                  {h("from_price", { price: course.price })}
                   <span className="text-sm text-midnight/70 dark:text-muted">
                     {h("fees.perYear")}
                   </span>

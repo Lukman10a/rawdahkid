@@ -80,20 +80,20 @@ export default function MathematicsProgramme() {
             <ul className="space-y-6">
               {[
                 {
-                  title: "Primary (Levels 1–5)",
-                  desc: "Horizons Math Curriculum ensuring solid arithmetic, fractions, decimals and early geometry.",
+                  title: t("t59"),
+                  desc: t("t45"),
                 },
                 {
-                  title: "Middle School (Levels 6–7)",
-                  desc: "Pre-Algebra and Algebra I foundations, mastering proportional reasoning and linear equations.",
+                  title: t("t53"),
+                  desc: t("t44"),
                 },
                 {
-                  title: "High School (Levels 8–9)",
-                  desc: "Algebra I & II alongside formal geometry, quadratics, and trigonometry.",
+                  title: t("t57"),
+                  desc: t("t47"),
                 },
                 {
-                  title: "Capstone (Level 10)",
-                  desc: "Pre-Calculus and an introduction to limits, differentiation, and integration.",
+                  title: t("t60"),
+                  desc: t("t46"),
                 },
               ].map((resource, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -132,43 +132,43 @@ export default function MathematicsProgramme() {
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
                 {[
-                  { lvl: "1", age: "6–7", focus: "Number sense, shapes, time" },
+                  { lvl: "1", age: "6–7", focus: t("t54") },
                   {
                     lvl: "2",
                     age: "7–8",
-                    focus: "Place value, addition to 1,000",
+                    focus: t("t50"),
                   },
                   {
                     lvl: "3",
                     age: "8–9",
-                    focus: "Multiplication & division mastery",
+                    focus: t("t48"),
                   },
                   {
                     lvl: "4",
                     age: "9–10",
-                    focus: "Multi-digit ops, fractions",
+                    focus: t("t55"),
                   },
                   {
                     lvl: "5",
                     age: "10–11",
-                    focus: "Ratios, decimals, pre-algebra",
+                    focus: t("t51"),
                   },
-                  { lvl: "6", age: "11–12", focus: "Algebra foundations" },
+                  { lvl: "6", age: "11–12", focus: t("t61") },
                   {
                     lvl: "7",
                     age: "12–13",
-                    focus: "Algebra I — linear equations",
+                    focus: t("t52"),
                   },
-                  { lvl: "8", age: "13–14", focus: "Algebra I/II + geometry" },
+                  { lvl: "8", age: "13–14", focus: t("t58") },
                   {
                     lvl: "9",
                     age: "14–15",
-                    focus: "Algebra II + trigonometry",
+                    focus: t("t56"),
                   },
                   {
                     lvl: "10",
                     age: "15–16",
-                    focus: "Pre-Calculus + intro to calculus",
+                    focus: t("t49"),
                   },
                 ].map((row, i) => (
                   <tr

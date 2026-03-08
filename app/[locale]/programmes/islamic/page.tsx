@@ -135,10 +135,10 @@ export default function IslamicProgramme() {
             <span className="text-amber">{t("t1")}</span>{t("t0")}</p>
           <div className="bg-ivory/ dark:bg-midnight/ p-8 md:p-12 border border-gold/20 rounded-sm inline-block w-full max-w-2xl">
             <h3 className="font-cinzel text-2xl text-gold tracking-widest mb-2 uppercase">
-              {t("investment.bundle.title")}
+              {t("investment.bundleTitle")}
             </h3>
             <p className="font-sans text-midnight/70 dark:text-muted mb-6">
-              {t("investment.bundle.desc")}
+              {t("investment.bundleDesc")}
             </p>
             <div className="font-cormorant text-6xl text-midnight dark:text-cream mb-2">
               $5,000{" "}

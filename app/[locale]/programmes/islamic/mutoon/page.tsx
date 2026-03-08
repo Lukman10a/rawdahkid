@@ -19,7 +19,7 @@ export default function MutoonProgramme() {
 
   const level1Weeks = [
     {
-      title: "Week 1",
+      title: t("t68"),
       days: [
         {
           day: "Day 1",
@@ -48,7 +48,7 @@ export default function MutoonProgramme() {
       ],
     },
     {
-      title: "Week 2",
+      title: t("t69"),
       days: [
         {
           day: "Day 1",
@@ -76,7 +76,7 @@ export default function MutoonProgramme() {
       ],
     },
     {
-      title: "Week 3",
+      title: t("t70"),
       days: [
         {
           day: "Day 1",
@@ -104,7 +104,7 @@ export default function MutoonProgramme() {
       ],
     },
     {
-      title: "Week 4",
+      title: t("t71"),
       days: [
         {
           day: "Day 1",
@@ -134,7 +134,7 @@ export default function MutoonProgramme() {
 
   const level2Weeks = [
     {
-      title: "Week 1 — Introductions",
+      title: t("t67"),
       days: [
         {
           day: "Day 1",
@@ -162,7 +162,7 @@ export default function MutoonProgramme() {
       ],
     },
     {
-      title: "Week 2 — Introduction 4 & The First Principle",
+      title: t("t64"),
       days: [
         {
           day: "Day 1",
@@ -186,7 +186,7 @@ export default function MutoonProgramme() {
       ],
     },
     {
-      title: "Week 3 — Examination of the Two Doubts",
+      title: t("t65"),
       days: [
         {
           day: "Day 1",
@@ -210,7 +210,7 @@ export default function MutoonProgramme() {
       ],
     },
     {
-      title: "Week 4 — The Third Principle — Part 1",
+      title: t("t66"),
       days: [
         {
           day: "Day 1",
@@ -234,7 +234,7 @@ export default function MutoonProgramme() {
       ],
     },
     {
-      title: "Week 5 — The Third Principle (continued) & The Fourth Principle",
+      title: t("t62"),
       days: [
         {
           day: "Day 1",
@@ -258,7 +258,7 @@ export default function MutoonProgramme() {
       ],
     },
     {
-      title: "Week 6 — Fourth Principle Completion & Full Review",
+      title: t("t63"),
       days: [
         {
           day: "Day 1",

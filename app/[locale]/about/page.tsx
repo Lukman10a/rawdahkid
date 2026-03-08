@@ -83,12 +83,8 @@ export default function AboutPage() {
               </h2>
             </div>
             <p className="font-sans text-lg text-midnight/80 leading-relaxed space-y-4">
-              <span className="block">
-                {t("mission.p1")}
-              </span>
-              <span className="block mt-4">
-                {t("mission.p2")}
-              </span>
+              <span className="block">{t("mission.p1")}</span>
+              <span className="block mt-4">{t("mission.p2")}</span>
             </p>
           </motion.div>
 
@@ -110,10 +106,10 @@ export default function AboutPage() {
                 </h2>
               </div>
               <p className="font-sans text-lg text-midnight/ dark:text-cream/ leading-relaxed space-y-4">
-                <span className="block">
-                  {t("vision.p1")}
+                <span className="block">{t("vision.p1")}</span>
+                <span className="block mt-4 text-amber/90 font-medium">
+                  {t("t0")}
                 </span>
-                <span className="block mt-4 text-amber/90 font-medium">{t("t0")}</span>
               </p>
             </div>
           </motion.div>
@@ -143,9 +139,7 @@ export default function AboutPage() {
               <div className="w-20 h-px bg-gold/50"></div>
 
               <div className="font-sans text-midnight/ dark:text-cream/ text-lg leading-relaxed space-y-6">
-                <p>
-                  {t("philosophy.p1")}
-                </p>
+                <p>{t("philosophy.p1")}</p>
                 <p>
                   At{" "}
                   <strong className="text-amber font-medium tracking-wide">
@@ -153,9 +147,7 @@ export default function AboutPage() {
                   </strong>
                   {t("philosophy.p2_suffix")}
                 </p>
-                <p>
-                  {t("philosophy.p3")}
-                </p>
+                <p>{t("philosophy.p3")}</p>
               </div>
             </motion.div>
 
@@ -175,7 +167,9 @@ export default function AboutPage() {
                   <span className="font-amiri text-4xl text-amber">الدين</span>
                 </div>
                 <div className="absolute inset-e-1/2 -me-32 w-64 h-64 border border-midnight/ dark:border-white/ rounded-full flex items-center justify-end pe-8 transition-transform duration-700 group-hover:translate-x-4">
-                  <span className="font-cinzel text-xl text-midnight dark:text-cream tracking-widest">{t("t1")}</span>
+                  <span className="font-cinzel text-xl text-midnight dark:text-cream tracking-widest">
+                    {t("t1")}
+                  </span>
                 </div>
                 <div className="z-20 w-32 h-32 bg-ivory dark:bg-midnight border-2 border-gold rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(212,175,55,0.2)]">
                   <Award className="w-12 h-12 text-gold" />
@@ -250,19 +244,9 @@ export default function AboutPage() {
             {t("origin.title")}
           </h2>
           <div className="prose prose-lg mx-auto text-midnight/80 font-sans leading-relaxed text-start md:text-center space-y-6">
-            <p>
-              {t("philosophy.p2_bold")} was founded circa 2021 as the foundational
-              children&apos;s school under the umbrella of Markazul Bayaan. What
-              started as a focused initiative has since blossomed into a global
-              learning community, answering the call of families across the US,
-              UK, Australia, Germany, Canada, India, Nigeria, Ghana, and beyond.
-            </p>
-            <p>
-              {t("origin.p2")}
-            </p>
-            <p>
-              {t("origin.p3")}
-            </p>
+            <p>{t("origin.p1")}</p>
+            <p>{t("origin.p2")}</p>
+            <p>{t("origin.p3")}</p>
             <p className="font-playfair italic text-xl text-amber pt-4">
               {t("origin.quote")}
             </p>

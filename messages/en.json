@@ -25,7 +25,8 @@
     "t15": "Close menu",
     "t16": "Open menu",
     "t17": "Toggle language",
-    "t18": "Toggle Dark Mode"
+    "t18": "Toggle Dark Mode",
+    "copyright": "© {year} Rawdatul Atfaal. All rights reserved."
   },
   "Hero": {
     "title1": "Where Children Love to Learn",
@@ -101,7 +102,27 @@
       "enrol": "Enrol Now",
       "contact": "Contact Us"
     },
-    "tNaN": "&rarr;"
+    "tNaN": "&rarr;",
+    "course_arabic_name": "Arabic Language",
+    "course_arabic_levels": "5 Levels",
+    "course_quran_name": "Quraan Memorisation",
+    "course_quran_levels": "10 Levels",
+    "course_tawheed_name": "Tawheed",
+    "course_tawheed_levels": "Levels 1–5",
+    "course_fiqh_name": "Fiqh",
+    "course_fiqh_levels": "Levels 1–5",
+    "course_hadith_name": "Hadith",
+    "course_hadith_levels": "Levels 1–4",
+    "course_mutoon_name": "Mutoon",
+    "course_mutoon_levels": "Classical texts",
+    "course_math_name": "Mathematics",
+    "course_math_levels": "Levels 10",
+    "course_sci_name": "Sciences",
+    "course_sci_levels": "Levels 10",
+    "course_prog_name": "Programming",
+    "course_prog_levels": "Levels 10",
+    "all_courses_title": "All 9 Courses At A Glance",
+    "from_price": "From {price}"
   },
   "About": {
     "hero": {
@@ -148,7 +169,8 @@
       "quote": "\"We didn't just want to build a school; we wanted to revive a tradition of holistic, unapologetic scholarship.\""
     },
     "t0": "We envision a future where our alumni stand as pillars in their communities—possessing deep knowledge of their Deen and demonstrating exceptional competence in worldly sciences.",
-    "t1": "DUNIYA"
+    "t1": "DUNIYA",
+    "origin_story_desc": "was founded circa 2021 as the foundational children's school under the umbrella of Markazul Bayaan. What started as a focused initiative has since blossomed into a global learning community, answering the call of families across the US, UK, Australia, Germany, Canada, India, Nigeria, Ghana, and beyond."
   },
   "Contact": {
     "header": {
@@ -840,7 +862,17 @@
     "t58": "Overview:",
     "t59": "Comprehensive Lesson Plan",
     "t60": "Al-Qawāʼid Al-Arbaʼ — The Four Principles",
-    "t61": "Nawāqiḍ Al-Islām — Nullifiers of Islam"
+    "t61": "Nawāqiḍ Al-Islām — Nullifiers of Islam",
+    "t62": "Week 5 — The Third Principle (continued) & The Fourth Principle",
+    "t63": "Week 6 — Fourth Principle Completion & Full Review",
+    "t64": "Week 2 — Introduction 4 & The First Principle",
+    "t65": "Week 3 — Examination of the Two Doubts",
+    "t66": "Week 4 — The Third Principle — Part 1",
+    "t67": "Week 1 — Introductions",
+    "t68": "Week 1",
+    "t69": "Week 2",
+    "t70": "Week 3",
+    "t71": "Week 4"
   },
   "ProgMathematics": {
     "t0": "Mathematics",
@@ -886,7 +918,25 @@
     "t40": "Foundations of Number",
     "t41": "Algebra I Foundations",
     "t42": "Algebra I & Geometry",
-    "t43": "Building Fluency"
+    "t43": "Building Fluency",
+    "t44": "Pre-Algebra and Algebra I foundations, mastering proportional reasoning and linear equations.",
+    "t45": "Horizons Math Curriculum ensuring solid arithmetic, fractions, decimals and early geometry.",
+    "t46": "Pre-Calculus and an introduction to limits, differentiation, and integration.",
+    "t47": "Algebra I & II alongside formal geometry, quadratics, and trigonometry.",
+    "t48": "Multiplication & division mastery",
+    "t49": "Pre-Calculus + intro to calculus",
+    "t50": "Place value, addition to 1,000",
+    "t51": "Ratios, decimals, pre-algebra",
+    "t52": "Algebra I — linear equations",
+    "t53": "Middle School (Levels 6–7)",
+    "t54": "Number sense, shapes, time",
+    "t55": "Multi-digit ops, fractions",
+    "t56": "Algebra II + trigonometry",
+    "t57": "High School (Levels 8–9)",
+    "t58": "Algebra I/II + geometry",
+    "t59": "Primary (Levels 1–5)",
+    "t60": "Capstone (Level 10)",
+    "t61": "Algebra foundations"
   },
   "ProgSciences": {
     "t0": "Sciences",
@@ -941,7 +991,24 @@
     "t49": "Grade 6",
     "t50": "Grade 7",
     "t51": "Grade 8",
-    "t52": "Grade 9"
+    "t52": "Grade 9",
+    "t53": "NGSS aligned. Exploring life, earth, and physical sciences through natural curiosity and the scientific method.",
+    "t54": "GCSE/IGCSE Foundation and Core years covering extended scientific theory, equations, and required practicals.",
+    "t55": "Transition to designated biology, chemistry, and physics tracks with cellular focus and lab techniques.",
+    "t56": "GCSE completion, final formal assessments, and specific bridging elements for A-Level sciences.",
+    "t57": "Biology, physics, chemistry (secondary)",
+    "t58": "Life cycles, matter, Earth materials",
+    "t59": "Cells, chemistry, plate tectonics",
+    "t60": "Senses, weather, plants, animals",
+    "t61": "GCSE completion + A-level bridge",
+    "t62": "Energy, waves, Earth's history",
+    "t63": "GCSE/IGCSE foundation sciences",
+    "t64": "Forces, ecosystems, climate",
+    "t65": "Matter, space, body systems",
+    "t66": "Middle School (Levels 6–7)",
+    "t67": "High School (Levels 8–9)",
+    "t68": "Primary (Levels 1–5)",
+    "t69": "Capstone (Level 10)"
   },
   "ProgProgramming": {
     "t0": "Programming",
@@ -985,6 +1052,24 @@
     "t38": "Computer Science — Theory",
     "t39": "Python 3 — Fundamentals",
     "t40": "Python 3 — Intermediate",
-    "t41": "Unplugged + Scratch Jr"
+    "t41": "Unplugged + Scratch Jr",
+    "t42": "Building responsive frontends and interactivity using modern HTML, CSS, JavaScript, and React basics.",
+    "t43": "Scratch Jr and full Scratch 3.0 alongside unplugged computational thinking and game development.",
+    "t44": "Computer Science theory (A-Level prep), Data Science, and a deployed full-stack web application.",
+    "t45": "Transition to text-based Python 3 covering fundamentals, algorithms, data structures, and OOP.",
+    "t46": "Advanced & Capstone (Levels 8–10)",
+    "t47": "Full-stack capstone & portfolio",
+    "t48": "Web Engineering (Levels 6–7)",
+    "t49": "Intermediate Scratch & CS",
+    "t50": "Foundations (Levels 1–3)",
+    "t51": "Scratch 3.0 block coding",
+    "t52": "Core Logic (Levels 4–5)",
+    "t53": "Scratch Jr + unplugged",
+    "t54": "Python advanced & data",
+    "t55": "Python 3 fundamentals",
+    "t56": "Python 3 intermediate",
+    "t57": "HTML & CSS web design",
+    "t58": "CS theory & GCSE prep",
+    "t59": "JavaScript & React"
   }
 }

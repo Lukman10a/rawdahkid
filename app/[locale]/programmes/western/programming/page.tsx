@@ -79,20 +79,20 @@ export default function ProgrammingProgramme() {
             <ul className="space-y-6">
               {[
                 {
-                  title: "Foundations (Levels 1–3)",
-                  desc: "Scratch Jr and full Scratch 3.0 alongside unplugged computational thinking and game development.",
+                  title: t("t50"),
+                  desc: t("t43"),
                 },
                 {
-                  title: "Core Logic (Levels 4–5)",
-                  desc: "Transition to text-based Python 3 covering fundamentals, algorithms, data structures, and OOP.",
+                  title: t("t52"),
+                  desc: t("t45"),
                 },
                 {
-                  title: "Web Engineering (Levels 6–7)",
-                  desc: "Building responsive frontends and interactivity using modern HTML, CSS, JavaScript, and React basics.",
+                  title: t("t48"),
+                  desc: t("t42"),
                 },
                 {
-                  title: "Advanced & Capstone (Levels 8–10)",
-                  desc: "Computer Science theory (A-Level prep), Data Science, and a deployed full-stack web application.",
+                  title: t("t46"),
+                  desc: t("t44"),
                 },
               ].map((resource, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -131,19 +131,19 @@ export default function ProgrammingProgramme() {
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
                 {[
-                  { lvl: "1", age: "6–7", focus: "Scratch Jr + unplugged" },
-                  { lvl: "2", age: "7–8", focus: "Scratch 3.0 block coding" },
-                  { lvl: "3", age: "8–9", focus: "Intermediate Scratch & CS" },
-                  { lvl: "4", age: "9–10", focus: "Python 3 fundamentals" },
-                  { lvl: "5", age: "10–11", focus: "Python 3 intermediate" },
-                  { lvl: "6", age: "11–12", focus: "HTML & CSS web design" },
-                  { lvl: "7", age: "12–13", focus: "JavaScript & React" },
-                  { lvl: "8", age: "13–14", focus: "Python advanced & data" },
-                  { lvl: "9", age: "14–15", focus: "CS theory & GCSE prep" },
+                  { lvl: "1", age: "6–7", focus: t("t53") },
+                  { lvl: "2", age: "7–8", focus: t("t51") },
+                  { lvl: "3", age: "8–9", focus: t("t49") },
+                  { lvl: "4", age: "9–10", focus: t("t55") },
+                  { lvl: "5", age: "10–11", focus: t("t56") },
+                  { lvl: "6", age: "11–12", focus: t("t57") },
+                  { lvl: "7", age: "12–13", focus: t("t59") },
+                  { lvl: "8", age: "13–14", focus: t("t54") },
+                  { lvl: "9", age: "14–15", focus: t("t58") },
                   {
                     lvl: "10",
                     age: "15–16",
-                    focus: "Full-stack capstone & portfolio",
+                    focus: t("t47"),
                   },
                 ].map((row, i) => (
                   <tr

@@ -79,20 +79,20 @@ export default function SciencesProgramme() {
             <ul className="space-y-6">
               {[
                 {
-                  title: "Primary (Levels 1–5)",
-                  desc: "NGSS aligned. Exploring life, earth, and physical sciences through natural curiosity and the scientific method.",
+                  title: t("t68"),
+                  desc: t("t53"),
                 },
                 {
-                  title: "Middle School (Levels 6–7)",
-                  desc: "Transition to designated biology, chemistry, and physics tracks with cellular focus and lab techniques.",
+                  title: t("t66"),
+                  desc: t("t55"),
                 },
                 {
-                  title: "High School (Levels 8–9)",
-                  desc: "GCSE/IGCSE Foundation and Core years covering extended scientific theory, equations, and required practicals.",
+                  title: t("t67"),
+                  desc: t("t54"),
                 },
                 {
-                  title: "Capstone (Level 10)",
-                  desc: "GCSE completion, final formal assessments, and specific bridging elements for A-Level sciences.",
+                  title: t("t69"),
+                  desc: t("t56"),
                 },
               ].map((resource, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -134,52 +134,52 @@ export default function SciencesProgramme() {
                   {
                     lvl: "1",
                     age: "6–7",
-                    focus: "Senses, weather, plants, animals",
+                    focus: t("t60"),
                   },
                   {
                     lvl: "2",
                     age: "7–8",
-                    focus: "Life cycles, matter, Earth materials",
+                    focus: t("t58"),
                   },
                   {
                     lvl: "3",
                     age: "8–9",
-                    focus: "Forces, ecosystems, climate",
+                    focus: t("t64"),
                   },
                   {
                     lvl: "4",
                     age: "9–10",
-                    focus: "Energy, waves, Earth's history",
+                    focus: t("t62"),
                   },
                   {
                     lvl: "5",
                     age: "10–11",
-                    focus: "Matter, space, body systems",
+                    focus: t("t65"),
                   },
                   {
                     lvl: "6",
                     age: "11–12",
-                    focus: "Cells, chemistry, plate tectonics",
+                    focus: t("t59"),
                   },
                   {
                     lvl: "7",
                     age: "12–13",
-                    focus: "Biology, physics, chemistry (secondary)",
+                    focus: t("t57"),
                   },
                   {
                     lvl: "8",
                     age: "13–14",
-                    focus: "GCSE/IGCSE foundation sciences",
+                    focus: t("t63"),
                   },
                   {
                     lvl: "9",
                     age: "14–15",
-                    focus: "GCSE Biology, Chemistry, Physics",
+                    focus: t("t35"),
                   },
                   {
                     lvl: "10",
                     age: "15–16",
-                    focus: "GCSE completion + A-level bridge",
+                    focus: t("t61"),
                   },
                 ].map((row, i) => (
                   <tr

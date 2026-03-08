@@ -108,10 +108,10 @@ export default function WesternProgramme() {
             <div className="absolute inset-0 bg-linear-to-b from-white/50 dark:from-navy/50 to-transparent"></div>
             <div className="relative z-10">
               <h3 className="font-cinzel text-2xl text-gold tracking-widest mb-2 uppercase">
-                {t("investment.bundle.title")}
+                {t("investment.bundleTitle")}
               </h3>
               <p className="font-sans text-midnight/70 dark:text-muted mb-6">
-                {t("investment.bundle.desc")}
+                {t("investment.bundleDesc")}
               </p>
               <div className="font-cormorant text-6xl text-midnight dark:text-cream mb-2">
                 $5,000{" "}
