@@ -258,6 +258,41 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* 5. ORIGIN STORY & LEADERSHIP */}
+      <section className="py-24 bg-white dark:bg-cream/10 border-t border-midnight/5">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <BookOpen className="w-12 h-12 text-gold mx-auto mb-8 opacity-80" />
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight tracking-wider mb-8">
+            How We Began
+          </h2>
+          <div className="prose prose-lg mx-auto text-midnight/80 font-sans leading-relaxed text-left md:text-center space-y-6">
+            <p>
+              Rawdatul Atfaal was founded circa 2021 as the foundational
+              children&apos;s school under the umbrella of Markazul Bayaan. What
+              started as a focused initiative has since blossomed into a global
+              learning community, answering the call of families across the US,
+              UK, Australia, Germany, Canada, India, Nigeria, Ghana, and beyond.
+            </p>
+            <p>
+              Our Islamic curriculum is firmly rooted in authenticity. We are
+              proud to feature highly qualified Islamic tutors who have spent
+              years studying under the recognized scholars of this era, adhering
+              strictly to the methodology of the pious predecessors (Salaf).
+            </p>
+            <p>
+              Simultaneously, we ensure no compromise in secular academics. Our
+              Western education department is spearheaded by highly experienced
+              educators specializing in mathematics, programming, and the
+              sciences, giving our students the absolute best of both worlds.
+            </p>
+            <p className="font-playfair italic text-xl text-amber pt-4">
+              &quot;We didn&apos;t just want to build a school; we wanted to
+              revive a tradition of holistic, unapologetic scholarship.&quot;
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
