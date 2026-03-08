@@ -229,95 +229,93 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="group relative bg-white/ dark:bg-navy/ border border-midnight/ dark:border-white/ rounded-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-gold/30 hover:shadow-2xl hover:shadow-gold/10 p-10 flex flex-col items-center text-center">
-              <div className="absolute inset-0 bg-linear-to-br from-blue-900/20 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <Link href="/programmes/islamic" className="block h-full">
+              <div className="h-full group relative bg-white/ dark:bg-navy/ border border-midnight/ dark:border-white/ rounded-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-gold/30 hover:shadow-2xl hover:shadow-gold/10 p-10 flex flex-col items-center text-center">
+                <div className="absolute inset-0 bg-linear-to-br from-blue-900/20 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              <div className="text-gold mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
-                </svg>
-              </div>
-
-              <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-2">
-                THE ISLAMIC PROGRAMME
-              </h3>
-              <p className="font-amiri text-gold text-xl mb-6">
-                ???????? ????????
-              </p>
-
-              <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
-                Qur&apos;an | Arabic | Tawheed | Fiqh | Hadith | Mutoon
-              </p>
-
-              <div className="mt-auto flex flex-col items-center space-y-4 w-full">
-                <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
-                  Individual courses from{" "}
-                  <span className="text-amber">$1,200</span> / year
-                  <br />
-                  Full Bundle from{" "}
-                  <span className="text-gold font-bold">$5,000</span>
+                <div className="text-gold mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  >
+                    <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" />
+                  </svg>
                 </div>
-                <Link
-                  href="/programmes/islamic"
-                  className="w-full cursor-pointer text-center py-3 border border-gold text-gold hover:bg-gold hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block"
-                >
-                  Explore Islamic Courses &rarr;
-                </Link>
-              </div>
-            </div>
 
-            <div className="group relative bg-[#12221b] border border-midnight/ dark:border-white/ rounded-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-green/50 hover:shadow-2xl hover:shadow-green/10 p-10 flex flex-col items-center text-center">
-              <div className="absolute inset-0 bg-linear-to-br from-green/20 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-2">
+                  THE ISLAMIC PROGRAMME
+                </h3>
+                <p className="font-amiri text-gold text-xl mb-6">
+                  ???????? ????????
+                </p>
 
-              <div className="text-gold gap-2 mb-6 opacity-80 group-hover:opacity-100 transition-opacity flex justify-center">
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                  <path d="M2 12h20" />
-                </svg>
-              </div>
+                <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
+                  Qur&apos;an | Arabic | Tawheed | Fiqh | Hadith | Mutoon
+                </p>
 
-              <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-2">
-                THE WESTERN PROGRAMME
-              </h3>
-              <p className="font-amiri text-gold text-xl mb-6">
-                ???????? ????????
-              </p>
-
-              <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
-                Mathematics Sciences Programming
-              </p>
-
-              <div className="mt-auto flex flex-col items-center space-y-4 w-full">
-                <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
-                  Individual courses from{" "}
-                  <span className="text-amber">$2,000</span> / year
-                  <br />
-                  Full Bundle from{" "}
-                  <span className="text-gold font-bold">$5,000</span>
+                <div className="mt-auto flex flex-col items-center space-y-4 w-full">
+                  <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
+                    Individual courses from{" "}
+                    <span className="text-amber">$1,200</span> / year
+                    <br />
+                    Full Bundle from{" "}
+                    <span className="text-gold font-bold">$5,000</span>
+                  </div>
+                  <div className="w-full text-center py-3 border border-gold text-gold group-hover:bg-gold group-hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block">
+                    Explore Islamic Courses &rarr;
+                  </div>
                 </div>
-                <Link
-                  href="/programmes/western"
-                  className="w-full cursor-pointer text-center py-3 border border-gold text-gold hover:bg-gold hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block"
-                >
-                  Explore Western Courses &rarr;
-                </Link>
               </div>
-            </div>
+            </Link>
+
+            <Link href="/programmes/western" className="block h-full">
+              <div className="h-full group relative bg-[#12221b] border border-midnight/ dark:border-white/ rounded-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:border-green/50 hover:shadow-2xl hover:shadow-green/10 p-10 flex flex-col items-center text-center">
+                <div className="absolute inset-0 bg-linear-to-br from-green/20 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="text-gold gap-2 mb-6 opacity-80 group-hover:opacity-100 transition-opacity flex justify-center">
+                  <svg
+                    width="48"
+                    height="48"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    <path d="M2 12h20" />
+                  </svg>
+                </div>
+
+                <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-2">
+                  THE WESTERN PROGRAMME
+                </h3>
+                <p className="font-amiri text-gold text-xl mb-6">
+                  ???????? ????????
+                </p>
+
+                <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
+                  Mathematics Sciences Programming
+                </p>
+
+                <div className="mt-auto flex flex-col items-center space-y-4 w-full">
+                  <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
+                    Individual courses from{" "}
+                    <span className="text-amber">$2,000</span> / year
+                    <br />
+                    Full Bundle from{" "}
+                    <span className="text-gold font-bold">$5,000</span>
+                  </div>
+                  <div className="w-full text-center py-3 border border-gold text-gold group-hover:bg-gold group-hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block">
+                    Explore Western Courses &rarr;
+                  </div>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
