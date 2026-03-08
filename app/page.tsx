@@ -331,77 +331,92 @@ export default function Home() {
         <div className="flex overflow-x-auto pb-8 hide-scrollbar snap-x snap-mandatory px-4 md:px-8 gap-6 max-w-[100vw]">
           {[
             {
-              name: "Qur?an",
+              name: "Qurʼan",
               color: "border-t-green",
               levels: "4 Terms",
               price: "$2,000",
+              link: "/programmes/islamic/quran-memorisation",
             },
             {
               name: "Arabic",
               color: "border-t-amber",
               levels: "5 Levels",
               price: "$1,500",
+              link: "/programmes/islamic/arabic",
             },
             {
               name: "Tawheed",
               color: "border-t-blue-500",
               levels: "5 Levels",
               price: "$1,200",
+              link: "/programmes/islamic/tawheed",
             },
             {
               name: "Fiqh",
               color: "border-t-purple",
               levels: "6 Levels",
               price: "$1,200",
+              link: "/programmes/islamic/fiqh",
             },
             {
               name: "Hadith",
               color: "border-t-rust",
               levels: "4 Levels",
               price: "$1,200",
+              link: "/programmes/islamic/hadith",
             },
             {
               name: "Mutoon",
               color: "border-t-[#556b2f]",
               levels: "Classical texts",
               price: "$1,200",
+              link: "/programmes/islamic/mutoon",
             },
             {
               name: "Mathematics",
               color: "border-t-white",
-              levels: "6 Levels",
+              levels: "10 Levels",
               price: "$2,000",
+              link: "/programmes/western/mathematics",
             },
             {
               name: "Sciences",
               color: "border-t-green",
-              levels: "6 Levels",
+              levels: "10 Levels",
               price: "$2,000",
+              link: "/programmes/western/sciences",
             },
             {
               name: "Programming",
               color: "border-t-purple",
-              levels: "6 Levels",
+              levels: "10 Levels",
               price: "$2,000",
+              link: "/programmes/western/programming",
             },
           ].map((course, idx) => (
-            <div
-              key={idx}
-              className={`min-w-70 sm:min-w-80 bg-white/ dark:bg-navy/ p-6 rounded-sm border border-midnight/ dark:border-white/ snap-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-gold/30 ${course.color} border-t-2`}
-            >
-              <h4 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
-                {course.name}
-              </h4>
-              <p className="font-sans text-midnight/70 dark:text-muted text-sm mb-6">
-                {course.levels}
-              </p>
-              <div className="font-cormorant text-xl text-amber">
-                From {course.price}{" "}
-                <span className="text-sm text-midnight/70 dark:text-muted">
-                  / year
-                </span>
+            <Link href={course.link} key={idx} className="snap-center block">
+              <div
+                className={`min-w-70 sm:min-w-80 bg-white/ dark:bg-navy/ p-6 rounded-sm border border-midnight/ dark:border-white/ h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-gold/30 ${course.color} border-t-2 group`}
+              >
+                <div className="flex justify-between items-start mb-2">
+                  <h4 className="font-playfair text-2xl text-midnight dark:text-cream">
+                    {course.name}
+                  </h4>
+                  <span className="text-midnight/30 dark:text-cream/30 group-hover:text-gold transition-colors font-sans">
+                    &rarr;
+                  </span>
+                </div>
+                <p className="font-sans text-midnight/70 dark:text-muted text-sm mb-6">
+                  {course.levels}
+                </p>
+                <div className="font-cormorant text-xl text-amber">
+                  From {course.price}{" "}
+                  <span className="text-sm text-midnight/70 dark:text-muted">
+                    / year
+                  </span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
