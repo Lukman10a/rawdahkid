@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Instagram, Facebook, PhoneIcon as WhatsappIcon } from "lucide-react";
 
 export default function Footer() {
@@ -36,7 +36,7 @@ export default function Footer() {
           {/* Column 1 - Brand */}
           <div className="space-y-6">
             <div className="flex flex-col">
-              <span className="font-amiri text-gold/30 text-5xl md:text-6xl -mb-4 select-none pr-4">
+              <span className="font-amiri text-gold/30 text-5xl md:text-6xl -mb-4 select-none pe-4">
                 روضة الأطفال
               </span>
               <span className="font-cinzel text-midnight dark:text-cream text-2xl tracking-[0.2em] relative z-10">
@@ -75,7 +75,7 @@ export default function Footer() {
           </div>
 
           {/* Column 2 - Quick Links */}
-          <div className="lg:pl-16">
+          <div className="lg:ps-16">
             <h3 className="font-cinzel text-lg tracking-wider text-gold mb-6">
               Explore
             </h3>
@@ -133,7 +133,7 @@ export default function Footer() {
                   href="/enrol"
                   className="text-gold font-medium hover:text-amber transition-colors opacity-100 font-sans text-sm tracking-wide flex items-center"
                 >
-                  Enrol Now <span className="ml-1">→</span>
+                  Enrol Now <span className="ms-1">→</span>
                 </Link>
               </li>
             </ul>
@@ -161,7 +161,7 @@ export default function Footer() {
                   +1 (234) 567-890
                 </a>
               </li>
-              <li className="text-midnight/ dark:text-cream/ pt-4 italic font-playfair pr-8">
+              <li className="text-midnight/ dark:text-cream/ pt-4 italic font-playfair pe-8">
                 Enquiries responded to within 24 hours.
               </li>
             </ul>
@@ -170,7 +170,7 @@ export default function Footer() {
 
         {/* Footer Bottom Bar */}
         <div className="pt-8 mt-8 border-t border-gradient-to-r from-transparent via-gold/25 to-transparent relative">
-          <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-gold/25 to-transparent"></div>
+          <div className="absolute top-0 inset-s-0 w-full h-px bg-linear-to-r from-transparent via-gold/25 to-transparent"></div>
           <div className="flex flex-col md:flex-row justify-between items-center text-xs text-midnight/ dark:text-cream/ font-sans uppercase tracking-widest">
             <p>
               &copy; {new Date().getFullYear()} Rawdatul Atfaal. All rights

@@ -1,12 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export default function Navbar() {
+  const t = useTranslations("Navigation");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProgrammesOpen, setIsProgrammesOpen] = useState(false);
@@ -50,15 +53,15 @@ export default function Navbar() {
                 href="/"
                 className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors text-sm uppercase tracking-wider relative group"
               >
-                Home
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                {t("home")}
+                <span className="absolute -bottom-1 inset-s-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link
                 href="/about"
-                className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors text-sm uppercase tracking-wider relative group"
+                className="text-midnight/80 dark:text-cream/80 hover:text-gold transition-colors text-sm uppercase tracking-wider relative group"
               >
-                About
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                {t("about")}
+                <span className="absolute -bottom-1 inset-s-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </Link>
               {/* Dropdown */}
               <div
@@ -67,15 +70,15 @@ export default function Navbar() {
                 onMouseLeave={() => setIsProgrammesOpen(false)}
               >
                 <div className="flex items-center space-x-1 text-midnight/ dark:text-cream/ hover:text-gold transition-colors text-sm uppercase tracking-wider py-2">
-                  <span>Programmes</span>
+                  <span>{t("programmes")}</span>
                   <ChevronDown className="w-4 h-4" />
-                  <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-1 inset-s-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
                 </div>
 
                 {/* Dropdown Menu */}
                 <div
                   className={cn(
-                    "absolute top-full left-0 w-56 bg-white dark:bg-navy border border-midnight/ dark:border-white/ shadow-xl rounded-sm py-2 transition-all duration-200 origin-top-left",
+                    "absolute top-full inset-s-0 w-56 bg-white dark:bg-navy border border-midnight/ dark:border-white/ shadow-xl rounded-sm py-2 transition-all duration-200 origin-top-left",
                     isProgrammesOpen
                       ? "opacity-100 scale-100 visible"
                       : "opacity-0 scale-95 invisible",
@@ -85,13 +88,13 @@ export default function Navbar() {
                     href="/programmes/islamic"
                     className="block px-4 py-3 text-sm text-midnight/ dark:text-cream/ hover:text-gold hover:bg-midnight/ dark:bg-white/ transition-colors"
                   >
-                    Islamic Programme
+                    {t("islamicProgramme")}
                   </Link>
                   <Link
                     href="/programmes/western"
                     className="block px-4 py-3 text-sm text-midnight/ dark:text-cream/ hover:text-gold hover:bg-midnight/ dark:bg-white/ transition-colors"
                   >
-                    Western Programme
+                    {t("westernProgramme")}
                   </Link>
                 </div>
               </div>
@@ -99,15 +102,19 @@ export default function Navbar() {
                 href="/fees"
                 className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors text-sm uppercase tracking-wider relative group"
               >
-                Fees
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+                {t("fees")}
+                <span className="absolute -bottom-1 inset-s-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </Link>
-              <ThemeToggle /> {/* CTA */}
+              <div className="flex items-center space-x-4 border-s border-midnight/20 dark:border-cream/20 ps-4">
+                <LanguageSwitcher />
+                <ThemeToggle />
+              </div>
+              {/* CTA */}
               <Link
                 href="/enrol"
                 className="bg-gold text-midnight px-6 py-2 rounded-sm text-sm font-medium tracking-wide hover:bg-amber hover:scale-105 hover:shadow-lg transition-all duration-300"
               >
-                Enrol Now
+                {t("enroll")}
               </Link>
             </div>
 
@@ -156,52 +163,47 @@ export default function Navbar() {
             onClick={() => setIsMobileMenuOpen(false)}
             className="text-3xl font-cinzel text-midnight dark:text-cream hover:text-gold transition-colors"
           >
-            Home
+            {t("home")}
           </Link>
           <Link
             href="/about"
             onClick={() => setIsMobileMenuOpen(false)}
             className="text-3xl font-cinzel text-midnight dark:text-cream hover:text-gold transition-colors"
           >
-            About
+            {t("about")}
           </Link>
           <Link
             href="/programmes/islamic"
             onClick={() => setIsMobileMenuOpen(false)}
             className="text-3xl font-cinzel text-midnight dark:text-cream hover:text-gold transition-colors text-center"
           >
-            Islamic
-            <br />
-            <span className="text-lg text-midnight/ dark:text-cream/">
-              Programme
-            </span>
+            {t("islamicProgramme")}
           </Link>
           <Link
             href="/programmes/western"
             onClick={() => setIsMobileMenuOpen(false)}
             className="text-3xl font-cinzel text-midnight dark:text-cream hover:text-gold transition-colors text-center"
           >
-            Western
-            <br />
-            <span className="text-lg text-midnight/ dark:text-cream/">
-              Programme
-            </span>
+            {t("westernProgramme")}
           </Link>
           <Link
             href="/fees"
             onClick={() => setIsMobileMenuOpen(false)}
             className="text-3xl font-cinzel text-midnight dark:text-cream hover:text-gold transition-colors"
           >
-            Fees
+            {t("fees")}
           </Link>
 
+          <div className="flex space-x-6 items-center">
+            <LanguageSwitcher />
+          </div>
           <div className="pt-8 w-full max-w-xs">
             <Link
               href="/enrol"
               onClick={() => setIsMobileMenuOpen(false)}
               className="block w-full bg-gold text-midnight text-center py-4 rounded-sm text-lg font-medium tracking-wide hover:bg-amber transition-colors"
             >
-              Enrol Now
+              {t("enroll")}
             </Link>
           </div>
         </div>

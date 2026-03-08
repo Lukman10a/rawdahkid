@@ -1,0 +1,20 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "programmes": "Programmes",
+    "islamicProgramme": "Islamic Programme",
+    "westernProgramme": "Western Programme",
+    "fees": "Fees",
+    "enroll": "Enrol Now"
+  },
+  "Hero": {
+    "title1": "Where Children Love to Learn",
+    "title2": "Islam and worldly knowledge",
+    "arabicSubtitle": "نور العلم يشع في القلوب",
+    "hadithQuote": "\"Seeking knowledge is an obligation upon every Muslim..\" [Hadith]",
+    "description": "Rawdatul Atfaal provides structured learning in Qur'an, Hadith, Aqeedah, Fiqh, and essential academic subjects, helping children grow with knowledge, discipline, and Islamic character.",
+    "exploreButton": "Explore Our Programmes",
+    "downloadFeesButton": "Download Fees Guide"
+  }
+}
