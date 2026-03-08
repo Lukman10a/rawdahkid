@@ -5,15 +5,15 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-cream text-midnight pt-24">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-midnight text-midnight dark:text-cream pt-24">
       {/* HEADER */}
-      <section className="py-20 bg-ivory dark:bg-midnight text-midnight dark:text-cream border-b border-midnight/ dark:border-white/ relative">
+      <section className="py-20 bg-ivory dark:bg-[#12221b] text-midnight dark:text-cream border-b border-midnight/10 dark:border-white/10 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-gold/10 via-transparent to-transparent pointer-events-none"></div>
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h1 className="font-cinzel text-4xl md:text-6xl tracking-widest mb-6 uppercase">
             Get In Touch
           </h1>
-          <p className="font-sans text-xl text-midnight/ dark:text-cream/ max-w-2xl mx-auto">
+          <p className="font-sans text-xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto">
             We are here to answer your questions and welcome you to the Rawdatul
             Atfaal community.
           </p>
@@ -64,17 +64,20 @@ export default function ContactPage() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="bg-white p-8 border border-gold/10 rounded-sm shadow-sm flex items-start gap-6 group hover:-translate-y-1 transition-transform"
+                  className="bg-white dark:bg-navy p-8 border border-gold/10 dark:border-white/5 rounded-sm shadow-sm flex items-start gap-6 group hover:-translate-y-1 transition-transform"
                 >
-                  <div className="bg-ivory/ dark:bg-midnight/ p-4 rounded-full group-hover:bg-gold/10 transition-colors">
+                  <div className="bg-ivory dark:bg-[#1a2b22] p-4 rounded-full group-hover:bg-gold/10 transition-colors border border-transparent group-hover:border-gold/30">
                     <item.icon className="w-6 h-6 text-gold" />
                   </div>
                   <div>
-                    <h3 className="font-cinzel text-lg tracking-widest mb-2 text-midnight">
+                    <h3 className="font-cinzel text-lg tracking-widest mb-2 text-midnight dark:text-cream">
                       {item.title}
                     </h3>
                     {item.content.map((line, idx) => (
-                      <p key={idx} className="font-sans text-midnight/70 dark:text-muted">
+                      <p
+                        key={idx}
+                        className="font-sans text-midnight/70 dark:text-cream/70"
+                      >
                         {line}
                       </p>
                     ))}
@@ -88,47 +91,50 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white dark:bg-navy p-10 lg:p-14 rounded-sm relative text-midnight dark:text-cream"
+              className="bg-white dark:bg-navy p-10 lg:p-14 rounded-sm shadow-xl border border-midnight/5 dark:border-white/5 relative text-midnight dark:text-cream"
             >
               <h2 className="font-playfair text-3xl mb-2 text-midnight dark:text-cream">
                 Send a Message
               </h2>
-              <p className="font-sans text-midnight/ dark:text-cream/ mb-8">
+              <p className="font-sans text-midnight/80 dark:text-cream/80 mb-8">
                 We usually respond within one business day.
               </p>
 
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div>
-                  <label className="block font-sans text-xs uppercase tracking-widest text-midnight/ dark:text-cream/ mb-2">
-                    Name
+                  <label className="block font-sans text-xs font-semibold uppercase tracking-widest text-midnight dark:text-cream mb-2">
+                    Name *
                   </label>
                   <input
                     type="text"
-                    className="w-full bg-midnight/ dark:bg-white/ border border-midnight/ dark:border-white/ px-4 py-3 text-midnight dark:text-cream focus:outline-hidden focus:border-gold transition-colors"
-                    placeholder="Your name"
+                    required
+                    className="w-full bg-white dark:bg-[#1a2b22] border border-midnight/10 dark:border-white/10 px-4 py-3 text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all"
+                    placeholder="e.g. John Doe"
                   />
                 </div>
                 <div>
-                  <label className="block font-sans text-xs uppercase tracking-widest text-midnight/ dark:text-cream/ mb-2">
-                    Email
+                  <label className="block font-sans text-xs font-semibold uppercase tracking-widest text-midnight dark:text-cream mb-2">
+                    Email *
                   </label>
                   <input
                     type="email"
-                    className="w-full bg-midnight/ dark:bg-white/ border border-midnight/ dark:border-white/ px-4 py-3 text-midnight dark:text-cream focus:outline-hidden focus:border-gold transition-colors"
-                    placeholder="Your email"
+                    required
+                    className="w-full bg-white dark:bg-[#1a2b22] border border-midnight/10 dark:border-white/10 px-4 py-3 text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all"
+                    placeholder="john@example.com"
                   />
                 </div>
                 <div>
-                  <label className="block font-sans text-xs uppercase tracking-widest text-midnight/ dark:text-cream/ mb-2">
-                    Message
+                  <label className="block font-sans text-xs font-semibold uppercase tracking-widest text-midnight dark:text-cream mb-2">
+                    Message *
                   </label>
                   <textarea
                     rows={5}
-                    className="w-full bg-midnight/ dark:bg-white/ border border-midnight/ dark:border-white/ px-4 py-3 text-midnight dark:text-cream focus:outline-hidden focus:border-gold transition-colors resize-none"
+                    required
+                    className="w-full bg-white dark:bg-[#1a2b22] border border-midnight/10 dark:border-white/10 px-4 py-3 text-midnight dark:text-cream rounded-sm focus:outline-hidden focus:ring-2 focus:ring-gold/50 focus:border-gold transition-all resize-none"
                     placeholder="How can we help?"
                   ></textarea>
                 </div>
-                <button className="w-full bg-gold text-midnight font-bold font-sans uppercase tracking-widest py-4 hover:bg-white transition-colors duration-300">
+                <button className="w-full bg-gold text-midnight py-4 rounded-sm font-sans font-bold tracking-widest uppercase text-sm hover:bg-white border border-transparent hover:border-gold transition-all duration-300 shadow-lg hover:shadow-gold/20">
                   Send Message
                 </button>
               </form>
