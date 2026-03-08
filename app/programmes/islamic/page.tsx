@@ -11,36 +11,42 @@ const courses = [
     arabic: "القرآن الكريم",
     desc: "Memorization (Hifdh), Tajweed, and Tafseer to connect deeply with the literal word of Allah.",
     levels: "4 Terms",
+    slug: "quran-memorisation",
   },
   {
     name: "Arabic Language",
     arabic: "اللغة العربية",
     desc: "Grammar (Nahw), Morphology (Sarf), and Literature (Adab) to understand the Deen from its original sources.",
     levels: "5 Levels",
+    slug: "arabic",
   },
   {
     name: "Tawheed",
     arabic: "التوحيد",
     desc: "Understanding the oneness of Allah and the core beliefs of Ahlus-Sunnah wal-Jama''ah.",
     levels: "5 Levels",
+    slug: "tawheed",
   },
   {
     name: "Fiqh",
     arabic: "الفقه",
     desc: "Islamic Jurisprudence focusing on worship (Ibadat) and daily transactions (Mu''amalat).",
     levels: "6 Levels",
+    slug: "fiqh",
   },
   {
     name: "Hadith",
     arabic: "الحديث",
     desc: "Studying the prophetic traditions, their sciences, and practical application.",
     levels: "4 Levels",
+    slug: "hadith",
   },
   {
     name: "Mutoon",
     arabic: "المتون العلمية",
     desc: "Memorization and explanation of classical foundational texts across various Islamic sciences.",
     levels: "Classical Texts",
+    slug: "mutoon",
   },
 ];
 
@@ -85,30 +91,32 @@ export default function IslamicProgramme() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-white/ dark:bg-navy/ border border-midnight/ dark:border-white/ p-8 rounded-sm hover:-translate-y-2 hover:border-gold/30 transition-all duration-300 flex flex-col group"
-            >
-              <div className="mb-4">
-                <Book className="w-8 h-8 text-gold opacity-70 group-hover:opacity-100 transition-opacity" />
-              </div>
-              <h3 className="font-playfair text-3xl text-midnight dark:text-cream mb-1">
-                {course.name}
-              </h3>
-              <p className="font-amiri text-gold text-2xl mb-4">
-                {course.arabic}
-              </p>
-              <p className="font-sans text-midnight/70 dark:text-muted leading-relaxed mb-6 grow">
-                {course.desc}
-              </p>
-              <div className="mt-auto text-sm font-cinzel tracking-widest text-midnight/ dark:text-cream/ uppercase border-t border-midnight/ dark:border-white/ pt-4">
-                {course.levels}
-              </div>
-            </motion.div>
+            <Link href={`/programmes/islamic/${course.slug}`} key={idx}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-white/50 dark:bg-navy/50 border border-midnight/10 dark:border-white/10 p-8 rounded-sm hover:-translate-y-2 hover:border-gold/30 transition-all duration-300 flex flex-col group h-full cursor-pointer"
+              >
+                <div className="mb-4">
+                  <Book className="w-8 h-8 text-gold opacity-70 group-hover:opacity-100 transition-opacity" />
+                </div>
+                <h3 className="font-playfair text-3xl text-midnight dark:text-cream mb-1 group-hover:text-gold transition-colors">
+                  {course.name}
+                </h3>
+                <p className="font-amiri text-gold text-2xl mb-4">
+                  {course.arabic}
+                </p>
+                <p className="font-sans text-midnight/70 dark:text-muted leading-relaxed mb-6 grow">
+                  {course.desc}
+                </p>
+                <div className="mt-auto text-sm font-cinzel tracking-widest text-midnight/60 dark:text-cream/60 uppercase border-t border-midnight/10 dark:border-white/10 pt-4 flex justify-between items-center group-hover:text-gold transition-colors">
+                  <span>{course.levels}</span>
+                  <span className="font-sans text-lg">→</span>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
       </section>
@@ -135,7 +143,9 @@ export default function IslamicProgramme() {
             </p>
             <div className="font-cormorant text-6xl text-midnight dark:text-cream mb-2">
               $5,000{" "}
-              <span className="text-xl text-midnight/70 dark:text-muted font-sans">/ year</span>
+              <span className="text-xl text-midnight/70 dark:text-muted font-sans">
+                / year
+              </span>
             </div>
             <p className="font-sans text-sm text-amber mb-8 uppercase tracking-widest">
               Equivalent to $416 / month
