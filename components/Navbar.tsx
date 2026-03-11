@@ -29,7 +29,7 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
           isScrolled
-            ? "bg-ivory/95 dark:bg-midnight/95 backdrop-blur-md border-midnight/10 dark:border-white/10 py-4 shadow-sm"
+            ? "bg-ivory/ dark:bg-midnight/ backdrop-blur-md border-midnight/10 dark:border-white/10 py-4 shadow-sm"
             : "bg-transparent py-6",
         )}
       >
