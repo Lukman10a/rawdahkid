@@ -163,15 +163,17 @@ export default function AboutPage() {
 
               {/* Abstract Representation of Dual Curriculum */}
               <div className="relative z-10 flex items-center justify-center w-full h-full">
-                <div className="absolute inset-s-1/2 -ms-32 w-64 h-64 border border-gold/30 rounded-full flex items-center justify-start ps-8 transition-transform duration-700 group-hover:-translate-x-4">
-                  <span className="font-amiri text-4xl text-amber">الدين</span>
-                </div>
-                <div className="absolute inset-e-1/2 -me-32 w-64 h-64 border border-midnight/ dark:border-white/ rounded-full flex items-center justify-end pe-8 transition-transform duration-700 group-hover:translate-x-4">
-                  <span className="font-cinzel text-xl text-midnight dark:text-cream tracking-widest">
-                    {t("t1")}
+                <div className="absolute inset-s-1/2 -ms-32 w-64 h-64 border border-gold/30 rounded-full flex items-center justify-start ps-8 transition-transform duration-700 group-hover:-translate-x-8 rtl:group-hover:translate-x-8">
+                  <span className="font-amiri text-4xl text-amber drop-shadow-md">
+                    {t("philosophy.deen")}
                   </span>
                 </div>
-                <div className="z-20 w-32 h-32 bg-ivory dark:bg-midnight border-2 border-gold rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(212,175,55,0.2)]">
+                <div className="absolute inset-e-1/2 -me-32 w-64 h-64 border border-midnight/30 dark:border-white/30 rounded-full flex items-center justify-end pe-8 transition-transform duration-700 group-hover:translate-x-8 rtl:group-hover:-translate-x-8">
+                  <span className="font-cinzel text-xl text-midnight dark:text-cream tracking-widest drop-shadow-md">
+                    {t("philosophy.duniya")}
+                  </span>
+                </div>
+                <div className="z-20 w-32 h-32 bg-ivory dark:bg-midnight border-2 border-gold rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(212,175,55,0.2)] transition-transform duration-700 group-hover:scale-105">
                   <Award className="w-12 h-12 text-gold" />
                 </div>
               </div>
