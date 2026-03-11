@@ -23,14 +23,12 @@ export default function Home() {
       author: h("testimonials.t2.author"),
       location: h("testimonials.t2.role"),
     },
-    {
-      quote: h("testimonials.t3.quote"),
-      author: h("testimonials.t3.author"),
-      location: h("testimonials.t3.role"),
-    },
   ];
   const [mounted, setMounted] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [billingPlan, setBillingPlan] = useState<
+    "monthly" | "semester" | "annual"
+  >("annual");
   const numTestimonials = testimonials.length;
 
   useEffect(() => {
@@ -281,19 +279,19 @@ export default function Home() {
                   </svg>
                 </div>
 
-                <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-2">
+                <h3 className="font-cinzel text-2xl tracking-widest text-cream mb-2">
                   {h("dualCurriculum.western.title")}
                 </h3>
                 <p className="font-amiri text-gold text-xl mb-6">
                   العلوم العصرية
                 </p>
 
-                <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
+                <p className="font-sans text-cream/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
                   {h("all_courses_title")}
                 </p>
 
                 <div className="mt-auto flex flex-col items-center space-y-4 w-full">
-                  <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
+                  <div className="text-cream font-cormorant text-lg">
                     {h("dualCurriculum.islamic.indivFrom")}{" "}
                     <span className="text-amber">$2,000</span>{" "}
                     {h("fees.perYear")}
@@ -450,10 +448,10 @@ export default function Home() {
                 <button
                   key={idx}
                   onClick={() => setTestimonialIndex(idx)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  className={`h-2 rounded-full transition-all duration-300 ${
                     idx === testimonialIndex
                       ? "bg-gold w-6"
-                      : "bg-midnight/ dark:bg-white/ hover:bg-midnight/ dark:bg-white/"
+                      : "w-2 bg-midnight/20 dark:bg-white/20 hover:bg-midnight/40 dark:hover:bg-white/40"
                   }`}
                   aria-label={`Go to testimonial ${idx + 1}`}
                 />
@@ -480,25 +478,40 @@ export default function Home() {
               {h("fees.bundleName")}
             </div>
             <div className="font-cormorant text-5xl md:text-7xl text-midnight mb-2 font-medium">
-              $5,000{" "}
+              {billingPlan === "annual" && "$5,000"}
+              {billingPlan === "semester" && "$2,750"}
+              {billingPlan === "monthly" && "$500"}{" "}
               <span className="text-xl md:text-2xl text-midnight/50 font-sans">
-                {h("fees.perYear")}
+                {billingPlan === "annual" && h("fees.perYear")}
+                {billingPlan === "semester" && h("fees.perSemester")}
+                {billingPlan === "monthly" && h("fees.perMonth")}
               </span>
             </div>
             <p className="text-midnight/60 mb-10 italic font-playfair text-lg">
-              {h("fees.monthlyEquiv")}
+              {billingPlan === "annual" && h("fees.monthlyEquiv")}
+              {billingPlan === "semester" && h("fees.yearlyEquivSemester")}
+              {billingPlan === "monthly" && h("fees.yearlyEquivMonthly")}
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 text-xs font-sans tracking-wider uppercase text-midnight/50 mb-10">
-              <span className="px-4 py-2 bg-ivory/ dark:bg-midnight/ rounded-sm">
+              <button
+                onClick={() => setBillingPlan("monthly")}
+                className={`px-4 py-2 rounded-sm transition-colors ${billingPlan === "monthly" ? "bg-gold/10 text-gold font-bold border border-gold/20" : "bg-ivory/ dark:bg-midnight/ hover:bg-gold/5"}`}
+              >
                 {h("fees.monthlyTag")}
-              </span>
-              <span className="px-4 py-2 bg-ivory/ dark:bg-midnight/ rounded-sm">
+              </button>
+              <button
+                onClick={() => setBillingPlan("semester")}
+                className={`px-4 py-2 rounded-sm transition-colors ${billingPlan === "semester" ? "bg-gold/10 text-gold font-bold border border-gold/20" : "bg-ivory/ dark:bg-midnight/ hover:bg-gold/5"}`}
+              >
                 {h("fees.semesterTag")}
-              </span>
-              <span className="px-4 py-2 bg-gold/10 text-gold font-bold rounded-sm border border-gold/20">
+              </button>
+              <button
+                onClick={() => setBillingPlan("annual")}
+                className={`px-4 py-2 rounded-sm transition-colors ${billingPlan === "annual" ? "bg-gold/10 text-gold font-bold border border-gold/20" : "bg-ivory/ dark:bg-midnight/ hover:bg-gold/5"}`}
+              >
                 {h("fees.annualTag")}
-              </span>
+              </button>
             </div>
 
             <Link href="/fees">
