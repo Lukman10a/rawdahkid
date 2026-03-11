@@ -10,7 +10,7 @@
     "t0": "\"Where the roots of faith and the wings of knowledge grow together.\"",
     "t1": "Enquiries responded to within 24 hours.",
     "t2": "hello@rawdatulatfaal.edu",
-    "t3": "Academic Year 2024–2025",
+    "t3": "Academic Year 2026–2027",
     "t4": "Fees & Tuition",
     "t5": "Get in Touch",
     "t6": "Instagram",
@@ -97,7 +97,7 @@
     },
     "cta": {
       "quote": "\"Give your child the\nfoundation they deserve.\"",
-      "description": "Registration for the 2024-2025 academic year is now open.",
+      "description": "Registration for the 2026-2027 academic year is now open.",
       "enrol": "Enrol Now",
       "contact": "Contact Us"
     },
@@ -131,7 +131,7 @@
     "mission": {
       "title": "Our Mission",
       "p1": "To provide an uncompromising educational experience where traditional Islamic sciences and modern academics are taught with equal rigor and excellence.",
-      "p2": "We strive to nurture students who are proud of their Muslim identity, deeply connected to the Qur'an, and capable of leading with integrity in any field they choose to pursue."
+      "p2": "We strive to nurture students who are proud of their Muslim identity, deeply connected to the Qur'an and Sunnah with the understanding of the Salaf, and capable of leading with integrity in any field they choose to pursue."
     },
     "vision": {
       "title": "Our Vision",
@@ -139,7 +139,7 @@
       "p2": "We envision a future where our alumni stand as pillars in their communities — possessing deep knowledge of their Deen and demonstrating exceptional competence in worldly sciences."
     },
     "philosophy": {
-      "subtitle": "Our Philosophy",
+      "subtitle": "Our Approach",
       "title": "No Compromise Between Deen & Duniya",
       "p1": "For too long, Muslim families have been forced into a false dichotomy: choose a rigorous academic school with a secular environment, or choose a traditional Islamic school that lacks academic competitiveness.",
       "p2_prefix": "At ",
@@ -156,20 +156,32 @@
       "v2_title": "Integrity (Amanah)",
       "v2_desc": "Upholding honesty, immense responsibility, and moral uprightness in every action.",
       "v3_title": "Authenticity",
-      "v3_desc": "Unapologetically rooting our knowledge and methodology in the Qur'an and the authentic Sunnah.",
+      "v3_desc": "Unapologetically rooting our knowledge and methodology in the Qur'an and the authentic Sunnah upon the understanding of the pious predecessors.",
       "v4_title": "Brotherhood",
       "v4_desc": "Fostering deeply rooted care, empathy, and community among students, staff, and parents."
     },
     "origin": {
       "title": "How We Began",
-      "p1": "Rawdatul Atfaal was founded circa 2021 as the foundational children's school under the umbrella of Markazul Bayaan. What started as a focused initiative has since blossomed into a global learning community, answering the call of families across the US, UK, Australia, Germany, Canada, India, Nigeria, Ghana, and beyond.",
-      "p2": "Our Islamic curriculum is firmly rooted in authenticity. We are proud to feature highly qualified Islamic tutors who have spent years studying under the recognized scholars of this era, adhering strictly to the methodology of the pious predecessors (Salaf).",
-      "p3": "Simultaneously, we ensure no compromise in secular academics. Our Western education department is spearheaded by highly experienced educators specializing in mathematics, programming, and the sciences, giving our students the absolute best of both worlds.",
-      "quote": "\"We didn't just want to build a school; we wanted to revive a tradition of holistic, unapologetic scholarship.\""
+      "p1": "Markazul Bayaan was founded in early 2021, initially serving students in Nigeria. It has since grown into a global learning community, welcoming students from around the world—including the USA, UK, Canada, Australia, the UAE, India, Germany, and Ghana. The institution caters to students of all ages and backgrounds.",
+      "p2": "In 2024, Rawdatul Atfaal was established as a separate institution specifically tailored for young children and parents who are homeschooling.",
+      "p3": "By 2025, recognizing a growing need, we expanded our curriculum to include subjects such as Mathematics, Sciences, and Programming. We are proud to have a dedicated team of highly experienced male and female teachers who deeply love educating and nurturing children.",
+      "quote": "\"Jazaakumullahu Khairan (May Allah reward you all with goodness).\""
     },
     "t0": "We envision a future where our alumni stand as pillars in their communities—possessing deep knowledge of their Deen and demonstrating exceptional competence in worldly sciences.",
     "t1": "DUNIYA",
-    "origin_story_desc": "was founded circa 2021 as the foundational children's school under the umbrella of Markazul Bayaan. What started as a focused initiative has since blossomed into a global learning community, answering the call of families across the US, UK, Australia, Germany, Canada, India, Nigeria, Ghana, and beyond."
+    "origin_story_desc": "was founded circa 2021 as the foundational children's school under the umbrella of Markazul Bayaan. What started as a focused initiative has since blossomed into a global learning community, answering the call of families across the US, UK, Australia, Germany, Canada, India, Nigeria, Ghana, and beyond.",
+    "leadership": {
+      "title": "Who Are Those Behind Rawdatul Atfaal",
+      "p1": "Our teachers are Salafis upon the way of the Salaf and with the major scholars of this era.",
+      "p2": "The brothers behind the school and other Salafī schools are those in charge of Pristine Methodology, Ar-Risaalah Publications, Tarbiyatul-Awlaad, and Markaz Sunnah Ghana, among many others.",
+      "p3": "The Salafi community in Nigeria has been connecting the Muslims in Nigeria with the Scholars of Sunnah since around 2020. We have hosted various lessons and telelinks with scholars from Saudi Arabia, Libya, Algeria, and more.",
+      "p4": "We have studied under scholars of Sunnah, including Shaikh AbdulGhaniy Al-Awsāt (Algeria) and Shaikh AbdulHakī Dahās (also from Algeria) at the Dawrah Shaikh Al-Allāmah Ubaid Bn Abdillāh Al-Jābirī An-Naijīriyyah.",
+      "p5": "We also studied directly under Shaikh Fuād Az-Zintānī during his visit to Nigeria, and we greatly benefited from his knowledge.",
+      "p6": "Brothers from our community, including the director of Rawdatul Aṭfāl, have also traveled to study with the scholars in Saudi Arabia, such as Shaikh Mustapha Mabram and Shaikh Yahyah An-Nahārī, and have attended the lessons of Shaikh Abdullāh Al-Bukhārī, Shaikh Ādil Ar-Ruhailī, and others in Madīnah.",
+      "p8": "We are proud to state that our community has studied directly under scholars in Madinah and other parts of Saudi Arabia, bringing authentic knowledge back to our students.",
+      "p9": "Furthermore, we hold written Ijaazaat (certifications) and maintain direct connections with various Mashaayikh. Several of these scholars have highly praised our efforts in spreading the Da'wah and connecting the Ummah with its scholars.",
+      "p7": "It is this dedicated Salafī community that takes charge of the teaching and nurturing at Rawdatul Aṭfāl."
+    }
   },
   "Contact": {
     "header": {

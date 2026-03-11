@@ -42,7 +42,7 @@ export default function Navbar() {
                   روضة الأطفال
                 </span>
                 <span className="font-cinzel text-midnight dark:text-cream text-sm tracking-[0.2em] group-hover:text-white transition-colors">
-                  {t("t14")}
+                  RAWDATUL ATFAAL
                 </span>
               </div>
             </Link>
@@ -145,7 +145,7 @@ export default function Navbar() {
               روضة الأطفال
             </span>
             <span className="font-cinzel text-midnight dark:text-cream text-sm tracking-[0.2em]">
-              {t("t14")}
+              RAWDATUL ATFAAL
             </span>
           </div>
           <button

@@ -105,7 +105,7 @@ export default function AboutPage() {
                   {t("vision.title")}
                 </h2>
               </div>
-              <p className="font-sans text-lg text-midnight/ dark:text-cream/ leading-relaxed space-y-4">
+              <p className="font-sans text-lg text-midnight/95 dark:text-cream/90 leading-relaxed space-y-4">
                 <span className="block">{t("vision.p1")}</span>
                 <span className="block mt-4 text-amber/90 font-medium">
                   {t("t0")}
@@ -163,15 +163,17 @@ export default function AboutPage() {
 
               {/* Abstract Representation of Dual Curriculum */}
               <div className="relative z-10 flex items-center justify-center w-full h-full">
-                <div className="absolute inset-s-1/2 -ms-32 w-64 h-64 border border-gold/30 rounded-full flex items-center justify-start ps-8 transition-transform duration-700 group-hover:-translate-x-4">
-                  <span className="font-amiri text-4xl text-amber">الدين</span>
-                </div>
-                <div className="absolute inset-e-1/2 -me-32 w-64 h-64 border border-midnight/ dark:border-white/ rounded-full flex items-center justify-end pe-8 transition-transform duration-700 group-hover:translate-x-4">
-                  <span className="font-cinzel text-xl text-midnight dark:text-cream tracking-widest">
-                    {t("t1")}
+                <div className="absolute inset-s-1/2 -ms-32 w-64 h-64 border border-gold/30 rounded-full flex items-center justify-start ps-8 transition-transform duration-700 group-hover:-translate-x-8 rtl:group-hover:translate-x-8">
+                  <span className="font-amiri text-4xl text-amber drop-shadow-md">
+                    {t("philosophy.deen")}
                   </span>
                 </div>
-                <div className="z-20 w-32 h-32 bg-ivory dark:bg-midnight border-2 border-gold rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(212,175,55,0.2)]">
+                <div className="absolute inset-e-1/2 -me-32 w-64 h-64 border border-midnight/30 dark:border-white/30 rounded-full flex items-center justify-end pe-8 transition-transform duration-700 group-hover:translate-x-8 rtl:group-hover:-translate-x-8">
+                  <span className="font-cinzel text-xl text-midnight dark:text-cream tracking-widest drop-shadow-md">
+                    {t("philosophy.duniya")}
+                  </span>
+                </div>
+                <div className="z-20 w-32 h-32 bg-ivory dark:bg-midnight border-2 border-gold rounded-full flex items-center justify-center shadow-[0_0_50px_rgba(212,175,55,0.2)] transition-transform duration-700 group-hover:scale-105">
                   <Award className="w-12 h-12 text-gold" />
                 </div>
               </div>
@@ -250,6 +252,96 @@ export default function AboutPage() {
             <p className="font-playfair italic text-xl text-amber pt-4">
               {t("origin.quote")}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. WHO ARE THOSE BEHIND RAWDATUL ATFAAL */}
+      <section className="py-24 bg-ivory dark:bg-midnight border-t border-midnight/5 relative overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-[0.03] text-gold pointer-events-none">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern
+                id="islamic-pattern-leadership"
+                width="80"
+                height="80"
+                patternUnits="userSpaceOnUse"
+              >
+                <path
+                  d="M40 0 L80 40 L40 80 L0 40 Z"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                />
+              </pattern>
+            </defs>
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#islamic-pattern-leadership)"
+            />
+          </svg>
+        </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <Award className="w-12 h-12 text-gold mx-auto mb-8 opacity-80" />
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream tracking-wider mb-10">
+            {t("leadership.title")}
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-start md:text-start">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.0 }}
+              className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-xs border border-midnight/5 hover:border-gold/30 transition-colors duration-300 space-y-4"
+            >
+              <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
+                {t("leadership.p1")}
+              </p>
+              <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
+                {t("leadership.p2")}
+              </p>
+              <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
+                {t("leadership.p3")}
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-xs border border-midnight/5 hover:border-gold/30 transition-colors duration-300 space-y-4"
+            >
+              <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
+                {t("leadership.p4")}
+              </p>
+              <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
+                {t("leadership.p5")}
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-xs border border-midnight/5 hover:border-gold/30 transition-colors duration-300 md:col-span-2 space-y-4"
+            >
+              <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
+                {t("leadership.p6")}
+              </p>
+              <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
+                {t("leadership.p8")}
+              </p>
+              <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
+                {t("leadership.p9")}
+              </p>
+              <p className="font-sans text-amber font-semibold leading-relaxed text-center mt-6 text-lg">
+                {t("leadership.p7")}
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
