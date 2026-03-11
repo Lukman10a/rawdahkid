@@ -23,11 +23,6 @@ export default function Home() {
       author: h("testimonials.t2.author"),
       location: h("testimonials.t2.role"),
     },
-    {
-      quote: h("testimonials.t3.quote"),
-      author: h("testimonials.t3.author"),
-      location: h("testimonials.t3.role"),
-    },
   ];
   const [mounted, setMounted] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
@@ -450,10 +445,10 @@ export default function Home() {
                 <button
                   key={idx}
                   onClick={() => setTestimonialIndex(idx)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  className={`h-2 rounded-full transition-all duration-300 ${
                     idx === testimonialIndex
                       ? "bg-gold w-6"
-                      : "bg-midnight/ dark:bg-white/ hover:bg-midnight/ dark:bg-white/"
+                      : "w-2 bg-midnight/20 dark:bg-white/20 hover:bg-midnight/40 dark:hover:bg-white/40"
                   }`}
                   aria-label={`Go to testimonial ${idx + 1}`}
                 />
