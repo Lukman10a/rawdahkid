@@ -43,9 +43,9 @@ export default function Footer() {
                 روضة الأطفال
               </span>
               <span className="font-cinzel text-midnight dark:text-cream text-2xl tracking-[0.2em] relative z-10">
-                {t("t7")}
+                RAWDATUL
                 <br />
-                {t("t13")}
+                ATFAAL
               </span>
             </div>
             <p className="font-playfair italic text-midnight/ dark:text-cream/ max-w-sm text-lg">
