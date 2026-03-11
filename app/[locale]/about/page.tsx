@@ -289,7 +289,13 @@ export default function AboutPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-start md:text-start">
-            <div className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-xs border border-midnight/5 hover:border-gold/30 transition-colors duration-300 space-y-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.0 }}
+              className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-xs border border-midnight/5 hover:border-gold/30 transition-colors duration-300 space-y-4"
+            >
               <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
                 {t("leadership.p1")}
               </p>
@@ -299,28 +305,43 @@ export default function AboutPage() {
               <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
                 {t("leadership.p3")}
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-xs border border-midnight/5 hover:border-gold/30 transition-colors duration-300 space-y-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-xs border border-midnight/5 hover:border-gold/30 transition-colors duration-300 space-y-4"
+            >
               <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
                 {t("leadership.p4")}
               </p>
               <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
                 {t("leadership.p5")}
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-xs border border-midnight/5 hover:border-gold/30 transition-colors duration-300 md:col-span-2 space-y-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white dark:bg-white/5 p-8 rounded-xl shadow-xs border border-midnight/5 hover:border-gold/30 transition-colors duration-300 md:col-span-2 space-y-4"
+            >
               <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
                 {t("leadership.p6")}
               </p>
               <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
                 {t("leadership.p8")}
               </p>
+              <p className="font-sans text-midnight/80 dark:text-cream/80 leading-relaxed">
+                {t("leadership.p9")}
+              </p>
               <p className="font-sans text-amber font-semibold leading-relaxed text-center mt-6 text-lg">
                 {t("leadership.p7")}
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
