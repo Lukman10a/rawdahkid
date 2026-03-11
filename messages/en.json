@@ -70,19 +70,14 @@
     "testimonials": {
       "title": "What Parents Say",
       "t1": {
-        "quote": "My son's tajweed has improved so much, and yet he still loves building robots in the programming class. This school is exactly what we were looking for.",
-        "author": "ZAYNAB A.",
-        "role": "Parent of Grade 3 Student"
+        "quote": "I am very satisfied with your accessibility, willingness to help, and flexibility. You go above and beyond to assist, offering Arabic, Aqeedah, Quran, and more. I would definitely recommend signing your kids up for these courses.",
+        "author": "Umm Firdaus",
+        "role": "Parent of one of one kids in the Islamic Programme"
       },
       "t2": {
-        "quote": "I used to worry about the balance between Islam and academics. Now I see my daughter thriving in both. It's a weight off our shoulders.",
-        "author": "OMAR F.",
-        "role": "Parent of Grade 5 Student"
-      },
-      "t3": {
-        "quote": "The teachers truly care. It's not just a school; it feels like a community that supports our family's values.",
-        "author": "FATIMA S.",
-        "role": "Parent of Grade 1 Student"
+        "quote": "I took Islamic studies, Arabic speaking, and Quran classes for my daughter. The teacher was patient and dedicated. I really saw an improvement in my daughter's memorization in less than a month.",
+        "author": "Sister Iqra Kareem",
+        "role": "Parent of one of one kids in the Islamic Programme"
       }
     },
     "fees": {
