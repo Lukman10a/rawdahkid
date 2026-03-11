@@ -29,7 +29,7 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
           isScrolled
-            ? "bg-ivory/ dark:bg-midnight/ backdrop-blur-md border-midnight/ dark:border-white/ py-4 shadow-sm"
+            ? "bg-ivory/95 dark:bg-midnight/95 backdrop-blur-md border-midnight/10 dark:border-white/10 py-4 shadow-sm"
             : "bg-transparent py-6",
         )}
       >
@@ -41,7 +41,9 @@ export default function Navbar() {
                 <span className="font-amiri text-gold text-2xl leading-none group-hover:text-amber transition-colors">
                   روضة الأطفال
                 </span>
-                <span className="font-cinzel text-midnight dark:text-cream text-sm tracking-[0.2em] group-hover:text-white transition-colors">{t("t14")}</span>
+                <span className="font-cinzel text-midnight dark:text-cream text-sm tracking-[0.2em] group-hover:text-white transition-colors">
+                  {t("t14")}
+                </span>
               </div>
             </Link>
 
@@ -142,7 +144,9 @@ export default function Navbar() {
             <span className="font-amiri text-gold text-2xl leading-none">
               روضة الأطفال
             </span>
-            <span className="font-cinzel text-midnight dark:text-cream text-sm tracking-[0.2em]">{t("t14")}</span>
+            <span className="font-cinzel text-midnight dark:text-cream text-sm tracking-[0.2em]">
+              {t("t14")}
+            </span>
           </div>
           <button
             onClick={() => setIsMobileMenuOpen(false)}

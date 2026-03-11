@@ -31,17 +31,18 @@ export default function Home() {
   ];
   const [mounted, setMounted] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const numTestimonials = testimonials.length;
 
   useEffect(() => {
     const timeout = setTimeout(() => setMounted(true), 0);
     const interval = setInterval(() => {
-      setTestimonialIndex((prev) => (prev + 1) % testimonials.length);
+      setTestimonialIndex((prev) => (prev + 1) % numTestimonials);
     }, 6000);
     return () => {
       clearTimeout(timeout);
       clearInterval(interval);
     };
-  }, []);
+  }, [numTestimonials]);
 
   return (
     <div className="flex flex-col min-h-screen">
