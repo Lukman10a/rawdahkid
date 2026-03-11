@@ -279,19 +279,19 @@ export default function Home() {
                   </svg>
                 </div>
 
-                <h3 className="font-cinzel text-2xl tracking-widest text-midnight dark:text-cream mb-2">
+                <h3 className="font-cinzel text-2xl tracking-widest text-cream mb-2">
                   {h("dualCurriculum.western.title")}
                 </h3>
                 <p className="font-amiri text-gold text-xl mb-6">
                   العلوم العصرية
                 </p>
 
-                <p className="font-sans text-midnight/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
+                <p className="font-sans text-cream/70 dark:text-muted mb-8 text-sm uppercase tracking-wide">
                   {h("all_courses_title")}
                 </p>
 
                 <div className="mt-auto flex flex-col items-center space-y-4 w-full">
-                  <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
+                  <div className="text-cream font-cormorant text-lg">
                     {h("dualCurriculum.islamic.indivFrom")}{" "}
                     <span className="text-amber">$2,000</span>{" "}
                     {h("fees.perYear")}
