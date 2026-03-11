@@ -105,7 +105,7 @@ export default function AboutPage() {
                   {t("vision.title")}
                 </h2>
               </div>
-              <p className="font-sans text-lg text-midnight/ dark:text-cream/ leading-relaxed space-y-4">
+              <p className="font-sans text-lg text-midnight/95 dark:text-cream/90 leading-relaxed space-y-4">
                 <span className="block">{t("vision.p1")}</span>
                 <span className="block mt-4 text-amber/90 font-medium">
                   {t("t0")}
