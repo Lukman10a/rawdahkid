@@ -26,6 +26,9 @@ export default function Home() {
   ];
   const [mounted, setMounted] = useState(false);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [billingPlan, setBillingPlan] = useState<
+    "monthly" | "semester" | "annual"
+  >("annual");
   const numTestimonials = testimonials.length;
 
   useEffect(() => {
@@ -475,25 +478,40 @@ export default function Home() {
               {h("fees.bundleName")}
             </div>
             <div className="font-cormorant text-5xl md:text-7xl text-midnight mb-2 font-medium">
-              $5,000{" "}
+              {billingPlan === "annual" && "$5,000"}
+              {billingPlan === "semester" && "$2,750"}
+              {billingPlan === "monthly" && "$500"}{" "}
               <span className="text-xl md:text-2xl text-midnight/50 font-sans">
-                {h("fees.perYear")}
+                {billingPlan === "annual" && h("fees.perYear")}
+                {billingPlan === "semester" && h("fees.perSemester")}
+                {billingPlan === "monthly" && h("fees.perMonth")}
               </span>
             </div>
             <p className="text-midnight/60 mb-10 italic font-playfair text-lg">
-              {h("fees.monthlyEquiv")}
+              {billingPlan === "annual" && h("fees.monthlyEquiv")}
+              {billingPlan === "semester" && h("fees.yearlyEquivSemester")}
+              {billingPlan === "monthly" && h("fees.yearlyEquivMonthly")}
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 text-xs font-sans tracking-wider uppercase text-midnight/50 mb-10">
-              <span className="px-4 py-2 bg-ivory/ dark:bg-midnight/ rounded-sm">
+              <button
+                onClick={() => setBillingPlan("monthly")}
+                className={`px-4 py-2 rounded-sm transition-colors ${billingPlan === "monthly" ? "bg-gold/10 text-gold font-bold border border-gold/20" : "bg-ivory/ dark:bg-midnight/ hover:bg-gold/5"}`}
+              >
                 {h("fees.monthlyTag")}
-              </span>
-              <span className="px-4 py-2 bg-ivory/ dark:bg-midnight/ rounded-sm">
+              </button>
+              <button
+                onClick={() => setBillingPlan("semester")}
+                className={`px-4 py-2 rounded-sm transition-colors ${billingPlan === "semester" ? "bg-gold/10 text-gold font-bold border border-gold/20" : "bg-ivory/ dark:bg-midnight/ hover:bg-gold/5"}`}
+              >
                 {h("fees.semesterTag")}
-              </span>
-              <span className="px-4 py-2 bg-gold/10 text-gold font-bold rounded-sm border border-gold/20">
+              </button>
+              <button
+                onClick={() => setBillingPlan("annual")}
+                className={`px-4 py-2 rounded-sm transition-colors ${billingPlan === "annual" ? "bg-gold/10 text-gold font-bold border border-gold/20" : "bg-ivory/ dark:bg-midnight/ hover:bg-gold/5"}`}
+              >
                 {h("fees.annualTag")}
-              </span>
+              </button>
             </div>
 
             <Link href="/fees">
