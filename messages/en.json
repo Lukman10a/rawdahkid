@@ -1138,7 +1138,63 @@
     "t58": "Algebra I/II + geometry",
     "t59": "Primary (Levels 1–5)",
     "t60": "Capstone (Level 10)",
-    "t61": "Algebra foundations"
+    "t61": "Algebra foundations",
+    "unitLabel": "Unit",
+    "topicLabel": "Topic / Unit",
+    "durationLabel": "Study Duration",
+    "skillsLabel": "Key Sub-topics & Skills",
+    "lvl1": {
+      "u1": {
+        "t": "Numbers 1 to 5",
+        "d": "3 Weeks",
+        "s": "Count, write, represent and compare numbers up to 5"
+      },
+      "u2": {
+        "t": "Addition and Subtraction to 5",
+        "d": "3 Weeks",
+        "s": "Put together, take apart, addition & subtraction within 5"
+      },
+      "u3": {
+        "t": "Numbers 6 to 10",
+        "d": "3 Weeks",
+        "s": "Count, represent, order, and compare numbers up to 10"
+      },
+      "u4": {
+        "t": "Addition and Subtraction to 10",
+        "d": "3 Weeks",
+        "s": "Put together, take apart, addition & subtraction within 10"
+      },
+      "u5": {
+        "t": "Numbers to 15",
+        "d": "2 Weeks",
+        "s": "Count, represent, and compare numbers up to 15"
+      },
+      "u6": {
+        "t": "Numbers to 20",
+        "d": "2 Weeks",
+        "s": "Count, represent, order, and compare numbers up to 20"
+      },
+      "u7": {
+        "t": "Explore Addition & Subtraction to 20",
+        "d": "2 Weeks",
+        "s": "Use a ten to put together and take apart to 20"
+      },
+      "u8": {
+        "t": "Count to 100",
+        "d": "3 Weeks",
+        "s": "Count by ones and tens up to 100 forwards and backwards"
+      },
+      "u9": {
+        "t": "Geometry: 2D & 3D Shapes",
+        "d": "4 Weeks",
+        "s": "Identify, describe, compare, and create 2D and 3D shapes"
+      },
+      "u10": {
+        "t": "Measurement and Data",
+        "d": "3 Weeks",
+        "s": "Compare length, weight; Classify, sort, and count objects"
+      }
+    }
   },
   "ProgSciences": {
     "t0": "Sciences",

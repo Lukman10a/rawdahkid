@@ -203,62 +203,16 @@ export default function MathematicsProgramme() {
           <LevelCard
             levelNumber="1"
             title={t("t40")}
-            subtitle="Grade 1"
-            ageGroup="Ages 6–7 | HMC Grade 1"
+            subtitle="Kindergarten"
+            ageGroup="Ages 4–6 | Early Years Foundation"
             duration="36 Weeks | 4–5 Sessions/Week | 40 Min/Session"
-            aim="To build solid addition and subtraction fluency to 20, introduce place value to 100, and develop early problem-solving and measurement skills."
-            units={[
-              {
-                no: 1,
-                topic: "Number Sense & Counting to 120",
-                skills: "Count forward/backward, skip count",
-              },
-              {
-                no: 2,
-                topic: "Place Value — Tens and Ones",
-                skills: "Group, compare, expand numbers",
-              },
-              {
-                no: 3,
-                topic: "Addition & Subtraction Fluency (to 20)",
-                skills: "Mental math, fact families",
-              },
-              {
-                no: 4,
-                topic: "Adding/Subtracting Multiples of 10",
-                skills: "Skip counting, number patterns",
-              },
-              {
-                no: 5,
-                topic: "Measurement — Length (inches & cm)",
-                skills: "Measure, estimate, compare",
-              },
-              {
-                no: 6,
-                topic: "Time — Hour, Half Hour, Quarter Hour",
-                skills: "Read analogue & digital clocks",
-              },
-              {
-                no: 7,
-                topic: "Geometry — Shapes, Halves and Quarters",
-                skills: "Identify, sort, describe, partition",
-              },
-              {
-                no: 8,
-                topic: "Money — Coins and Values to $1",
-                skills: "Count coins, make amounts",
-              },
-              {
-                no: 9,
-                topic: "Data — Picture Graphs and Tables",
-                skills: "Read, create, interpret",
-              },
-              {
-                no: 10,
-                topic: "Word Problems — One-step",
-                skills: "Model, plan, solve, check",
-              },
-            ]}
+            aim="To build solid number sense, addition and subtraction fluency within 20, understand shapes, and develop early problem-solving and measurement skills based on standard Go Math pacing."
+            units={Array.from({ length: 10 }).map((_, j) => ({
+              no: j + 1,
+              topic: t(`lvl1.u${j + 1}.t`),
+              duration: t(`lvl1.u${j + 1}.d`),
+              skills: t(`lvl1.u${j + 1}.s`)
+            }))}
           />
 
           <LevelCard
@@ -272,51 +226,61 @@ export default function MathematicsProgramme() {
               {
                 no: 1,
                 topic: "Place Value to 1,000",
+                duration: "4 Weeks",
                 skills: "Hundreds, tens, ones; expanded form",
               },
               {
                 no: 2,
                 topic: "Addition & Subtraction to 1,000 (regrouping)",
+                duration: "4 Weeks",
                 skills: "Multi-digit algorithms",
               },
               {
                 no: 3,
                 topic: "Multiplication — Equal Groups & Arrays",
+                duration: "4 Weeks",
                 skills: "Repeated addition, skip count",
               },
               {
                 no: 4,
                 topic: "Division — Sharing Equally",
+                duration: "4 Weeks",
                 skills: "Partition sets, basic facts",
               },
               {
                 no: 5,
                 topic: "Fractions — Halves, Thirds, Fourths",
+                duration: "4 Weeks",
                 skills: "Name, compare, order",
               },
               {
                 no: 6,
                 topic: "Measurement — Length, Area, Perimeter",
+                duration: "4 Weeks",
                 skills: "Estimate, measure, calculate",
               },
               {
                 no: 7,
                 topic: "Time — Minutes and Elapsed Time",
+                duration: "4 Weeks",
                 skills: "Tell time, calculate durations",
               },
               {
                 no: 8,
                 topic: "Money — Making Change to $10",
+                duration: "4 Weeks",
                 skills: "Add, subtract, count change",
               },
               {
                 no: 9,
                 topic: "Geometry — Perimeter and Basic Area",
+                duration: "4 Weeks",
                 skills: "Count units, use formula",
               },
               {
                 no: 10,
                 topic: "Data — Bar Graphs and Pictographs",
+                duration: "4 Weeks",
                 skills: "Collect, display, analyse",
               },
             ]}
@@ -333,51 +297,61 @@ export default function MathematicsProgramme() {
               {
                 no: 1,
                 topic: "Multiplication Facts 0–12 — Full Fluency",
+                duration: "4 Weeks",
                 skills: "Times tables, mental recall",
               },
               {
                 no: 2,
                 topic: "Division Facts",
+                duration: "4 Weeks",
                 skills: "Fact families, missing factors",
               },
               {
                 no: 3,
                 topic: "Multi-digit Multiplication (2-digit × 1-digit)",
+                duration: "4 Weeks",
                 skills: "Partial products, algorithm",
               },
               {
                 no: 4,
                 topic: "Division — 2-digit ÷ 1-digit",
+                duration: "4 Weeks",
                 skills: "Estimate, divide, check",
               },
               {
                 no: 5,
                 topic: "Fractions — Equivalence, Comparing, Line",
+                duration: "4 Weeks",
                 skills: "Benchmark fractions, ordering",
               },
               {
                 no: 6,
                 topic: "Decimals — Tenths and Hundredths",
+                duration: "4 Weeks",
                 skills: "Place value, compare, order",
               },
               {
                 no: 7,
                 topic: "Perimeter and Area of Rectangles",
+                duration: "4 Weeks",
                 skills: "Formulas, real-world problems",
               },
               {
                 no: 8,
                 topic: "Measurement — Mass, Volume",
+                duration: "4 Weeks",
                 skills: "Convert units, estimate",
               },
               {
                 no: 9,
                 topic: "Time — 12/24-hour, Elapsed Time",
+                duration: "4 Weeks",
                 skills: "Word problems, timetables",
               },
               {
                 no: 10,
                 topic: "Data & Probability — Scaled Graphs",
+                duration: "4 Weeks",
                 skills: "Analyse, interpret, predict",
               },
             ]}
@@ -394,51 +368,61 @@ export default function MathematicsProgramme() {
               {
                 no: 1,
                 topic: "Place Value to 1,000,000",
+                duration: "4 Weeks",
                 skills: "Read, Write, Compare, Round, order",
               },
               {
                 no: 2,
                 topic: "Multi-digit Multiplication (3-digit × 2-digit)",
+                duration: "4 Weeks",
                 skills: "Area model, standard algorithm",
               },
               {
                 no: 3,
                 topic: "Long Division (4-digit ÷ 2-digit)",
+                duration: "4 Weeks",
                 skills: "Estimate quotients, interpret remainders",
               },
               {
                 no: 4,
                 topic: "Fraction Operations — Add & Subtract",
+                duration: "4 Weeks",
                 skills: "LCM, equivalent fractions",
               },
               {
                 no: 5,
                 topic: "Multiplying Fractions by Whole Numbers",
+                duration: "4 Weeks",
                 skills: "Models, real-world application",
               },
               {
                 no: 6,
                 topic: "Decimal Operations — Add and Subtract",
+                duration: "4 Weeks",
                 skills: "Align decimal points, estimate",
               },
               {
                 no: 7,
                 topic: "Geometry — Angles, Lines, Symmetry",
+                duration: "4 Weeks",
                 skills: "Classify, measure with protractor",
               },
               {
                 no: 8,
                 topic: "Order of Operations — PEMDAS",
+                duration: "4 Weeks",
                 skills: "Evaluate multi-step expressions",
               },
               {
                 no: 9,
                 topic: "Algebra — Variables and Simple Equations",
+                duration: "4 Weeks",
                 skills: "Write and solve one-step equations",
               },
               {
                 no: 10,
                 topic: "Statistics — Mean, Median, Mode, Range",
+                duration: "4 Weeks",
                 skills: "Calculate and interpret data sets",
               },
             ]}
@@ -455,51 +439,61 @@ export default function MathematicsProgramme() {
               {
                 no: 1,
                 topic: "Fraction Operations — Multiply and Divide",
+                duration: "4 Weeks",
                 skills: "Algorithm, models, word problems",
               },
               {
                 no: 2,
                 topic: "Decimal Operations — All Four Operations",
+                duration: "4 Weeks",
                 skills: "Powers of 10, standard algorithm",
               },
               {
                 no: 3,
                 topic: "Ratios and Proportional Reasoning",
+                duration: "4 Weeks",
                 skills: "Equivalent ratios, unit rate, tables",
               },
               {
                 no: 4,
                 topic: "Percentages — Conversions and Applications",
+                duration: "4 Weeks",
                 skills: "Find % of quantity, discounts, tax",
               },
               {
                 no: 5,
                 topic: "Integers — Positive and Negative Numbers",
+                duration: "4 Weeks",
                 skills: "Number line, add, subtract",
               },
               {
                 no: 6,
                 topic: "Coordinate Geometry — Four Quadrants",
+                duration: "4 Weeks",
                 skills: "Plot ordered pairs, reflections",
               },
               {
                 no: 7,
                 topic: "Geometry — Area, Volume, Surface Area",
+                duration: "4 Weeks",
                 skills: "Prisms, pyramids, composite shapes",
               },
               {
                 no: 8,
                 topic: "Algebra — Solving Two-step Equations",
+                duration: "4 Weeks",
                 skills: "Balance, inverse operations",
               },
               {
                 no: 9,
                 topic: "Advanced Order of Operations & Expressions",
+                duration: "4 Weeks",
                 skills: "Simplify, expand, substitute",
               },
               {
                 no: 10,
                 topic: "Probability — Theoretical and Experimental",
+                duration: "4 Weeks",
                 skills: "Calculate, predict, compare",
               },
             ]}
@@ -516,51 +510,61 @@ export default function MathematicsProgramme() {
               {
                 no: 1,
                 topic: "Ratios and Rates — Advanced Applications",
+                duration: "4 Weeks",
                 skills: "Unit rate, ratio tables, tape diagrams",
               },
               {
                 no: 2,
                 topic: "Proportional Relationships and Graphs",
+                duration: "4 Weeks",
                 skills: "Identify, represent, interpret",
               },
               {
                 no: 3,
                 topic: "Percentages — Increase/Decrease, Interest",
+                duration: "4 Weeks",
                 skills: "Calculate change, real-world problems",
               },
               {
                 no: 4,
                 topic: "Integers — All Four Operations",
+                duration: "4 Weeks",
                 skills: "Rules for signs, absolute value",
               },
               {
                 no: 5,
                 topic: "Rational Numbers — Fractions, Decimals, Negatives",
+                duration: "4 Weeks",
                 skills: "Order, operate, convert",
               },
               {
                 no: 6,
                 topic: "Expressions and Equations — Variables",
+                duration: "4 Weeks",
                 skills: "Write, evaluate, simplify",
               },
               {
                 no: 7,
                 topic: "Solving One- and Two-step Equations",
+                duration: "4 Weeks",
                 skills: "Inverse operations, check solutions",
               },
               {
                 no: 8,
                 topic: "Solving Inequalities — Introduction",
+                duration: "4 Weeks",
                 skills: "Represent on number line, interpret",
               },
               {
                 no: 9,
                 topic: "Geometry — Area of Complex Shapes, Volume",
+                duration: "4 Weeks",
                 skills: "Decompose, calculate, apply",
               },
               {
                 no: 10,
                 topic: "Statistics — Measures of Centre and Spread",
+                duration: "4 Weeks",
                 skills: "Mean, MAD, box plots, histograms",
               },
             ]}
@@ -577,51 +581,61 @@ export default function MathematicsProgramme() {
               {
                 no: 1,
                 topic: "Proportional Relationships",
+                duration: "4 Weeks",
                 skills: "Constant of Proportionality, graphs, equations",
               },
               {
                 no: 2,
                 topic: "Linear Equations — One Variable",
+                duration: "4 Weeks",
                 skills: "Multi-step, distributive property",
               },
               {
                 no: 3,
                 topic: "Linear Inequalities — Graphing Solutions",
+                duration: "4 Weeks",
                 skills: "Compound inequalities, real-world",
               },
               {
                 no: 4,
                 topic: "Operations with Rational Numbers",
+                duration: "4 Weeks",
                 skills: "All operations, problem solving",
               },
               {
                 no: 5,
                 topic: "Algebraic Expressions",
+                duration: "4 Weeks",
                 skills: "Expand, factorise, simplify like terms",
               },
               {
                 no: 6,
                 topic: "Geometry — Scale Drawings and Similar Figures",
+                duration: "4 Weeks",
                 skills: "Calculate scale, find missing sides",
               },
               {
                 no: 7,
                 topic: "Geometry — Angles, Triangles and Transversals",
+                duration: "4 Weeks",
                 skills: "Angle relationships, proof introduction",
               },
               {
                 no: 8,
                 topic: "Circles — Circumference and Area",
+                duration: "4 Weeks",
                 skills: "Pi, formula, real-world applications",
               },
               {
                 no: 9,
                 topic: "Statistics — Sampling and Inference",
+                duration: "4 Weeks",
                 skills: "Random samples, draw conclusions",
               },
               {
                 no: 10,
                 topic: "Probability — Compound Events",
+                duration: "4 Weeks",
                 skills: "Tree diagrams, counting principle",
               },
             ]}
@@ -638,51 +652,61 @@ export default function MathematicsProgramme() {
               {
                 no: 1,
                 topic: "Linear Functions — Slope and y-intercept",
+                duration: "4 Weeks",
                 skills: "Graph, write equations, interpret",
               },
               {
                 no: 2,
                 topic: "Systems of Linear Equations",
+                duration: "4 Weeks",
                 skills: "Substitution, elimination, graphing",
               },
               {
                 no: 3,
                 topic: "Exponents and Scientific Notation",
+                duration: "4 Weeks",
                 skills: "Laws of exponents, convert, compute",
               },
               {
                 no: 4,
                 topic: "Polynomials — Add, Subtract, Multiply",
+                duration: "4 Weeks",
                 skills: "Standard form, FOIL, area model",
               },
               {
                 no: 5,
                 topic: "Factoring Polynomials",
+                duration: "4 Weeks",
                 skills: "GCF, difference of squares, trinomials",
               },
               {
                 no: 6,
                 topic: "Pythagorean Theorem and Its Converse",
+                duration: "4 Weeks",
                 skills: "Prove, apply, real-world problems",
               },
               {
                 no: 7,
                 topic: "Geometry — Transformations",
+                duration: "4 Weeks",
                 skills: "Translate, reflect, rotate, dilate",
               },
               {
                 no: 8,
                 topic: "Geometry — Congruence and Similarity",
+                duration: "4 Weeks",
                 skills: "Corresponding parts, scale factor",
               },
               {
                 no: 9,
                 topic: "Volume of 3D Figures",
+                duration: "4 Weeks",
                 skills: "Cylinders, cones, spheres formula",
               },
               {
                 no: 10,
                 topic: "Bivariate Data — Scatter Plots",
+                duration: "4 Weeks",
                 skills: "Lines of Best Fit, correlation",
               },
             ]}
@@ -699,51 +723,61 @@ export default function MathematicsProgramme() {
               {
                 no: 1,
                 topic: "Quadratic Functions",
+                duration: "4 Weeks",
                 skills: "Graphs, vertex, axis of symmetry",
               },
               {
                 no: 2,
                 topic: "Solving Quadratics",
+                duration: "4 Weeks",
                 skills: "Factoring, formula, completing square",
               },
               {
                 no: 3,
                 topic: "Complex Numbers — Introduction",
+                duration: "4 Weeks",
                 skills: "i, add, subtract, multiply",
               },
               {
                 no: 4,
                 topic: "Exponential Functions",
+                duration: "4 Weeks",
                 skills: "Growth and decay, model real-world",
               },
               {
                 no: 5,
                 topic: "Logarithms — Introduction and Properties",
+                duration: "4 Weeks",
                 skills: "Convert between log and exponential",
               },
               {
                 no: 6,
                 topic: "Radical Expressions and Equations",
+                duration: "4 Weeks",
                 skills: "Simplify, solve, check extraneous",
               },
               {
                 no: 7,
                 topic: "Rational Expressions and Equations",
+                duration: "4 Weeks",
                 skills: "Simplify, add, multiply, solve",
               },
               {
                 no: 8,
                 topic: "Sequences and Series",
+                duration: "4 Weeks",
                 skills: "Arithmetic and Geometric, nth term",
               },
               {
                 no: 9,
                 topic: "Introduction to Trigonometry (SOHCAHTOA)",
+                duration: "4 Weeks",
                 skills: "Right triangles, sine, cosine, tangent",
               },
               {
                 no: 10,
                 topic: "Trigonometry — Unit Circle",
+                duration: "4 Weeks",
                 skills: "Special angles, exact values",
               },
             ]}
@@ -760,51 +794,61 @@ export default function MathematicsProgramme() {
               {
                 no: 1,
                 topic: "Functions — Domain, Range, Composition",
+                duration: "4 Weeks",
                 skills: "Analyse, transform, combine, inverses",
               },
               {
                 no: 2,
                 topic: "Polynomial Functions — Higher Degree",
+                duration: "4 Weeks",
                 skills: "Rational roots, end behaviour, zeros",
               },
               {
                 no: 3,
                 topic: "Trigonometric Functions",
+                duration: "4 Weeks",
                 skills: "Graphs, Amplitude, Period, transformations",
               },
               {
                 no: 4,
                 topic: "Trigonometric Identities and Equations",
+                duration: "4 Weeks",
                 skills: "Prove identities, solve equations",
               },
               {
                 no: 5,
                 topic: "Conic Sections — Circle, Ellipse",
+                duration: "4 Weeks",
                 skills: "Parabola, Hyperbola, standard form",
               },
               {
                 no: 6,
                 topic: "Matrices — Operations, Determinants",
+                duration: "4 Weeks",
                 skills: "Inverses, solve systems using matrices",
               },
               {
                 no: 7,
                 topic: "Combinatorics and Probability",
+                duration: "4 Weeks",
                 skills: "Permutations, combinations, Binomial",
               },
               {
                 no: 8,
                 topic: "Limits — Introduction to Calculus",
+                duration: "4 Weeks",
                 skills: "Concept of limit, continuity",
               },
               {
                 no: 9,
                 topic: "Introduction to Differentiation",
+                duration: "4 Weeks",
                 skills: "Derivative rules, tangent lines, rate of change",
               },
               {
                 no: 10,
                 topic: "Introduction to Integration",
+                duration: "4 Weeks",
                 skills: "Area under curve, Fundamental Theorem",
               },
             ]}
@@ -869,7 +913,7 @@ function LevelCard({
   ageGroup: string;
   duration: string;
   aim: string;
-  units: { no: number; topic: string; skills: string }[];
+  units: { no: number; topic: string; duration: string; skills: string }[];
 }) {
   const t = useTranslations("ProgMathematics");
   return (
@@ -917,9 +961,10 @@ function LevelCard({
           <table className="w-full text-start border-collapse min-w-200">
             <thead>
               <tr className="border-b-2 border-blue-100 dark:border-white/10 bg-blue-50/50 dark:bg-white/5">
-                <th className="py-4 px-6 font-cinzel text-blue-700 dark:text-blue-400 font-bold w-16 text-center">{t("t31")}</th>
-                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold w-1/2">{t("t32")}</th>
-                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold">{t("t33")}</th>
+                <th className="py-4 px-6 font-cinzel text-blue-700 dark:text-blue-400 font-bold w-16 text-center">{t("unitLabel")}</th>
+                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold w-1/4">{t("topicLabel")}</th>
+                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold w-1/5 whitespace-nowrap">{t("durationLabel")}</th>
+                <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream font-bold">{t("skillsLabel")}</th>
               </tr>
             </thead>
             <tbody className="font-sans text-midnight/80 dark:text-cream/80 text-sm">
@@ -933,6 +978,9 @@ function LevelCard({
                   </td>
                   <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
                     {unit.topic}
+                  </td>
+                  <td className="py-4 px-6 text-blue-600 dark:text-blue-400 font-medium whitespace-nowrap">
+                    {unit.duration}
                   </td>
                   <td className="py-4 px-6 leading-relaxed">{unit.skills}</td>
                 </tr>
