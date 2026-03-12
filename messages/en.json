@@ -1125,20 +1125,20 @@
     "t45": "Horizons Math Curriculum ensuring solid arithmetic, fractions, decimals and early geometry.",
     "t46": "Pre-Calculus and an introduction to limits, differentiation, and integration.",
     "t47": "Algebra I & II alongside formal geometry, quadratics, and trigonometry.",
-    "t48": "Multiplication & division mastery",
-    "t49": "Pre-Calculus + intro to calculus",
-    "t50": "Place value, addition to 1,000",
-    "t51": "Ratios, decimals, pre-algebra",
-    "t52": "Algebra I — linear equations",
+    "t48": "Place value to 1000, 3-digit add/sub, time & money",
+    "t49": "Algebra I, polynomials, quadratics, modeling",
+    "t50": "Place value to 120, add/subtract to 20, measurement",
+    "t51": "Multi-digit ops, fraction equivalence, decimals",
+    "t52": "Ratios, integers, basic equations, statistics",
     "t53": "Middle School (Levels 6–7)",
-    "t54": "Number sense, shapes, time",
-    "t55": "Multi-digit ops, fractions",
-    "t56": "Algebra II + trigonometry",
+    "t54": "Counting, basic addition/subtraction, shapes",
+    "t55": "Multiplication/division facts, basic fractions, area",
+    "t56": "Linear equations, functions, geometry, exponents",
     "t57": "High School (Levels 8–9)",
-    "t58": "Algebra I/II + geometry",
+    "t58": "Proportional relationships, rational numbers, probability",
     "t59": "Primary (Levels 1–5)",
     "t60": "Capstone (Level 10)",
-    "t61": "Algebra foundations",
+    "t61": "Decimal & fraction operations, volume, coordinate plane",
     "unitLabel": "Unit",
     "topicLabel": "Topic / Unit",
     "durationLabel": "Study Duration",
@@ -1193,6 +1193,474 @@
         "t": "Measurement and Data",
         "d": "3 Weeks",
         "s": "Compare length, weight; Classify, sort, and count objects"
+      }
+    },
+    "lvl2": {
+      "u1": {
+        "t": "Counting and Number Sense (To 120)",
+        "d": "4 Weeks",
+        "s": "Counting to 120, reading and writing numbers"
+      },
+      "u2": {
+        "t": "Place Value: Tens and Ones",
+        "d": "3 Weeks",
+        "s": "Tens and ones, expanded form"
+      },
+      "u3": {
+        "t": "Comparing Numbers",
+        "d": "2 Weeks",
+        "s": "Greater than, less than, ordering"
+      },
+      "u4": {
+        "t": "Addition Concepts & Strategies",
+        "d": "4 Weeks",
+        "s": "Addition within 20, properties of operations"
+      },
+      "u5": {
+        "t": "Subtraction Concepts & Strategies",
+        "d": "4 Weeks",
+        "s": "Subtraction within 20, unknown addends"
+      },
+      "u6": {
+        "t": "Addition and Subtraction Relationships",
+        "d": "3 Weeks",
+        "s": "Fact families, inverse operations"
+      },
+      "u7": {
+        "t": "Two-Digit Addition and Subtraction",
+        "d": "3 Weeks",
+        "s": "Adding and subtracting multiples of 10"
+      },
+      "u8": {
+        "t": "Measurement and Data (Graphing)",
+        "d": "3 Weeks",
+        "s": "Picture graphs, tally charts, bar graphs"
+      },
+      "u9": {
+        "t": "Time and Money",
+        "d": "3 Weeks",
+        "s": "Telling time to hour/half-hour, coin values"
+      },
+      "u10": {
+        "t": "Geometry and Fractions",
+        "d": "3 Weeks",
+        "s": "Attributes of 2D/3D shapes, halves and fourths"
+      }
+    },
+    "lvl3": {
+      "u1": {
+        "t": "Understand Place Value",
+        "d": "3 Weeks",
+        "s": "Hundreds, tens, ones, skip counting"
+      },
+      "u2": {
+        "t": "Use Place Value to Count and Compare",
+        "d": "3 Weeks",
+        "s": "Comparing 3-digit numbers using symbols"
+      },
+      "u3": {
+        "t": "Basic Facts and Equal Groups",
+        "d": "4 Weeks",
+        "s": "Addition/subtraction within 20, odd/even"
+      },
+      "u4": {
+        "t": "2-Digit Addition",
+        "d": "4 Weeks",
+        "s": "Regrouping ones and tens, partial sums"
+      },
+      "u5": {
+        "t": "2-Digit Subtraction",
+        "d": "4 Weeks",
+        "s": "Regrouping, taking apart to subtract"
+      },
+      "u6": {
+        "t": "3-Digit Addition and Subtraction",
+        "d": "4 Weeks",
+        "s": "Adding and subtracting 3-digit numbers"
+      },
+      "u7": {
+        "t": "Money",
+        "d": "2 Weeks",
+        "s": "Counting coins and bills, word problems"
+      },
+      "u8": {
+        "t": "Time",
+        "d": "2 Weeks",
+        "s": "Time to 5 minutes, AM/PM"
+      },
+      "u9": {
+        "t": "Length in Customary and Metric Units",
+        "d": "5 Weeks",
+        "s": "Inches, centimeters, estimating lengths"
+      },
+      "u10": {
+        "t": "Geometry, Fractions, and Data",
+        "d": "5 Weeks",
+        "s": "Polygons, angles, measuring data"
+      }
+    },
+    "lvl4": {
+      "u1": {
+        "t": "Addition and Subtraction Strategies",
+        "d": "2 Weeks",
+        "s": "Mental math, rounding, properties"
+      },
+      "u2": {
+        "t": "Understand Multiplication and Facts",
+        "d": "5 Weeks",
+        "s": "Equal groups, arrays, properties of multiplication"
+      },
+      "u3": {
+        "t": "Advanced Multiplication and Division Concepts",
+        "d": "4 Weeks",
+        "s": "Multiply by multiples of 10 and 100"
+      },
+      "u4": {
+        "t": "Division Facts and Strategies",
+        "d": "4 Weeks",
+        "s": "Quotients, remainders, relating to multiplication"
+      },
+      "u5": {
+        "t": "Apply Multiplication and Division",
+        "d": "3 Weeks",
+        "s": "Word problems, identifying patterns"
+      },
+      "u6": {
+        "t": "Fractions: Understanding and Comparing",
+        "d": "5 Weeks",
+        "s": "Unit fractions, equivalent fractions, comparing"
+      },
+      "u7": {
+        "t": "Area and Perimeter",
+        "d": "4 Weeks",
+        "s": "Finding unknown sides, area of rectangles"
+      },
+      "u8": {
+        "t": "Time Measurement and Intervals",
+        "d": "2 Weeks",
+        "s": "Time intervals, start and end times"
+      },
+      "u9": {
+        "t": "Measurement (Capacity, Mass, Weight)",
+        "d": "3 Weeks",
+        "s": "Liquid volume, mass, weight"
+      },
+      "u10": {
+        "t": "Two-Dimensional Shapes and Data",
+        "d": "4 Weeks",
+        "s": "Quadrilaterals, line plots, frequency tables"
+      }
+    },
+    "lvl5": {
+      "u1": {
+        "t": "Whole Number Place Value, Addition and Subtraction",
+        "d": "3 Weeks",
+        "s": "Place value to 1,000,000, multi-digit arithmetic"
+      },
+      "u2": {
+        "t": "Multiplication by 1-Digit and 2-Digit Numbers",
+        "d": "5 Weeks",
+        "s": "Area models, partial products, standard algorithm"
+      },
+      "u3": {
+        "t": "Division Strategies and 1-Digit Divisors",
+        "d": "4 Weeks",
+        "s": "Partial quotients, interpreting remainders"
+      },
+      "u4": {
+        "t": "Factors, Multiples, and Patterns",
+        "d": "2 Weeks",
+        "s": "Prime/composite numbers, divisibility rules"
+      },
+      "u5": {
+        "t": "Fraction Equivalence and Comparison",
+        "d": "3 Weeks",
+        "s": "Simplifying fractions, common denominators"
+      },
+      "u6": {
+        "t": "Add, Subtract, and Multiply Fractions",
+        "d": "4 Weeks",
+        "s": "Mixed numbers, like denominators"
+      },
+      "u7": {
+        "t": "Relate Fractions and Decimals",
+        "d": "3 Weeks",
+        "s": "Tenths and hundredths, money applications"
+      },
+      "u8": {
+        "t": "Geometry: Angles and 2D Figures",
+        "d": "4 Weeks",
+        "s": "Lines, rays, measuring angles with protractors"
+      },
+      "u9": {
+        "t": "Measurement, Area, and Perimeter",
+        "d": "4 Weeks",
+        "s": "Formulas for area/perimeter, metric conversions"
+      },
+      "u10": {
+        "t": "Time, Temperature, and Data Representation",
+        "d": "3 Weeks",
+        "s": "Elapsed time, measurement benchmarks, stem-and-leaf plots"
+      }
+    },
+    "lvl6": {
+      "u1": {
+        "t": "Whole Number Place Value, Multiplication, and Division",
+        "d": "4 Weeks",
+        "s": "Powers of 10, multi-digit multiplication, long division"
+      },
+      "u2": {
+        "t": "Decimal Place Value, Addition, and Subtraction",
+        "d": "4 Weeks",
+        "s": "Read, write, compare, and round decimals"
+      },
+      "u3": {
+        "t": "Multiply and Divide Decimals",
+        "d": "4 Weeks",
+        "s": "Standard algorithms for decimal operations"
+      },
+      "u4": {
+        "t": "Add and Subtract Fractions with Unlike Denominators",
+        "d": "4 Weeks",
+        "s": "Least common multiple, equivalent fractions"
+      },
+      "u5": {
+        "t": "Multiply and Divide Fractions",
+        "d": "4 Weeks",
+        "s": "Area models, scaling, dividing unit fractions"
+      },
+      "u6": {
+        "t": "Numerical Expressions and Patterns",
+        "d": "3 Weeks",
+        "s": "Order of operations (PEMDAS), analyzing patterns"
+      },
+      "u7": {
+        "t": "Measurement: Convert Units of Measure",
+        "d": "3 Weeks",
+        "s": "Customary and metric conversions, line plots"
+      },
+      "u8": {
+        "t": "Geometry: Perimeter, Area, and Volume",
+        "d": "4 Weeks",
+        "s": "Volume formulas, composite solid figures"
+      },
+      "u9": {
+        "t": "Classify 2D and 3D Figures",
+        "d": "3 Weeks",
+        "s": "Attributes of polygons, hierarchy of shapes"
+      },
+      "u10": {
+        "t": "Graphs and Data Interpretation",
+        "d": "3 Weeks",
+        "s": "Coordinate plane, graphing relationships"
+      }
+    },
+    "lvl7": {
+      "u1": {
+        "t": "Integers and Rational Numbers",
+        "d": "4 Weeks",
+        "s": "Absolute value, ordering rational numbers"
+      },
+      "u2": {
+        "t": "Operations with Fractions and Decimals",
+        "d": "4 Weeks",
+        "s": "Dividing fractions, operations with multi-digit decimals"
+      },
+      "u3": {
+        "t": "Ratios and Rates",
+        "d": "3 Weeks",
+        "s": "Ratio language, unit rates, equivalent ratios"
+      },
+      "u4": {
+        "t": "Percents and Proportions",
+        "d": "3 Weeks",
+        "s": "Finding percent of a completely, real-world problems"
+      },
+      "u5": {
+        "t": "Algebraic Expressions",
+        "d": "4 Weeks",
+        "s": "Writing and evaluating expressions, combining like terms"
+      },
+      "u6": {
+        "t": "Equations and Inequalities",
+        "d": "4 Weeks",
+        "s": "One-step equations, writing and graphing inequalities"
+      },
+      "u7": {
+        "t": "The Coordinate Plane",
+        "d": "3 Weeks",
+        "s": "Graphing in 4 quadrants, distances, polygons on planes"
+      },
+      "u8": {
+        "t": "Area of Polygons",
+        "d": "3 Weeks",
+        "s": "Triangles, special quadrilaterals, composite figures"
+      },
+      "u9": {
+        "t": "Surface Area and Volume",
+        "d": "4 Weeks",
+        "s": "Nets, surface area, volume of right rectangular prisms"
+      },
+      "u10": {
+        "t": "Data Displays and Statistical Measures",
+        "d": "4 Weeks",
+        "s": "Mean, median, mode, mean absolute deviation, box plots"
+      }
+    },
+    "lvl8": {
+      "u1": {
+        "t": "Operations with Rational Numbers",
+        "d": "4 Weeks",
+        "s": "Adding, subtracting, multiplying, dividing integers"
+      },
+      "u2": {
+        "t": "Proportional Relationships",
+        "d": "4 Weeks",
+        "s": "Unit rates with fractions, direct variation"
+      },
+      "u3": {
+        "t": "Percent Problems and Applications",
+        "d": "3 Weeks",
+        "s": "Markups, markdowns, interest, percent error"
+      },
+      "u4": {
+        "t": "Equivalent Expressions",
+        "d": "3 Weeks",
+        "s": "Expanding and factoring expressions"
+      },
+      "u5": {
+        "t": "Solving Equations and Inequalities",
+        "d": "4 Weeks",
+        "s": "Two-step equations, solving multi-step inequalities"
+      },
+      "u6": {
+        "t": "Scale Drawings and Proportions",
+        "d": "3 Weeks",
+        "s": "Scale factor, similar figures, missing measures"
+      },
+      "u7": {
+        "t": "Circles: Area and Circumference",
+        "d": "4 Weeks",
+        "s": "Radius, diameter, Pi, calculating area and perimeter"
+      },
+      "u8": {
+        "t": "Surface Area and Volume of 3D Figures",
+        "d": "4 Weeks",
+        "s": "Cross sections, surface area and volume of prisms/cylinders"
+      },
+      "u9": {
+        "t": "Probability",
+        "d": "3 Weeks",
+        "s": "Theoretical and experimental probability, tree diagrams"
+      },
+      "u10": {
+        "t": "Sampling and Comparative Inferences",
+        "d": "4 Weeks",
+        "s": "Populations, samples, inferences, comparing distributions"
+      }
+    },
+    "lvl9": {
+      "u1": {
+        "t": "Real Numbers and Rational Approximations",
+        "d": "3 Weeks",
+        "s": "Irrational numbers, approximating values"
+      },
+      "u2": {
+        "t": "Exponents and Scientific Notation",
+        "d": "4 Weeks",
+        "s": "Laws of exponents, operations with scientific notation"
+      },
+      "u3": {
+        "t": "Solving Linear Equations",
+        "d": "4 Weeks",
+        "s": "Multi-step equations, variables on both sides"
+      },
+      "u4": {
+        "t": "Systems of Linear Equations",
+        "d": "4 Weeks",
+        "s": "Graphing, substitution, and elimination methods"
+      },
+      "u5": {
+        "t": "Introduction to Functions",
+        "d": "3 Weeks",
+        "s": "Function notation, identifying linear vs non-linear"
+      },
+      "u6": {
+        "t": "Linear Functions and Graphing",
+        "d": "4 Weeks",
+        "s": "Slope, y-intercept, y=mx+b, rate of change"
+      },
+      "u7": {
+        "t": "Transformations and Congruence",
+        "d": "4 Weeks",
+        "s": "Translations, rotations, reflections, dilations"
+      },
+      "u8": {
+        "t": "The Pythagorean Theorem",
+        "d": "3 Weeks",
+        "s": "Right triangles, distance on coordinate planes"
+      },
+      "u9": {
+        "t": "Volume of Cylinders, Cones, and Spheres",
+        "d": "3 Weeks",
+        "s": "Formulas, solving for missing dimensions"
+      },
+      "u10": {
+        "t": "Bivariate Data and Scatter Plots",
+        "d": "4 Weeks",
+        "s": "Lines of best fit, two-way tables, frequencies"
+      }
+    },
+    "lvl10": {
+      "u1": {
+        "t": "Equations and Inequalities in One Variable",
+        "d": "3 Weeks",
+        "s": "Literal equations, compound inequalities, word problems"
+      },
+      "u2": {
+        "t": "Linear Equations and Graphs",
+        "d": "4 Weeks",
+        "s": "Standard form, point-slope form, parallel/perpendicular"
+      },
+      "u3": {
+        "t": "Systems of Linear Equations and Inequalities",
+        "d": "4 Weeks",
+        "s": "Graphing systems, linear programming, optimization"
+      },
+      "u4": {
+        "t": "Sequences and Exponential Functions",
+        "d": "4 Weeks",
+        "s": "Arithmetic/geometric sequences, exponential growth/decay"
+      },
+      "u5": {
+        "t": "Polynomials and Operations",
+        "d": "3 Weeks",
+        "s": "Adding, subtracting, multiplying bi/trinomials"
+      },
+      "u6": {
+        "t": "Factoring Polynomials",
+        "d": "4 Weeks",
+        "s": "GCF, difference of squares, trinomial factoring"
+      },
+      "u7": {
+        "t": "Quadratic Functions and Equations",
+        "d": "4 Weeks",
+        "s": "Parabolas, vertex form, quadratic formula, roots"
+      },
+      "u8": {
+        "t": "Radical Expressions and Equations",
+        "d": "3 Weeks",
+        "s": "Simplifying roots, solving radical equations"
+      },
+      "u9": {
+        "t": "Rational Expressions and Functions",
+        "d": "3 Weeks",
+        "s": "Simplifying expressions, solving rational equations"
+      },
+      "u10": {
+        "t": "Data Analysis and Statistical Models",
+        "d": "4 Weeks",
+        "s": "Standard deviation, normal distribution, regressions"
       }
     }
   },
