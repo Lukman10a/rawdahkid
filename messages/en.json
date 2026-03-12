@@ -1210,7 +1210,432 @@
     "t66": "Middle School (Levels 6–7)",
     "t67": "High School (Levels 8–9)",
     "t68": "Primary (Levels 1–5)",
-    "t69": "Capstone (Level 10)"
+    "t69": "Capstone (Level 10)",
+    "t70": "Duration",
+    "lvl8": {
+      "u1": {
+        "t": "B1 Cell Biology",
+        "d": "5 Weeks",
+        "s": "Cell structure, Microscopy, Transport, Cell Division"
+      },
+      "u2": {
+        "t": "B2 Organisation",
+        "d": "5 Weeks",
+        "s": "Animal tissues, Enzymes, Digestion, Respiratory Systems, Plants"
+      },
+      "u3": {
+        "t": "C1 Atomic Structure & Periodic Table",
+        "d": "4 Weeks",
+        "s": "Atoms, Elements, Compounds, Electron Config, Trends"
+      },
+      "u4": {
+        "t": "C2 Bonding, Structure & Matter",
+        "d": "4 Weeks",
+        "s": "Ionic, Covalent, Metallic bonding, Polymers, Structures"
+      },
+      "u5": {
+        "t": "C3 Quantitative Chemistry",
+        "d": "5 Weeks",
+        "s": "Relative Mass, The Mole, Limiting reactants, Concentrations"
+      },
+      "u6": {
+        "t": "P1 Energy",
+        "d": "4 Weeks",
+        "s": "Energy Stores, Specific Heat Capacity, Power, Efficiency"
+      },
+      "u7": {
+        "t": "P2 Electricity",
+        "d": "5 Weeks",
+        "s": "Circuit Symbols, Resistance, Series/Parallel, Mains Electricity"
+      },
+      "u8": {
+        "t": "P3 Particle Model of Matter",
+        "d": "4 Weeks",
+        "s": "Density, Internal Energy, Specific Latent Heat, Gas pressure"
+      }
+    },
+    "lvl9": {
+      "u1": {
+        "t": "B3 Infection and Response",
+        "d": "4 Weeks",
+        "s": "Communicable diseases, Pathogens, Defense systems, Vaccination"
+      },
+      "u2": {
+        "t": "B4 Bioenergetics",
+        "d": "5 Weeks",
+        "s": "Photosynthesis, Aerobic/Anaerobic respiration, Metabolism"
+      },
+      "u3": {
+        "t": "C4 Chemical Changes",
+        "d": "5 Weeks",
+        "s": "Reactivity Series, Metal extraction, Acids and bases, Electrolysis"
+      },
+      "u4": {
+        "t": "C5 Energy Changes",
+        "d": "4 Weeks",
+        "s": "Exothermic/Endothermic reactions, Reaction profiles, Bond Energies"
+      },
+      "u5": {
+        "t": "C6 Rate & Extent of Chemical Change",
+        "d": "5 Weeks",
+        "s": "Measuring rates, Collision theory, Reversible reactions"
+      },
+      "u6": {
+        "t": "P4 Atomic Structure & Radiation",
+        "d": "4 Weeks",
+        "s": "Atomic model, Isotopes, Alpha/Beta/Gamma decay, Half-life"
+      },
+      "u7": {
+        "t": "P5 Forces",
+        "d": "5 Weeks",
+        "s": "Contact/non-contact forces, Resultant forces, Newton's Laws, Momentum"
+      },
+      "u8": {
+        "t": "P6 Waves",
+        "d": "4 Weeks",
+        "s": "Transverse/longitudinal, EM Spectrum, Refraction, Radio waves"
+      }
+    },
+    "lvl10": {
+      "u1": {
+        "t": "B5 Homeostasis and Response",
+        "d": "5 Weeks",
+        "s": "Nervous tracking, Endocrine system, Blood glucose, Hormones"
+      },
+      "u2": {
+        "t": "B6 Inheritance, Variation & Evolution",
+        "d": "5 Weeks",
+        "s": "DNA, Meiosis, Genetic diagrams, Natural selection, Engineering"
+      },
+      "u3": {
+        "t": "B7 Ecology",
+        "d": "4 Weeks",
+        "s": "Ecosystems, Adaptations, Food chains, Carbon/Water cycles"
+      },
+      "u4": {
+        "t": "C7 Organic Chemistry",
+        "d": "4 Weeks",
+        "s": "Hydrocarbons, Alkanes, Fractional Distillation, Cracking crude oil"
+      },
+      "u5": {
+        "t": "C8 Chemical Analysis",
+        "d": "4 Weeks",
+        "s": "Purity, Formulations, Chromatography, Analytical tests"
+      },
+      "u6": {
+        "t": "C9 & C10 Earth's Atmosphere & Resources",
+        "d": "5 Weeks",
+        "s": "Greenhouse effect, Air pollution, LCAs, Potable water, Waste"
+      },
+      "u7": {
+        "t": "P7 Magnetism and Electromagnetism",
+        "d": "4 Weeks",
+        "s": "Permanent/induced magnets, Magnetic fields, Motor effect"
+      },
+      "u8": {
+        "t": "Practical Skills & GCSE Revision",
+        "d": "5 Weeks",
+        "s": "Measuring techniques, Experimental setup, Data sampling, Exams"
+      }
+    },
+    "unitLabel": "Unit",
+    "topicLabel": "Topic / Unit",
+    "durationLabel": "Study Duration",
+    "skillsLabel": "Key Sub-topics & Skills",
+    "lvl1": {
+      "u1": {
+        "t": "The Five Senses — Exploring Our World",
+        "d": "4 Weeks",
+        "s": "Observe, describe, compare physical properties"
+      },
+      "u2": {
+        "t": "Weather and Seasons",
+        "d": "5 Weeks",
+        "s": "Observe patterns, record daily weather, seasons"
+      },
+      "u3": {
+        "t": "Plants — Parts, Needs, Life Cycle",
+        "d": "4 Weeks",
+        "s": "Label anatomy, grow plants, sequence cycles"
+      },
+      "u4": {
+        "t": "Animals — Needs, Habitats, Features",
+        "d": "5 Weeks",
+        "s": "Sort, classify, match animals to environments"
+      },
+      "u5": {
+        "t": "Properties of Materials",
+        "d": "4 Weeks",
+        "s": "Test, sort, compare solid, liquid, gas basics"
+      },
+      "u6": {
+        "t": "Light and Shadows",
+        "d": "4 Weeks",
+        "s": "Investigate light sources, predict shadow changes"
+      },
+      "u7": {
+        "t": "Pushes and Pulls — Force Basics",
+        "d": "5 Weeks",
+        "s": "Explore motion, direction, speed of objects"
+      },
+      "u8": {
+        "t": "Sound and Vibration",
+        "d": "5 Weeks",
+        "s": "Make, change, stop sounds, explore hearing"
+      }
+    },
+    "lvl2": {
+      "u1": {
+        "t": "Life Cycles of Plants and Animals",
+        "d": "5 Weeks",
+        "s": "Sequence, compare, model life spans"
+      },
+      "u2": {
+        "t": "Inherited Traits and Offspring",
+        "d": "4 Weeks",
+        "s": "Compare traits, identify inherited features"
+      },
+      "u3": {
+        "t": "Habitats and Diversity",
+        "d": "5 Weeks",
+        "s": "Identify needs, match species to ecosystems"
+      },
+      "u4": {
+        "t": "Properties of Matter In Depth",
+        "d": "5 Weeks",
+        "s": "Reversible/irreversible changes, mass"
+      },
+      "u5": {
+        "t": "Earth's Surface and Landforms",
+        "d": "4 Weeks",
+        "s": "Identify mountains, rivers, valleys, oceans"
+      },
+      "u6": {
+        "t": "The Water Cycle Basics",
+        "d": "4 Weeks",
+        "s": "Evaporation, condensation, precipitation"
+      },
+      "u7": {
+        "t": "Forces and Magnets Basics",
+        "d": "4 Weeks",
+        "s": "Observe magnetic attraction and repulsion"
+      },
+      "u8": {
+        "t": "Engineering Design Process",
+        "d": "5 Weeks",
+        "s": "Plan, build, test, and improve simple structures"
+      }
+    },
+    "lvl3": {
+      "u1": {
+        "t": "Forces and Motion",
+        "d": "5 Weeks",
+        "s": "Friction, gravity effects on speed and distance"
+      },
+      "u2": {
+        "t": "Magnetic and Static Forces",
+        "d": "4 Weeks",
+        "s": "Investigate polarity and static electricity"
+      },
+      "u3": {
+        "t": "Traits, Variation and Adaptation",
+        "d": "5 Weeks",
+        "s": "Structural and behavioural adaptations"
+      },
+      "u4": {
+        "t": "Fossils and Past Life",
+        "d": "4 Weeks",
+        "s": "Analyse evidence, draw conclusions from fossils"
+      },
+      "u5": {
+        "t": "Food Chains and Food Webs",
+        "d": "5 Weeks",
+        "s": "Build models, trace energy flow, identify roles"
+      },
+      "u6": {
+        "t": "Weather vs Climate",
+        "d": "4 Weeks",
+        "s": "Differentiate short-term weather and long-term climate"
+      },
+      "u7": {
+        "t": "The Solar System",
+        "d": "4 Weeks",
+        "s": "Planets, orbits, day and night cycle"
+      },
+      "u8": {
+        "t": "Introduction to Scientific Method",
+        "d": "5 Weeks",
+        "s": "Identify variables, conduct fair tests, tabulate data"
+      }
+    },
+    "lvl4": {
+      "u1": {
+        "t": "Energy Types and Transfer",
+        "d": "5 Weeks",
+        "s": "Identify forms, trace energy pathways and conversions"
+      },
+      "u2": {
+        "t": "Properties of Waves, Sound and Light",
+        "d": "5 Weeks",
+        "s": "Measure wavelength, frequency, amplitude"
+      },
+      "u3": {
+        "t": "Simple Electrical Circuits",
+        "d": "4 Weeks",
+        "s": "Build series and parallel circuits, conductors/insulators"
+      },
+      "u4": {
+        "t": "Rock Cycle and Earth's Layers",
+        "d": "5 Weeks",
+        "s": "Sequence igneous, sedimentary, and metamorphic"
+      },
+      "u5": {
+        "t": "Weathering, Erosion and Deposition",
+        "d": "4 Weeks",
+        "s": "Compare rates, model landform changes over time"
+      },
+      "u6": {
+        "t": "Internal Structures — Plants and Animals",
+        "d": "5 Weeks",
+        "s": "Label organs, understand biological functions"
+      },
+      "u7": {
+        "t": "Human Impact on Environments",
+        "d": "4 Weeks",
+        "s": "Evaluate conservation, problem-solve ecological issues"
+      },
+      "u8": {
+        "t": "Advanced Data Analysis",
+        "d": "4 Weeks",
+        "s": "Construct graphs, interpret tables, draw conclusions"
+      }
+    },
+    "lvl5": {
+      "u1": {
+        "t": "Matter: Atoms, Molecules, Elements",
+        "d": "5 Weeks",
+        "s": "Model particles, classify matter, intro to periodic table"
+      },
+      "u2": {
+        "t": "Observing Chemical Reactions",
+        "d": "5 Weeks",
+        "s": "Predict outcomes, observe evidence of chemical changes"
+      },
+      "u3": {
+        "t": "Earth's Spheres and Systems",
+        "d": "4 Weeks",
+        "s": "Analyse interactions between geosphere, biosphere, etc."
+      },
+      "u4": {
+        "t": "Stars, Space, and Gravity",
+        "d": "5 Weeks",
+        "s": "Scale models, orbital patterns, constellations"
+      },
+      "u5": {
+        "t": "Ecosystem Interactions in Depth",
+        "d": "4 Weeks",
+        "s": "Symbiosis, competition, resource limitations"
+      },
+      "u6": {
+        "t": "Human Body Systems in Depth",
+        "d": "5 Weeks",
+        "s": "Respiratory, circulatory, and digestive systems Overview"
+      },
+      "u7": {
+        "t": "Water Quality and Climate Change",
+        "d": "4 Weeks",
+        "s": "Model greenhouse effect, evaluate human impacts"
+      },
+      "u8": {
+        "t": "Science Investigation Project",
+        "d": "4 Weeks",
+        "s": "Design, execute, evaluate, and present original research"
+      }
+    },
+    "lvl6": {
+      "u1": {
+        "t": "Biology: Core Cells & Microscopy",
+        "d": "5 Weeks",
+        "s": "Use microscopes, label plant and animal cell structures"
+      },
+      "u2": {
+        "t": "Biology: Specialized Cells & Tissues",
+        "d": "4 Weeks",
+        "s": "Cell differentiation, hierarchy of organisation"
+      },
+      "u3": {
+        "t": "Chemistry: Particle Model & States",
+        "d": "5 Weeks",
+        "s": "Kinetic theory, melting, boiling, diffusion"
+      },
+      "u4": {
+        "t": "Chemistry: Mixtures & Separation",
+        "d": "5 Weeks",
+        "s": "Evaporation, filtration, distillation, chromatography"
+      },
+      "u5": {
+        "t": "Physics: Forces & Newton's Basics",
+        "d": "4 Weeks",
+        "s": "Friction, air resistance, gravity, weight vs mass"
+      },
+      "u6": {
+        "t": "Physics: Sound Waves & Hearing",
+        "d": "4 Weeks",
+        "s": "Vibrations, pitch, volume, ear anatomy"
+      },
+      "u7": {
+        "t": "Physics: Light Waves & Vision",
+        "d": "5 Weeks",
+        "s": "Reflection, refraction, colour breakdown, eye anatomy"
+      },
+      "u8": {
+        "t": "Earth Science: Plate Tectonics",
+        "d": "4 Weeks",
+        "s": "Structure of the Earth, tectonic plates, earthquakes"
+      }
+    },
+    "lvl7": {
+      "u1": {
+        "t": "Biology: Diet, Digestion & Enzymes",
+        "d": "5 Weeks",
+        "s": "Nutrients, food tests, digestive system, enzyme action"
+      },
+      "u2": {
+        "t": "Biology: Respiration & Gas Exchange",
+        "d": "4 Weeks",
+        "s": "Aerobic vs anaerobic, lungs, alveoli adaptation"
+      },
+      "u3": {
+        "t": "Biology: Reproduction System",
+        "d": "5 Weeks",
+        "s": "Human reproductive organs, fertilization, gestation"
+      },
+      "u4": {
+        "t": "Chemistry: Acids, Alkalis & pH",
+        "d": "4 Weeks",
+        "s": "Indicators, neutralization reactions, hazardous symbols"
+      },
+      "u5": {
+        "t": "Chemistry: The Periodic Table",
+        "d": "5 Weeks",
+        "s": "Metals/non-metals, Groups 1, 7, 0 basic trends"
+      },
+      "u6": {
+        "t": "Physics: Motion & Speed",
+        "d": "4 Weeks",
+        "s": "Speed equations, distance-time graphs, relative motion"
+      },
+      "u7": {
+        "t": "Physics: Electrical Circuits",
+        "d": "5 Weeks",
+        "s": "Current, voltage, resistance calculations, Ohm's law"
+      },
+      "u8": {
+        "t": "Physics: Work, Energy & Power",
+        "d": "4 Weeks",
+        "s": "Calculations of work done, energy stores and transfers"
+      }
+    }
   },
   "ProgProgramming": {
     "t0": "Programming",
