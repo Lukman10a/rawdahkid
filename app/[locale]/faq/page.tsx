@@ -17,34 +17,51 @@ export default function FaqPage() {
     { id: "fees", label: t("categories.fees"), icon: CreditCard },
   ];
 
-  type RichTextProp = { [key: string]: (chunks: React.ReactNode) => React.ReactNode };
+  type RichTextProp = {
+    [key: string]: (chunks: React.ReactNode) => React.ReactNode;
+  };
 
   const richTextComponents: RichTextProp = {
     enrolLink: (chunks) => (
-      <Link href="/enrol" className="text-amber hover:text-gold font-medium underline underline-offset-2 transition-colors">
+      <Link
+        href="/enrol"
+        className="text-amber hover:text-gold font-medium underline underline-offset-2 transition-colors"
+      >
         {chunks}
       </Link>
     ),
     contactLink: (chunks) => (
-      <Link href="/contact" className="text-amber hover:text-gold font-medium underline underline-offset-2 transition-colors">
+      <Link
+        href="/contact"
+        className="text-amber hover:text-gold font-medium underline underline-offset-2 transition-colors"
+      >
         {chunks}
       </Link>
     ),
     islamicLink: (chunks) => (
-      <Link href="/programmes/islamic" className="text-amber hover:text-gold font-medium underline underline-offset-2 transition-colors">
+      <Link
+        href="/programmes/islamic"
+        className="text-amber hover:text-gold font-medium underline underline-offset-2 transition-colors"
+      >
         {chunks}
       </Link>
     ),
     westernLink: (chunks) => (
-      <Link href="/programmes/western" className="text-amber hover:text-gold font-medium underline underline-offset-2 transition-colors">
+      <Link
+        href="/programmes/western"
+        className="text-amber hover:text-gold font-medium underline underline-offset-2 transition-colors"
+      >
         {chunks}
       </Link>
     ),
     feesLink: (chunks) => (
-      <Link href="/fees" className="text-amber hover:text-gold font-medium underline underline-offset-2 transition-colors">
+      <Link
+        href="/fees"
+        className="text-amber hover:text-gold font-medium underline underline-offset-2 transition-colors"
+      >
         {chunks}
       </Link>
-    )
+    ),
   };
 
   const faqs = {
@@ -62,7 +79,7 @@ export default function FaqPage() {
       { q: t("q_fees_1"), a: t.rich("a_fees_1", richTextComponents) },
       { q: t("q_fees_2"), a: t.rich("a_fees_2", richTextComponents) },
       { q: t("q_fees_3"), a: t.rich("a_fees_3", richTextComponents) },
-    ]
+    ],
   };
 
   const handleCategorySwitch = (id: string) => {
@@ -91,11 +108,12 @@ export default function FaqPage() {
       {/* FAQ CONTENT TWO-COLUMN LAYOUT */}
       <section className="py-16 md:py-24 bg-white dark:bg-midnight flex-grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 lg:gap-20">
-          
           {/* SIDEBAR CATEGORIES */}
           <div className="lg:w-1/3 shrink-0">
             <div className="sticky top-32 space-y-2">
-              <h3 className="font-cinzel text-2xl text-gold mb-6">{t("categories.admissions") ? "Categories" : "Categories"}</h3>
+              <h3 className="font-cinzel text-2xl text-gold mb-6">
+                {t("categories.admissions") ? "Categories" : "Categories"}
+              </h3>
               <div className="flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible gap-2 pb-4 lg:pb-0">
                 {categories.map((cat) => {
                   const Icon = cat.icon;
@@ -105,13 +123,15 @@ export default function FaqPage() {
                       key={cat.id}
                       onClick={() => handleCategorySwitch(cat.id)}
                       className={`flex items-center gap-3 px-5 py-4 rounded-xl text-start transition-all whitespace-nowrap lg:whitespace-normal shrink-0 ${
-                        isActive 
-                          ? "bg-gold text-midnight shadow-md" 
+                        isActive
+                          ? "bg-gold text-midnight shadow-md"
                           : "bg-ivory/50 dark:bg-accent/10 text-midnight/70 dark:text-cream/70 hover:bg-gold/10 dark:hover:bg-gold/20 hover:text-midnight dark:hover:text-cream"
                       }`}
                     >
                       <Icon className="w-5 h-5" />
-                      <span className="font-sans font-medium text-lg">{cat.label}</span>
+                      <span className="font-sans font-medium text-lg">
+                        {cat.label}
+                      </span>
                     </button>
                   );
                 })}
@@ -138,7 +158,9 @@ export default function FaqPage() {
                     <span className="font-sans font-medium text-xl text-midnight dark:text-cream w-[90%] pr-4">
                       {faq.q}
                     </span>
-                    <span className={`${isOpen ? 'bg-gold text-midnight' : 'bg-midnight/5 dark:bg-white/5 text-gold'} p-2 rounded-full shrink-0 transition-colors`}>
+                    <span
+                      className={`${isOpen ? "bg-gold text-midnight" : "bg-midnight/5 dark:bg-white/5 text-gold"} p-2 rounded-full shrink-0 transition-colors`}
+                    >
                       {isOpen ? (
                         <Minus className="w-5 h-5" />
                       ) : (
@@ -149,7 +171,10 @@ export default function FaqPage() {
 
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
+                    animate={{
+                      height: isOpen ? "auto" : 0,
+                      opacity: isOpen ? 1 : 0,
+                    }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
@@ -163,7 +188,6 @@ export default function FaqPage() {
               );
             })}
           </div>
-
         </div>
       </section>
     </div>
