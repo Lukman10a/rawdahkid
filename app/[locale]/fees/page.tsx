@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check, Info } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
 
 import { useTranslations } from "next-intl";

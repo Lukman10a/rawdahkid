@@ -8,7 +8,7 @@ import {
   Compass,
   Sigma,
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
 
 import { useTranslations } from "next-intl";
