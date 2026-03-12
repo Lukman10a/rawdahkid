@@ -63,13 +63,9 @@ export default function QuranMemorisation() {
               {t("overview.title")}
             </h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
-              <p>
-                The Rawdatul Atfaal {t("hero.title")} guides students through
-                the systematic memorisation of Juzʼ ʿAmma — the thirtieth part
-                of the Qurʼān — across four structured terms.
-              </p>
-              <p>{t("t0")}</p>
-              <p>{t("t1")}</p>
+              <p>{t("overview.p1")}</p>
+              <p>{t("overview.p2")}</p>
+              <p>{t("overview.p3")}</p>
             </div>
           </motion.div>
 
@@ -86,16 +82,16 @@ export default function QuranMemorisation() {
             </h2>
             <ul className="space-y-5">
               {[
-                "Each week focuses on memorisation of the assigned surah(s) with correct pronunciation (tajweed).",
-                "Revision weeks are dedicated entirely to consolidating all surahs from the current term.",
-                "Examination weeks assess recitation from memory of the complete term’s surahs.",
-                "Longer surahs are allocated two weeks, with the surah divided at a natural break point.",
-                "Students are expected to revise previously memorised surahs from earlier terms on an ongoing basis.",
-              ].map((principle, i) => (
-                <li key={i} className="flex items-start gap-4">
+                { key: "p1", txt: t("principlesList.p1") },
+                { key: "p2", txt: t("principlesList.p2") },
+                { key: "p3", txt: t("principlesList.p3") },
+                { key: "p4", txt: t("principlesList.p4") },
+                { key: "p5", txt: t("principlesList.p5") },
+              ].map((principle) => (
+                <li key={principle.key} className="flex items-start gap-4">
                   <CheckCircle className="w-6 h-6 text-gold shrink-0 mt-0.5" />
                   <span className="font-sans text-midnight/80 dark:text-cream/80">
-                    {principle}
+                    {principle.txt}
                   </span>
                 </li>
               ))}
@@ -173,15 +169,21 @@ export default function QuranMemorisation() {
           <div className="mt-12 flex flex-wrap justify-center gap-6 md:gap-12">
             <div className="flex items-center gap-3">
               <div className="w-4 h-4 rounded-sm bg-white dark:bg-navy border border-midnight/10 dark:border-white/10"></div>
-              <span className="font-sans text-sm text-midnight/70 dark:text-muted">{t("t8")}</span>
+              <span className="font-sans text-sm text-midnight/70 dark:text-muted">
+                {t("t8")}
+              </span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-4 h-4 rounded-sm bg-green-500/20 border border-green-500/30"></div>
-              <span className="font-sans text-sm text-midnight/70 dark:text-muted">{t("t10")}</span>
+              <span className="font-sans text-sm text-midnight/70 dark:text-muted">
+                {t("t10")}
+              </span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-4 h-4 rounded-sm bg-amber-500/20 border border-amber-500/30"></div>
-              <span className="font-sans text-sm text-midnight/70 dark:text-muted">{t("t9")}</span>
+              <span className="font-sans text-sm text-midnight/70 dark:text-muted">
+                {t("t9")}
+              </span>
             </div>
           </div>
         </div>
@@ -190,7 +192,9 @@ export default function QuranMemorisation() {
       {/* 4. DETAILED TERM PLANS */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t21")}</h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
+            {t("t21")}
+          </h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
 
@@ -199,58 +203,21 @@ export default function QuranMemorisation() {
           <TermCard
             number="1"
             title={t("t13")}
-            subtitle="Juzʼ ʿAmma — Part 1"
-            arabic="سورة الناس — سورة الزلزلة"
+            subtitle={t("term1.subtitle")}
+            arabic={t("term1.arabic")}
             totalSurahs={t("t26")}
-            duration="8 Weeks"
-            structure="6 Memorisation weeks → 1 Revision week → 1 Exam week"
-            objective="To memorise the short surahs of Juzʼ ʿAmma from Sūrat An-Nās through to Sūrat Az-Zalzalah with correct pronunciation and fluency."
+            duration={t("term1.duration")}
+            structure={t("term1.structure")}
+            objective={t("term1.objective")}
             weeks={[
-              {
-                w: 1,
-                type: "memo",
-                content:
-                  "Sūrat An-Nās (114) • Sūrat Al-Falaq (113) • Sūrat Al-Ikhlāṣ (112)",
-              },
-              {
-                w: 2,
-                type: "memo",
-                content:
-                  "Sūrat Al-Masad (111) • Sūrat An-Naṣr (110) • Sūrat Al-Kāfirūn (109)",
-              },
-              {
-                w: 3,
-                type: "memo",
-                content:
-                  "Sūrat Al-Kawthar (108) • Sūrat Al-Māʼūn (107) • Sūrat Quraysh (106)",
-              },
-              {
-                w: 4,
-                type: "memo",
-                content:
-                  "Sūrat Al-Fīl (105) • Sūrat Al-Humazah (104) • Sūrat Al-ʿAṣr (103)",
-              },
-              {
-                w: 5,
-                type: "rev",
-                content: "Full revision of all surahs memorised in this term",
-              },
-              {
-                w: 6,
-                type: "memo",
-                content: "Sūrat At-Takāthur (102) • Sūrat Al-Qāriʼah (101)",
-              },
-              {
-                w: 7,
-                type: "memo",
-                content: "Sūrat Al-ʿAādiyāt (100) • Sūrat Az-Zalzalah (99)",
-              },
-              {
-                w: 8,
-                type: "exam",
-                content:
-                  "End-of-term examination — full recitation and assessment",
-              },
+              { w: 1, type: "memo", content: t("term1.w1") },
+              { w: 2, type: "memo", content: t("term1.w2") },
+              { w: 3, type: "memo", content: t("term1.w3") },
+              { w: 4, type: "memo", content: t("term1.w4") },
+              { w: 5, type: "rev", content: t("term1.w5") },
+              { w: 6, type: "memo", content: t("term1.w6") },
+              { w: 7, type: "memo", content: t("term1.w7") },
+              { w: 8, type: "exam", content: t("term1.w8") },
             ]}
           />
 
@@ -258,46 +225,21 @@ export default function QuranMemorisation() {
           <TermCard
             number="2"
             title={t("t11")}
-            subtitle="Juzʼ ʿAmma — Part 2"
-            arabic="سورة البينة — سورة الفجر"
+            subtitle={t("term2.subtitle")}
+            arabic={t("term2.arabic")}
             totalSurahs={t("t27")}
-            duration="8 Weeks"
-            structure="6 Memorisation weeks → 1 Revision week → 1 Exam week"
-            objective="To memorise Sūrat Al-Bayyinah through Sūrat Al-Fajr with accuracy and correct tajweed, building upon the surahs learnt in Term 1."
+            duration={t("term2.duration")}
+            structure={t("term2.structure")}
+            objective={t("term2.objective")}
             weeks={[
-              {
-                w: 1,
-                type: "memo",
-                content: "Sūrat Al-Bayyinah (98) • Sūrat Al-Qadr (97)",
-              },
-              {
-                w: 2,
-                type: "memo",
-                content: "Sūrat Al-ʿAlaq (96) • Sūrat At-Tīn (95)",
-              },
-              {
-                w: 3,
-                type: "memo",
-                content: "Sūrat Ash-Sharḥ (94) • Sūrat Aḍ-Ḍuhā (93)",
-              },
-              {
-                w: 4,
-                type: "memo",
-                content: "Sūrat Al-Layl (92) • Sūrat Ash-Shams (91)",
-              },
-              {
-                w: 5,
-                type: "rev",
-                content: "Full revision of all surahs memorised in this term",
-              },
-              { w: 6, type: "memo", content: "Sūrat Al-Balad (90) — complete" },
-              { w: 7, type: "memo", content: "Sūrat Al-Fajr (89) — complete" },
-              {
-                w: 8,
-                type: "exam",
-                content:
-                  "End-of-term examination — full recitation and assessment",
-              },
+              { w: 1, type: "memo", content: t("term2.w1") },
+              { w: 2, type: "memo", content: t("term2.w2") },
+              { w: 3, type: "memo", content: t("term2.w3") },
+              { w: 4, type: "memo", content: t("term2.w4") },
+              { w: 5, type: "rev", content: t("term2.w5") },
+              { w: 6, type: "memo", content: t("term2.w6") },
+              { w: 7, type: "memo", content: t("term2.w7") },
+              { w: 8, type: "exam", content: t("term2.w8") },
             ]}
           />
 
@@ -305,52 +247,22 @@ export default function QuranMemorisation() {
           <TermCard
             number="3"
             title={t("t7")}
-            subtitle="Juzʼ ʿAmma — Part 3"
-            arabic="سورة الغاشية — سورة المطففين"
+            subtitle={t("term3.subtitle")}
+            arabic={t("term3.arabic")}
             totalSurahs={t("t30")}
-            duration="8 Weeks"
-            structure="4 Memorisation weeks → 1 Revision week → 2 Extended weeks → 1 Exam week"
-            objective="To memorise Sūrat Al-Ghāshiyah through Sūrat Al-Muṭaffifīn with correct recitation, giving appropriate attention to the longer surahs."
-            note="Sūrat Al-Muṭaffifīn (83 verses) is studied over two weeks due to its length. Students are expected to master each half before proceeding."
+            duration={t("term3.duration")}
+            structure={t("term3.structure")}
+            objective={t("term3.objective")}
+            note={t("term3.note")}
             weeks={[
-              {
-                w: 1,
-                type: "memo",
-                content: "Sūrat Al-Ghāshiyah (88) — complete",
-              },
-              {
-                w: 2,
-                type: "memo",
-                content: "Sūrat Al-Aʼlā (87) • Sūrat Aṭ-Ṯāriq (86)",
-              },
-              { w: 3, type: "memo", content: "Sūrat Al-Burūj (85) — complete" },
-              {
-                w: 4,
-                type: "memo",
-                content: "Sūrat Al-Inshiqāq (84) — complete",
-              },
-              {
-                w: 5,
-                type: "rev",
-                content: "Full revision of all surahs memorised in this term",
-              },
-              {
-                w: 6,
-                type: "memo",
-                content: "Sūrat Al-Muṭaffifīn (83) — First half (verses 1–20)",
-              },
-              {
-                w: 7,
-                type: "memo",
-                content:
-                  "Sūrat Al-Muṭaffifīn (83) — Second half (verses 21–36) — completion",
-              },
-              {
-                w: 8,
-                type: "exam",
-                content:
-                  "End-of-term examination — full recitation and assessment",
-              },
+              { w: 1, type: "memo", content: t("term3.w1") },
+              { w: 2, type: "memo", content: t("term3.w2") },
+              { w: 3, type: "memo", content: t("term3.w3") },
+              { w: 4, type: "memo", content: t("term3.w4") },
+              { w: 5, type: "rev", content: t("term3.w5") },
+              { w: 6, type: "memo", content: t("term3.w6") },
+              { w: 7, type: "memo", content: t("term3.w7") },
+              { w: 8, type: "exam", content: t("term3.w8") },
             ]}
           />
 
@@ -358,53 +270,22 @@ export default function QuranMemorisation() {
           <TermCard
             number="4"
             title={t("t12")}
-            subtitle="Juzʼ ʿAmma — Part 4"
-            arabic="سورة الانفطار — سورة النبأ"
+            subtitle={t("term4.subtitle")}
+            arabic={t("term4.arabic")}
             totalSurahs={t("t31")}
-            duration="8 Weeks"
-            structure="3 Single-surah weeks → 2 Half-surah weeks → 2 Half-surah weeks → 1 Exam week"
-            objective="To memorise Sūrat Al-Infiṭār through Sūrat An-Nabaʼ with fluency and correct tajweed, completing Juzʼ ʿAmma in this programme."
-            note="Sūrat An-Nāziʼāt (46 verses) and Sūrat An-Nabaʼ (40 verses) are each divided across two weeks. Revision is built into each transition."
+            duration={t("term4.duration")}
+            structure={t("term4.structure")}
+            objective={t("term4.objective")}
+            note={t("term4.note")}
             weeks={[
-              {
-                w: 1,
-                type: "memo",
-                content: "Sūrat Al-Infiṭār (82) — complete",
-              },
-              {
-                w: 2,
-                type: "memo",
-                content: "Sūrat At-Takwīr (81) — complete",
-              },
-              { w: 3, type: "memo", content: "Sūrat ʿAbasa (80) — complete" },
-              {
-                w: 4,
-                type: "memo",
-                content: "Sūrat An-Nāziʼāt (79) — First half (verses 1–26)",
-              },
-              {
-                w: 5,
-                type: "memo",
-                content:
-                  "Sūrat An-Nāziʼāt (79) — Second half (verses 27–46) — completion",
-              },
-              {
-                w: 6,
-                type: "memo",
-                content: "Sūrat An-Nabaʼ (78) — First half (verses 1–20)",
-              },
-              {
-                w: 7,
-                type: "memo",
-                content:
-                  "Sūrat An-Nabaʼ (78) — Second half (verses 21–40) — completion",
-              },
-              {
-                w: 8,
-                type: "exam",
-                content:
-                  "End-of-term examination — full recitation and assessment",
-              },
+              { w: 1, type: "memo", content: t("term4.w1") },
+              { w: 2, type: "memo", content: t("term4.w2") },
+              { w: 3, type: "memo", content: t("term4.w3") },
+              { w: 4, type: "memo", content: t("term4.w4") },
+              { w: 5, type: "memo", content: t("term4.w5") },
+              { w: 6, type: "memo", content: t("term4.w6") },
+              { w: 7, type: "memo", content: t("term4.w7") },
+              { w: 8, type: "exam", content: t("term4.w8") },
             ]}
           />
         </div>
@@ -414,31 +295,47 @@ export default function QuranMemorisation() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-gold mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t14")}</h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t2")}</p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
+            {t("t14")}
+          </h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
+            {t("t2")}
+          </p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t23")}</h3>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
+              {t("t23")}
+            </h3>
             <div className="font-cormorant text-5xl text-gold mb-6">
               $1,200{" "}
-              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">{t("t33")}</span>
+              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">
+                {t("t33")}
+              </span>
             </div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t19")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t19")}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t16")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t16")}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t18")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t18")}
+                </span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">{t("t28")}</Button>
+              <Button variant="primary" className="w-full py-4 text-lg">
+                {t("t28")}
+              </Button>
             </Link>
           </div>
 
@@ -446,7 +343,9 @@ export default function QuranMemorisation() {
             <Link
               href="/programmes/islamic"
               className="text-gold hover:text-amber transition-colors font-sans underline underline-offset-4"
-            >{t("t15")}</Link>
+            >
+              {t("t15")}
+            </Link>
           </div>
         </div>
       </section>
@@ -491,7 +390,7 @@ function TermCard({
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
           <div>
             <div className="text-gold font-cinzel font-bold tracking-widest text-sm mb-2">
-              TERM {number}
+              {t("termLabel")} {number}
             </div>
             <h3 className="font-playfair text-2xl md:text-3xl text-white mb-2">
               {title}
@@ -518,7 +417,8 @@ function TermCard({
           </div>
           {note && (
             <div className="md:col-span-2 text-gold italic">
-              <strong className="text-white not-italic">{t("t34")}</strong> {note}
+              <strong className="text-white not-italic">{t("t34")}</strong>{" "}
+              {note}
             </div>
           )}
         </div>
@@ -526,7 +426,9 @@ function TermCard({
 
       <div className="p-8 md:p-10 bg-white dark:bg-transparent">
         <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-          <Calendar className="w-5 h-5 text-gold" />{t("t17")}</h4>
+          <Calendar className="w-5 h-5 text-gold" />
+          {t("t17")}
+        </h4>
         <div className="space-y-3">
           {weeks.map((week, idx) => {
             const isRev = week.type === "rev";
@@ -534,18 +436,18 @@ function TermCard({
 
             let bgClass = "bg-ivory dark:bg-midnight";
             let borderClass = "border-midnight/5 dark:border-white/5";
-            let typeLabel = "Memorisation";
+            let typeLabel = t("typeLabels.memo");
             let iconColor = "text-gold";
 
             if (isRev) {
               bgClass = "bg-green-500/10 dark:bg-green-500/10";
               borderClass = "border-green-500/20";
-              typeLabel = "Revision";
+              typeLabel = t("typeLabels.rev");
               iconColor = "text-green-600 dark:text-green-400";
             } else if (isExam) {
               bgClass = "bg-amber-500/10 dark:bg-amber-500/10";
               borderClass = "border-amber-500/20";
-              typeLabel = "★ EXAM";
+              typeLabel = t("typeLabels.exam");
               iconColor = "text-amber-600 dark:text-amber-400";
             }
 

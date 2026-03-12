@@ -493,7 +493,23 @@
       "p3": "Our programme treats Arabic not merely as a foreign language to be learnt — but as a sacred inheritance to be reclaimed."
     },
     "resources": {
-      "title": "Key Resources Used"
+      "title": "Key Resources Used",
+      "r1": {
+        "title": "Qaaʼidah Nooraaniyyah (Level 1)",
+        "desc": "The foundational text for learning Arabic letters and their sounds with correct articulation (makhaarij)."
+      },
+      "r2": {
+        "title": "Noorul Bayāan (Level 2)",
+        "desc": "A widely used primer for joining Arabic letters into words and progressing toward reading the Qurʼān."
+      },
+      "r3": {
+        "title": "Basic Conversations (Level 3)",
+        "desc": "A structured conversational Arabic programme developing speaking, listening and vocabulary."
+      },
+      "r4": {
+        "title": "Madīnah Arabic Series (Levels 4 & 5)",
+        "desc": "The world-famous series from the Islamic University of Madīnah, introducing and deepening formal grammar systematically."
+      }
     },
     "glance": {
       "title": "Programme at a Glance"
@@ -542,7 +558,107 @@
     "t41": "L5 Text",
     "t42": "/ year",
     "t43": "Aim:",
-    "t44": "Lvl"
+    "t44": "Lvl",
+    "levelLabel": "LEVEL",
+    "resourceLabel": "Resource:",
+    "level1": {
+      "subtitle": "Reading & Recognising Arabic Letters",
+      "resource": "Qaaʼidah Nooraaniyyah — Shaykh Noor Muhammad Hāqiqānī",
+      "freq": "3–4 Sessions per Week",
+      "aim": "To teach students to correctly recognise, name, and pronounce all 28 Arabic letters in their isolated forms, with all short vowels, sukoon, tanween, shaddah, and madd letters.",
+      "listTitle": "What Students Learn",
+      "i1": "All 28 Arabic letters (isolated form)",
+      "i2": "Distinguishing similar shapes (ب ت ث, ج ح خ, etc.)",
+      "i3": "Short vowels (Fathah, Kasrah, Dammah)",
+      "i4": "Sukoon (a resting letter with no vowel)",
+      "i5": "Tanween (double vowels: ً ٌ ٍ)",
+      "i6": "Shaddah (doubled consonant)",
+      "i7": "Madd (long vowels with Alif, Waw, Yāʼ)",
+      "i8": "Laam Shamsiyyah vs. Laam Qamariyyah",
+      "i9": "Connecting forms (initial, medial, final, isolated)",
+      "i10": "Non-connecting letters (ا د ذ ر ز و)",
+      "i11": "Reading CVC syllables and short words",
+      "i12": "Reading simple Qurʼānic fragments (fully vowelled)"
+    },
+    "level2": {
+      "subtitle": "Joining Letters & Words",
+      "resource": "Noorul Bayāan — universally acclaimed Qurʼān primer",
+      "freq": "3–4 Sessions per Week",
+      "aim": "To teach students to join Arabic letters into complete words, read multi-letter words with diacritical marks, and begin reading short Qurʼānic āyāt and familiar phrases with fluency.",
+      "listTitle": "What Students Learn",
+      "i1": "Joining two and three letters with vowels",
+      "i2": "Reading words with all diacritical marks",
+      "i3": "Long vowels within joined words",
+      "i4": "Tanween in natural word endings",
+      "i5": "Shaddah within words",
+      "i6": "Al- (definite article) within words",
+      "i7": "Two-word Arabic phrases (noun + adjective)",
+      "i8": "Qurʼānic sight words recognition",
+      "i9": "Reading short Āyāt with full tashkeel",
+      "i10": "Reading connected sentences smoothly",
+      "i11": "Reading complete short surahs (Juzʼ ʿAmma)",
+      "i12": "Self-correction and reading fluency"
+    },
+    "level3": {
+      "subtitle": "Speaking, Listening & Vocabulary",
+      "resource": "Rawdatul Atfaal Applied Conversational Arabic",
+      "freq": "3 Sessions per Week",
+      "aim": "To equip students with practical Arabic communication skills — greeting, introducing themselves, describing objects, asking simple questions, and using MSA and Qurʼānic vocabulary.",
+      "listTitle": "Conversational Units",
+      "i1": "Greetings and Farewells (As-salaam, Marhaban)",
+      "i2": "Introductions (Who Are You? / Where are you from?)",
+      "i3": "Classroom Language (Commands: Iftah, uktub, iqraʼ)",
+      "i4": "Numbers 1–20 (Counting and usage)",
+      "i5": "Colours & Gender Agreement",
+      "i6": "Family Members (Al-ʼāʼilah)",
+      "i7": "The Body (Al-Jism)",
+      "i8": "Food and Drink (At-Taʼm)",
+      "i9": "Animals (Al-Hayāwānāt)",
+      "i10": "Days and Months / Daily Routine",
+      "i11": "Asking Questions (Where, What, Who, How)",
+      "i12": "Simple Sentences (Subject + Verb + Object)",
+      "i13": "My Home (Baytee & Furniture)",
+      "i14": "Weather and Seasons",
+      "i15": "Islamic Daily Phrases in context"
+    },
+    "level4": {
+      "subtitle": "Foundational Arabic Grammar & Reading",
+      "resource": "Madīnah Arabic Reader Book 1 (Dr. V. Abdúr-Raḥeem)",
+      "freq": "3–4 Sessions per Week",
+      "aim": "To introduce formal Arabic grammar — covering demonstrative pronouns, noun gender, definite/indefinite nouns, adjective agreement, past tense verbs, and prepositions.",
+      "listTitle": "Grammar & Text Topics",
+      "i1": "Demonstrative Pronouns (Haadhaa / Tilka)",
+      "i2": "Questions in Arabic (Mā hādhaa? / Man haadhaa?)",
+      "i3": "Personal Pronouns (Huwa / Hiya)",
+      "i4": "Nationality and Origins (Huwa min...)",
+      "i5": "Attached Possessive Pronouns (Ismuhu, Ismuhāa)",
+      "i6": "Numbers 1–10 and gender agreement",
+      "i7": "Sound Masculine Plural patterns",
+      "i8": "Introduction to Broken Plurals",
+      "i9": "Adjective Agreement (Ṣifah with mawsūf)",
+      "i10": "The Verb: Past Tense Conjugation (Faʼala pattern)",
+      "i11": "Verb Conjugation for Plurals (Third person)",
+      "i12": "Prepositions (Fee, Min, Ila, ʼAlà)",
+      "i13": "Nominal Sentences (Mubtadaʼ & Khabar)",
+      "i14": "Verbal Sentences vs. Nominal Sentences",
+      "i15": "Reading graded contextual passages"
+    },
+    "level5": {
+      "i1": "Mubtadaʼ and Khabar (in depth)",
+      "i2": "Relative Pronouns (Alladhī / Allatī)",
+      "i3": "Present Tense Verb Conjugation (Al-Muḍāriʼ)",
+      "i4": "Negative Sentences (Laa and Mā)",
+      "i5": "Active Participle (Ism Al-Faʼīl)",
+      "i6": "Passive Participle (Ism Al-Mafʼool)",
+      "i7": "Dual Forms (Muthannā)",
+      "i8": "Advanced Broken Plural Patterns",
+      "i9": "Imperative Verbs (Al-Amr commands)",
+      "i10": "ʼAnna, Inna and their Sisters",
+      "i11": "Numbers 11–100 rules",
+      "i12": "In-depth Question Particles (Al-Istifhām)",
+      "i13": "Independent Composition (Paragraph building)",
+      "i14": "Deepening conversational reading texts"
+    }
   },
   "ProgQuran": {
     "hero": {
@@ -605,7 +721,82 @@
     "t31": "5 Surahs",
     "t32": "Surahs:",
     "t33": "/ year",
-    "t34": "Note:"
+    "t34": "Note:",
+    "principlesList": {
+      "p1": "Each week focuses on memorisation of the assigned surah(s) with correct pronunciation (tajweed).",
+      "p2": "Revision weeks are dedicated entirely to consolidating all surahs from the current term.",
+      "p3": "Examination weeks assess recitation from memory of the complete term's surahs.",
+      "p4": "Longer surahs are allocated two weeks, with the surah divided at a natural break point.",
+      "p5": "Students are expected to revise previously memorised surahs from earlier terms on an ongoing basis."
+    },
+    "termLabel": "TERM",
+    "typeLabels": {
+      "memo": "Memorisation",
+      "rev": "Revision",
+      "exam": "★ EXAM"
+    },
+    "term1": {
+      "subtitle": "Juzʼ ʿAmma — Part 1",
+      "arabic": "سورة الناس — سورة الزلزلة",
+      "duration": "8 Weeks",
+      "structure": "6 Memorisation weeks → 1 Revision week → 1 Exam week",
+      "objective": "To memorise the short surahs of Juzʼ ʿAmma from Sūrat An-Nās through to Sūrat Az-Zalzalah with correct pronunciation and fluency.",
+      "w1": "Sūrat An-Nās (114) • Sūrat Al-Falaq (113) • Sūrat Al-Ikhlāṣ (112)",
+      "w2": "Sūrat Al-Masad (111) • Sūrat An-Naṣr (110) • Sūrat Al-Kāfirūn (109)",
+      "w3": "Sūrat Al-Kawthar (108) • Sūrat Al-Māʼm (107) • Sūrat Quraysh (106)",
+      "w4": "Sūrat Al-Fīl (105) • Sūrat Al-Humazah (104) • Sūrat Al-ʿAṣr (103)",
+      "w5": "Full revision of all surahs memorised in this term",
+      "w6": "Sūrat At-Takāthur (102) • Sūrat Al-Qāriʼah (101)",
+      "w7": "Sūrat Al-ʿAādiyāt (100) • Sūrat Az-Zalzalah (99)",
+      "w8": "End-of-term examination — full recitation and assessment"
+    },
+    "term2": {
+      "subtitle": "Juzʼ ʿAmma — Part 2",
+      "arabic": "سورة البينة — سورة الفجر",
+      "duration": "8 Weeks",
+      "structure": "6 Memorisation weeks → 1 Revision week → 1 Exam week",
+      "objective": "To memorise Sūrat Al-Bayyinah through Sūrat Al-Fajr with accuracy and correct tajweed, building upon the surahs learnt in Term 1.",
+      "w1": "Sūrat Al-Bayyinah (98) • Sūrat Al-Qadr (97)",
+      "w2": "Sūrat Al-ʿAlaq (96) • Sūrat At-Tīn (95)",
+      "w3": "Sūrat Ash-Sharḥ (94) • Sūrat Aḍ-Ḍuhā (93)",
+      "w4": "Sūrat Al-Layl (92) • Sūrat Ash-Shams (91)",
+      "w5": "Full revision of all surahs memorised in this term",
+      "w6": "Sūrat Al-Balad (90) — complete",
+      "w7": "Sūrat Al-Fajr (89) — complete",
+      "w8": "End-of-term examination — full recitation and assessment"
+    },
+    "term3": {
+      "subtitle": "Juzʼ ʿAmma — Part 3",
+      "arabic": "سورة الغاشية — سورة المطففين",
+      "duration": "8 Weeks",
+      "structure": "4 Memorisation weeks → 1 Revision week → 2 Extended weeks → 1 Exam week",
+      "objective": "To memorise Sūrat Al-Ghāshiyah through Sūrat Al-Muṭaffifīn with correct recitation, giving appropriate attention to the longer surahs.",
+      "note": "Sūrat Al-Muṭaffifīn (83 verses) is studied over two weeks due to its length. Students are expected to master each half before proceeding.",
+      "w1": "Sūrat Al-Ghāshiyah (88) — complete",
+      "w2": "Sūrat Al-Aʼlā (87) • Sūrat Aṭ-Ṯāriq (86)",
+      "w3": "Sūrat Al-Burūj (85) — complete",
+      "w4": "Sūrat Al-Inshiqāq (84) — complete",
+      "w5": "Full revision of all surahs memorised in this term",
+      "w6": "Sūrat Al-Muṭaffifīn (83) — First half (verses 1–20)",
+      "w7": "Sūrat Al-Muṭaffifīn (83) — Second half (verses 21–36) — completion",
+      "w8": "End-of-term examination — full recitation and assessment"
+    },
+    "term4": {
+      "subtitle": "Juzʼ ʿAmma — Part 4",
+      "arabic": "سورة الانفطار — سورة النبأ",
+      "duration": "8 Weeks",
+      "structure": "3 Single-surah weeks → 2 Half-surah weeks → 2 Half-surah weeks → 1 Exam week",
+      "objective": "To memorise Sūrat Al-Infiṭār through Sūrat An-Nabaʼ with fluency and correct tajweed, completing Juzʼ ʿAmma in this programme.",
+      "note": "Sūrat An-Nāziʼāt (46 verses) and Sūrat An-Nabaʼ (40 verses) are each divided across two weeks. Revision is built into each transition.",
+      "w1": "Sūrat Al-Infiṭār (82) — complete",
+      "w2": "Sūrat At-Takwīr (81) — complete",
+      "w3": "Sūrat ʿAbasa (80) — complete",
+      "w4": "Sūrat An-Nāziʼāt (79) — First half (verses 1–26)",
+      "w5": "Sūrat An-Nāziʼāt (79) — Second half (verses 27–46) — completion",
+      "w6": "Sūrat An-Nabaʼ (78) — First half (verses 1–20)",
+      "w7": "Sūrat An-Nabaʼ (78) — Second half (verses 21–40) — completion",
+      "w8": "End-of-term examination — full recitation and assessment"
+    }
   },
   "ProgTawheed": {
     "t0": "بسم الله الرحمن الرحيم",

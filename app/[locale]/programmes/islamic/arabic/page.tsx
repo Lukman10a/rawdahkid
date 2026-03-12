@@ -48,19 +48,31 @@ export default function ArabicProgramme() {
               <span>{t("hero.subtitle4")}</span>
             </div>
 
-            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">{t("t9")}</p>
+            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">
+              {t("t9")}
+            </p>
 
             {/* Path visualization */}
             <div className="flex flex-wrap justify-center items-center gap-4 mt-12 text-sm font-cinzel font-bold text-midnight/70 dark:text-cream/70">
-              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">{t("t31")}</span>
+              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">
+                {t("t31")}
+              </span>
               <span className="text-gold">→</span>
-              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">{t("t32")}</span>
+              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">
+                {t("t32")}
+              </span>
               <span className="text-gold">→</span>
-              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">{t("t35")}</span>
+              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">
+                {t("t35")}
+              </span>
               <span className="text-gold">→</span>
-              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">{t("t33")}</span>
+              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">
+                {t("t33")}
+              </span>
               <span className="text-gold">→</span>
-              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">{t("t41")}</span>
+              <span className="px-4 py-2 border border-gold/30 rounded-full bg-gold/5">
+                {t("t41")}
+              </span>
             </div>
           </motion.div>
         </div>
@@ -81,14 +93,11 @@ export default function ArabicProgramme() {
               {t("overview.title")}
             </h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
-              <p>
-                The Rawdatul Atfaal {t("hero.title")} is a structured
-                five-level programme designed to take a student from their very
-                first encounter with the Arabic alphabet all the way through to
-                a confident reading of grammatical Arabic texts.
-              </p>
+              <p>{t("overview.p1")}</p>
               <p>{t("t2")}</p>
-              <p className="font-semibold text-midnight dark:text-cream italic border-s-4 border-gold ps-4 py-1">{t("t3")}</p>
+              <p className="font-semibold text-midnight dark:text-cream italic border-s-4 border-gold ps-4 py-1">
+                {t("t3")}
+              </p>
             </div>
           </motion.div>
 
@@ -107,20 +116,20 @@ export default function ArabicProgramme() {
             <ul className="space-y-6">
               {[
                 {
-                  title: "Qaaʼidah Nooraaniyyah (Level 1)",
-                  desc: "The foundational text for learning Arabic letters and their sounds with correct articulation (makhaarij).",
+                  title: t("resources.r1.title"),
+                  desc: t("resources.r1.desc"),
                 },
                 {
-                  title: "Noorul Bayāan (Level 2)",
-                  desc: "A widely used primer for joining Arabic letters into words and progressing toward reading the Qurʼān.",
+                  title: t("resources.r2.title"),
+                  desc: t("resources.r2.desc"),
                 },
                 {
-                  title: "Basic Conversations (Level 3)",
-                  desc: "A structured conversational Arabic programme developing speaking, listening and vocabulary.",
+                  title: t("resources.r3.title"),
+                  desc: t("resources.r3.desc"),
                 },
                 {
-                  title: "Madīnah Arabic Series (Levels 4 & 5)",
-                  desc: "The world-famous series from the Islamic University of Madīnah, introducing and deepening formal grammar systematically.",
+                  title: t("resources.r4.title"),
+                  desc: t("resources.r4.desc"),
                 },
               ].map((resource, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -154,10 +163,18 @@ export default function ArabicProgramme() {
             <table className="w-full text-start border-collapse min-w-200">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
-                  <th className="py-4 px-6 font-cinzel text-gold text-lg w-20">{t("t44")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-64">{t("t28")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">{t("t39")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t15")}</th>
+                  <th className="py-4 px-6 font-cinzel text-gold text-lg w-20">
+                    {t("t44")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-64">
+                    {t("t28")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">
+                    {t("t39")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
+                    {t("t15")}
+                  </th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
@@ -165,41 +182,61 @@ export default function ArabicProgramme() {
                   <td className="py-4 px-6 font-bold font-cinzel text-xl text-center">
                     1
                   </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t21")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t21")}
+                  </td>
                   <td className="py-4 px-6">{t("t40")}</td>
-                  <td className="py-4 px-6 leading-relaxed text-sm">{t("t8")}</td>
+                  <td className="py-4 px-6 leading-relaxed text-sm">
+                    {t("t8")}
+                  </td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
                   <td className="py-4 px-6 font-bold font-cinzel text-xl text-center">
                     2
                   </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t30")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t30")}
+                  </td>
                   <td className="py-4 px-6">{t("t40")}</td>
-                  <td className="py-4 px-6 leading-relaxed text-sm">{t("t10")}</td>
+                  <td className="py-4 px-6 leading-relaxed text-sm">
+                    {t("t10")}
+                  </td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
                   <td className="py-4 px-6 font-bold font-cinzel text-xl text-center">
                     3
                   </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t25")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t25")}
+                  </td>
                   <td className="py-4 px-6">{t("t40")}</td>
-                  <td className="py-4 px-6 leading-relaxed text-sm">{t("t6")}</td>
+                  <td className="py-4 px-6 leading-relaxed text-sm">
+                    {t("t6")}
+                  </td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
                   <td className="py-4 px-6 font-bold font-cinzel text-xl text-center">
                     4
                   </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t22")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t22")}
+                  </td>
                   <td className="py-4 px-6">{t("t40")}</td>
-                  <td className="py-4 px-6 leading-relaxed text-sm">{t("t7")}</td>
+                  <td className="py-4 px-6 leading-relaxed text-sm">
+                    {t("t7")}
+                  </td>
                 </tr>
                 <tr className="hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
                   <td className="py-4 px-6 font-bold font-cinzel text-xl text-center">
                     5
                   </td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t23")}</td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t23")}
+                  </td>
                   <td className="py-4 px-6">{t("t40")}</td>
-                  <td className="py-4 px-6 leading-relaxed text-sm">{t("t5")}</td>
+                  <td className="py-4 px-6 leading-relaxed text-sm">
+                    {t("t5")}
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -210,7 +247,9 @@ export default function ArabicProgramme() {
       {/* 4. DETAILED COURSE OUTLINES */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t24")}</h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
+            {t("t24")}
+          </h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
 
@@ -220,25 +259,25 @@ export default function ArabicProgramme() {
             levelNumber="1"
             title={t("t21")}
             arabicTitle="القاعدة النورانية"
-            subtitle="Reading & Recognising Arabic Letters"
-            resource="Qaaʼidah Nooraaniyyah — Shaykh Noor Muhammad Hāqiqānī"
+            subtitle={t("level1.subtitle")}
+            resource={t("level1.resource")}
             duration={t("t40")}
-            frequency="3–4 Sessions per Week"
-            aim="To teach students to correctly recognise, name, and pronounce all 28 Arabic letters in their isolated forms, with all short vowels, sukoon, tanween, shaddah, and madd letters."
-            listTitle="What Students Learn"
+            frequency={t("level1.freq")}
+            aim={t("level1.aim")}
+            listTitle={t("level1.listTitle")}
             listItems={[
-              "All 28 Arabic letters (isolated form)",
-              "Distinguishing similar shapes (ب ت ث, ج ح خ, etc.)",
-              "Short vowels (Fathah, Kasrah, Dammah)",
-              "Sukoon (a resting letter with no vowel)",
-              "Tanween (double vowels: ً ٌ ٍ)",
-              "Shaddah (doubled consonant)",
-              "Madd (long vowels with Alif, Waw, Yāʼ)",
-              "Laam Shamsiyyah vs. Laam Qamariyyah",
-              "Connecting forms (initial, medial, final, isolated)",
-              "Non-connecting letters (ا د ذ ر ز و)",
-              "Reading CVC syllables and short words",
-              "Reading simple Qurʼānic fragments (fully vowelled)",
+              t("level1.i1"),
+              t("level1.i2"),
+              t("level1.i3"),
+              t("level1.i4"),
+              t("level1.i5"),
+              t("level1.i6"),
+              t("level1.i7"),
+              t("level1.i8"),
+              t("level1.i9"),
+              t("level1.i10"),
+              t("level1.i11"),
+              t("level1.i12"),
             ]}
           />
 
@@ -247,25 +286,25 @@ export default function ArabicProgramme() {
             levelNumber="2"
             title={t("t30")}
             arabicTitle="نور البيان"
-            subtitle="Joining Letters & Words"
-            resource="Noorul Bayāan — universally acclaimed Qurʼān primer"
+            subtitle={t("level2.subtitle")}
+            resource={t("level2.resource")}
             duration={t("t40")}
-            frequency="3–4 Sessions per Week"
-            aim="To teach students to join Arabic letters into complete words, read multi-letter words with diacritical marks, and begin reading short Qurʼānic āyāt and familiar phrases with fluency."
-            listTitle="What Students Learn"
+            frequency={t("level2.freq")}
+            aim={t("level2.aim")}
+            listTitle={t("level2.listTitle")}
             listItems={[
-              "Joining two and three letters with vowels",
-              "Reading words with all diacritical marks",
-              "Long vowels within joined words",
-              "Tanween in natural word endings",
-              "Shaddah within words",
-              "Al- (definite article) within words",
-              "Two-word Arabic phrases (noun + adjective)",
-              "Qurʼānic sight words recognition",
-              "Reading short Āyāt with full tashkeel",
-              "Reading connected sentences smoothly",
-              "Reading complete short surahs (Juzʼ ʿAmma)",
-              "Self-correction and reading fluency",
+              t("level2.i1"),
+              t("level2.i2"),
+              t("level2.i3"),
+              t("level2.i4"),
+              t("level2.i5"),
+              t("level2.i6"),
+              t("level2.i7"),
+              t("level2.i8"),
+              t("level2.i9"),
+              t("level2.i10"),
+              t("level2.i11"),
+              t("level2.i12"),
             ]}
           />
 
@@ -274,29 +313,29 @@ export default function ArabicProgramme() {
             levelNumber="3"
             title={t("t19")}
             arabicTitle="المحادثة العربية الأساسية"
-            subtitle="Speaking, Listening & Vocabulary"
-            resource="Rawdatul Atfaal Applied Conversational Arabic"
+            subtitle={t("level3.subtitle")}
+            resource={t("level3.resource")}
             duration={t("t40")}
-            frequency="3 Sessions per Week"
-            aim="To equip students with practical Arabic communication skills — greeting, introducing themselves, describing objects, asking simple questions, and using MSA and Qurʼānic vocabulary."
+            frequency={t("level3.freq")}
+            aim={t("level3.aim")}
             icon={<Speech className="w-5 h-5 text-gold" />}
-            listTitle="Conversational Units"
+            listTitle={t("level3.listTitle")}
             listItems={[
-              "Greetings and Farewells (As-salaam, Marhaban)",
-              "Introductions (Who Are You? / Where are you from?)",
-              "Classroom Language (Commands: Iftah, uktub, iqraʼ)",
-              "Numbers 1–20 (Counting and usage)",
-              "Colours & Gender Agreement",
-              "Family Members (Al-ʼaʼilah)",
-              "The Body (Al-Jism)",
-              "Food and Drink (At-Taʼām)",
-              "Animals (Al-Hayawānāt)",
-              "Days and Months / Daily Routine",
-              "Asking Questions (Where, What, Who, How)",
-              "Simple Sentences (Subject + Verb + Object)",
-              "My Home (Baytee & Furniture)",
-              "Weather and Seasons",
-              "Islamic Daily Phrases in context",
+              t("level3.i1"),
+              t("level3.i2"),
+              t("level3.i3"),
+              t("level3.i4"),
+              t("level3.i5"),
+              t("level3.i6"),
+              t("level3.i7"),
+              t("level3.i8"),
+              t("level3.i9"),
+              t("level3.i10"),
+              t("level3.i11"),
+              t("level3.i12"),
+              t("level3.i13"),
+              t("level3.i14"),
+              t("level3.i15"),
             ]}
           />
 
@@ -305,28 +344,28 @@ export default function ArabicProgramme() {
             levelNumber="4"
             title={t("t22")}
             arabicTitle="كتاب المدينة — الكتاب الأول"
-            subtitle="Foundational Arabic Grammar & Reading"
-            resource="Madīnah Arabic Reader Book 1 (Dr. V. Abdúr-Raḥeem)"
+            subtitle={t("level4.subtitle")}
+            resource={t("level4.resource")}
             duration={t("t40")}
-            frequency="3–4 Sessions per Week"
-            aim="To introduce formal Arabic grammar — covering demonstrative pronouns, noun gender, definite/indefinite nouns, adjective agreement, past tense verbs, and prepositions."
-            listTitle="Grammar & Text Topics"
+            frequency={t("level4.freq")}
+            aim={t("level4.aim")}
+            listTitle={t("level4.listTitle")}
             listItems={[
-              "Demonstrative Pronouns (Haadhaa / Tilka)",
-              "Questions in Arabic (Mā hādhaa? / Man haadhaa?)",
-              "Personal Pronouns (Huwa / Hiya)",
-              "Nationality and Origins (Huwa min...)",
-              "Attached Possessive Pronouns (Ismuhu, Ismuhaa)",
-              "Numbers 1–10 and gender agreement",
-              "Sound Masculine Plural patterns",
-              "Introduction to Broken Plurals",
-              "Adjective Agreement (Sifah with mawsūf)",
-              "The Verb: Past Tense Conjugation (Faʼala pattern)",
-              "Verb Conjugation for Plurals (Third person)",
-              "Prepositions (Fee, Min, Ila, ʼAlà)",
-              "Nominal Sentences (Mubtadaʼ & Khabar)",
-              "Verbal Sentences vs. Nominal Sentences",
-              "Reading graded contextual passages",
+              t("level4.i1"),
+              t("level4.i2"),
+              t("level4.i3"),
+              t("level4.i4"),
+              t("level4.i5"),
+              t("level4.i6"),
+              t("level4.i7"),
+              t("level4.i8"),
+              t("level4.i9"),
+              t("level4.i10"),
+              t("level4.i11"),
+              t("level4.i12"),
+              t("level4.i13"),
+              t("level4.i14"),
+              t("level4.i15"),
             ]}
           />
 
@@ -346,9 +385,15 @@ export default function ArabicProgramme() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
                 <div>
                   <div className="text-gold font-cinzel font-bold tracking-widest text-sm mb-2 flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>{t("t27")}</div>
-                  <h3 className="font-playfair text-2xl md:text-4xl text-white mb-2">{t("t23")}</h3>
-                  <p className="font-sans text-cream/70 text-sm md:text-base">{t("t13")}</p>
+                    <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                    {t("t27")}
+                  </div>
+                  <h3 className="font-playfair text-2xl md:text-4xl text-white mb-2">
+                    {t("t23")}
+                  </h3>
+                  <p className="font-sans text-cream/70 text-sm md:text-base">
+                    {t("t13")}
+                  </p>
                 </div>
                 <div className="font-amiri text-2xl md:text-3xl text-gold/90 text-end">
                   كتاب المدينة — الكتاب الثاني
@@ -357,33 +402,41 @@ export default function ArabicProgramme() {
 
               <div className="grid md:grid-cols-2 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
                 <div>
-                  <strong className="text-white">{t("t36")}</strong>{t("t40")}</div>
+                  <strong className="text-white">{t("t36")}</strong>
+                  {t("t40")}
+                </div>
                 <div>
-                  <strong className="text-white">{t("t37")}</strong>{t("t11")}</div>
+                  <strong className="text-white">{t("t37")}</strong>
+                  {t("t11")}
+                </div>
               </div>
               <div className="text-sm text-cream/80 leading-relaxed">
-                <strong className="text-white block mb-1">{t("t43")}</strong>{t("t1")}</div>
+                <strong className="text-white block mb-1">{t("t43")}</strong>
+                {t("t1")}
+              </div>
             </div>
 
             <div className="p-8 md:p-10 bg-white dark:bg-transparent relative z-10">
               <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-8 inline-flex items-center gap-3 border-b-2 border-gold/40 pb-2">
-                <LayoutList className="w-5 h-5 text-gold" />{t("t12")}</h4>
+                <LayoutList className="w-5 h-5 text-gold" />
+                {t("t12")}
+              </h4>
               <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4 mb-12">
                 {[
-                  "Mubtadaʼ and Khabar (in depth)",
-                  "Relative Pronouns (Alladhī / Allatī)",
-                  "Present Tense Verb Conjugation (Al-Muḍāriʼ)",
-                  "Negative Sentences (Laa and Mā)",
-                  "Active Participle (Ism Al-Faʼīl)",
-                  "Passive Participle (Ism Al-Mafʼool)",
-                  "Dual Forms (Muthannā)",
-                  "Advanced Broken Plural Patterns",
-                  "Imperative Verbs (Al-Amr commands)",
-                  "ʼAnna, Inna and their Sisters",
-                  "Numbers 11–100 rules",
-                  "In-depth Question Particles (Al-Istifhām)",
-                  "Independent Composition (Paragraph building)",
-                  "Deepening conversational reading texts",
+                  t("level5.i1"),
+                  t("level5.i2"),
+                  t("level5.i3"),
+                  t("level5.i4"),
+                  t("level5.i5"),
+                  t("level5.i6"),
+                  t("level5.i7"),
+                  t("level5.i8"),
+                  t("level5.i9"),
+                  t("level5.i10"),
+                  t("level5.i11"),
+                  t("level5.i12"),
+                  t("level5.i13"),
+                  t("level5.i14"),
                 ].map((topic, idx) => (
                   <div
                     key={idx}
@@ -400,8 +453,12 @@ export default function ArabicProgramme() {
               </div>
 
               <div className="bg-ivory dark:bg-midnight p-6 rounded-md border border-midnight/10 dark:border-white/10 text-center space-y-4">
-                <h5 className="font-cinzel font-bold text-midnight dark:text-cream text-lg">{t("t29")}</h5>
-                <p className="font-sans text-midnight/80 dark:text-cream/80 text-sm max-w-2xl mx-auto leading-relaxed">{t("t0")}</p>
+                <h5 className="font-cinzel font-bold text-midnight dark:text-cream text-lg">
+                  {t("t29")}
+                </h5>
+                <p className="font-sans text-midnight/80 dark:text-cream/80 text-sm max-w-2xl mx-auto leading-relaxed">
+                  {t("t0")}
+                </p>
                 <p className="font-amiri text-gold text-lg italic tracking-widest pt-2">
                   وما توفيقي إلا بالله — عليه توكلت وإليه أنيب
                 </p>
@@ -415,31 +472,47 @@ export default function ArabicProgramme() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-gold mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t14")}</h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t4")}</p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
+            {t("t14")}
+          </h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
+            {t("t4")}
+          </p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t18")}</h3>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
+              {t("t18")}
+            </h3>
             <div className="font-cormorant text-5xl text-gold mb-6">
               $1,200{" "}
-              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">{t("t42")}</span>
+              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">
+                {t("t42")}
+              </span>
             </div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t26")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t26")}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t17")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t17")}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t20")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t20")}
+                </span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">{t("t38")}</Button>
+              <Button variant="primary" className="w-full py-4 text-lg">
+                {t("t38")}
+              </Button>
             </Link>
           </div>
 
@@ -447,7 +520,9 @@ export default function ArabicProgramme() {
             <Link
               href="/programmes/islamic"
               className="text-gold hover:text-amber transition-colors font-sans underline underline-offset-4"
-            >{t("t16")}</Link>
+            >
+              {t("t16")}
+            </Link>
           </div>
         </div>
       </section>
@@ -494,13 +569,13 @@ function LevelCard({
         <div className="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="text-gold font-cinzel font-bold tracking-widest text-sm mb-2 uppercase">
-              LEVEL {levelNumber} — {subtitle}
+              {t("levelLabel")} {levelNumber} — {subtitle}
             </div>
             <h3 className="font-playfair text-2xl md:text-4xl text-white mb-2">
               {title}
             </h3>
             <p className="font-sans text-cream/70 text-sm">
-              Resource:{" "}
+              {t("resourceLabel")}{" "}
               <span className="font-semibold text-cream/90">{resource}</span>
             </p>
           </div>
