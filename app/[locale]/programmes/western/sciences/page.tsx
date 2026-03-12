@@ -18,7 +18,7 @@ export default function SciencesProgramme() {
   const t = useTranslations("ProgSciences");
 
   return (
-    <div className="flex flex-col min-h-screen w-full min-w-0 w-full min-w-0 overflow-x-hidden max-w-full ">
+    <div className="flex flex-col min-h-screen w-full min-w-0 overflow-x-hidden max-w-full ">
       {/* 1. HERO SECTION */}
       <section className="w-full min-w-0 relative py-20 overflow-hidden border-b border-midnight/10 dark:border-white/10">
         <div className="absolute inset-0 z-0 bg-linear-to-b from-white dark:from-navy to-ivory dark:to-midnight pointer-events-none"></div>

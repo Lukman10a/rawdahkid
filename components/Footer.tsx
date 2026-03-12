@@ -132,6 +132,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/faq"
+                  className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors opacity-80 hover:opacity-100 font-sans text-sm tracking-wide"
+                >
+                  {t("faq")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/enrol"
                   className="text-gold font-medium hover:text-amber transition-colors opacity-100 font-sans text-sm tracking-wide flex items-center"
                 >

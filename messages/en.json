@@ -26,7 +26,8 @@
     "t16": "Open menu",
     "t17": "Toggle language",
     "t18": "Toggle Dark Mode",
-    "copyright": "© {year} Rawdatul Atfaal. All rights reserved."
+    "copyright": "© {year} Rawdatul Atfaal. All rights reserved.",
+    "faq": "FAQ"
   },
   "Hero": {
     "title1": "Where Children Love to Learn",
@@ -2222,5 +2223,32 @@
     "t57": "HTML & CSS web design",
     "t58": "CS theory & GCSE prep",
     "t59": "JavaScript & React"
+  },
+  "Faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our programmes, admissions, and policies.",
+    "categories": {
+      "admissions": "Admissions & Enrolment",
+      "curriculum": "Curriculum & Academics",
+      "fees": "Fees & Policies"
+    },
+    "q_admin_1": "What age groups do you accept?",
+    "a_admin_1": "We welcome children from ages 3 to 10 for both our Islamic and Western programmes.",
+    "q_admin_2": "How do I enrol my child?",
+    "a_admin_2": "You can easily begin the enrolment process by visiting our <enrolLink>Enrolment Page</enrolLink> and filling out the application form.",
+    "q_admin_3": "Can we visit the school before enrolling?",
+    "a_admin_3": "Yes, we encourage campus tours. Please visit our <contactLink>Contact Page</contactLink> to schedule a visit or reach out to our admission office.",
+    "q_curr_1": "What programmes do you offer?",
+    "a_curr_1": "We offer a dual curriculum featuring an <islamicLink>Islamic Programme</islamicLink> (Quran memorisation, Arabic, Fiqh) and a <westernLink>Western Programme</westernLink> (Mathematics, Sciences, and Programming).",
+    "q_curr_2": "Is coding and programming taught to all ages?",
+    "a_curr_2": "Yes, our Programming curriculum is specifically tailored by age group, starting from basic logic and problem-solving for our youngest learners to more advanced concepts as they grow.",
+    "q_curr_3": "What extracurricular activities are available?",
+    "a_curr_3": "We offer various clubs, Quran memorisation competitions, sports, and creative arts sessions designed to nurture well-rounded children.",
+    "q_fees_1": "Where can I find the fee structure?",
+    "a_fees_1": "Detailed tuition and current fee schedules can be found directly on our <feesLink>Fees Page</feesLink>.",
+    "q_fees_2": "Do you offer sibling discounts?",
+    "a_fees_2": "Yes, we provide special discounts for families enrolling multiple children. Please <contactLink>reach out to us</contactLink> for a detailed breakdown.",
+    "q_fees_3": "Are there any hidden costs?",
+    "a_fees_3": "No, our fee structure is completely transparent. Any additional costs for uniforms, books, or special trips will be communicated clearly during the enrolment process."
   }
 }
