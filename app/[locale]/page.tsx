@@ -175,12 +175,21 @@ export default function Home() {
                   viewBox="0 0 100 100"
                   className="animate-[spin_60s_linear_infinite]"
                 >
-                  <path
-                    d="M50 0L60 40L100 50L60 60L50 100L40 60L0 50L40 40Z"
+                  {/* Book Icon replacing the original Star */}
+                  <g
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1"
-                  />
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    {/* Left Page */}
+                    <path d="M 50 35 C 40 30 25 30 20 35 L 20 70 C 25 65 40 65 50 70 Z" />
+                    {/* Right Page */}
+                    <path d="M 50 35 C 60 30 75 30 80 35 L 80 70 C 75 65 60 65 50 70 Z" />
+                    {/* Spine/Center Line */}
+                    <path d="M 50 35 L 50 70" />
+                  </g>
                   <circle
                     cx="50"
                     cy="50"

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ClipboardList, MailCheck, GraduationCap } from "lucide-react";
 
-import { useTranslations } from "next-intl"
+import { useTranslations } from "next-intl";
 
 export default function EnrolPage() {
   const t = useTranslations("Enrol");
@@ -207,11 +207,13 @@ export default function EnrolPage() {
                       <option value="" disabled>
                         {t("form.student.programmeSelect")}
                       </option>
-                      <option value="dual">
-                        {t("form.student.progDual")}
+                      <option value="dual">{t("form.student.progDual")}</option>
+                      <option value="islamic">
+                        {t("form.student.progIslamic")}
                       </option>
-                      <option value="islamic">{t("form.student.progIslamic")}</option>
-                      <option value="western">{t("form.student.progWestern")}</option>
+                      <option value="western">
+                        {t("form.student.progWestern")}
+                      </option>
                       <option value="individual">
                         {t("form.student.progIndividual")}
                       </option>
@@ -233,7 +235,9 @@ export default function EnrolPage() {
                       <option value="group">
                         {t("form.student.formatGroup")}
                       </option>
-                      <option value="one-on-one">{t("form.student.formatOneOnOne")}</option>
+                      <option value="one-on-one">
+                        {t("form.student.formatOneOnOne")}
+                      </option>
                     </select>
                   </div>
                 </div>
@@ -308,39 +312,41 @@ export default function EnrolPage() {
                           {t("form.student.individualCourses.westernTitle")}
                         </h5>
                         <div className="space-y-3">
-                          {[t("form.student.individualCourses.math"), t("form.student.individualCourses.science"), t("form.student.individualCourses.programming")].map(
-                            (c) => (
-                              <label
-                                key={c}
-                                className="flex items-center gap-3 cursor-pointer group"
-                              >
-                                <div className="relative flex items-center justify-center">
-                                  <input
-                                    type="checkbox"
-                                    checked={selectedCourses.includes(c)}
-                                    onChange={() => toggleCourse(c)}
-                                    className="peer appearance-none w-5 h-5 border-2 border-midnight/20 dark:border-white/20 rounded-sm checked:bg-gold checked:border-gold focus:outline-hidden hover:border-gold transition-colors cursor-pointer shrink-0"
+                          {[
+                            t("form.student.individualCourses.math"),
+                            t("form.student.individualCourses.science"),
+                            t("form.student.individualCourses.programming"),
+                          ].map((c) => (
+                            <label
+                              key={c}
+                              className="flex items-center gap-3 cursor-pointer group"
+                            >
+                              <div className="relative flex items-center justify-center">
+                                <input
+                                  type="checkbox"
+                                  checked={selectedCourses.includes(c)}
+                                  onChange={() => toggleCourse(c)}
+                                  className="peer appearance-none w-5 h-5 border-2 border-midnight/20 dark:border-white/20 rounded-sm checked:bg-gold checked:border-gold focus:outline-hidden hover:border-gold transition-colors cursor-pointer shrink-0"
+                                />
+                                <svg
+                                  className="absolute w-3 h-3 text-midnight pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  strokeWidth="3"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M5 13l4 4L19 7"
                                   />
-                                  <svg
-                                    className="absolute w-3 h-3 text-midnight pointer-events-none opacity-0 peer-checked:opacity-100 transition-opacity"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    strokeWidth="3"
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      d="M5 13l4 4L19 7"
-                                    />
-                                  </svg>
-                                </div>
-                                <span className="font-sans text-midnight/80 dark:text-cream/80 text-sm group-hover:text-gold transition-colors">
-                                  {c}
-                                </span>
-                              </label>
-                            ),
-                          )}
+                                </svg>
+                              </div>
+                              <span className="font-sans text-midnight/80 dark:text-cream/80 text-sm group-hover:text-gold transition-colors">
+                                {c}
+                              </span>
+                            </label>
+                          ))}
                         </div>
                       </div>
                     </div>

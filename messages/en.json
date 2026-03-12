@@ -9,7 +9,7 @@
     "enroll": "Enrol Now",
     "t0": "\"Where the roots of faith and the wings of knowledge grow together.\"",
     "t1": "Enquiries responded to within 24 hours.",
-    "t2": "hello@rawdatulatfaal.edu",
+    "t2": "info@rawdahkids.org",
     "t3": "Academic Year 2026–2027",
     "t4": "Fees & Tuition",
     "t5": "Get in Touch",
@@ -26,7 +26,8 @@
     "t16": "Open menu",
     "t17": "Toggle language",
     "t18": "Toggle Dark Mode",
-    "copyright": "© {year} Rawdatul Atfaal. All rights reserved."
+    "copyright": "© {year} Rawdatul Atfaal. All rights reserved.",
+    "faq": "FAQ"
   },
   "Hero": {
     "title1": "Where Children Love to Learn",
@@ -191,22 +192,22 @@
     "info": {
       "campus": {
         "title": "Our Campus",
-        "c1": "123 Knowledge Avenue",
-        "c2": "Leicester, UK LE1 2AB"
+        "c1": "Fully Functional Online",
+        "c2": "Global Virtual Campus"
       },
       "phone": {
         "title": "Phone",
-        "c1": "Admissions: +44 116 123 4567",
-        "c2": "Main Office: +44 116 123 4568"
+        "c1": "Admissions: +2348089287065",
+        "c2": "Female Support: +2347054950908"
       },
       "email": {
         "title": "Email",
-        "c1": "admissions@rawdatulatfaal.org",
-        "c2": "info@rawdatulatfaal.org"
+        "c1": "admissions@rawdahkids.org",
+        "c2": "info@rawdahkids.org"
       },
       "hours": {
         "title": "Office Hours",
-        "c1": "Mon - Fri: 8:00 AM - 4:00 PM",
+        "c1": "Mon - Fri: Full working time",
         "c2": "Sat - Sun: Closed"
       }
     },
@@ -493,7 +494,23 @@
       "p3": "Our programme treats Arabic not merely as a foreign language to be learnt — but as a sacred inheritance to be reclaimed."
     },
     "resources": {
-      "title": "Key Resources Used"
+      "title": "Key Resources Used",
+      "r1": {
+        "title": "Qaaʼidah Nooraaniyyah (Level 1)",
+        "desc": "The foundational text for learning Arabic letters and their sounds with correct articulation (makhaarij)."
+      },
+      "r2": {
+        "title": "Noorul Bayāan (Level 2)",
+        "desc": "A widely used primer for joining Arabic letters into words and progressing toward reading the Qurʼān."
+      },
+      "r3": {
+        "title": "Basic Conversations (Level 3)",
+        "desc": "A structured conversational Arabic programme developing speaking, listening and vocabulary."
+      },
+      "r4": {
+        "title": "Madīnah Arabic Series (Levels 4 & 5)",
+        "desc": "The world-famous series from the Islamic University of Madīnah, introducing and deepening formal grammar systematically."
+      }
     },
     "glance": {
       "title": "Programme at a Glance"
@@ -542,7 +559,107 @@
     "t41": "L5 Text",
     "t42": "/ year",
     "t43": "Aim:",
-    "t44": "Lvl"
+    "t44": "Lvl",
+    "levelLabel": "LEVEL",
+    "resourceLabel": "Resource:",
+    "level1": {
+      "subtitle": "Reading & Recognising Arabic Letters",
+      "resource": "Qaaʼidah Nooraaniyyah — Shaykh Noor Muhammad Hāqiqānī",
+      "freq": "3–4 Sessions per Week",
+      "aim": "To teach students to correctly recognise, name, and pronounce all 28 Arabic letters in their isolated forms, with all short vowels, sukoon, tanween, shaddah, and madd letters.",
+      "listTitle": "What Students Learn",
+      "i1": "All 28 Arabic letters (isolated form)",
+      "i2": "Distinguishing similar shapes (ب ت ث, ج ح خ, etc.)",
+      "i3": "Short vowels (Fathah, Kasrah, Dammah)",
+      "i4": "Sukoon (a resting letter with no vowel)",
+      "i5": "Tanween (double vowels: ً ٌ ٍ)",
+      "i6": "Shaddah (doubled consonant)",
+      "i7": "Madd (long vowels with Alif, Waw, Yāʼ)",
+      "i8": "Laam Shamsiyyah vs. Laam Qamariyyah",
+      "i9": "Connecting forms (initial, medial, final, isolated)",
+      "i10": "Non-connecting letters (ا د ذ ر ز و)",
+      "i11": "Reading CVC syllables and short words",
+      "i12": "Reading simple Qurʼānic fragments (fully vowelled)"
+    },
+    "level2": {
+      "subtitle": "Joining Letters & Words",
+      "resource": "Noorul Bayāan — universally acclaimed Qurʼān primer",
+      "freq": "3–4 Sessions per Week",
+      "aim": "To teach students to join Arabic letters into complete words, read multi-letter words with diacritical marks, and begin reading short Qurʼānic āyāt and familiar phrases with fluency.",
+      "listTitle": "What Students Learn",
+      "i1": "Joining two and three letters with vowels",
+      "i2": "Reading words with all diacritical marks",
+      "i3": "Long vowels within joined words",
+      "i4": "Tanween in natural word endings",
+      "i5": "Shaddah within words",
+      "i6": "Al- (definite article) within words",
+      "i7": "Two-word Arabic phrases (noun + adjective)",
+      "i8": "Qurʼānic sight words recognition",
+      "i9": "Reading short Āyāt with full tashkeel",
+      "i10": "Reading connected sentences smoothly",
+      "i11": "Reading complete short surahs (Juzʼ ʿAmma)",
+      "i12": "Self-correction and reading fluency"
+    },
+    "level3": {
+      "subtitle": "Speaking, Listening & Vocabulary",
+      "resource": "Rawdatul Atfaal Applied Conversational Arabic",
+      "freq": "3 Sessions per Week",
+      "aim": "To equip students with practical Arabic communication skills — greeting, introducing themselves, describing objects, asking simple questions, and using MSA and Qurʼānic vocabulary.",
+      "listTitle": "Conversational Units",
+      "i1": "Greetings and Farewells (As-salaam, Marhaban)",
+      "i2": "Introductions (Who Are You? / Where are you from?)",
+      "i3": "Classroom Language (Commands: Iftah, uktub, iqraʼ)",
+      "i4": "Numbers 1–20 (Counting and usage)",
+      "i5": "Colours & Gender Agreement",
+      "i6": "Family Members (Al-ʼāʼilah)",
+      "i7": "The Body (Al-Jism)",
+      "i8": "Food and Drink (At-Taʼm)",
+      "i9": "Animals (Al-Hayāwānāt)",
+      "i10": "Days and Months / Daily Routine",
+      "i11": "Asking Questions (Where, What, Who, How)",
+      "i12": "Simple Sentences (Subject + Verb + Object)",
+      "i13": "My Home (Baytee & Furniture)",
+      "i14": "Weather and Seasons",
+      "i15": "Islamic Daily Phrases in context"
+    },
+    "level4": {
+      "subtitle": "Foundational Arabic Grammar & Reading",
+      "resource": "Madīnah Arabic Reader Book 1 (Dr. V. Abdúr-Raḥeem)",
+      "freq": "3–4 Sessions per Week",
+      "aim": "To introduce formal Arabic grammar — covering demonstrative pronouns, noun gender, definite/indefinite nouns, adjective agreement, past tense verbs, and prepositions.",
+      "listTitle": "Grammar & Text Topics",
+      "i1": "Demonstrative Pronouns (Haadhaa / Tilka)",
+      "i2": "Questions in Arabic (Mā hādhaa? / Man haadhaa?)",
+      "i3": "Personal Pronouns (Huwa / Hiya)",
+      "i4": "Nationality and Origins (Huwa min...)",
+      "i5": "Attached Possessive Pronouns (Ismuhu, Ismuhāa)",
+      "i6": "Numbers 1–10 and gender agreement",
+      "i7": "Sound Masculine Plural patterns",
+      "i8": "Introduction to Broken Plurals",
+      "i9": "Adjective Agreement (Ṣifah with mawsūf)",
+      "i10": "The Verb: Past Tense Conjugation (Faʼala pattern)",
+      "i11": "Verb Conjugation for Plurals (Third person)",
+      "i12": "Prepositions (Fee, Min, Ila, ʼAlà)",
+      "i13": "Nominal Sentences (Mubtadaʼ & Khabar)",
+      "i14": "Verbal Sentences vs. Nominal Sentences",
+      "i15": "Reading graded contextual passages"
+    },
+    "level5": {
+      "i1": "Mubtadaʼ and Khabar (in depth)",
+      "i2": "Relative Pronouns (Alladhī / Allatī)",
+      "i3": "Present Tense Verb Conjugation (Al-Muḍāriʼ)",
+      "i4": "Negative Sentences (Laa and Mā)",
+      "i5": "Active Participle (Ism Al-Faʼīl)",
+      "i6": "Passive Participle (Ism Al-Mafʼool)",
+      "i7": "Dual Forms (Muthannā)",
+      "i8": "Advanced Broken Plural Patterns",
+      "i9": "Imperative Verbs (Al-Amr commands)",
+      "i10": "ʼAnna, Inna and their Sisters",
+      "i11": "Numbers 11–100 rules",
+      "i12": "In-depth Question Particles (Al-Istifhām)",
+      "i13": "Independent Composition (Paragraph building)",
+      "i14": "Deepening conversational reading texts"
+    }
   },
   "ProgQuran": {
     "hero": {
@@ -605,7 +722,82 @@
     "t31": "5 Surahs",
     "t32": "Surahs:",
     "t33": "/ year",
-    "t34": "Note:"
+    "t34": "Note:",
+    "principlesList": {
+      "p1": "Each week focuses on memorisation of the assigned surah(s) with correct pronunciation (tajweed).",
+      "p2": "Revision weeks are dedicated entirely to consolidating all surahs from the current term.",
+      "p3": "Examination weeks assess recitation from memory of the complete term's surahs.",
+      "p4": "Longer surahs are allocated two weeks, with the surah divided at a natural break point.",
+      "p5": "Students are expected to revise previously memorised surahs from earlier terms on an ongoing basis."
+    },
+    "termLabel": "TERM",
+    "typeLabels": {
+      "memo": "Memorisation",
+      "rev": "Revision",
+      "exam": "★ EXAM"
+    },
+    "term1": {
+      "subtitle": "Juzʼ ʿAmma — Part 1",
+      "arabic": "سورة الناس — سورة الزلزلة",
+      "duration": "8 Weeks",
+      "structure": "6 Memorisation weeks → 1 Revision week → 1 Exam week",
+      "objective": "To memorise the short surahs of Juzʼ ʿAmma from Sūrat An-Nās through to Sūrat Az-Zalzalah with correct pronunciation and fluency.",
+      "w1": "Sūrat An-Nās (114) • Sūrat Al-Falaq (113) • Sūrat Al-Ikhlāṣ (112)",
+      "w2": "Sūrat Al-Masad (111) • Sūrat An-Naṣr (110) • Sūrat Al-Kāfirūn (109)",
+      "w3": "Sūrat Al-Kawthar (108) • Sūrat Al-Māʼm (107) • Sūrat Quraysh (106)",
+      "w4": "Sūrat Al-Fīl (105) • Sūrat Al-Humazah (104) • Sūrat Al-ʿAṣr (103)",
+      "w5": "Full revision of all surahs memorised in this term",
+      "w6": "Sūrat At-Takāthur (102) • Sūrat Al-Qāriʼah (101)",
+      "w7": "Sūrat Al-ʿAādiyāt (100) • Sūrat Az-Zalzalah (99)",
+      "w8": "End-of-term examination — full recitation and assessment"
+    },
+    "term2": {
+      "subtitle": "Juzʼ ʿAmma — Part 2",
+      "arabic": "سورة البينة — سورة الفجر",
+      "duration": "8 Weeks",
+      "structure": "6 Memorisation weeks → 1 Revision week → 1 Exam week",
+      "objective": "To memorise Sūrat Al-Bayyinah through Sūrat Al-Fajr with accuracy and correct tajweed, building upon the surahs learnt in Term 1.",
+      "w1": "Sūrat Al-Bayyinah (98) • Sūrat Al-Qadr (97)",
+      "w2": "Sūrat Al-ʿAlaq (96) • Sūrat At-Tīn (95)",
+      "w3": "Sūrat Ash-Sharḥ (94) • Sūrat Aḍ-Ḍuhā (93)",
+      "w4": "Sūrat Al-Layl (92) • Sūrat Ash-Shams (91)",
+      "w5": "Full revision of all surahs memorised in this term",
+      "w6": "Sūrat Al-Balad (90) — complete",
+      "w7": "Sūrat Al-Fajr (89) — complete",
+      "w8": "End-of-term examination — full recitation and assessment"
+    },
+    "term3": {
+      "subtitle": "Juzʼ ʿAmma — Part 3",
+      "arabic": "سورة الغاشية — سورة المطففين",
+      "duration": "8 Weeks",
+      "structure": "4 Memorisation weeks → 1 Revision week → 2 Extended weeks → 1 Exam week",
+      "objective": "To memorise Sūrat Al-Ghāshiyah through Sūrat Al-Muṭaffifīn with correct recitation, giving appropriate attention to the longer surahs.",
+      "note": "Sūrat Al-Muṭaffifīn (83 verses) is studied over two weeks due to its length. Students are expected to master each half before proceeding.",
+      "w1": "Sūrat Al-Ghāshiyah (88) — complete",
+      "w2": "Sūrat Al-Aʼlā (87) • Sūrat Aṭ-Ṯāriq (86)",
+      "w3": "Sūrat Al-Burūj (85) — complete",
+      "w4": "Sūrat Al-Inshiqāq (84) — complete",
+      "w5": "Full revision of all surahs memorised in this term",
+      "w6": "Sūrat Al-Muṭaffifīn (83) — First half (verses 1–20)",
+      "w7": "Sūrat Al-Muṭaffifīn (83) — Second half (verses 21–36) — completion",
+      "w8": "End-of-term examination — full recitation and assessment"
+    },
+    "term4": {
+      "subtitle": "Juzʼ ʿAmma — Part 4",
+      "arabic": "سورة الانفطار — سورة النبأ",
+      "duration": "8 Weeks",
+      "structure": "3 Single-surah weeks → 2 Half-surah weeks → 2 Half-surah weeks → 1 Exam week",
+      "objective": "To memorise Sūrat Al-Infiṭār through Sūrat An-Nabaʼ with fluency and correct tajweed, completing Juzʼ ʿAmma in this programme.",
+      "note": "Sūrat An-Nāziʼāt (46 verses) and Sūrat An-Nabaʼ (40 verses) are each divided across two weeks. Revision is built into each transition.",
+      "w1": "Sūrat Al-Infiṭār (82) — complete",
+      "w2": "Sūrat At-Takwīr (81) — complete",
+      "w3": "Sūrat ʿAbasa (80) — complete",
+      "w4": "Sūrat An-Nāziʼāt (79) — First half (verses 1–26)",
+      "w5": "Sūrat An-Nāziʼāt (79) — Second half (verses 27–46) — completion",
+      "w6": "Sūrat An-Nabaʼ (78) — First half (verses 1–20)",
+      "w7": "Sūrat An-Nabaʼ (78) — Second half (verses 21–40) — completion",
+      "w8": "End-of-term examination — full recitation and assessment"
+    }
   },
   "ProgTawheed": {
     "t0": "بسم الله الرحمن الرحيم",
@@ -934,20 +1126,544 @@
     "t45": "Horizons Math Curriculum ensuring solid arithmetic, fractions, decimals and early geometry.",
     "t46": "Pre-Calculus and an introduction to limits, differentiation, and integration.",
     "t47": "Algebra I & II alongside formal geometry, quadratics, and trigonometry.",
-    "t48": "Multiplication & division mastery",
-    "t49": "Pre-Calculus + intro to calculus",
-    "t50": "Place value, addition to 1,000",
-    "t51": "Ratios, decimals, pre-algebra",
-    "t52": "Algebra I — linear equations",
+    "t48": "Place value to 1000, 3-digit add/sub, time & money",
+    "t49": "Algebra I, polynomials, quadratics, modeling",
+    "t50": "Place value to 120, add/subtract to 20, measurement",
+    "t51": "Multi-digit ops, fraction equivalence, decimals",
+    "t52": "Ratios, integers, basic equations, statistics",
     "t53": "Middle School (Levels 6–7)",
-    "t54": "Number sense, shapes, time",
-    "t55": "Multi-digit ops, fractions",
-    "t56": "Algebra II + trigonometry",
+    "t54": "Counting, basic addition/subtraction, shapes",
+    "t55": "Multiplication/division facts, basic fractions, area",
+    "t56": "Linear equations, functions, geometry, exponents",
     "t57": "High School (Levels 8–9)",
-    "t58": "Algebra I/II + geometry",
+    "t58": "Proportional relationships, rational numbers, probability",
     "t59": "Primary (Levels 1–5)",
     "t60": "Capstone (Level 10)",
-    "t61": "Algebra foundations"
+    "t61": "Decimal & fraction operations, volume, coordinate plane",
+    "unitLabel": "Unit",
+    "topicLabel": "Topic / Unit",
+    "durationLabel": "Study Duration",
+    "skillsLabel": "Key Sub-topics & Skills",
+    "lvl1": {
+      "u1": {
+        "t": "Numbers 1 to 5",
+        "d": "3 Weeks",
+        "s": "Count, write, represent and compare numbers up to 5"
+      },
+      "u2": {
+        "t": "Addition and Subtraction to 5",
+        "d": "3 Weeks",
+        "s": "Put together, take apart, addition & subtraction within 5"
+      },
+      "u3": {
+        "t": "Numbers 6 to 10",
+        "d": "3 Weeks",
+        "s": "Count, represent, order, and compare numbers up to 10"
+      },
+      "u4": {
+        "t": "Addition and Subtraction to 10",
+        "d": "3 Weeks",
+        "s": "Put together, take apart, addition & subtraction within 10"
+      },
+      "u5": {
+        "t": "Numbers to 15",
+        "d": "2 Weeks",
+        "s": "Count, represent, and compare numbers up to 15"
+      },
+      "u6": {
+        "t": "Numbers to 20",
+        "d": "2 Weeks",
+        "s": "Count, represent, order, and compare numbers up to 20"
+      },
+      "u7": {
+        "t": "Explore Addition & Subtraction to 20",
+        "d": "2 Weeks",
+        "s": "Use a ten to put together and take apart to 20"
+      },
+      "u8": {
+        "t": "Count to 100",
+        "d": "3 Weeks",
+        "s": "Count by ones and tens up to 100 forwards and backwards"
+      },
+      "u9": {
+        "t": "Geometry: 2D & 3D Shapes",
+        "d": "4 Weeks",
+        "s": "Identify, describe, compare, and create 2D and 3D shapes"
+      },
+      "u10": {
+        "t": "Measurement and Data",
+        "d": "3 Weeks",
+        "s": "Compare length, weight; Classify, sort, and count objects"
+      }
+    },
+    "lvl2": {
+      "u1": {
+        "t": "Counting and Number Sense (To 120)",
+        "d": "4 Weeks",
+        "s": "Counting to 120, reading and writing numbers"
+      },
+      "u2": {
+        "t": "Place Value: Tens and Ones",
+        "d": "3 Weeks",
+        "s": "Tens and ones, expanded form"
+      },
+      "u3": {
+        "t": "Comparing Numbers",
+        "d": "2 Weeks",
+        "s": "Greater than, less than, ordering"
+      },
+      "u4": {
+        "t": "Addition Concepts & Strategies",
+        "d": "4 Weeks",
+        "s": "Addition within 20, properties of operations"
+      },
+      "u5": {
+        "t": "Subtraction Concepts & Strategies",
+        "d": "4 Weeks",
+        "s": "Subtraction within 20, unknown addends"
+      },
+      "u6": {
+        "t": "Addition and Subtraction Relationships",
+        "d": "3 Weeks",
+        "s": "Fact families, inverse operations"
+      },
+      "u7": {
+        "t": "Two-Digit Addition and Subtraction",
+        "d": "3 Weeks",
+        "s": "Adding and subtracting multiples of 10"
+      },
+      "u8": {
+        "t": "Measurement and Data (Graphing)",
+        "d": "3 Weeks",
+        "s": "Picture graphs, tally charts, bar graphs"
+      },
+      "u9": {
+        "t": "Time and Money",
+        "d": "3 Weeks",
+        "s": "Telling time to hour/half-hour, coin values"
+      },
+      "u10": {
+        "t": "Geometry and Fractions",
+        "d": "3 Weeks",
+        "s": "Attributes of 2D/3D shapes, halves and fourths"
+      }
+    },
+    "lvl3": {
+      "u1": {
+        "t": "Understand Place Value",
+        "d": "3 Weeks",
+        "s": "Hundreds, tens, ones, skip counting"
+      },
+      "u2": {
+        "t": "Use Place Value to Count and Compare",
+        "d": "3 Weeks",
+        "s": "Comparing 3-digit numbers using symbols"
+      },
+      "u3": {
+        "t": "Basic Facts and Equal Groups",
+        "d": "4 Weeks",
+        "s": "Addition/subtraction within 20, odd/even"
+      },
+      "u4": {
+        "t": "2-Digit Addition",
+        "d": "4 Weeks",
+        "s": "Regrouping ones and tens, partial sums"
+      },
+      "u5": {
+        "t": "2-Digit Subtraction",
+        "d": "4 Weeks",
+        "s": "Regrouping, taking apart to subtract"
+      },
+      "u6": {
+        "t": "3-Digit Addition and Subtraction",
+        "d": "4 Weeks",
+        "s": "Adding and subtracting 3-digit numbers"
+      },
+      "u7": {
+        "t": "Money",
+        "d": "2 Weeks",
+        "s": "Counting coins and bills, word problems"
+      },
+      "u8": {
+        "t": "Time",
+        "d": "2 Weeks",
+        "s": "Time to 5 minutes, AM/PM"
+      },
+      "u9": {
+        "t": "Length in Customary and Metric Units",
+        "d": "5 Weeks",
+        "s": "Inches, centimeters, estimating lengths"
+      },
+      "u10": {
+        "t": "Geometry, Fractions, and Data",
+        "d": "5 Weeks",
+        "s": "Polygons, angles, measuring data"
+      }
+    },
+    "lvl4": {
+      "u1": {
+        "t": "Addition and Subtraction Strategies",
+        "d": "2 Weeks",
+        "s": "Mental math, rounding, properties"
+      },
+      "u2": {
+        "t": "Understand Multiplication and Facts",
+        "d": "5 Weeks",
+        "s": "Equal groups, arrays, properties of multiplication"
+      },
+      "u3": {
+        "t": "Advanced Multiplication and Division Concepts",
+        "d": "4 Weeks",
+        "s": "Multiply by multiples of 10 and 100"
+      },
+      "u4": {
+        "t": "Division Facts and Strategies",
+        "d": "4 Weeks",
+        "s": "Quotients, remainders, relating to multiplication"
+      },
+      "u5": {
+        "t": "Apply Multiplication and Division",
+        "d": "3 Weeks",
+        "s": "Word problems, identifying patterns"
+      },
+      "u6": {
+        "t": "Fractions: Understanding and Comparing",
+        "d": "5 Weeks",
+        "s": "Unit fractions, equivalent fractions, comparing"
+      },
+      "u7": {
+        "t": "Area and Perimeter",
+        "d": "4 Weeks",
+        "s": "Finding unknown sides, area of rectangles"
+      },
+      "u8": {
+        "t": "Time Measurement and Intervals",
+        "d": "2 Weeks",
+        "s": "Time intervals, start and end times"
+      },
+      "u9": {
+        "t": "Measurement (Capacity, Mass, Weight)",
+        "d": "3 Weeks",
+        "s": "Liquid volume, mass, weight"
+      },
+      "u10": {
+        "t": "Two-Dimensional Shapes and Data",
+        "d": "4 Weeks",
+        "s": "Quadrilaterals, line plots, frequency tables"
+      }
+    },
+    "lvl5": {
+      "u1": {
+        "t": "Whole Number Place Value, Addition and Subtraction",
+        "d": "3 Weeks",
+        "s": "Place value to 1,000,000, multi-digit arithmetic"
+      },
+      "u2": {
+        "t": "Multiplication by 1-Digit and 2-Digit Numbers",
+        "d": "5 Weeks",
+        "s": "Area models, partial products, standard algorithm"
+      },
+      "u3": {
+        "t": "Division Strategies and 1-Digit Divisors",
+        "d": "4 Weeks",
+        "s": "Partial quotients, interpreting remainders"
+      },
+      "u4": {
+        "t": "Factors, Multiples, and Patterns",
+        "d": "2 Weeks",
+        "s": "Prime/composite numbers, divisibility rules"
+      },
+      "u5": {
+        "t": "Fraction Equivalence and Comparison",
+        "d": "3 Weeks",
+        "s": "Simplifying fractions, common denominators"
+      },
+      "u6": {
+        "t": "Add, Subtract, and Multiply Fractions",
+        "d": "4 Weeks",
+        "s": "Mixed numbers, like denominators"
+      },
+      "u7": {
+        "t": "Relate Fractions and Decimals",
+        "d": "3 Weeks",
+        "s": "Tenths and hundredths, money applications"
+      },
+      "u8": {
+        "t": "Geometry: Angles and 2D Figures",
+        "d": "4 Weeks",
+        "s": "Lines, rays, measuring angles with protractors"
+      },
+      "u9": {
+        "t": "Measurement, Area, and Perimeter",
+        "d": "4 Weeks",
+        "s": "Formulas for area/perimeter, metric conversions"
+      },
+      "u10": {
+        "t": "Time, Temperature, and Data Representation",
+        "d": "3 Weeks",
+        "s": "Elapsed time, measurement benchmarks, stem-and-leaf plots"
+      }
+    },
+    "lvl6": {
+      "u1": {
+        "t": "Whole Number Place Value, Multiplication, and Division",
+        "d": "4 Weeks",
+        "s": "Powers of 10, multi-digit multiplication, long division"
+      },
+      "u2": {
+        "t": "Decimal Place Value, Addition, and Subtraction",
+        "d": "4 Weeks",
+        "s": "Read, write, compare, and round decimals"
+      },
+      "u3": {
+        "t": "Multiply and Divide Decimals",
+        "d": "4 Weeks",
+        "s": "Standard algorithms for decimal operations"
+      },
+      "u4": {
+        "t": "Add and Subtract Fractions with Unlike Denominators",
+        "d": "4 Weeks",
+        "s": "Least common multiple, equivalent fractions"
+      },
+      "u5": {
+        "t": "Multiply and Divide Fractions",
+        "d": "4 Weeks",
+        "s": "Area models, scaling, dividing unit fractions"
+      },
+      "u6": {
+        "t": "Numerical Expressions and Patterns",
+        "d": "3 Weeks",
+        "s": "Order of operations (PEMDAS), analyzing patterns"
+      },
+      "u7": {
+        "t": "Measurement: Convert Units of Measure",
+        "d": "3 Weeks",
+        "s": "Customary and metric conversions, line plots"
+      },
+      "u8": {
+        "t": "Geometry: Perimeter, Area, and Volume",
+        "d": "4 Weeks",
+        "s": "Volume formulas, composite solid figures"
+      },
+      "u9": {
+        "t": "Classify 2D and 3D Figures",
+        "d": "3 Weeks",
+        "s": "Attributes of polygons, hierarchy of shapes"
+      },
+      "u10": {
+        "t": "Graphs and Data Interpretation",
+        "d": "3 Weeks",
+        "s": "Coordinate plane, graphing relationships"
+      }
+    },
+    "lvl7": {
+      "u1": {
+        "t": "Integers and Rational Numbers",
+        "d": "4 Weeks",
+        "s": "Absolute value, ordering rational numbers"
+      },
+      "u2": {
+        "t": "Operations with Fractions and Decimals",
+        "d": "4 Weeks",
+        "s": "Dividing fractions, operations with multi-digit decimals"
+      },
+      "u3": {
+        "t": "Ratios and Rates",
+        "d": "3 Weeks",
+        "s": "Ratio language, unit rates, equivalent ratios"
+      },
+      "u4": {
+        "t": "Percents and Proportions",
+        "d": "3 Weeks",
+        "s": "Finding percent of a completely, real-world problems"
+      },
+      "u5": {
+        "t": "Algebraic Expressions",
+        "d": "4 Weeks",
+        "s": "Writing and evaluating expressions, combining like terms"
+      },
+      "u6": {
+        "t": "Equations and Inequalities",
+        "d": "4 Weeks",
+        "s": "One-step equations, writing and graphing inequalities"
+      },
+      "u7": {
+        "t": "The Coordinate Plane",
+        "d": "3 Weeks",
+        "s": "Graphing in 4 quadrants, distances, polygons on planes"
+      },
+      "u8": {
+        "t": "Area of Polygons",
+        "d": "3 Weeks",
+        "s": "Triangles, special quadrilaterals, composite figures"
+      },
+      "u9": {
+        "t": "Surface Area and Volume",
+        "d": "4 Weeks",
+        "s": "Nets, surface area, volume of right rectangular prisms"
+      },
+      "u10": {
+        "t": "Data Displays and Statistical Measures",
+        "d": "4 Weeks",
+        "s": "Mean, median, mode, mean absolute deviation, box plots"
+      }
+    },
+    "lvl8": {
+      "u1": {
+        "t": "Operations with Rational Numbers",
+        "d": "4 Weeks",
+        "s": "Adding, subtracting, multiplying, dividing integers"
+      },
+      "u2": {
+        "t": "Proportional Relationships",
+        "d": "4 Weeks",
+        "s": "Unit rates with fractions, direct variation"
+      },
+      "u3": {
+        "t": "Percent Problems and Applications",
+        "d": "3 Weeks",
+        "s": "Markups, markdowns, interest, percent error"
+      },
+      "u4": {
+        "t": "Equivalent Expressions",
+        "d": "3 Weeks",
+        "s": "Expanding and factoring expressions"
+      },
+      "u5": {
+        "t": "Solving Equations and Inequalities",
+        "d": "4 Weeks",
+        "s": "Two-step equations, solving multi-step inequalities"
+      },
+      "u6": {
+        "t": "Scale Drawings and Proportions",
+        "d": "3 Weeks",
+        "s": "Scale factor, similar figures, missing measures"
+      },
+      "u7": {
+        "t": "Circles: Area and Circumference",
+        "d": "4 Weeks",
+        "s": "Radius, diameter, Pi, calculating area and perimeter"
+      },
+      "u8": {
+        "t": "Surface Area and Volume of 3D Figures",
+        "d": "4 Weeks",
+        "s": "Cross sections, surface area and volume of prisms/cylinders"
+      },
+      "u9": {
+        "t": "Probability",
+        "d": "3 Weeks",
+        "s": "Theoretical and experimental probability, tree diagrams"
+      },
+      "u10": {
+        "t": "Sampling and Comparative Inferences",
+        "d": "4 Weeks",
+        "s": "Populations, samples, inferences, comparing distributions"
+      }
+    },
+    "lvl9": {
+      "u1": {
+        "t": "Real Numbers and Rational Approximations",
+        "d": "3 Weeks",
+        "s": "Irrational numbers, approximating values"
+      },
+      "u2": {
+        "t": "Exponents and Scientific Notation",
+        "d": "4 Weeks",
+        "s": "Laws of exponents, operations with scientific notation"
+      },
+      "u3": {
+        "t": "Solving Linear Equations",
+        "d": "4 Weeks",
+        "s": "Multi-step equations, variables on both sides"
+      },
+      "u4": {
+        "t": "Systems of Linear Equations",
+        "d": "4 Weeks",
+        "s": "Graphing, substitution, and elimination methods"
+      },
+      "u5": {
+        "t": "Introduction to Functions",
+        "d": "3 Weeks",
+        "s": "Function notation, identifying linear vs non-linear"
+      },
+      "u6": {
+        "t": "Linear Functions and Graphing",
+        "d": "4 Weeks",
+        "s": "Slope, y-intercept, y=mx+b, rate of change"
+      },
+      "u7": {
+        "t": "Transformations and Congruence",
+        "d": "4 Weeks",
+        "s": "Translations, rotations, reflections, dilations"
+      },
+      "u8": {
+        "t": "The Pythagorean Theorem",
+        "d": "3 Weeks",
+        "s": "Right triangles, distance on coordinate planes"
+      },
+      "u9": {
+        "t": "Volume of Cylinders, Cones, and Spheres",
+        "d": "3 Weeks",
+        "s": "Formulas, solving for missing dimensions"
+      },
+      "u10": {
+        "t": "Bivariate Data and Scatter Plots",
+        "d": "4 Weeks",
+        "s": "Lines of best fit, two-way tables, frequencies"
+      }
+    },
+    "lvl10": {
+      "u1": {
+        "t": "Equations and Inequalities in One Variable",
+        "d": "3 Weeks",
+        "s": "Literal equations, compound inequalities, word problems"
+      },
+      "u2": {
+        "t": "Linear Equations and Graphs",
+        "d": "4 Weeks",
+        "s": "Standard form, point-slope form, parallel/perpendicular"
+      },
+      "u3": {
+        "t": "Systems of Linear Equations and Inequalities",
+        "d": "4 Weeks",
+        "s": "Graphing systems, linear programming, optimization"
+      },
+      "u4": {
+        "t": "Sequences and Exponential Functions",
+        "d": "4 Weeks",
+        "s": "Arithmetic/geometric sequences, exponential growth/decay"
+      },
+      "u5": {
+        "t": "Polynomials and Operations",
+        "d": "3 Weeks",
+        "s": "Adding, subtracting, multiplying bi/trinomials"
+      },
+      "u6": {
+        "t": "Factoring Polynomials",
+        "d": "4 Weeks",
+        "s": "GCF, difference of squares, trinomial factoring"
+      },
+      "u7": {
+        "t": "Quadratic Functions and Equations",
+        "d": "4 Weeks",
+        "s": "Parabolas, vertex form, quadratic formula, roots"
+      },
+      "u8": {
+        "t": "Radical Expressions and Equations",
+        "d": "3 Weeks",
+        "s": "Simplifying roots, solving radical equations"
+      },
+      "u9": {
+        "t": "Rational Expressions and Functions",
+        "d": "3 Weeks",
+        "s": "Simplifying expressions, solving rational equations"
+      },
+      "u10": {
+        "t": "Data Analysis and Statistical Models",
+        "d": "4 Weeks",
+        "s": "Standard deviation, normal distribution, regressions"
+      }
+    }
   },
   "ProgSciences": {
     "t0": "Sciences",
@@ -1019,7 +1735,432 @@
     "t66": "Middle School (Levels 6–7)",
     "t67": "High School (Levels 8–9)",
     "t68": "Primary (Levels 1–5)",
-    "t69": "Capstone (Level 10)"
+    "t69": "Capstone (Level 10)",
+    "t70": "Duration",
+    "lvl8": {
+      "u1": {
+        "t": "B1 Cell Biology",
+        "d": "5 Weeks",
+        "s": "Cell structure, Microscopy, Transport, Cell Division"
+      },
+      "u2": {
+        "t": "B2 Organisation",
+        "d": "5 Weeks",
+        "s": "Animal tissues, Enzymes, Digestion, Respiratory Systems, Plants"
+      },
+      "u3": {
+        "t": "C1 Atomic Structure & Periodic Table",
+        "d": "4 Weeks",
+        "s": "Atoms, Elements, Compounds, Electron Config, Trends"
+      },
+      "u4": {
+        "t": "C2 Bonding, Structure & Matter",
+        "d": "4 Weeks",
+        "s": "Ionic, Covalent, Metallic bonding, Polymers, Structures"
+      },
+      "u5": {
+        "t": "C3 Quantitative Chemistry",
+        "d": "5 Weeks",
+        "s": "Relative Mass, The Mole, Limiting reactants, Concentrations"
+      },
+      "u6": {
+        "t": "P1 Energy",
+        "d": "4 Weeks",
+        "s": "Energy Stores, Specific Heat Capacity, Power, Efficiency"
+      },
+      "u7": {
+        "t": "P2 Electricity",
+        "d": "5 Weeks",
+        "s": "Circuit Symbols, Resistance, Series/Parallel, Mains Electricity"
+      },
+      "u8": {
+        "t": "P3 Particle Model of Matter",
+        "d": "4 Weeks",
+        "s": "Density, Internal Energy, Specific Latent Heat, Gas pressure"
+      }
+    },
+    "lvl9": {
+      "u1": {
+        "t": "B3 Infection and Response",
+        "d": "4 Weeks",
+        "s": "Communicable diseases, Pathogens, Defense systems, Vaccination"
+      },
+      "u2": {
+        "t": "B4 Bioenergetics",
+        "d": "5 Weeks",
+        "s": "Photosynthesis, Aerobic/Anaerobic respiration, Metabolism"
+      },
+      "u3": {
+        "t": "C4 Chemical Changes",
+        "d": "5 Weeks",
+        "s": "Reactivity Series, Metal extraction, Acids and bases, Electrolysis"
+      },
+      "u4": {
+        "t": "C5 Energy Changes",
+        "d": "4 Weeks",
+        "s": "Exothermic/Endothermic reactions, Reaction profiles, Bond Energies"
+      },
+      "u5": {
+        "t": "C6 Rate & Extent of Chemical Change",
+        "d": "5 Weeks",
+        "s": "Measuring rates, Collision theory, Reversible reactions"
+      },
+      "u6": {
+        "t": "P4 Atomic Structure & Radiation",
+        "d": "4 Weeks",
+        "s": "Atomic model, Isotopes, Alpha/Beta/Gamma decay, Half-life"
+      },
+      "u7": {
+        "t": "P5 Forces",
+        "d": "5 Weeks",
+        "s": "Contact/non-contact forces, Resultant forces, Newton's Laws, Momentum"
+      },
+      "u8": {
+        "t": "P6 Waves",
+        "d": "4 Weeks",
+        "s": "Transverse/longitudinal, EM Spectrum, Refraction, Radio waves"
+      }
+    },
+    "lvl10": {
+      "u1": {
+        "t": "B5 Homeostasis and Response",
+        "d": "5 Weeks",
+        "s": "Nervous tracking, Endocrine system, Blood glucose, Hormones"
+      },
+      "u2": {
+        "t": "B6 Inheritance, Variation & Evolution",
+        "d": "5 Weeks",
+        "s": "DNA, Meiosis, Genetic diagrams, Natural selection, Engineering"
+      },
+      "u3": {
+        "t": "B7 Ecology",
+        "d": "4 Weeks",
+        "s": "Ecosystems, Adaptations, Food chains, Carbon/Water cycles"
+      },
+      "u4": {
+        "t": "C7 Organic Chemistry",
+        "d": "4 Weeks",
+        "s": "Hydrocarbons, Alkanes, Fractional Distillation, Cracking crude oil"
+      },
+      "u5": {
+        "t": "C8 Chemical Analysis",
+        "d": "4 Weeks",
+        "s": "Purity, Formulations, Chromatography, Analytical tests"
+      },
+      "u6": {
+        "t": "C9 & C10 Earth's Atmosphere & Resources",
+        "d": "5 Weeks",
+        "s": "Greenhouse effect, Air pollution, LCAs, Potable water, Waste"
+      },
+      "u7": {
+        "t": "P7 Magnetism and Electromagnetism",
+        "d": "4 Weeks",
+        "s": "Permanent/induced magnets, Magnetic fields, Motor effect"
+      },
+      "u8": {
+        "t": "Practical Skills & GCSE Revision",
+        "d": "5 Weeks",
+        "s": "Measuring techniques, Experimental setup, Data sampling, Exams"
+      }
+    },
+    "unitLabel": "Unit",
+    "topicLabel": "Topic / Unit",
+    "durationLabel": "Study Duration",
+    "skillsLabel": "Key Sub-topics & Skills",
+    "lvl1": {
+      "u1": {
+        "t": "The Five Senses — Exploring Our World",
+        "d": "4 Weeks",
+        "s": "Observe, describe, compare physical properties"
+      },
+      "u2": {
+        "t": "Weather and Seasons",
+        "d": "5 Weeks",
+        "s": "Observe patterns, record daily weather, seasons"
+      },
+      "u3": {
+        "t": "Plants — Parts, Needs, Life Cycle",
+        "d": "4 Weeks",
+        "s": "Label anatomy, grow plants, sequence cycles"
+      },
+      "u4": {
+        "t": "Animals — Needs, Habitats, Features",
+        "d": "5 Weeks",
+        "s": "Sort, classify, match animals to environments"
+      },
+      "u5": {
+        "t": "Properties of Materials",
+        "d": "4 Weeks",
+        "s": "Test, sort, compare solid, liquid, gas basics"
+      },
+      "u6": {
+        "t": "Light and Shadows",
+        "d": "4 Weeks",
+        "s": "Investigate light sources, predict shadow changes"
+      },
+      "u7": {
+        "t": "Pushes and Pulls — Force Basics",
+        "d": "5 Weeks",
+        "s": "Explore motion, direction, speed of objects"
+      },
+      "u8": {
+        "t": "Sound and Vibration",
+        "d": "5 Weeks",
+        "s": "Make, change, stop sounds, explore hearing"
+      }
+    },
+    "lvl2": {
+      "u1": {
+        "t": "Life Cycles of Plants and Animals",
+        "d": "5 Weeks",
+        "s": "Sequence, compare, model life spans"
+      },
+      "u2": {
+        "t": "Inherited Traits and Offspring",
+        "d": "4 Weeks",
+        "s": "Compare traits, identify inherited features"
+      },
+      "u3": {
+        "t": "Habitats and Diversity",
+        "d": "5 Weeks",
+        "s": "Identify needs, match species to ecosystems"
+      },
+      "u4": {
+        "t": "Properties of Matter In Depth",
+        "d": "5 Weeks",
+        "s": "Reversible/irreversible changes, mass"
+      },
+      "u5": {
+        "t": "Earth's Surface and Landforms",
+        "d": "4 Weeks",
+        "s": "Identify mountains, rivers, valleys, oceans"
+      },
+      "u6": {
+        "t": "The Water Cycle Basics",
+        "d": "4 Weeks",
+        "s": "Evaporation, condensation, precipitation"
+      },
+      "u7": {
+        "t": "Forces and Magnets Basics",
+        "d": "4 Weeks",
+        "s": "Observe magnetic attraction and repulsion"
+      },
+      "u8": {
+        "t": "Engineering Design Process",
+        "d": "5 Weeks",
+        "s": "Plan, build, test, and improve simple structures"
+      }
+    },
+    "lvl3": {
+      "u1": {
+        "t": "Forces and Motion",
+        "d": "5 Weeks",
+        "s": "Friction, gravity effects on speed and distance"
+      },
+      "u2": {
+        "t": "Magnetic and Static Forces",
+        "d": "4 Weeks",
+        "s": "Investigate polarity and static electricity"
+      },
+      "u3": {
+        "t": "Traits, Variation and Adaptation",
+        "d": "5 Weeks",
+        "s": "Structural and behavioural adaptations"
+      },
+      "u4": {
+        "t": "Fossils and Past Life",
+        "d": "4 Weeks",
+        "s": "Analyse evidence, draw conclusions from fossils"
+      },
+      "u5": {
+        "t": "Food Chains and Food Webs",
+        "d": "5 Weeks",
+        "s": "Build models, trace energy flow, identify roles"
+      },
+      "u6": {
+        "t": "Weather vs Climate",
+        "d": "4 Weeks",
+        "s": "Differentiate short-term weather and long-term climate"
+      },
+      "u7": {
+        "t": "The Solar System",
+        "d": "4 Weeks",
+        "s": "Planets, orbits, day and night cycle"
+      },
+      "u8": {
+        "t": "Introduction to Scientific Method",
+        "d": "5 Weeks",
+        "s": "Identify variables, conduct fair tests, tabulate data"
+      }
+    },
+    "lvl4": {
+      "u1": {
+        "t": "Energy Types and Transfer",
+        "d": "5 Weeks",
+        "s": "Identify forms, trace energy pathways and conversions"
+      },
+      "u2": {
+        "t": "Properties of Waves, Sound and Light",
+        "d": "5 Weeks",
+        "s": "Measure wavelength, frequency, amplitude"
+      },
+      "u3": {
+        "t": "Simple Electrical Circuits",
+        "d": "4 Weeks",
+        "s": "Build series and parallel circuits, conductors/insulators"
+      },
+      "u4": {
+        "t": "Rock Cycle and Earth's Layers",
+        "d": "5 Weeks",
+        "s": "Sequence igneous, sedimentary, and metamorphic"
+      },
+      "u5": {
+        "t": "Weathering, Erosion and Deposition",
+        "d": "4 Weeks",
+        "s": "Compare rates, model landform changes over time"
+      },
+      "u6": {
+        "t": "Internal Structures — Plants and Animals",
+        "d": "5 Weeks",
+        "s": "Label organs, understand biological functions"
+      },
+      "u7": {
+        "t": "Human Impact on Environments",
+        "d": "4 Weeks",
+        "s": "Evaluate conservation, problem-solve ecological issues"
+      },
+      "u8": {
+        "t": "Advanced Data Analysis",
+        "d": "4 Weeks",
+        "s": "Construct graphs, interpret tables, draw conclusions"
+      }
+    },
+    "lvl5": {
+      "u1": {
+        "t": "Matter: Atoms, Molecules, Elements",
+        "d": "5 Weeks",
+        "s": "Model particles, classify matter, intro to periodic table"
+      },
+      "u2": {
+        "t": "Observing Chemical Reactions",
+        "d": "5 Weeks",
+        "s": "Predict outcomes, observe evidence of chemical changes"
+      },
+      "u3": {
+        "t": "Earth's Spheres and Systems",
+        "d": "4 Weeks",
+        "s": "Analyse interactions between geosphere, biosphere, etc."
+      },
+      "u4": {
+        "t": "Stars, Space, and Gravity",
+        "d": "5 Weeks",
+        "s": "Scale models, orbital patterns, constellations"
+      },
+      "u5": {
+        "t": "Ecosystem Interactions in Depth",
+        "d": "4 Weeks",
+        "s": "Symbiosis, competition, resource limitations"
+      },
+      "u6": {
+        "t": "Human Body Systems in Depth",
+        "d": "5 Weeks",
+        "s": "Respiratory, circulatory, and digestive systems Overview"
+      },
+      "u7": {
+        "t": "Water Quality and Climate Change",
+        "d": "4 Weeks",
+        "s": "Model greenhouse effect, evaluate human impacts"
+      },
+      "u8": {
+        "t": "Science Investigation Project",
+        "d": "4 Weeks",
+        "s": "Design, execute, evaluate, and present original research"
+      }
+    },
+    "lvl6": {
+      "u1": {
+        "t": "Biology: Core Cells & Microscopy",
+        "d": "5 Weeks",
+        "s": "Use microscopes, label plant and animal cell structures"
+      },
+      "u2": {
+        "t": "Biology: Specialized Cells & Tissues",
+        "d": "4 Weeks",
+        "s": "Cell differentiation, hierarchy of organisation"
+      },
+      "u3": {
+        "t": "Chemistry: Particle Model & States",
+        "d": "5 Weeks",
+        "s": "Kinetic theory, melting, boiling, diffusion"
+      },
+      "u4": {
+        "t": "Chemistry: Mixtures & Separation",
+        "d": "5 Weeks",
+        "s": "Evaporation, filtration, distillation, chromatography"
+      },
+      "u5": {
+        "t": "Physics: Forces & Newton's Basics",
+        "d": "4 Weeks",
+        "s": "Friction, air resistance, gravity, weight vs mass"
+      },
+      "u6": {
+        "t": "Physics: Sound Waves & Hearing",
+        "d": "4 Weeks",
+        "s": "Vibrations, pitch, volume, ear anatomy"
+      },
+      "u7": {
+        "t": "Physics: Light Waves & Vision",
+        "d": "5 Weeks",
+        "s": "Reflection, refraction, colour breakdown, eye anatomy"
+      },
+      "u8": {
+        "t": "Earth Science: Plate Tectonics",
+        "d": "4 Weeks",
+        "s": "Structure of the Earth, tectonic plates, earthquakes"
+      }
+    },
+    "lvl7": {
+      "u1": {
+        "t": "Biology: Diet, Digestion & Enzymes",
+        "d": "5 Weeks",
+        "s": "Nutrients, food tests, digestive system, enzyme action"
+      },
+      "u2": {
+        "t": "Biology: Respiration & Gas Exchange",
+        "d": "4 Weeks",
+        "s": "Aerobic vs anaerobic, lungs, alveoli adaptation"
+      },
+      "u3": {
+        "t": "Biology: Reproduction System",
+        "d": "5 Weeks",
+        "s": "Human reproductive organs, fertilization, gestation"
+      },
+      "u4": {
+        "t": "Chemistry: Acids, Alkalis & pH",
+        "d": "4 Weeks",
+        "s": "Indicators, neutralization reactions, hazardous symbols"
+      },
+      "u5": {
+        "t": "Chemistry: The Periodic Table",
+        "d": "5 Weeks",
+        "s": "Metals/non-metals, Groups 1, 7, 0 basic trends"
+      },
+      "u6": {
+        "t": "Physics: Motion & Speed",
+        "d": "4 Weeks",
+        "s": "Speed equations, distance-time graphs, relative motion"
+      },
+      "u7": {
+        "t": "Physics: Electrical Circuits",
+        "d": "5 Weeks",
+        "s": "Current, voltage, resistance calculations, Ohm's law"
+      },
+      "u8": {
+        "t": "Physics: Work, Energy & Power",
+        "d": "4 Weeks",
+        "s": "Calculations of work done, energy stores and transfers"
+      }
+    }
   },
   "ProgProgramming": {
     "t0": "Programming",
@@ -1082,5 +2223,32 @@
     "t57": "HTML & CSS web design",
     "t58": "CS theory & GCSE prep",
     "t59": "JavaScript & React"
+  },
+  "Faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our programmes, admissions, and policies.",
+    "categories": {
+      "admissions": "Admissions & Enrolment",
+      "curriculum": "Curriculum & Academics",
+      "fees": "Fees & Policies"
+    },
+    "q_admin_1": "What age groups do you accept?",
+    "a_admin_1": "We welcome students from ages 3 to 20 for both our Islamic and Western programmes.",
+    "q_admin_2": "How do I enrol my child?",
+    "a_admin_2": "You can easily begin the enrolment process by visiting our <enrolLink>Enrolment Page</enrolLink> and filling out the application form.",
+    "q_admin_3": "Can we visit the school before enrolling?",
+    "a_admin_3": "We are a fully online institution, so we do not have a physical campus to visit. Our high-quality virtual classes allow students to learn from wherever they are. Feel free to visit our <contactLink>Contact Page</contactLink> if you have any questions before enrolling!",
+    "q_curr_1": "What programmes do you offer?",
+    "a_curr_1": "We offer a dual curriculum featuring an <islamicLink>Islamic Programme</islamicLink> (Quran memorisation, Arabic, Fiqh) and a <westernLink>Western Programme</westernLink> (Mathematics, Sciences, and Programming).",
+    "q_curr_2": "Is coding and programming taught to all ages?",
+    "a_curr_2": "Yes, our Programming curriculum is specifically tailored by age group, starting from basic logic and problem-solving for our youngest learners to more advanced concepts as they grow.",
+    "q_curr_3": "What extracurricular activities are available?",
+    "a_curr_3": "We organize Hadith and Quran memorisation competitions. Additionally, Science students are given practical exercises and regularly engage in interactive quizzes among themselves to reinforce their learning.",
+    "q_fees_1": "Where can I find the fee structure?",
+    "a_fees_1": "Detailed tuition and current fee schedules can be found directly on our <feesLink>Fees Page</feesLink>.",
+    "q_fees_2": "Do you offer sibling discounts?",
+    "a_fees_2": "Yes, we provide special discounts for families enrolling multiple children. Please <contactLink>reach out to us</contactLink> for a detailed breakdown.",
+    "q_fees_3": "Are there any hidden costs?",
+    "a_fees_3": "No, our fee structure is completely transparent. Any additional costs such as registration fees or workbook fees will be communicated clearly during the enrolment process."
   }
 }

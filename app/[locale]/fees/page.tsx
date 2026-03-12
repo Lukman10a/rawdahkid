@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Check, Info } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
 
-import { useTranslations } from "next-intl"
+import { useTranslations } from "next-intl";
 
 export default function FeesPage() {
   const t = useTranslations("Fees");
@@ -50,7 +50,9 @@ export default function FeesPage() {
             viewport={{ once: true }}
             className="bg-white dark:bg-navy border border-midnight/10 dark:border-white/10 p-8 rounded-sm relative overflow-hidden text-midnight dark:text-cream flex flex-col"
           >
-            <h3 className="font-playfair text-2xl mb-2">{t("bundles.islamic.title")}</h3>
+            <h3 className="font-playfair text-2xl mb-2">
+              {t("bundles.islamic.title")}
+            </h3>
             <p className="font-sans text-sm text-midnight/70 dark:text-cream/70 mb-6 min-h-10">
               {t("bundles.islamic.desc")}
             </p>
@@ -110,7 +112,9 @@ export default function FeesPage() {
             transition={{ delay: 0.1 }}
             className="bg-white dark:bg-navy border border-midnight/10 dark:border-white/10 p-8 rounded-sm relative overflow-hidden text-midnight dark:text-cream flex flex-col"
           >
-            <h3 className="font-playfair text-2xl mb-2">{t("bundles.western.title")}</h3>
+            <h3 className="font-playfair text-2xl mb-2">
+              {t("bundles.western.title")}
+            </h3>
             <p className="font-sans text-sm text-midnight/70 dark:text-cream/70 mb-6 min-h-10">
               {t("bundles.western.desc")}
             </p>
@@ -246,16 +250,36 @@ export default function FeesPage() {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { name: t("alacarte.courses.quran"), group: "$2,000", oneOnOne: "$3,000" },
+                    {
+                      name: t("alacarte.courses.quran"),
+                      group: "$2,000",
+                      oneOnOne: "$3,000",
+                    },
                     {
                       name: t("alacarte.courses.arabic"),
                       group: "$1,500",
                       oneOnOne: "$2,250",
                     },
-                    { name: t("alacarte.courses.tawheed"), group: "$1,200", oneOnOne: "$1,800" },
-                    { name: t("alacarte.courses.fiqh"), group: "$1,200", oneOnOne: "$1,800" },
-                    { name: t("alacarte.courses.hadith"), group: "$1,200", oneOnOne: "$1,800" },
-                    { name: t("alacarte.courses.mutoon"), group: "$1,200", oneOnOne: "$1,800" },
+                    {
+                      name: t("alacarte.courses.tawheed"),
+                      group: "$1,200",
+                      oneOnOne: "$1,800",
+                    },
+                    {
+                      name: t("alacarte.courses.fiqh"),
+                      group: "$1,200",
+                      oneOnOne: "$1,800",
+                    },
+                    {
+                      name: t("alacarte.courses.hadith"),
+                      group: "$1,200",
+                      oneOnOne: "$1,800",
+                    },
+                    {
+                      name: t("alacarte.courses.mutoon"),
+                      group: "$1,200",
+                      oneOnOne: "$1,800",
+                    },
                   ].map((course, i) => (
                     <div
                       key={i}
@@ -266,16 +290,22 @@ export default function FeesPage() {
                       </span>
                       <div className="flex gap-6 text-sm font-sans">
                         <div className="text-midnight/70 dark:text-cream/70">
-                          <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">{t("bundles.labels.group")}</span>
+                          <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">
+                            {t("bundles.labels.group")}
+                          </span>
                           <span className="font-medium">{course.group}</span>
-                          <span className="text-[10px]">{t("bundles.labels.yr")}</span>
+                          <span className="text-[10px]">
+                            {t("bundles.labels.yr")}
+                          </span>
                         </div>
                         <div className="text-midnight/70 dark:text-cream/70">
                           <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">
                             {t("bundles.labels.oneOnOne")}
                           </span>
                           <span className="font-medium">{course.oneOnOne}</span>
-                          <span className="text-[10px]">{t("bundles.labels.yr")}</span>
+                          <span className="text-[10px]">
+                            {t("bundles.labels.yr")}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -294,7 +324,11 @@ export default function FeesPage() {
                       group: "$2,000",
                       oneOnOne: "$3,000",
                     },
-                    { name: t("alacarte.courses.science"), group: "$2,000", oneOnOne: "$3,000" },
+                    {
+                      name: t("alacarte.courses.science"),
+                      group: "$2,000",
+                      oneOnOne: "$3,000",
+                    },
                     {
                       name: t("alacarte.courses.programming"),
                       group: "$2,000",
@@ -310,16 +344,22 @@ export default function FeesPage() {
                       </span>
                       <div className="flex gap-6 text-sm font-sans">
                         <div className="text-midnight/70 dark:text-cream/70">
-                          <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">{t("bundles.labels.group")}</span>
+                          <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">
+                            {t("bundles.labels.group")}
+                          </span>
                           <span className="font-medium">{course.group}</span>
-                          <span className="text-[10px]">{t("bundles.labels.yr")}</span>
+                          <span className="text-[10px]">
+                            {t("bundles.labels.yr")}
+                          </span>
                         </div>
                         <div className="text-midnight/70 dark:text-cream/70">
                           <span className="text-xs uppercase tracking-widest block text-midnight/40 dark:text-cream/40 mb-0.5">
                             {t("bundles.labels.oneOnOne")}
                           </span>
                           <span className="font-medium">{course.oneOnOne}</span>
-                          <span className="text-[10px]">{t("bundles.labels.yr")}</span>
+                          <span className="text-[10px]">
+                            {t("bundles.labels.yr")}
+                          </span>
                         </div>
                       </div>
                     </div>
