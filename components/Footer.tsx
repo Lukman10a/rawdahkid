@@ -1,6 +1,12 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-import { Instagram, Facebook, PhoneIcon as WhatsappIcon } from "lucide-react";
+import {
+  Send as TelegramIcon,
+  MessageCircle as WhatsappIcon,
+  Instagram,
+  Facebook,
+  Twitter,
+} from "lucide-react";
 
 export default function Footer() {
   const t = useTranslations("Navigation");
@@ -51,25 +57,43 @@ export default function Footer() {
             <p className="font-playfair italic text-midnight/ dark:text-cream/ max-w-sm text-lg">
               {t("t0")}
             </p>
-            <div className="flex space-x-4 pt-4">
+            <div className="flex flex-wrap gap-4 pt-4">
               <a
                 href="#"
                 className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors block"
-                aria-label={t("t6")}
+                aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
                 href="#"
                 className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors block"
-                aria-label={t("t9")}
+                aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
                 href="#"
                 className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors block"
-                aria-label={t("t10")}
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a
+                href="https://t.me/bayanbenefits"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors block"
+                aria-label="Telegram"
+              >
+                <TelegramIcon className="w-5 h-5" />
+              </a>
+              <a
+                href="https://whatsapp.com/channel/0029VarQvHiLY6d000oWu82O"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors block"
+                aria-label="WhatsApp"
               >
                 <WhatsappIcon className="w-5 h-5" />
               </a>
@@ -158,7 +182,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm font-sans tracking-wide">
               <li>
                 <a
-                  href="mailto:hello@rawdatulatfaal.edu"
+                  href="mailto:info@rawdahkids.org"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors"
                 >
                   {t("t2")}
@@ -166,10 +190,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+2348089287065"
                   className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors"
                 >
-                  +1 (234) 567-890
+                  +234 808 928 7065
                 </a>
               </li>
               <li className="text-midnight/ dark:text-cream/ pt-4 italic font-playfair pe-8">
