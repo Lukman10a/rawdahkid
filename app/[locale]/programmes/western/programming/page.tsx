@@ -18,9 +18,9 @@ export default function ProgrammingProgramme() {
   const t = useTranslations("ProgProgramming");
 
   return (
-    <div className="flex flex-col min-h-screen bg-ivory dark:bg-midnight text-midnight dark:text-cream pt-24">
+    <div className="flex flex-col min-h-screen w-full min-w-0 w-full min-w-0 overflow-x-hidden max-w-full ">
       {/* 1. HERO SECTION */}
-      <section className="relative py-20 overflow-hidden border-b border-midnight/10 dark:border-white/10">
+      <section className="w-full min-w-0 relative py-20 overflow-hidden border-b border-midnight/10 dark:border-white/10">
         <div className="absolute inset-0 z-0 bg-linear-to-b from-white dark:from-navy to-ivory dark:to-midnight pointer-events-none"></div>
         <div className="absolute top-1/2 inset-s-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-indigo-500/5 dark:bg-indigo-400/5 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
@@ -50,7 +50,7 @@ export default function ProgrammingProgramme() {
       </section>
 
       {/* 2. OVERVIEW & RESOURCES */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full min-w-0 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -113,15 +113,15 @@ export default function ProgrammingProgramme() {
       </section>
 
       {/* 3. AT A GLANCE */}
-      <section className="py-20 bg-indigo-50/50 dark:bg-indigo-900/10 border-y border-midnight/5 dark:border-white/5">
+      <section className="w-full min-w-0 py-20 bg-indigo-50/50 dark:bg-indigo-900/10 border-y border-midnight/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">{t("t13")}</h2>
             <div className="w-24 h-px bg-indigo-600/50 dark:bg-indigo-400/50 mx-auto"></div>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-start border-collapse min-w-200">
+          <div className="w-full overflow-x-auto">
+            <table className="w-full text-start border-collapse min-w-[800px]">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
                   <th className="py-4 px-6 font-cinzel text-indigo-700 dark:text-indigo-400 text-lg w-20">{t("t14")}</th>
@@ -168,7 +168,7 @@ export default function ProgrammingProgramme() {
       </section>
 
       {/* 4. DETAILED COURSE OUTLINES */}
-      <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full min-w-0 py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t17")}</h2>
           <div className="w-24 h-px bg-indigo-600/50 dark:bg-indigo-400/50 mx-auto"></div>
@@ -702,7 +702,7 @@ export default function ProgrammingProgramme() {
       </section>
 
       {/* 5. CTA / PRICING SECTION */}
-      <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
+      <section className="w-full min-w-0 py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-indigo-600 dark:text-indigo-400 mx-auto mb-6" />
           <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t18")}</h2>
@@ -802,8 +802,8 @@ function LevelCard({
       </div>
 
       <div className="p-0 bg-white dark:bg-transparent">
-        <div className="overflow-x-auto">
-          <table className="w-full text-start border-collapse min-w-200">
+        <div className="w-full overflow-x-auto">
+          <table className="w-full text-start border-collapse min-w-[800px]">
             <thead>
               <tr className="border-b-2 border-indigo-100 dark:border-white/10 bg-indigo-50/50 dark:bg-white/5">
                 <th className="py-4 px-6 font-cinzel text-indigo-700 dark:text-indigo-400 font-bold w-16 text-center">{t("t29")}</th>
