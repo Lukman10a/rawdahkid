@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, BookOpen, Clock, Calendar, User } from "lucide-react";
+import { ArrowRight, BookOpen, Clock, Calendar } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
@@ -29,7 +29,7 @@ export default function KnowledgeHubPage() {
       categoryLabel: t("categories.islamic"),
       author: "Sheikh Abdullah",
       image:
-        "https://images.unsplash.com/photo-1609599006353-e629aaab31fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?auto=format&fit=crop&w=1200&q=80",
     },
     {
       id: 2,
@@ -66,6 +66,59 @@ export default function KnowledgeHubPage() {
       author: "Mr. James",
       image:
         "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    },
+    // New Content
+    {
+      id: 5,
+      title: "The Wonder of Electricity & Magnetism",
+      excerpt:
+        " sparking curiosity in young minds using simple circuits and invisible forces.",
+      date: "March 15, 2026",
+      readTime: "6 min read",
+      category: "tech",
+      categoryLabel: t("categories.tech"),
+      author: "Ustadh Bilal",
+      image:
+        "https://images.unsplash.com/photo-1620846506306-69680370d03b?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 6,
+      title: "Understanding Taharah: Cleanliness is Half of Faith",
+      excerpt:
+        "A guide to teaching Fiqh of purification to young children in a practical, hands-on way.",
+      date: "March 18, 2026",
+      readTime: "7 min read",
+      category: "islamic",
+      categoryLabel: t("categories.islamic"),
+      author: "Sheikh Abdullah",
+      image:
+        "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 7,
+      title: "Geometry in Islamic Art & Mathematics",
+      excerpt:
+        "Connecting the dots between sacred geometry, art history, and modern mathematical concepts.",
+      date: "March 20, 2026",
+      readTime: "5 min read",
+      category: "academics",
+      categoryLabel: t("categories.academics"),
+      author: "Mrs. Huda",
+      image:
+        "https://images.unsplash.com/photo-1542259649-43cc767421ac?auto=format&fit=crop&w=800&q=80",
+    },
+    {
+      id: 8,
+      title: "5 Hadiths Every Child Should Know",
+      excerpt:
+        "Simple yet profound sayings of the Prophet (PBUH) that build character and kindness.",
+      date: "March 22, 2026",
+      readTime: "4 min read",
+      category: "islamic",
+      categoryLabel: t("categories.islamic"),
+      author: "Rawdatul Atfaal Team",
+      image:
+        "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&w=800&q=80",
     },
   ];
 
@@ -142,7 +195,7 @@ export default function KnowledgeHubPage() {
       </section>
 
       {/* 2. CATEGORY TABS & CONTENT */}
-      <section className="py-12 md:py-16 bg-white dark:bg-midnight flex-grow">
+      <section className="py-12 md:py-16 bg-white dark:bg-midnight grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Animated Tab Filter */}
           <div className="flex justify-center mb-16 overflow-x-auto hide-scrollbar pb-4">
@@ -161,7 +214,7 @@ export default function KnowledgeHubPage() {
                   {activeCategory === cat.id && (
                     <motion.div
                       layoutId="categoryUnderline"
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-gold"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold"
                       transition={{
                         type: "spring",
                         stiffness: 300,
@@ -179,6 +232,7 @@ export default function KnowledgeHubPage() {
             {activeCategory === "all" && (
               <motion.div
                 layout
+                key="featured-post"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -186,7 +240,7 @@ export default function KnowledgeHubPage() {
                 className="mb-20"
               >
                 <Link href={`/knowledge-hub/${featuredPost.id}`}>
-                  <div className="group relative w-full h-[500px] md:h-[600px] rounded-sm overflow-hidden shadow-2xl cursor-pointer">
+                  <div className="group relative w-full h-125 md:h-150 rounded-sm overflow-hidden shadow-2xl cursor-pointer">
                     {/* Background Image with Zoom Effect */}
                     <div className="absolute inset-0 bg-midnight">
                       <img
@@ -196,8 +250,8 @@ export default function KnowledgeHubPage() {
                       />
                     </div>
 
-                    {/* Dramatic Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-midnight/95 via-midnight/50 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100"></div>
+                    {/* Dramatic Gradient Overlay - reduced opacity */}
+                    <div className="absolute inset-0 bg-linear-to-t from-midnight/95 via-midnight/50 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-80"></div>
 
                     {/* Content */}
                     <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 lg:p-16 text-white z-10">
@@ -247,6 +301,7 @@ export default function KnowledgeHubPage() {
             {/* 4. POSTS GRID (Editorial Style) */}
             <motion.div
               layout
+              key="posts-grid"
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12"
             >
               {filteredPosts
