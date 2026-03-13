@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @variant dark (&:where(.dark, .dark *));
 
@@ -47,6 +48,31 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Typography Dark Mode Fixes */
+.dark .article-content p, 
+.dark .article-content li {
+  color: var(--color-cream);
+  opacity: 0.9;
+}
+
+.dark .article-content h1,
+.dark .article-content h2,
+.dark .article-content h3,
+.dark .article-content h4 {
+  color: var(--color-gold);
+}
+
+.dark .article-content strong {
+  color: var(--color-amber);
+}
+
+.dark .article-content blockquote {
+  color: var(--color-gold);
+  opacity: 0.9;
+  border-left-color: var(--color-gold);
+}
+
 
 
 @utility hide-scrollbar {

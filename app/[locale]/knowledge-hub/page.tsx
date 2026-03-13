@@ -5,6 +5,8 @@ import { ArrowRight, BookOpen, Clock, Calendar } from "lucide-react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import Image from "next/image";
+import { getBlogPosts, BlogPost } from "@/lib/blogPosts";
 
 export default function KnowledgeHubPage() {
   const t = useTranslations("KnowledgeHub");
@@ -18,109 +20,11 @@ export default function KnowledgeHubPage() {
     { id: "academics", label: t("categories.academics") },
   ];
 
-  const posts = [
-    {
-      id: 1,
-      title: t("post1.title"),
-      excerpt: t("post1.excerpt"),
-      date: t("post1.date"),
-      readTime: t("post1.readTime"),
-      category: "islamic",
-      categoryLabel: t("categories.islamic"),
-      author: "Sheikh Abdullah",
-      image:
-        "https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      id: 2,
-      title: t("post2.title"),
-      excerpt: t("post2.excerpt"),
-      date: t("post2.date"),
-      readTime: t("post2.readTime"),
-      category: "tech",
-      categoryLabel: t("categories.tech"),
-      author: "Sarah Ahmed",
-      image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 3,
-      title: t("post3.title"),
-      excerpt: t("post3.excerpt"),
-      date: t("post3.date"),
-      readTime: t("post3.readTime"),
-      category: "parenting",
-      categoryLabel: t("categories.parenting"),
-      author: "Dr. Fatima",
-      image:
-        "https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 4,
-      title: t("post4.title"),
-      excerpt: t("post4.excerpt"),
-      date: t("post4.date"),
-      readTime: t("post4.readTime"),
-      category: "academics",
-      categoryLabel: t("categories.academics"),
-      author: "Mr. James",
-      image:
-        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    },
-    // New Content
-    {
-      id: 5,
-      title: "The Wonder of Electricity & Magnetism",
-      excerpt:
-        " sparking curiosity in young minds using simple circuits and invisible forces.",
-      date: "March 15, 2026",
-      readTime: "6 min read",
-      category: "tech",
-      categoryLabel: t("categories.tech"),
-      author: "Ustadh Bilal",
-      image:
-        "https://images.unsplash.com/photo-1620846506306-69680370d03b?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 6,
-      title: "Understanding Taharah: Cleanliness is Half of Faith",
-      excerpt:
-        "A guide to teaching Fiqh of purification to young children in a practical, hands-on way.",
-      date: "March 18, 2026",
-      readTime: "7 min read",
-      category: "islamic",
-      categoryLabel: t("categories.islamic"),
-      author: "Sheikh Abdullah",
-      image:
-        "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 7,
-      title: "Geometry in Islamic Art & Mathematics",
-      excerpt:
-        "Connecting the dots between sacred geometry, art history, and modern mathematical concepts.",
-      date: "March 20, 2026",
-      readTime: "5 min read",
-      category: "academics",
-      categoryLabel: t("categories.academics"),
-      author: "Mrs. Huda",
-      image:
-        "https://images.unsplash.com/photo-1542259649-43cc767421ac?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 8,
-      title: "5 Hadiths Every Child Should Know",
-      excerpt:
-        "Simple yet profound sayings of the Prophet (PBUH) that build character and kindness.",
-      date: "March 22, 2026",
-      readTime: "4 min read",
-      category: "islamic",
-      categoryLabel: t("categories.islamic"),
-      author: "Rawdatul Atfaal Team",
-      image:
-        "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&w=800&q=80",
-    },
-  ];
+  const posts = Object.values(getBlogPosts(t)).map((post: BlogPost) => ({
+    ...post,
+    id: parseInt(post.id),
+    categoryLabel: t("categories." + post.category),
+  }));
 
   const filteredPosts =
     activeCategory === "all"
@@ -131,7 +35,7 @@ export default function KnowledgeHubPage() {
   const featuredPost = posts[0];
 
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-midnight text-midnight dark:text-cream pt-24">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-navy text-midnight dark:text-cream pt-24">
       {/* 1. HERO SECTION */}
       <section className="relative py-24 md:py-32 bg-ivory dark:bg-[#12221b] text-midnight dark:text-cream overflow-hidden border-b border-midnight/5 dark:border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-gold/5 via-transparent to-transparent pointer-events-none"></div>
@@ -195,7 +99,7 @@ export default function KnowledgeHubPage() {
       </section>
 
       {/* 2. CATEGORY TABS & CONTENT */}
-      <section className="py-12 md:py-16 bg-white dark:bg-midnight grow">
+      <section className="py-12 md:py-16 bg-white dark:bg-navy grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Animated Tab Filter */}
           <div className="flex justify-center mb-16 overflow-x-auto hide-scrollbar pb-4">
@@ -243,10 +147,11 @@ export default function KnowledgeHubPage() {
                   <div className="group relative w-full h-125 md:h-150 rounded-sm overflow-hidden shadow-2xl cursor-pointer">
                     {/* Background Image with Zoom Effect */}
                     <div className="absolute inset-0 bg-midnight">
-                      <img
+                      <Image
                         src={featuredPost.image}
                         alt={featuredPost.title}
                         className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-105"
+                        fill
                       />
                     </div>
 
@@ -325,10 +230,12 @@ export default function KnowledgeHubPage() {
                         <div className="absolute top-0 left-0 right-0 h-1 bg-gold z-30 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
                         <div className="absolute inset-0 bg-midnight/10 group-hover:bg-transparent transition-colors z-10"></div>
-                        <img
+                        <Image
                           src={post.image}
                           alt={post.title}
                           className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                         <div className="absolute bottom-4 left-4 z-20">
                           <span className="bg-white/90 dark:bg-midnight/90 backdrop-blur-md px-3 py-1 text-[10px] font-cinzel font-bold tracking-[0.2em] uppercase text-midnight dark:text-gold border border-gold/20">
