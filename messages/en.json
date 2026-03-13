@@ -27,7 +27,8 @@
     "t17": "Toggle language",
     "t18": "Toggle Dark Mode",
     "copyright": "© {year} Rawdatul Atfaal. All rights reserved.",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "knowledgeHub": "Knowledge Hub"
   },
   "Hero": {
     "title1": "Where Children Love to Learn",
@@ -2250,5 +2251,66 @@
     "a_fees_2": "Yes, we provide special discounts for families enrolling multiple children. Please <contactLink>reach out to us</contactLink> for a detailed breakdown.",
     "q_fees_3": "Are there any hidden costs?",
     "a_fees_3": "No, our fee structure is completely transparent. Any additional costs such as registration fees or workbook fees will be communicated clearly during the enrolment process."
+  },
+  "KnowledgeHub": {
+    "title": "Knowledge Hub",
+    "subtitle": "Insights, educational strategies, and reflections to support your child's journey in Deen and Dunya.",
+    "featured": "Featured",
+    "viewArticle": "Read More",
+    "categories": {
+      "all": "All",
+      "islamic": "Islamic Studies",
+      "tech": "Tech & Sciences",
+      "parenting": "Parenting",
+      "academics": "Academics"
+    },
+    "post1": {
+      "title": "Nurturing a Love for the Quran at Home",
+      "excerpt": "Practical and gentle ways to help your child connect with the words of Allah beyond the classroom.",
+      "date": "March 10, 2026",
+      "readTime": "5 min read"
+    },
+    "post2": {
+      "title": "Why Early Coding Matters in the Modern Age",
+      "excerpt": "Understanding the logic behind programming and how it develops critical thinking in early childhood.",
+      "date": "March 5, 2026",
+      "readTime": "4 min read"
+    },
+    "post3": {
+      "title": "Prophetic Wisdom in Parenting",
+      "excerpt": "Extracting timeless child-rearing strategies from the Sunnah to raise confident and compassionate learners.",
+      "date": "February 28, 2026",
+      "readTime": "6 min read"
+    },
+    "post4": {
+      "title": "Making Mathematics Fun: Everyday Games",
+      "excerpt": "Turn daily chores and weekend activities into engaging math practice for young minds.",
+      "date": "February 15, 2026",
+      "readTime": "4 min read"
+    },
+    "post5": {
+      "title": "The Wonder of Electricity & Magnetism",
+      "excerpt": "Sparking curiosity in young minds using simple circuits and invisible forces.",
+      "date": "March 15, 2026",
+      "readTime": "6 min read"
+    },
+    "post6": {
+      "title": "Understanding Taharah: Cleanliness is Half of Faith",
+      "excerpt": "A guide to teaching Fiqh of purification to young children in a practical, hands-on way.",
+      "date": "March 18, 2026",
+      "readTime": "7 min read"
+    },
+    "post7": {
+      "title": "Geometry in Islamic Art & Mathematics",
+      "excerpt": "Connecting the dots between sacred geometry, art history, and modern mathematical concepts.",
+      "date": "March 20, 2026",
+      "readTime": "5 min read"
+    },
+    "post8": {
+      "title": "5 Hadiths Every Child Should Know",
+      "excerpt": "Simple yet profound sayings of the Prophet (PBUH) that build character and kindness.",
+      "date": "March 22, 2026",
+      "readTime": "4 min read"
+    }
   }
 }

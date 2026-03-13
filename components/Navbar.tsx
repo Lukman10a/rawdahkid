@@ -105,6 +105,13 @@ export default function Navbar() {
                 {t("fees")}
                 <span className="absolute -bottom-1 inset-s-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </Link>
+              <Link
+                href="/knowledge-hub"
+                className="text-midnight/ dark:text-cream/ hover:text-gold transition-colors text-sm uppercase tracking-wider relative group"
+              >
+                {t("knowledgeHub")}
+                <span className="absolute -bottom-1 inset-s-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+              </Link>
               <div className="flex items-center space-x-4 border-s border-midnight/20 dark:border-cream/20 ps-4">
                 <LanguageSwitcher />
                 <ThemeToggle />
@@ -192,6 +199,13 @@ export default function Navbar() {
             className="text-3xl font-cinzel text-midnight dark:text-cream hover:text-gold transition-colors"
           >
             {t("fees")}
+          </Link>
+          <Link
+            href="/knowledge-hub"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-3xl font-cinzel text-midnight dark:text-cream hover:text-gold transition-colors"
+          >
+            {t("knowledgeHub")}
           </Link>
 
           <div className="flex space-x-6 items-center">
