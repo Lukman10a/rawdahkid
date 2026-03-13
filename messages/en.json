@@ -324,19 +324,28 @@
         },
         "s2": {
           "step": "Step 2",
-          "title": "Assessment",
-          "desc": "Your child may undergo a brief assessment to determine their starting level in Arabic or Math."
+          "title": "Enrolment & Onboarding",
+          "desc": "Complete the registration process and receive your welcome pack and schedule."
         },
         "s3": {
           "step": "Step 3",
-          "title": "Enrolment & Onboarding",
-          "desc": "Upon acceptance, complete the fee payment to secure the seat and receive the student welcome pack."
+          "title": "Assessment",
+          "desc": "Your child will undergo a personalized assessment to ensure they start at the perfect level."
         }
       }
     },
     "form": {
+      "submit": "Submit Registration Inquiry",
       "title": "Registration Form",
-      "desc": "Please provide your details below and our admissions team will contact you within 48 hours to secure your child's placement.",
+      "desc": "Please provide your details below. You must complete all fields before submission.",
+      "errors": {
+        "required": "This field is required",
+        "invalidEmail": "Please enter a valid email address",
+        "emailExists": "This email is already registered. Please contact support.",
+        "phoneShort": "Phone number must be at least 10 digits",
+        "phoneInvalid": "Phone number contains invalid characters",
+        "terms": "You must agree to the terms"
+      },
       "parent": {
         "title": "Parent / Guardian Details",
         "name": "Full Name",
@@ -378,11 +387,56 @@
           "math": "Mathematics",
           "science": "Sciences",
           "programming": "Programming"
+
         },
         "additional": "Additional Information / Questions",
         "additionalPlaceholder": "Tell us about your child's current academic or Islamic level, or ask any questions here..."
+      }
+    },
+    "Modals": {
+      "success": {
+        "title": "Application Received",
+        "desc": "We have successfully received your registration inquiry. A confirmation email has been sent to you.",
+        "proceed": "Proceed to Payment"
       },
-      "submit": "Submit Registration Inquiry"
+      "failure": {
+        "title": "Submission Failed",
+        "desc": "We could not process your request. Please try again.",
+        "retry": "Try Again"
+      },
+      "registerPrompt": {
+        "title": "Registration Required",
+        "desc": "Please complete the registration for your child before selecting a tuition plan.",
+        "action": "Go to Registration",
+        "cta": "New Parent? Register Your Child",
+        "cancel": "Cancel",
+        "verifyLabel": "Already Registered? Verify Email",
+        "verifyExample": "Enter email...",
+        "verifyAction": "Verify",
+        "emailNotFound": "Email not found. Please register first."
+      },
+      "paymentConfig": {
+        "title": "Configure Your Plan",
+        "desc": "Customize your payment frequency and number of students.",
+        "modeLabel": "Payment Frequency",
+        "childrenLabel": "Number of Students",
+        "modes": {
+          "monthly": "Monthly",
+          "semester": "Per Semester (5% Off)",
+          "annual": "Annually (10% Off)"
+        },
+        "next": "View Summary"
+      },
+      "overview": {
+        "title": "Enrollment Summary",
+        "plan": "Plan",
+        "students": "Students",
+        "subtotal": "Subtotal",
+        "discount": "Discount Applied",
+        "total": "Total Payable",
+        "proceed": "Proceed to Paystack",
+        "cancel": "Cancel"
+      }
     }
   },
   "ProgIslamic": {
