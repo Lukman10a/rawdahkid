@@ -237,7 +237,7 @@ export default function FeesPage() {
             </ul>
             <div className="mt-auto space-y-3">
               <Button
-                variant="outline"
+                variant="ghost"
                 className="w-full bg-midnight/5 dark:bg-black/20 hover:bg-midnight/10 dark:hover:bg-black/30 border-midnight/10 dark:border-white/10"
                 onClick={() =>
                   handleSelectPlan({
@@ -334,7 +334,7 @@ export default function FeesPage() {
             </ul>
             <div className="mt-auto space-y-3">
               <Button
-                variant="outline"
+                variant="ghost"
                 className="w-full bg-midnight/5 dark:bg-black/20 hover:bg-midnight/10 dark:hover:bg-black/30 border-midnight/10 dark:border-white/10"
                 onClick={() =>
                   handleSelectPlan({
@@ -912,7 +912,7 @@ export default function FeesPage() {
                         {/* @ts-ignore */}
                         <button
                           onClick={() => setModalState("payment_overview")}
-                          className="w-full md:w-auto px-12 bg-midnight dark:bg-cream text-white dark:text-midnight py-4 font-bold uppercase tracking-widest hover:opacity-90 shadow-lg hover:translate-y-[-2px] transition-all"
+                          className="w-full md:w-auto px-12 bg-midnight dark:bg-cream text-white dark:text-midnight py-4 font-bold uppercase tracking-widest hover:opacity-90 shadow-lg hover:-translate-y-0.5 transition-all"
                         >
                           {tEnrol("Modals.paymentConfig.next")}
                         </button>
@@ -942,7 +942,7 @@ export default function FeesPage() {
                             <span className="text-midnight/60 dark:text-cream/60 text-sm italic">
                               Billing Frequency
                             </span>
-                            <span className="text-sm bg-gold/10 text-gold px-3 py-1 rounded-full uppercase tracking-wider text-xs font-bold">
+                            <span className="bg-gold/10 text-gold px-3 py-1 rounded-full uppercase tracking-wider text-xs font-bold">
                               {config.frequency}
                             </span>
                           </div>
