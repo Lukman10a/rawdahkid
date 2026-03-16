@@ -59,7 +59,9 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
             <Navbar />
-            <main className="grow w-full min-w-0 overflow-x-hidden">{children}</main>
+            <main className="grow w-full min-w-0 overflow-x-hidden">
+              {children}
+            </main>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
