@@ -222,7 +222,7 @@ export default function FeesPage() {
             <div className="mt-auto space-y-3">
               <Button
                 variant="ghost"
-                className="w-full bg-midnight/5 dark:bg-black/20 hover:bg-midnight/10 dark:hover:bg-black/30 border-midnight/10 dark:border-white/10"
+                className="w-full bg-midnight/5 dark:bg-black/20 text-midnight dark:text-cream hover:bg-midnight/10 dark:hover:bg-black/30 border-midnight/10 dark:border-white/10"
                 onClick={() =>
                   handleSelectPlan({
                     id: "islamic-group",
@@ -319,7 +319,7 @@ export default function FeesPage() {
             <div className="mt-auto space-y-3">
               <Button
                 variant="ghost"
-                className="w-full bg-midnight/5 dark:bg-black/20 hover:bg-midnight/10 dark:hover:bg-black/30 border-midnight/10 dark:border-white/10"
+                className="w-full bg-midnight/5 dark:bg-black/20 text-midnight dark:text-cream hover:bg-midnight/10 dark:hover:bg-black/30 border-midnight/10 dark:border-white/10"
                 onClick={() =>
                   handleSelectPlan({
                     id: "western-group",
