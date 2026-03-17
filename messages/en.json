@@ -89,12 +89,12 @@
       "perYear": "/ year",
       "perMonth": "/ month",
       "perSemester": "/ semester",
-      "monthlyEquiv": "Equivalent to exactly $416 / month",
-      "yearlyEquivMonthly": "Total $6,000 / year",
-      "yearlyEquivSemester": "Total $5,500 / year",
+      "monthlyEquiv": "Equivalent to exactly $375 / month",
+      "yearlyEquivMonthly": "Total $4,500 / year",
+      "yearlyEquivSemester": "Total $4,500 / year",
       "monthlyTag": "Monthly",
       "semesterTag": "Semester",
-      "annualTag": "Annual (10% Off)",
+      "annualTag": "Annual",
       "seeGrid": "See Full Pricing Grid"
     },
     "cta": {
@@ -486,7 +486,7 @@
       "bundleTitle": "Full Islamic Bundle",
       "bundleDesc": "Access to all 6 core disciplines",
       "perYear": "/ year",
-      "equivalent": "Equivalent to $416 / month",
+      "equivalent": "Equivalent to $375 / month",
       "cta": "View Fee Schedule"
     },
     "t0": ", we highly recommend the complete Islamic Programme bundle for a holistic educational experience.",
@@ -525,7 +525,7 @@
       "bundleTitle": "Full Western Bundle",
       "bundleDesc": "Mathematics, Sciences, and Programming",
       "perYear": "/ year",
-      "equivalent": "Equivalent to $416 / month",
+      "equivalent": "Equivalent to $250 / month",
       "cta": "View Fee Schedule"
     },
     "t0": "While Western Programme courses can be taken individually starting from",

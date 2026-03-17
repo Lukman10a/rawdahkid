@@ -487,8 +487,8 @@ export default function Home() {
             </div>
             <div className="font-cormorant text-5xl md:text-7xl text-midnight mb-2 font-medium">
               {billingPlan === "annual" && "$4,500"}
-              {billingPlan === "semester" && "$2,750"}
-              {billingPlan === "monthly" && "$500"}{" "}
+              {billingPlan === "semester" && "$2,250"}
+              {billingPlan === "monthly" && "$375"}{" "}
               <span className="text-xl md:text-2xl text-midnight/50 font-sans">
                 {billingPlan === "annual" && h("fees.perYear")}
                 {billingPlan === "semester" && h("fees.perSemester")}

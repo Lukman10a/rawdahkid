@@ -127,19 +127,20 @@ export default function FeesPage() {
     let discountMsg = "";
 
     if (config.frequency === "annual") {
-      amountDue = base * config.students * 0.9;
-      discountMsg = "10%";
+      amountDue = base * config.students;
+      discountMsg = "0%";
     } else if (config.frequency === "semester") {
-      // Assuming 2 semesters, so half price per semester, then 5% off that half
-      amountDue = (base / 2) * config.students * 0.95;
-      discountMsg = "5%";
+      amountDue = (base / 2) * config.students;
+      discountMsg = "0%";
     } else {
-      // Monthly - assume 10 months
-      amountDue = (base / 10) * config.students;
+      amountDue = (base / 12) * config.students;
       discountMsg = "0%";
     }
 
-    return { total: Math.round(amountDue), discount: discountMsg };
+    return {
+      total: Math.round(amountDue),
+      discount: discountMsg,
+    };
   };
 
   const totals = calculateTotal();
