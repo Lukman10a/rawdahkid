@@ -18,6 +18,14 @@ export function KnowledgeHubContentSection() {
   const tUnsafe = (key: string) => t(key as never);
   const [activeCategory, setActiveCategory] = useState<HubCategoryId>("all");
 
+  const getAuthorInitials = (author: string) =>
+    author
+      .split(" ")
+      .map((name) => name[0])
+      .join("")
+      .substring(0, 2)
+      .toUpperCase();
+
   const categories = getHubCategories(tUnsafe);
   const posts = getHubPosts(tUnsafe);
   const filteredPosts = getFilteredHubPosts(posts, activeCategory);
@@ -102,6 +110,10 @@ export function KnowledgeHubContentSection() {
                         {featuredPost.excerpt}
                       </p>
 
+                      <p className="font-sans text-sm text-white/80 mb-6 italic">
+                        Written by: {featuredPost.author}
+                      </p>
+
                       <div className="flex items-center gap-6 text-sm font-medium">
                         <div className="flex items-center gap-2 text-white/70">
                           <Clock size={16} className="text-gold" />
@@ -177,13 +189,17 @@ export function KnowledgeHubContentSection() {
                         {post.excerpt}
                       </p>
 
+                      <p className="font-sans text-xs text-midnight/70 dark:text-cream/70 mb-4 italic">
+                        Written by: {post.author}
+                      </p>
+
                       <div className="mt-auto pt-4 border-t border-midnight/5 dark:border-white/5 flex items-center justify-between">
                         <div className="flex items-center gap-3">
                           <div className="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold font-serif italic text-xs">
-                            RA
+                            {getAuthorInitials(post.author)}
                           </div>
                           <span className="text-xs font-medium text-midnight/80 dark:text-cream/80">
-                            Rawdatul Atfaal
+                            {post.author}
                           </span>
                         </div>
                         <ArrowRight className="w-4 h-4 text-gold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 rtl:rotate-180" />

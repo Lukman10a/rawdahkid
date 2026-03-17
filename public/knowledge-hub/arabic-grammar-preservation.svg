@@ -1,0 +1,62 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f2a3a"/>
+      <stop offset="0.45" stop-color="#173f4f"/>
+      <stop offset="1" stop-color="#1f5a52"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1120 180) rotate(140) scale(840 520)">
+      <stop offset="0" stop-color="#f3d27a" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#f3d27a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="motif" width="120" height="120" patternUnits="userSpaceOnUse">
+      <path d="M60 8L112 60L60 112L8 60L60 8Z" stroke="#f1d08a" stroke-opacity="0.16" stroke-width="1.5" fill="none"/>
+      <circle cx="60" cy="60" r="20" stroke="#f1d08a" stroke-opacity="0.16" stroke-width="1.5" fill="none"/>
+    </pattern>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6de9e"/>
+      <stop offset="1" stop-color="#c8a04c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#motif)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <g opacity="0.18">
+    <path d="M210 770C390 610 590 560 830 560C1010 560 1170 520 1360 420" stroke="#f3d27a" stroke-width="3" stroke-linecap="round"/>
+    <path d="M190 805C355 665 560 625 790 625C980 625 1165 585 1415 465" stroke="#f3d27a" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <rect x="170" y="140" width="850" height="620" rx="16" fill="#0f1f2e" fill-opacity="0.58" stroke="#f1d08a" stroke-opacity="0.35" stroke-width="2"/>
+    <rect x="190" y="170" width="810" height="560" rx="10" fill="#102739" fill-opacity="0.76" stroke="#f1d08a" stroke-opacity="0.22"/>
+
+    <g opacity="0.9">
+      <rect x="230" y="230" width="730" height="4" rx="2" fill="#f1d08a" fill-opacity="0.55"/>
+      <rect x="230" y="285" width="640" height="3" rx="1.5" fill="#f1d08a" fill-opacity="0.4"/>
+      <rect x="230" y="330" width="700" height="3" rx="1.5" fill="#f1d08a" fill-opacity="0.4"/>
+      <rect x="230" y="375" width="610" height="3" rx="1.5" fill="#f1d08a" fill-opacity="0.4"/>
+      <rect x="230" y="420" width="675" height="3" rx="1.5" fill="#f1d08a" fill-opacity="0.4"/>
+      <rect x="230" y="465" width="730" height="3" rx="1.5" fill="#f1d08a" fill-opacity="0.4"/>
+      <rect x="230" y="510" width="590" height="3" rx="1.5" fill="#f1d08a" fill-opacity="0.4"/>
+      <rect x="230" y="555" width="680" height="3" rx="1.5" fill="#f1d08a" fill-opacity="0.4"/>
+      <rect x="230" y="600" width="625" height="3" rx="1.5" fill="#f1d08a" fill-opacity="0.4"/>
+    </g>
+  </g>
+
+  <g>
+    <ellipse cx="1195" cy="580" rx="215" ry="36" fill="#0a1622" fill-opacity="0.55"/>
+    <path d="M1120 360L1200 550L1180 560L1070 380L1120 360Z" fill="url(#gold)"/>
+    <path d="M1200 550L1308 615C1323 624 1330 642 1326 660L1322 678L1288 665C1269 658 1253 646 1244 628L1180 560L1200 550Z" fill="#d2ae62"/>
+    <path d="M1090 390C1108 357 1153 344 1187 360L1202 367L1049 650L1021 638L1090 390Z" fill="#f3e4b6" fill-opacity="0.88"/>
+    <circle cx="1100" cy="392" r="10" fill="#cfaa59"/>
+  </g>
+
+  <g opacity="0.88">
+    <text x="980" y="195" fill="#f7e4b2" font-size="34" font-family="Georgia, serif" letter-spacing="2">Knowledge Hub</text>
+    <text x="980" y="250" fill="#f6de9e" font-size="56" font-family="Georgia, serif" font-weight="700">Arabic Grammar</text>
+    <text x="980" y="306" fill="#f6de9e" font-size="56" font-family="Georgia, serif" font-weight="700">Preservation</text>
+    <text x="980" y="354" fill="#f7e4b2" font-size="26" font-family="Georgia, serif" opacity="0.9">Language. History. Scholarship.</text>
+  </g>
+</svg>

@@ -22,6 +22,7 @@ export function getHubPosts(t: Translator): HubPost[] {
     image: post.image,
     category: post.category,
     categoryLabel: t(`categories.${post.category}`),
+    author: post.author,
     title: post.title,
     excerpt: post.excerpt,
     date: post.date,

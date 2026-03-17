@@ -43,6 +43,7 @@ export type HubPost = {
   image: string;
   category: Exclude<HubCategoryId, "all">;
   categoryLabel: string;
+  author: string;
   title: string;
   excerpt: string;
   date: string;

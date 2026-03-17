@@ -278,53 +278,85 @@ export const getBlogPosts = (t: (key: string) => string): Record<string, BlogPos
     "8": {
       id: "8",
       key: "post8",
-      title: "5 Hadiths Every Child Should Know",
-      date: "March 22, 2026",
-      readTime: "4 min read",
+      title: "How Arabic Grammar Was Preserved: A Historical Overview",
+      date: "March 17, 2026",
+      readTime: "8 min read",
       category: "islamic",
-      author: "Rawdatul Atfaal Team",
+      author: "Abū Kawthar Lukmān Bn Abdir-Raūf",
       excerpt:
-        "Simple yet profound sayings of the Prophet (PBUH) that build character and kindness.",
-      image:
-        "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&w=1200&q=80",
+        "The Arabic language is the tongue of the Arabs, and it is the language in which the Qur’ān was revealed, a language of beauty, depth, and precision.",
+      image: "/knowledge-hub/arabic-grammar-preservation.svg",
       content: `
-        <p class="mb-6 text-xl leading-relaxed font-serif text-midnight/90 dark:text-cream/90">Simple yet profound sayings of the Prophet (PBUH) that build character and kindness.</p>
-        
-        <h2 id="section-1">Building Character through Speech</h2>
-        <p>The words of the Prophet Muhammad (PBUH) are the best guidance. They are concise yet full of wisdom (Jawami' al-Kalim). For young children, short ahadith are easy to memorize and serve as guiding lights for their behavior. Here are five foundational hadiths we focus on:</p>
-        
-        <h2 id="section-2">The Golden Five</h2>
-        <ol class="list-decimal pl-6 space-y-6 mb-6">
-          <li>
-              <strong>"The best of you are those with the best character."</strong> 
-              <p class="text-sm opacity-90 mt-1">This teaches that our value is not in our wealth or looks, but in how we treat others. It encourages self-improvement and politeness.</p>
-          </li>
-          <li>
-              <strong>"None of you truly believes until he loves for his brother what he loves for himself."</strong> 
-              <p class="text-sm opacity-90 mt-1">This is the golden rule of empathy. It stops selfishness and encourages sharing. If you want a toy, your friend probably wants one too.</p>
-          </li>
-          <li>
-              <strong>"Smiling in the face of your brother is charity."</strong> 
-              <p class="text-sm opacity-90 mt-1">This teaches positivity. Even without money, every child can give charity every day just by being kind and cheerful.</p>
-          </li>
-          <li>
-              <strong>"Cleanliness is half of faith."</strong> 
-              <p class="text-sm opacity-90 mt-1">This links physical hygiene (brushing teeth, wudu, clean clothes) with spiritual purity. A believer loves to be clean.</p>
-          </li>
-          <li>
-              <strong>"Paradise lies under the feet of your mother."</strong> 
-              <p class="text-sm opacity-90 mt-1">This teaches supreme respect and love for parents. It shows that serving our mothers is a direct path to Jannah.</p>
-          </li>
-        </ol>
-        
-        <h2 id="section-3">Living the Hadith</h2>
-        <p>Memorization is the first step, but implementation is the goal. We encourage parents to create 'Hadith of the Week' jars at home, where one hadith is practiced intentionally by the whole family. If the hadith is about smiling, everyone tries to smile more that week.</p>
-        <p>This brings the Sunnah to life within the household, making the Prophet (PBUH) a beloved role model in their daily lives.</p>
+        <p class="mb-6 text-xl leading-relaxed font-serif text-midnight/90 dark:text-cream/90">How Arabic Grammar Was Preserved: A Historical Overview</p>
+
+        <p>The Arabic language is the tongue of the Arabs, and it is the language in which the Qur’ān was revealed, a language of beauty, depth, and precision.</p>
+
+        <p>During the pre-Islamic era (Jāhiliyyah) and the early days of Islam, there was no formal study of Nahw (Arabic grammar) or Sarf (Arabic morphology) or otherbranches of the Arabiclanguage.</p>
+
+        <p>The Arabs spoke pure, eloquent, and naturally correct Arabic without the need for grammatical rules or written guidelines.</p>
+
+        <p>However, after the Muslim expansion into Roman and Persian territories, many non-Arabs entered Islam and began living among the Arabs.</p>
+
+        <p>Over time, this interaction began to influence the Arabic tongue, and linguistic errors appeared even in the speech of native Arabs.</p>
+
+        <p>This development raised serious concern. Scholars feared that the purity of the Arabic language — the language of the Qur’ān and Sunnah — would be lost.</p>
+
+        <p>This motivated the experts of the time to document the principles of the language so that it could be preserved for future generations.</p>
+
+        <h2 id="section-1">The Beginning of Documentation</h2>
+
+        <p>The most well-known opinion is that Abū al-Aswad Dhālim Dn ʿAmrī ibn al-Duʾalī (commonly called Abū al-Aswad al-Duʾalī) was the first to compile the rules of Arabic in written form.</p>
+
+        <p>It was narrated that he once sat with his daughter on a beautiful night, beneath a sky filled with shining stars. She looked up and said:</p>
+
+        <p>ما أجملُ السماءِ<br/>“How beautiful the sky is!”</p>
+
+        <p>Taking her words as a question rather than an exclamation, Abū al-Aswad replied:</p>
+
+        <p>نجومُها<br/>“Its stars.”</p>
+
+        <p>She then clarified that she intended exclamation, not a question.</p>
+
+        <p>Abū al-Aswad realized that her sentence was grammatically incorrect, because the phrasing she used is normally for asking a question. The correct way to express admiration is:</p>
+
+        <p>ما أجملَ السماءَ!<br/>“How beautiful the sky is!”</p>
+
+        <p>Here, both أجملَ and السماءَ take a fatḥah, which is the proper case ending for sentences of exclamation (أسلوب التعجب).</p>
+
+        <p>This incident inspired Abū al-Aswad to begin laying down the foundational rules of Arabic grammar but only after seeking the approval and guidance of ʿAlī ibn Abī Ṭālib رضي الله عنه.</p>
+
+        <h2 id="section-2">In Summary</h2>
+
+        <p>In summary:</p>
+
+        <p>Arabic grammar was not originally taught or written; it lived naturally on the tongues of the Arabs. But as Islam spread and new cultures mixed with Arabic speakers, mistakes appeared, threatening the purity of the Qur’anic language.</p>
+
+        <p>Scholars, led first by Abū al-Aswad al-Duʾalī, rose to preserve this great language by compiling its rules and principles. Through their efforts, Arabic has remained clear, structured, and protected until today.</p>
+
+        <h2 id="section-3">Finally</h2>
+
+        <p>Finally:</p>
+
+        <p>Arabic is not just a language, it is a doorway to the Qur’ān, the Sunnah, and the rich intellectual history of Islam.</p>
+
+        <p>Learning it connects you to centuries of knowledge, wisdom, and scholarship. Every letter you learn brings you closer to understanding the words of your Creator.</p>
+
+        <p>So take the journey with patience and consistency.</p>
+
+        <p>The beauty of this language will unfold for you, one lesson at a time.</p>
+
+        <p>May Allāh make your path easy and bless your efforts.</p>
+
+        <p>Jazaakumullahu khairan</p>
+
+        <p>Written by: Abū Kawthar Lukmān Bn Abdir-Raūf.</p>
+
+        <p>Markazul Bayaan Benefits.</p>
       `,
       headings: [
-        { id: "section-1", title: "Building Character" },
-        { id: "section-2", title: "The Golden Five" },
-        { id: "section-3", title: "Living the Hadith" },
+        { id: "section-1", title: "The Beginning of Documentation" },
+        { id: "section-2", title: "In Summary" },
+        { id: "section-3", title: "Finally" },
       ],
     },
   };
