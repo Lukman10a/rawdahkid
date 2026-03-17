@@ -484,7 +484,7 @@ export default function ArabicProgramme() {
               {t("t18")}
             </h3>
             <div className="font-cormorant text-5xl text-gold mb-6">
-              $1,200{" "}
+              $800{" "}
               <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">
                 {t("t42")}
               </span>

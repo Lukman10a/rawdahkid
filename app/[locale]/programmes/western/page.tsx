@@ -7,8 +7,6 @@ import { Button } from "@/components/ui/Button";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
-
-
 export default function WesternProgramme() {
   const t = useTranslations("ProgWestern");
   const courses = [
@@ -103,7 +101,11 @@ export default function WesternProgramme() {
           <h2 className="font-playfair italic text-4xl text-midnight dark:text-cream mb-6">
             {t("investment.title")}
           </h2>
-          <p className="font-sans text-lg text-midnight/70 dark:text-muted mb-12">{t("t0")}<span className="text-amber">{t("t2")}</span>{t("t1")}</p>
+          <p className="font-sans text-lg text-midnight/70 dark:text-muted mb-12">
+            {t("t0")}
+            <span className="text-amber">{t("t2")}</span>
+            {t("t1")}
+          </p>
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/20 rounded-sm inline-block w-full max-w-2xl relative overflow-hidden text-midnight dark:text-cream">
             <div className="absolute inset-0 bg-linear-to-b from-white/50 dark:from-navy/50 to-transparent"></div>
             <div className="relative z-10">
@@ -114,8 +116,10 @@ export default function WesternProgramme() {
                 {t("investment.bundleDesc")}
               </p>
               <div className="font-cormorant text-6xl text-midnight dark:text-cream mb-2">
-                $5,000{" "}
-                <span className="text-xl text-midnight/70 dark:text-muted font-sans">{t("t3")}</span>
+                $3,000{" "}
+                <span className="text-xl text-midnight/70 dark:text-muted font-sans">
+                  {t("t3")}
+                </span>
               </div>
               <p className="font-sans text-sm text-amber mb-8 uppercase tracking-widest">
                 {t("investment.equivalent")}

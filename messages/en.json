@@ -306,7 +306,7 @@
         "d2": "Semester Upfront: 5% off the semester fee",
         "d3": "Monthly Plan: No discount"
       },
-      "footerNote": "Note: A non-refundable registration fee of $100 per student is due upon enrolment to cover administrative processing, placement assessments, and baseline learning materials."
+      "footerNote": "Note: A non-refundable registration fee of $20 per student is due upon enrolment to cover administrative processing, placement assessments, and baseline learning materials."
     }
   },
   "Enrol": {
@@ -490,7 +490,7 @@
       "cta": "View Fee Schedule"
     },
     "t0": ", we highly recommend the complete Islamic Programme bundle for a holistic educational experience.",
-    "t1": "$1,200/year",
+    "t1": "$800/year",
     "t2": "/ year"
   },
   "ProgWestern": {
@@ -530,7 +530,7 @@
     },
     "t0": "While Western Programme courses can be taken individually starting from",
     "t1": ", we highly recommend the complete bundle.",
-    "t2": "$2,000/year",
+    "t2": "$1,500/year",
     "t3": "/ year"
   },
   "ProgArabic": {

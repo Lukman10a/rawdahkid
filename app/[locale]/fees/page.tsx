@@ -201,7 +201,7 @@ export default function FeesPage() {
                     {t("bundles.labels.group")}
                   </div>
                   <div className="font-cormorant text-4xl text-midnight dark:text-cream">
-                    $5,000
+                    $4,500
                     <span className="text-lg text-midnight/60 dark:text-cream/60 font-sans">
                       {t("bundles.labels.yr")}
                     </span>
@@ -247,7 +247,7 @@ export default function FeesPage() {
                       " (" +
                       t("bundles.labels.group") +
                       ")",
-                    price: 5000,
+                    price: 4500,
                     period: "yr",
                     type: "group",
                   })
@@ -298,7 +298,7 @@ export default function FeesPage() {
                     {t("bundles.labels.group")}
                   </div>
                   <div className="font-cormorant text-4xl text-midnight dark:text-cream">
-                    $5,000
+                    $3,000
                     <span className="text-lg text-midnight/60 dark:text-cream/60 font-sans">
                       {t("bundles.labels.yr")}
                     </span>
@@ -344,7 +344,7 @@ export default function FeesPage() {
                       " (" +
                       t("bundles.labels.group") +
                       ")",
-                    price: 5000,
+                    price: 3000,
                     period: "yr",
                     type: "group",
                   })
@@ -408,7 +408,7 @@ export default function FeesPage() {
                     {t("bundles.labels.oneOnOne")}
                   </div>
                   <div className="font-cormorant text-2xl text-midnight/80 dark:text-cream/80">
-                    $12,500
+                    $12,750
                     <span className="text-sm font-sans text-midnight/60 dark:text-cream/60">
                       {t("bundles.labels.yr")}
                     </span>
@@ -460,7 +460,7 @@ export default function FeesPage() {
                       " (" +
                       t("bundles.labels.oneOnOne") +
                       ")",
-                    price: 12500,
+                    price: 12750,
                     period: "yr",
                     type: "one-on-one",
                   })
@@ -493,33 +493,33 @@ export default function FeesPage() {
                   {[
                     {
                       name: t("alacarte.courses.quran"),
-                      group: "$2,000",
-                      oneOnOne: "$3,000",
+                      group: "$800",
+                      oneOnOne: "$1,800",
                     },
                     {
                       name: t("alacarte.courses.arabic"),
-                      group: "$1,500",
-                      oneOnOne: "$2,250",
+                      group: "$800",
+                      oneOnOne: "$1,800",
                     },
                     {
                       name: t("alacarte.courses.tawheed"),
-                      group: "$1,200",
-                      oneOnOne: "$1,800",
+                      group: "$800",
+                      oneOnOne: "$1,500",
                     },
                     {
                       name: t("alacarte.courses.fiqh"),
-                      group: "$1,200",
-                      oneOnOne: "$1,800",
+                      group: "$800",
+                      oneOnOne: "$1,500",
                     },
                     {
                       name: t("alacarte.courses.hadith"),
-                      group: "$1,200",
+                      group: "$800",
                       oneOnOne: "$1,800",
                     },
                     {
                       name: t("alacarte.courses.mutoon"),
-                      group: "$1,200",
-                      oneOnOne: "$1,800",
+                      group: "$800",
+                      oneOnOne: "$1,500",
                     },
                   ].map((course, i) => (
                     <div
@@ -562,18 +562,18 @@ export default function FeesPage() {
                   {[
                     {
                       name: t("alacarte.courses.math"),
-                      group: "$2,000",
-                      oneOnOne: "$3,000",
+                      group: "$1,500",
+                      oneOnOne: "$2,000",
                     },
                     {
                       name: t("alacarte.courses.science"),
-                      group: "$2,000",
-                      oneOnOne: "$3,000",
+                      group: "$1,500",
+                      oneOnOne: "$2,000",
                     },
                     {
                       name: t("alacarte.courses.programming"),
-                      group: "$2,000",
-                      oneOnOne: "$3,000",
+                      group: "$1,500",
+                      oneOnOne: "$2,000",
                     },
                   ].map((course, i) => (
                     <div

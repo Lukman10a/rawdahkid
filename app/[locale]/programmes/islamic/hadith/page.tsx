@@ -23,12 +23,22 @@ export default function HadithProgramme() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-amiri text-gold text-2xl md:text-3xl mb-4">{t("t0")}</p>
-            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">{t("t1")}</h1>
-            <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">{t("t2")}</p>
-            <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-6">{t("t3")}</div>
+            <p className="font-amiri text-gold text-2xl md:text-3xl mb-4">
+              {t("t0")}
+            </p>
+            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
+              {t("t1")}
+            </h1>
+            <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">
+              {t("t2")}
+            </p>
+            <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-6">
+              {t("t3")}
+            </div>
 
-            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">{t("t4")}</p>
+            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">
+              {t("t4")}
+            </p>
           </motion.div>
         </div>
       </section>
@@ -44,11 +54,17 @@ export default function HadithProgramme() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-cinzel text-3xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <BookOpen className="w-8 h-8 text-gold" />{t("t5")}</h2>
+              <BookOpen className="w-8 h-8 text-gold" />
+              {t("t5")}
+            </h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
               <p>{t("t6")}</p>
               <p>{t("t7")}</p>
-              <p>{t("t8")}<strong>{t("t9")}</strong>{t("t10")}</p>
+              <p>
+                {t("t8")}
+                <strong>{t("t9")}</strong>
+                {t("t10")}
+              </p>
             </div>
           </motion.div>
 
@@ -60,7 +76,9 @@ export default function HadithProgramme() {
             transition={{ duration: 0.6 }}
             className="bg-white/80 dark:bg-navy/80 p-8 md:p-10 border border-midnight/5 dark:border-white/5 rounded-sm"
           >
-            <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6">{t("t11")}</h2>
+            <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6">
+              {t("t11")}
+            </h2>
             <ul className="space-y-5">
               {[
                 "To build a strong foundation in belief, worship, and Islamic identity.",
@@ -85,7 +103,9 @@ export default function HadithProgramme() {
       <section className="py-20 bg-warm/30 dark:bg-deep/30 border-y border-midnight/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">{t("t12")}</h2>
+            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
+              {t("t12")}
+            </h2>
             <div className="w-24 h-px bg-gold/50 mx-auto"></div>
           </div>
 
@@ -93,30 +113,52 @@ export default function HadithProgramme() {
             <table className="w-full text-start border-collapse">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
-                  <th className="py-4 px-6 font-cinzel text-gold text-lg">{t("t13")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t14")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t15")}</th>
+                  <th className="py-4 px-6 font-cinzel text-gold text-lg">
+                    {t("t13")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
+                    {t("t14")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
+                    {t("t15")}
+                  </th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t16")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t17")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t16")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t17")}
+                  </td>
                   <td className="py-4 px-6 leading-relaxed">{t("t18")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t19")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t20")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t19")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t20")}
+                  </td>
                   <td className="py-4 px-6 leading-relaxed">{t("t21")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t22")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t23")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t22")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t23")}
+                  </td>
                   <td className="py-4 px-6 leading-relaxed">{t("t24")}</td>
                 </tr>
                 <tr className="hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t25")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t9")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t25")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t9")}
+                  </td>
                   <td className="py-4 px-6 leading-relaxed">{t("t27")}</td>
                 </tr>
               </tbody>
@@ -128,7 +170,9 @@ export default function HadithProgramme() {
       {/* 4. DETAILED COURSE OUTLINES */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t28")}</h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
+            {t("t28")}
+          </h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
 
@@ -208,31 +252,47 @@ export default function HadithProgramme() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-gold mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t29")}</h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t30")}</p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
+            {t("t29")}
+          </h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
+            {t("t30")}
+          </p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t31")}</h3>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
+              {t("t31")}
+            </h3>
             <div className="font-cormorant text-5xl text-gold mb-6">
-              $1,200{" "}
-              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">{t("t32")}</span>
+              $800{" "}
+              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">
+                {t("t32")}
+              </span>
             </div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t33")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t33")}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t34")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t34")}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t35")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t35")}
+                </span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">{t("t36")}</Button>
+              <Button variant="primary" className="w-full py-4 text-lg">
+                {t("t36")}
+              </Button>
             </Link>
           </div>
 
@@ -240,7 +300,9 @@ export default function HadithProgramme() {
             <Link
               href="/programmes/islamic"
               className="text-gold hover:text-amber transition-colors font-sans underline underline-offset-4"
-            >{t("t37")}</Link>
+            >
+              {t("t37")}
+            </Link>
           </div>
         </div>
       </section>
@@ -303,7 +365,9 @@ function LevelCard({
 
       <div className="p-8 md:p-10 bg-white dark:bg-transparent">
         <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-          <LayoutList className="w-5 h-5 text-gold" />{t("t42")}</h4>
+          <LayoutList className="w-5 h-5 text-gold" />
+          {t("t42")}
+        </h4>
         <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
           {topics.map((topic, idx) => (
             <div key={idx} className="flex items-start gap-3">
@@ -386,32 +450,54 @@ function Level4Card() {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
           <div>
             <div className="text-gold font-cinzel font-bold tracking-widest text-sm mb-2 flex items-center gap-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>{t("t43")}</div>
-            <h3 className="font-playfair text-2xl md:text-3xl text-white mb-2">{t("t9")}</h3>
+              <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+              {t("t43")}
+            </div>
+            <h3 className="font-playfair text-2xl md:text-3xl text-white mb-2">
+              {t("t9")}
+            </h3>
             <p className="font-sans text-cream/70">{t("t45")}</p>
           </div>
-          <div className="font-amiri text-3xl md:text-4xl text-gold/90 text-end">{t("t46")}</div>
+          <div className="font-amiri text-3xl md:text-4xl text-gold/90 text-end">
+            {t("t46")}
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
           <div>
-            <strong className="text-white">{t("t38")}</strong>{t("t48")}</div>
+            <strong className="text-white">{t("t38")}</strong>
+            {t("t48")}
+          </div>
           <div>
-            <strong className="text-white">{t("t39")}</strong>{t("t50")}</div>
+            <strong className="text-white">{t("t39")}</strong>
+            {t("t50")}
+          </div>
           <div>
-            <strong className="text-white">{t("t40")}</strong>{t("t52")}</div>
+            <strong className="text-white">{t("t40")}</strong>
+            {t("t52")}
+          </div>
         </div>
         <div className="text-sm text-cream/80 leading-relaxed">
-          <strong className="text-white block mb-1">{t("t41")}</strong>{t("t54")}</div>
+          <strong className="text-white block mb-1">{t("t41")}</strong>
+          {t("t54")}
+        </div>
       </div>
 
       <div className="p-8 md:p-10 bg-white dark:bg-transparent">
         <div className="mb-10 text-midnight/80 dark:text-muted font-sans space-y-4">
           <p>
-            <strong className="text-midnight dark:text-cream font-cinzel text-lg">{t("t55")}</strong>
-            <br />{t("t56")}<em>{t("t9")}</em>{t("t58")}</p>
+            <strong className="text-midnight dark:text-cream font-cinzel text-lg">
+              {t("t55")}
+            </strong>
+            <br />
+            {t("t56")}
+            <em>{t("t9")}</em>
+            {t("t58")}
+          </p>
           <div className="bg-ivory dark:bg-midnight p-5 rounded-md border border-midnight/5 dark:border-white/5 my-6">
-            <p className="font-semibold mb-2 text-midnight dark:text-cream">{t("t59")}</p>
+            <p className="font-semibold mb-2 text-midnight dark:text-cream">
+              {t("t59")}
+            </p>
             <ul className="list-disc list-inside ms-5 space-y-1 text-midnight/70 dark:text-cream/70">
               <li>{t("t60")}</li>
               <li>{t("t61")}</li>
@@ -423,7 +509,9 @@ function Level4Card() {
         </div>
 
         <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-          <LayoutList className="w-5 h-5 text-gold" />{t("t65")}</h4>
+          <LayoutList className="w-5 h-5 text-gold" />
+          {t("t65")}
+        </h4>
 
         {/* Compact Grid for 42 hadiths */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-3">
