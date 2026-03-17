@@ -29,7 +29,7 @@ export default function GlanceSection() {
         </div>
 
         <div className="w-full overflow-x-auto">
-          <table className="w-full text-start border-collapse min-w-[800px]">
+          <table className="w-full text-start border-collapse min-w-200">
             <thead>
               <tr className="border-b border-midnight/20 dark:border-white/20">
                 <th className="py-4 px-6 font-cinzel text-blue-700 dark:text-blue-400 text-lg w-20">
