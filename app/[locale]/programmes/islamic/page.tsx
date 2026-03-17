@@ -7,8 +7,6 @@ import { Button } from "@/components/ui/Button";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
-
-
 export default function IslamicProgramme() {
   const t = useTranslations("ProgIslamic");
   const courses = [
@@ -132,7 +130,9 @@ export default function IslamicProgramme() {
           </h2>
           <p className="font-sans text-lg text-midnight/70 dark:text-muted mb-12">
             While courses can be taken individually starting from{" "}
-            <span className="text-amber">{t("t1")}</span>{t("t0")}</p>
+            <span className="text-amber">{t("t1")}</span>
+            {t("t0")}
+          </p>
           <div className="bg-ivory/ dark:bg-midnight/ p-8 md:p-12 border border-gold/20 rounded-sm inline-block w-full max-w-2xl">
             <h3 className="font-cinzel text-2xl text-gold tracking-widest mb-2 uppercase">
               {t("investment.bundleTitle")}
@@ -141,8 +141,10 @@ export default function IslamicProgramme() {
               {t("investment.bundleDesc")}
             </p>
             <div className="font-cormorant text-6xl text-midnight dark:text-cream mb-2">
-              $5,000{" "}
-              <span className="text-xl text-midnight/70 dark:text-muted font-sans">{t("t2")}</span>
+              $4,500{" "}
+              <span className="text-xl text-midnight/70 dark:text-muted font-sans">
+                {t("t2")}
+              </span>
             </div>
             <p className="font-sans text-sm text-amber mb-8 uppercase tracking-widest">
               {t("investment.equivalent")}

@@ -23,9 +23,15 @@ export default function TawheedProgramme() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-amiri text-gold text-2xl md:text-3xl mb-4">{t("t0")}</p>
-            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">{t("t1")}</h1>
-            <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">{t("t2")}</p>
+            <p className="font-amiri text-gold text-2xl md:text-3xl mb-4">
+              {t("t0")}
+            </p>
+            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
+              {t("t1")}
+            </h1>
+            <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">
+              {t("t2")}
+            </p>
             <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-6 flex flex-wrap justify-center items-center gap-2">
               <span>{t("t3")}</span>
               <span className="hidden sm:inline">{t("t4")}</span>
@@ -34,7 +40,9 @@ export default function TawheedProgramme() {
               <span>{t("t7")}</span>
             </div>
 
-            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">{t("t8")}</p>
+            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">
+              {t("t8")}
+            </p>
           </motion.div>
         </div>
       </section>
@@ -50,7 +58,9 @@ export default function TawheedProgramme() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-cinzel text-3xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <BookOpen className="w-8 h-8 text-gold" />{t("t9")}</h2>
+              <BookOpen className="w-8 h-8 text-gold" />
+              {t("t9")}
+            </h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
               <p>{t("t10")}</p>
               <p>{t("t11")}</p>
@@ -66,7 +76,9 @@ export default function TawheedProgramme() {
             transition={{ duration: 0.6 }}
             className="bg-white/80 dark:bg-navy/80 p-8 md:p-10 border border-midnight/5 dark:border-white/5 rounded-sm"
           >
-            <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6">{t("t13")}</h2>
+            <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6">
+              {t("t13")}
+            </h2>
             <ul className="space-y-5">
               {[
                 "Established upon the authentic methodology and Saudi Arabia school curriculum.",
@@ -91,7 +103,9 @@ export default function TawheedProgramme() {
       <section className="py-20 bg-warm/30 dark:bg-deep/30 border-y border-midnight/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">{t("t14")}</h2>
+            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
+              {t("t14")}
+            </h2>
             <div className="w-24 h-px bg-gold/50 mx-auto"></div>
           </div>
 
@@ -99,40 +113,68 @@ export default function TawheedProgramme() {
             <table className="w-full text-start border-collapse">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
-                  <th className="py-4 px-6 font-cinzel text-gold text-lg">{t("t15")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t16")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t17")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t18")}</th>
+                  <th className="py-4 px-6 font-cinzel text-gold text-lg">
+                    {t("t15")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
+                    {t("t16")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
+                    {t("t17")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
+                    {t("t18")}
+                  </th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t19")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t20")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t19")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t20")}
+                  </td>
                   <td className="py-4 px-6">{t("t21")}</td>
                   <td className="py-4 px-6 leading-relaxed">{t("t22")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t23")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t24")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t23")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t24")}
+                  </td>
                   <td className="py-4 px-6">{t("t25")}</td>
                   <td className="py-4 px-6 leading-relaxed">{t("t26")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t27")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t28")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t27")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t28")}
+                  </td>
                   <td className="py-4 px-6">{t("t25")}</td>
                   <td className="py-4 px-6 leading-relaxed">{t("t30")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t31")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t32")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t31")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t32")}
+                  </td>
                   <td className="py-4 px-6">{t("t25")}</td>
                   <td className="py-4 px-6 leading-relaxed">{t("t34")}</td>
                 </tr>
                 <tr className="hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t35")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t36")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t35")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t36")}
+                  </td>
                   <td className="py-4 px-6">{t("t25")}</td>
                   <td className="py-4 px-6 leading-relaxed">{t("t38")}</td>
                 </tr>
@@ -145,7 +187,9 @@ export default function TawheedProgramme() {
       {/* 4. DETAILED COURSE OUTLINES */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t39")}</h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
+            {t("t39")}
+          </h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
 
@@ -263,30 +307,50 @@ export default function TawheedProgramme() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
                 <div>
                   <div className="text-gold font-cinzel font-bold tracking-widest text-sm mb-2 flex items-center gap-2">
-                    <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>{t("t40")}</div>
-                  <h3 className="font-playfair text-2xl md:text-3xl text-white mb-2">{t("t36")}</h3>
+                    <span className="inline-block w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                    {t("t40")}
+                  </div>
+                  <h3 className="font-playfair text-2xl md:text-3xl text-white mb-2">
+                    {t("t36")}
+                  </h3>
                   <p className="font-sans text-cream/70">{t("t42")}</p>
                 </div>
-                <div className="font-amiri text-2xl md:text-3xl text-gold/90 text-end">{t("t43")}</div>
+                <div className="font-amiri text-2xl md:text-3xl text-gold/90 text-end">
+                  {t("t43")}
+                </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 text-sm text-cream/80 mb-6 border-b border-white/10 pb-6">
                 <div>
-                  <strong className="text-white">{t("t44")}</strong>{t("t25")}</div>
+                  <strong className="text-white">{t("t44")}</strong>
+                  {t("t25")}
+                </div>
                 <div>
-                  <strong className="text-white">{t("t46")}</strong>{t("t47")}</div>
+                  <strong className="text-white">{t("t46")}</strong>
+                  {t("t47")}
+                </div>
               </div>
               <div className="text-sm text-cream/80 leading-relaxed">
-                <strong className="text-white block mb-1">{t("t48")}</strong>{t("t49")}</div>
+                <strong className="text-white block mb-1">{t("t48")}</strong>
+                {t("t49")}
+              </div>
             </div>
 
             <div className="p-8 md:p-10 bg-white dark:bg-transparent relative z-10">
               <div className="mb-10 text-midnight/80 dark:text-muted font-sans space-y-4">
                 <p>
-                  <strong className="text-midnight dark:text-cream font-cinzel text-lg">{t("t50")}</strong>
-                  <br />{t("t51")}<em>{t("t52")}</em>{t("t53")}</p>
+                  <strong className="text-midnight dark:text-cream font-cinzel text-lg">
+                    {t("t50")}
+                  </strong>
+                  <br />
+                  {t("t51")}
+                  <em>{t("t52")}</em>
+                  {t("t53")}
+                </p>
                 <div className="bg-ivory dark:bg-midnight p-5 rounded-md border border-midnight/5 dark:border-white/5 my-6">
-                  <p className="font-semibold mb-2 text-midnight dark:text-cream">{t("t54")}</p>
+                  <p className="font-semibold mb-2 text-midnight dark:text-cream">
+                    {t("t54")}
+                  </p>
                   <ul className="list-disc list-inside ms-5 space-y-1 text-midnight/70 dark:text-cream/70">
                     <li>{t("t55")}</li>
                     <li>{t("t56")}</li>
@@ -297,7 +361,9 @@ export default function TawheedProgramme() {
               </div>
 
               <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-                <LayoutList className="w-5 h-5 text-gold" />{t("t59")}</h4>
+                <LayoutList className="w-5 h-5 text-gold" />
+                {t("t59")}
+              </h4>
               <div className="grid sm:grid-cols-1 gap-x-8 gap-y-4">
                 <div className="flex items-start gap-4 p-4 border border-midnight/5 dark:border-white/5 rounded-lg bg-gray-50/50 dark:bg-navy/50">
                   <span className="flex items-center justify-center min-w-8 h-8 rounded-full bg-gold/20 text-gold text-sm font-bold shrink-0 mt-0.5">
@@ -305,7 +371,9 @@ export default function TawheedProgramme() {
                   </span>
                   <span className="font-sans text-midnight/80 dark:text-cream/90 leading-relaxed text-base">
                     Memorization and detailed explanation of the text{" "}
-                    <strong>{t("t52")}</strong>{t("t61")}</span>
+                    <strong>{t("t52")}</strong>
+                    {t("t61")}
+                  </span>
                 </div>
               </div>
             </div>
@@ -317,31 +385,47 @@ export default function TawheedProgramme() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-gold mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t62")}</h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t63")}</p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
+            {t("t62")}
+          </h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
+            {t("t63")}
+          </p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t64")}</h3>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
+              {t("t64")}
+            </h3>
             <div className="font-cormorant text-5xl text-gold mb-6">
-              $1,200{" "}
-              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">{t("t65")}</span>
+              $800{" "}
+              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">
+                {t("t65")}
+              </span>
             </div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t66")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t66")}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t67")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t67")}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t68")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t68")}
+                </span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">{t("t69")}</Button>
+              <Button variant="primary" className="w-full py-4 text-lg">
+                {t("t69")}
+              </Button>
             </Link>
           </div>
 
@@ -349,7 +433,9 @@ export default function TawheedProgramme() {
             <Link
               href="/programmes/islamic"
               className="text-gold hover:text-amber transition-colors font-sans underline underline-offset-4"
-            >{t("t70")}</Link>
+            >
+              {t("t70")}
+            </Link>
           </div>
         </div>
       </section>
@@ -407,7 +493,9 @@ function SingleSectionLevelCard({
 
       <div className="p-8 md:p-10 bg-white dark:bg-transparent">
         <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-          <LayoutList className="w-5 h-5 text-gold" />{t("t74")}</h4>
+          <LayoutList className="w-5 h-5 text-gold" />
+          {t("t74")}
+        </h4>
         <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4">
           {topics.map((topic, idx) => (
             <div

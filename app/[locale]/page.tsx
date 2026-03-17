@@ -256,11 +256,10 @@ export default function Home() {
                 <div className="mt-auto flex flex-col items-center space-y-4 w-full">
                   <div className="text-midnight/ dark:text-cream/ font-cormorant text-lg">
                     {h("dualCurriculum.islamic.indivFrom")}{" "}
-                    <span className="text-amber">$1,200</span>{" "}
-                    {h("fees.perYear")}
+                    <span className="text-amber">$800</span> {h("fees.perYear")}
                     <br />
                     {h("dualCurriculum.islamic.bundleFrom")}{" "}
-                    <span className="text-gold font-bold">$5,000</span>
+                    <span className="text-gold font-bold">$4,500</span>
                   </div>
                   <div className="w-full text-center py-3 border border-gold text-gold group-hover:bg-gold group-hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block">
                     {h("dualCurriculum.islamic.explore")}
@@ -302,11 +301,11 @@ export default function Home() {
                 <div className="mt-auto flex flex-col items-center space-y-4 w-full">
                   <div className="text-cream font-cormorant text-lg">
                     {h("dualCurriculum.islamic.indivFrom")}{" "}
-                    <span className="text-amber">$2,000</span>{" "}
+                    <span className="text-amber">$1,500</span>{" "}
                     {h("fees.perYear")}
                     <br />
                     {h("dualCurriculum.islamic.bundleFrom")}{" "}
-                    <span className="text-gold font-bold">$5,000</span>
+                    <span className="text-gold font-bold">$3,000</span>
                   </div>
                   <div className="w-full text-center py-3 border border-gold text-gold group-hover:bg-gold group-hover:text-midnight transition-colors tracking-wide text-sm font-medium uppercase mt-4 block">
                     {h("dualCurriculum.western.explore")}
@@ -332,63 +331,63 @@ export default function Home() {
               name: t_isl("quran.name"),
               color: "border-t-green",
               levels: t_isl("quran.levels"),
-              price: "$2,000",
+              price: "$800",
               link: "/programmes/islamic/quran-memorisation",
             },
             {
               name: t_isl("arabic.name"),
               color: "border-t-amber",
               levels: t_isl("arabic.levels"),
-              price: "$1,500",
+              price: "$800",
               link: "/programmes/islamic/arabic",
             },
             {
               name: t_isl("tawheed.name"),
               color: "border-t-blue-500",
               levels: t_isl("tawheed.levels"),
-              price: "$1,200",
+              price: "$800",
               link: "/programmes/islamic/tawheed",
             },
             {
               name: t_isl("fiqh.name"),
               color: "border-t-purple",
               levels: t_isl("fiqh.levels"),
-              price: "$1,200",
+              price: "$800",
               link: "/programmes/islamic/fiqh",
             },
             {
               name: t_isl("hadith.name"),
               color: "border-t-rust",
               levels: t_isl("hadith.levels"),
-              price: "$1,200",
+              price: "$800",
               link: "/programmes/islamic/hadith",
             },
             {
               name: t_isl("mutoon.name"),
               color: "border-t-[#556b2f]",
               levels: t_isl("mutoon.levels"),
-              price: "$1,200",
+              price: "$800",
               link: "/programmes/islamic/mutoon",
             },
             {
               name: t_wst("math.name"),
               color: "border-t-white",
               levels: t_wst("math.levels"),
-              price: "$2,000",
+              price: "$1,500",
               link: "/programmes/western/mathematics",
             },
             {
               name: t_wst("science.name"),
               color: "border-t-green",
               levels: t_wst("science.levels"),
-              price: "$2,000",
+              price: "$1,500",
               link: "/programmes/western/sciences",
             },
             {
               name: t_wst("programming.name"),
               color: "border-t-purple",
               levels: t_wst("programming.levels"),
-              price: "$2,000",
+              price: "$1,500",
               link: "/programmes/western/programming",
             },
           ].map((course, idx) => (
@@ -487,9 +486,9 @@ export default function Home() {
               {h("fees.bundleName")}
             </div>
             <div className="font-cormorant text-5xl md:text-7xl text-midnight mb-2 font-medium">
-              {billingPlan === "annual" && "$5,000"}
-              {billingPlan === "semester" && "$2,750"}
-              {billingPlan === "monthly" && "$500"}{" "}
+              {billingPlan === "annual" && "$4,500"}
+              {billingPlan === "semester" && "$2,250"}
+              {billingPlan === "monthly" && "$375"}{" "}
               <span className="text-xl md:text-2xl text-midnight/50 font-sans">
                 {billingPlan === "annual" && h("fees.perYear")}
                 {billingPlan === "semester" && h("fees.perSemester")}

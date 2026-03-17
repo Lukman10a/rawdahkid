@@ -301,9 +301,15 @@ export default function MutoonProgramme() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-amiri text-gold text-2xl md:text-3xl mb-4">{t("t0")}</p>
-            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">{t("t1")}</h1>
-            <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">{t("t2")}</p>
+            <p className="font-amiri text-gold text-2xl md:text-3xl mb-4">
+              {t("t0")}
+            </p>
+            <h1 className="font-cinzel text-3xl md:text-5xl lg:text-6xl text-midnight dark:text-cream tracking-widest mb-4 uppercase">
+              {t("t1")}
+            </h1>
+            <p className="font-amiri text-gold text-3xl md:text-5xl mb-6">
+              {t("t2")}
+            </p>
             <div className="font-sans text-sm md:text-base tracking-widest uppercase text-midnight/60 dark:text-cream/60 mb-6 flex flex-wrap justify-center gap-2">
               <span>{t("t3")}</span>
               <span className="hidden sm:inline">{t("t4")}</span>
@@ -312,7 +318,9 @@ export default function MutoonProgramme() {
               <span>{t("t7")}</span>
             </div>
 
-            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">{t("t8")}</p>
+            <p className="font-playfair italic text-2xl text-midnight/80 dark:text-cream/80 max-w-2xl mx-auto mb-8">
+              {t("t8")}
+            </p>
           </motion.div>
         </div>
       </section>
@@ -328,7 +336,9 @@ export default function MutoonProgramme() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-cinzel text-3xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <BookOpen className="w-8 h-8 text-gold" />{t("t9")}</h2>
+              <BookOpen className="w-8 h-8 text-gold" />
+              {t("t9")}
+            </h2>
             <div className="space-y-4 text-midnight/80 dark:text-muted font-sans leading-relaxed text-lg">
               <p>{t("t10")}</p>
               <p>{t("t11")}</p>
@@ -345,22 +355,34 @@ export default function MutoonProgramme() {
             className="bg-white/80 dark:bg-navy/80 p-8 md:p-10 border border-midnight/5 dark:border-white/5 rounded-sm"
           >
             <h2 className="font-cinzel text-2xl text-midnight dark:text-cream mb-6 flex items-center gap-3">
-              <CalendarDays className="w-7 h-7 text-gold" />{t("t13")}</h2>
-            <p className="font-sans text-midnight/80 dark:text-cream/80 mb-6 leading-relaxed">{t("t14")}</p>
+              <CalendarDays className="w-7 h-7 text-gold" />
+              {t("t13")}
+            </h2>
+            <p className="font-sans text-midnight/80 dark:text-cream/80 mb-6 leading-relaxed">
+              {t("t14")}
+            </p>
             <div className="flex flex-col gap-4">
               <div className="flex items-start gap-4 p-4 border border-midnight/5 dark:border-white/5 rounded-lg bg-gray-50 dark:bg-transparent">
                 <BookOpen className="w-6 h-6 text-gold shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-midnight dark:text-cream mb-1 font-cinzel tracking-wider">{t("t15")}</h4>
-                  <p className="text-sm text-midnight/70 dark:text-cream/70 font-sans">{t("t16")}</p>
+                  <h4 className="font-bold text-midnight dark:text-cream mb-1 font-cinzel tracking-wider">
+                    {t("t15")}
+                  </h4>
+                  <p className="text-sm text-midnight/70 dark:text-cream/70 font-sans">
+                    {t("t16")}
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-4 border border-emerald-500/20 rounded-lg bg-emerald-50/50 dark:bg-emerald-900/10 relative overflow-hidden">
                 <div className="absolute inset-s-0 top-0 bottom-0 w-1 bg-emerald-500/50"></div>
                 <RefreshCw className="w-6 h-6 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-emerald-800 dark:text-emerald-300 mb-1 font-cinzel tracking-wider">{t("t17")}</h4>
-                  <p className="text-sm text-emerald-900/70 dark:text-emerald-100/70 font-sans">{t("t18")}</p>
+                  <h4 className="font-bold text-emerald-800 dark:text-emerald-300 mb-1 font-cinzel tracking-wider">
+                    {t("t17")}
+                  </h4>
+                  <p className="text-sm text-emerald-900/70 dark:text-emerald-100/70 font-sans">
+                    {t("t18")}
+                  </p>
                 </div>
               </div>
             </div>
@@ -372,7 +394,9 @@ export default function MutoonProgramme() {
       <section className="py-20 bg-warm/30 dark:bg-deep/30 border-y border-midnight/5 dark:border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">{t("t19")}</h2>
+            <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
+              {t("t19")}
+            </h2>
             <div className="w-24 h-px bg-gold/50 mx-auto"></div>
           </div>
 
@@ -380,31 +404,51 @@ export default function MutoonProgramme() {
             <table className="w-full text-start border-collapse">
               <thead>
                 <tr className="border-b border-midnight/20 dark:border-white/20">
-                  <th className="py-4 px-6 font-cinzel text-gold text-lg">{t("t20")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t21")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t22")}</th>
-                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">{t("t23")}</th>
+                  <th className="py-4 px-6 font-cinzel text-gold text-lg">
+                    {t("t20")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
+                    {t("t21")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
+                    {t("t22")}
+                  </th>
+                  <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg">
+                    {t("t23")}
+                  </th>
                 </tr>
               </thead>
               <tbody className="font-sans text-midnight/80 dark:text-cream/80">
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t24")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t25")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t24")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t25")}
+                  </td>
                   <td className="py-4 px-6 whitespace-nowrap">{t("t26")}</td>
                   <td className="py-4 px-6 leading-relaxed">{t("t27")}</td>
                 </tr>
                 <tr className="border-b border-midnight/5 dark:border-white/5 hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap">{t("t28")}</td>
-                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">{t("t29")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap">
+                    {t("t28")}
+                  </td>
+                  <td className="py-4 px-6 font-medium text-midnight dark:text-cream">
+                    {t("t29")}
+                  </td>
                   <td className="py-4 px-6 whitespace-nowrap">{t("t30")}</td>
                   <td className="py-4 px-6 leading-relaxed">{t("t31")}</td>
                 </tr>
                 <tr className="hover:bg-white/50 dark:hover:bg-navy/50 transition-colors">
-                  <td className="py-4 px-6 font-semibold whitespace-nowrap text-gold/80 italic">{t("t32")}</td>
+                  <td className="py-4 px-6 font-semibold whitespace-nowrap text-gold/80 italic">
+                    {t("t32")}
+                  </td>
                   <td
                     className="py-4 px-6 font-medium text-midnight/60 dark:text-cream/60 italic"
                     colSpan={3}
-                  >{t("t33")}</td>
+                  >
+                    {t("t33")}
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -415,7 +459,9 @@ export default function MutoonProgramme() {
       {/* 4. DETAILED COURSE OUTLINES */}
       <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">{t("t34")}</h2>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-4">
+            {t("t34")}
+          </h2>
           <div className="w-24 h-px bg-gold/50 mx-auto"></div>
         </div>
 
@@ -455,33 +501,49 @@ export default function MutoonProgramme() {
             className="bg-white/50 dark:bg-navy/20 border border-dashed border-gold/40 shadow-sm rounded-xl overflow-hidden p-8 md:p-12 text-center relative"
           >
             <div className="mb-6">
-              <div className="text-gold font-cinzel font-bold tracking-widest text-sm mb-2 uppercase">{t("t35")}</div>
-              <h3 className="font-playfair text-2xl md:text-3xl text-midnight dark:text-white mb-4">{t("t36")}</h3>
-              <p className="font-sans text-midnight/70 dark:text-cream/70 max-w-2xl mx-auto mb-8">{t("t37")}</p>
+              <div className="text-gold font-cinzel font-bold tracking-widest text-sm mb-2 uppercase">
+                {t("t35")}
+              </div>
+              <h3 className="font-playfair text-2xl md:text-3xl text-midnight dark:text-white mb-4">
+                {t("t36")}
+              </h3>
+              <p className="font-sans text-midnight/70 dark:text-cream/70 max-w-2xl mx-auto mb-8">
+                {t("t37")}
+              </p>
             </div>
 
             <div className="bg-white dark:bg-midnight border border-midnight/5 dark:border-white/5 rounded-lg p-6 max-w-3xl mx-auto text-start">
-              <h4 className="font-cinzel text-lg text-midnight dark:text-cream border-b border-midnight/10 dark:border-white/10 pb-4 mb-4">{t("t38")}</h4>
+              <h4 className="font-cinzel text-lg text-midnight dark:text-cream border-b border-midnight/10 dark:border-white/10 pb-4 mb-4">
+                {t("t38")}
+              </h4>
               <ul className="space-y-4 font-sans text-midnight/80 dark:text-cream/80">
                 <li className="flex items-start gap-4">
                   <BookOpen className="w-5 h-5 text-gold shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold tracking-wide">{t("t39")}</span>{t("t40")}</div>
+                    <span className="font-bold tracking-wide">{t("t39")}</span>
+                    {t("t40")}
+                  </div>
                 </li>
                 <li className="flex items-start gap-4">
                   <BookOpen className="w-5 h-5 text-gold shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold tracking-wide">{t("t41")}</span>{t("t42")}</div>
+                    <span className="font-bold tracking-wide">{t("t41")}</span>
+                    {t("t42")}
+                  </div>
                 </li>
                 <li className="flex items-start gap-4">
                   <BookOpen className="w-5 h-5 text-gold shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-bold tracking-wide">{t("t43")}</span>{t("t44")}</div>
+                    <span className="font-bold tracking-wide">{t("t43")}</span>
+                    {t("t44")}
+                  </div>
                 </li>
               </ul>
             </div>
 
-            <p className="mt-8 text-sm font-amiri text-midnight/50 dark:text-cream/50 italic">{t("t45")}</p>
+            <p className="mt-8 text-sm font-amiri text-midnight/50 dark:text-cream/50 italic">
+              {t("t45")}
+            </p>
           </motion.div>
         </div>
       </section>
@@ -490,31 +552,47 @@ export default function MutoonProgramme() {
       <section className="py-24 bg-white dark:bg-navy border-t border-midnight/10 dark:border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <GraduationCap className="w-16 h-16 text-gold mx-auto mb-6" />
-          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">{t("t46")}</h2>
-          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">{t("t47")}</p>
+          <h2 className="font-cinzel text-3xl md:text-5xl text-midnight dark:text-cream mb-6">
+            {t("t46")}
+          </h2>
+          <p className="font-sans text-lg text-midnight/80 dark:text-muted mb-12 max-w-2xl mx-auto">
+            {t("t47")}
+          </p>
 
           <div className="bg-ivory dark:bg-midnight p-8 md:p-12 border border-gold/30 rounded-sm inline-block w-full max-w-md shadow-xl">
-            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">{t("t48")}</h3>
+            <h3 className="font-playfair text-2xl text-midnight dark:text-cream mb-2">
+              {t("t48")}
+            </h3>
             <div className="font-cormorant text-5xl text-gold mb-6">
-              $1,200{" "}
-              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">{t("t49")}</span>
+              $800{" "}
+              <span className="text-xl text-midnight/60 dark:text-cream/60 font-sans">
+                {t("t49")}
+              </span>
             </div>
             <ul className="text-start space-y-4 mb-8">
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t50")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t50")}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t51")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t51")}
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="font-sans text-midnight/80 dark:text-cream/80">{t("t52")}</span>
+                <span className="font-sans text-midnight/80 dark:text-cream/80">
+                  {t("t52")}
+                </span>
               </li>
             </ul>
             <Link href="/enrol">
-              <Button variant="primary" className="w-full py-4 text-lg">{t("t53")}</Button>
+              <Button variant="primary" className="w-full py-4 text-lg">
+                {t("t53")}
+              </Button>
             </Link>
           </div>
 
@@ -522,7 +600,9 @@ export default function MutoonProgramme() {
             <Link
               href="/programmes/islamic"
               className="text-gold hover:text-amber transition-colors font-sans underline underline-offset-4"
-            >{t("t54")}</Link>
+            >
+              {t("t54")}
+            </Link>
           </div>
         </div>
       </section>
@@ -613,7 +693,9 @@ function WeeklyLevelCard({
 
       <div className="p-4 sm:p-8 md:p-10 bg-white dark:bg-transparent">
         <h4 className="font-cinzel text-xl text-midnight dark:text-cream mb-8 inline-flex items-center gap-3 border-b-2 border-gold/40 pb-2">
-          <LayoutList className="w-5 h-5 text-gold" />{t("t59")}</h4>
+          <LayoutList className="w-5 h-5 text-gold" />
+          {t("t59")}
+        </h4>
 
         <div className="space-y-12">
           {weeks.map((week, wIdx) => (
