@@ -3,9 +3,15 @@
 import { motion } from "framer-motion";
 import { BookOpen, LayoutList } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { advancedOutcomeText, levelTemplates } from "./levelData";
+import type { LevelTemplate } from "./types";
 
 export function DetailedCourseSection() {
   const t = useTranslations("ProgTawheed");
+  const levels = levelTemplates.map((level) => ({
+    ...level,
+    title: t(level.titleKey),
+  }));
 
   return (
     <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,98 +23,9 @@ export function DetailedCourseSection() {
       </div>
 
       <div className="space-y-24">
-        <SingleSectionLevelCard
-          levelNumber="1"
-          title={t("t20")}
-          duration="12 Weeks"
-          classDuration="40 Minutes per Session"
-          aim="To provide foundational knowledge about Allah's Lordship, the reason for existence and the basic tenets of the religion."
-          topics={[
-            "What is compulsory for mankind to know",
-            "Allah is my Lord",
-            "Knowing the Lord (Allah)",
-            "Allah is the Creator",
-            "From the amazing power of Allah in His slaves",
-            "Allah is the Provider",
-            "I worship Allah, my Lord",
-            "My religion is Islam",
-            "My Prophet is Muhammad صلى الله عليه وسلم",
-            "The Noble Qur'an",
-          ]}
-        />
-
-        <DualSectionLevelCard
-          levelNumber="2"
-          title={t("t24")}
-          duration="16 Weeks"
-          classDuration="40 Minutes per Session"
-          aim="To teach the fundamentals of the deen, the pillars of Islam, to understand the reason for creation and tawheed."
-          sectionTitle1="Section 1"
-          sectionTitle2="Section 2"
-          section1={[
-            "Revision of previously learnt lessons",
-            "The three fundamentals of the deen",
-            "The first fundamental: Knowledge of the slave about his Lord",
-            "The wisdom behind the creation of Jinn and Mankind",
-            "The obligation of worshiping Allah alone",
-            "The worship of other than Allah is Shirk",
-          ]}
-          section2={[
-            "The second fundamental: Knowledge of the slave about his deen",
-            "Levels of the religion: The first level — Al-Islam",
-            "The pillars of Islam",
-            "Meaning of the Shahaadataan (The two testimonies of faith)",
-            "The second level — Al-Emaan",
-            "Belief in resurrection",
-            "The third level — Al-Ihsaan",
-            "The third fundamental: Knowledge of the slave about his Prophet Muhammad صلى الله عليه وسلم",
-          ]}
-        />
-
-        <SingleSectionLevelCard
-          levelNumber="3"
-          title={t("t28")}
-          duration="16 Weeks"
-          classDuration="40 Minutes per Session"
-          aim="To learn the levels of the religion, what each level necessitates and how to attain perfection in each."
-          topics={[
-            "Levels of the deen — The first level: Islam",
-            "The pillars of Islam",
-            "The first pillar: The testifications (Shahaadataan)",
-            "The second and third pillar",
-            "The fourth and fifth pillar",
-            "The second level of the deen: Al-Emaan",
-            "The pillars of Emaan: The first pillar — Belief in Allah",
-            "The second pillar — Belief in the angels",
-            "The third and fourth pillar — Belief in the books and messengers",
-            "The fifth pillar — Belief in the last day",
-            "The sixth pillar — Belief in Al-Qadr (the good and bad of it)",
-            "The third level of the deen: Al-Ihsaan",
-          ]}
-        />
-
-        <SingleSectionLevelCard
-          levelNumber="4"
-          title={t("t32")}
-          duration="16 Weeks"
-          classDuration="40 Minutes per Session"
-          aim="To teach the true tawheed, types of tawheed and some of its nullifiers."
-          topics={[
-            "The wisdom behind creation",
-            "Al-Ibaadah (worship)",
-            "Tawheed and its types",
-            "Tawheed Ar-Rububiyyah",
-            "Tawheed Al-Uluhiyyah",
-            "Tawheed Al-Asmaa' was-Sifaat",
-            "The messengers of Allah to the creation",
-            "The first obligation of Allah upon mankind",
-            "The true belief",
-            "Shaytaan",
-            "Ruling with other than what was revealed by Allah",
-            "Whoever claims knowledge of the unseen or is pleased with the worship of the people is a Taaghoot",
-            "The believer must disbelieve in all that is worshipped besides Allah",
-          ]}
-        />
+        {levels.map((level) => (
+          <LevelCard key={level.levelNumber} level={level} />
+        ))}
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -188,9 +105,9 @@ export function DetailedCourseSection() {
                   1
                 </span>
                 <span className="font-sans text-midnight/80 dark:text-cream/90 leading-relaxed text-base">
-                  Memorization and detailed explanation of the text{" "}
-                  <strong>{t("t52")}</strong>
-                  {t("t61")}
+                  {advancedOutcomeText.prefix}
+                  <strong>{t(advancedOutcomeText.titleKey)}</strong>
+                  {t(advancedOutcomeText.suffixKey)}
                 </span>
               </div>
             </div>
@@ -198,6 +115,35 @@ export function DetailedCourseSection() {
         </motion.div>
       </div>
     </section>
+  );
+}
+
+function LevelCard({ level }: { level: LevelTemplate & { title: string } }) {
+  if (level.kind === "dual") {
+    return (
+      <DualSectionLevelCard
+        levelNumber={level.levelNumber}
+        title={level.title}
+        duration={level.duration}
+        classDuration={level.classDuration}
+        aim={level.aim}
+        sectionTitle1={level.sectionTitle1}
+        sectionTitle2={level.sectionTitle2}
+        section1={level.section1}
+        section2={level.section2}
+      />
+    );
+  }
+
+  return (
+    <SingleSectionLevelCard
+      levelNumber={level.levelNumber}
+      title={level.title}
+      duration={level.duration}
+      classDuration={level.classDuration}
+      aim={level.aim}
+      topics={level.topics}
+    />
   );
 }
 
