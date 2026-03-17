@@ -53,14 +53,14 @@ export function getRelatedPosts(id: string, t: Translator): RelatedPost[] {
       title: "The Wonder of Electricity & Magnetism",
       category: "Tech & Sciences",
       image:
-        "https://images.unsplash.com/photo-1620846506306-69680370d03b?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       id: "6",
       title: "Understanding Taharah: Cleanliness is Half of Faith",
       category: "Islamic Studies",
       image:
-        "https://images.unsplash.com/photo-1574343869269-d75d5069b027?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       id: "2",
