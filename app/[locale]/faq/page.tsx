@@ -2,23 +2,31 @@
 
 import { motion } from "framer-motion";
 import { Plus, Minus, Info, BookOpen, CreditCard } from "lucide-react";
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
+type CategoryId = "admissions" | "curriculum" | "fees";
+
+type FaqItem = {
+  q: string;
+  a: ReactNode;
+};
+
 export default function FaqPage() {
   const t = useTranslations("Faq");
-  const [activeCategory, setActiveCategory] = useState("admissions");
+  const [activeCategory, setActiveCategory] =
+    useState<CategoryId>("admissions");
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const categories = [
+  const categories: { id: CategoryId; label: string; icon: typeof Info }[] = [
     { id: "admissions", label: t("categories.admissions"), icon: Info },
     { id: "curriculum", label: t("categories.curriculum"), icon: BookOpen },
     { id: "fees", label: t("categories.fees"), icon: CreditCard },
   ];
 
   type RichTextProp = {
-    [key: string]: (chunks: React.ReactNode) => React.ReactNode;
+    [key: string]: (chunks: ReactNode) => ReactNode;
   };
 
   const richTextComponents: RichTextProp = {
@@ -64,7 +72,7 @@ export default function FaqPage() {
     ),
   };
 
-  const faqs = {
+  const faqs: Record<CategoryId, FaqItem[]> = {
     admissions: [
       { q: t("q_admin_1"), a: t.rich("a_admin_1", richTextComponents) },
       { q: t("q_admin_2"), a: t.rich("a_admin_2", richTextComponents) },
@@ -82,13 +90,12 @@ export default function FaqPage() {
     ],
   };
 
-  const handleCategorySwitch = (id: string) => {
+  const handleCategorySwitch = (id: CategoryId) => {
     setActiveCategory(id);
     setOpenIndex(null);
   };
 
-  // @ts-ignore
-  const currentFaqs = faqs[activeCategory] || faqs.admissions;
+  const currentFaqs = faqs[activeCategory];
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-midnight text-midnight dark:text-cream pt-24">
@@ -106,7 +113,7 @@ export default function FaqPage() {
       </section>
 
       {/* FAQ CONTENT TWO-COLUMN LAYOUT */}
-      <section className="py-16 md:py-24 bg-white dark:bg-midnight flex-grow">
+      <section className="py-16 md:py-24 bg-white dark:bg-midnight grow">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12 lg:gap-20">
           {/* SIDEBAR CATEGORIES */}
           <div className="lg:w-1/3 shrink-0">
@@ -141,7 +148,7 @@ export default function FaqPage() {
 
           {/* RIGHT SIDE ACCORDIONS */}
           <div className="lg:w-2/3 space-y-4">
-            {currentFaqs.map((faq: any, idx: number) => {
+            {currentFaqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
               return (
                 <motion.div

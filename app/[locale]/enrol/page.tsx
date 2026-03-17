@@ -33,6 +33,7 @@ type FormErrors = Partial<Record<keyof FormData, string>>;
 
 export default function EnrolPage() {
   const t = useTranslations("Enrol");
+  const tUnsafe = (key: string) => t(key as never);
   const router = useRouter();
 
   // --- State ---
@@ -242,17 +243,14 @@ export default function EnrolPage() {
                 <div className="w-16 h-16 bg-ivory dark:bg-midnight text-gold mx-auto rounded-full flex items-center justify-center mb-6 border-4 border-white dark:border-navy shadow-md group-hover:scale-110 transition-transform">
                   <s.icon className="w-8 h-8" />
                 </div>
-                {/* @ts-ignore */}
                 <div className="font-cinzel text-sm text-gold tracking-widest uppercase mb-2">
-                  {t(`process.steps.${s.key}.step`)}
+                  {tUnsafe(`process.steps.${s.key}.step`)}
                 </div>
-                {/* @ts-ignore */}
                 <h3 className="font-playfair text-xl text-midnight dark:text-cream mb-4">
-                  {t(`process.steps.${s.key}.title`)}
+                  {tUnsafe(`process.steps.${s.key}.title`)}
                 </h3>
-                {/* @ts-ignore */}
                 <p className="font-sans text-midnight/70 dark:text-cream/70 text-sm leading-relaxed">
-                  {t(`process.steps.${s.key}.desc`)}
+                  {tUnsafe(`process.steps.${s.key}.desc`)}
                 </p>
               </motion.div>
             ))}
@@ -702,21 +700,18 @@ export default function EnrolPage() {
                     <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-6 text-green-600 dark:text-green-400">
                       <CheckCircle size={40} />
                     </div>
-                    {/* @ts-ignore */}
                     <h3 className="font-cinzel text-2xl md:text-3xl text-midnight dark:text-cream mb-4">
-                      {t("Modals.success.title")}
+                      {tUnsafe("Modals.success.title")}
                     </h3>
-                    {/* @ts-ignore */}
                     <p className="font-sans text-midnight/70 dark:text-cream/70 mb-8">
-                      {t("Modals.success.desc")}
+                      {tUnsafe("Modals.success.desc")}
                     </p>
                     <Link
                       href="/fees#bundles"
                       onClick={() => setModalState("idle")}
                       className="btn-primary w-full bg-gold text-midnight py-3 font-bold uppercase tracking-widest hover:bg-amber-400 transition-colors inline-block leading-12"
                     >
-                      {/* @ts-ignore */}
-                      {t("Modals.success.proceed")}
+                      {tUnsafe("Modals.success.proceed")}
                     </Link>
                   </div>
                 )}
@@ -726,16 +721,14 @@ export default function EnrolPage() {
                     <div className="w-20 h-20 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-6 text-red-600 dark:text-red-400">
                       <AlertTriangle size={40} />
                     </div>
-                    {/* @ts-ignore */}
                     <h3 className="font-cinzel text-2xl md:text-3xl text-midnight dark:text-cream mb-4">
-                      {t("Modals.failure.title")}
+                      {tUnsafe("Modals.failure.title")}
                     </h3>
                     <p className="font-sans text-red-500 mb-8 font-medium">
                       {failureReason}
                     </p>
                     {/* Logic to show different button if it's "Email Exists" vs Generic Error */}
-                    {/* @ts-ignore */}
-                    {failureReason === t("form.errors.emailExists") ? (
+                    {failureReason === tUnsafe("form.errors.emailExists") ? (
                       <div className="w-full space-y-3">
                         <button
                           onClick={() => router.push("/fees#bundles")}
@@ -755,8 +748,7 @@ export default function EnrolPage() {
                         onClick={() => setModalState("idle")}
                         className="w-full bg-midnight dark:bg-white text-white dark:text-midnight py-3 font-bold uppercase tracking-widest hover:opacity-90 transition-opacity"
                       >
-                        {/* @ts-ignore */}
-                        {t("Modals.failure.retry")}
+                        {tUnsafe("Modals.failure.retry")}
                       </button>
                     )}
                   </div>
