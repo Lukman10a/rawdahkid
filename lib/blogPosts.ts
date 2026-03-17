@@ -18,7 +18,7 @@ export const getBlogPosts = (t: (key: string) => string): Record<string, BlogPos
       id: "1",
       key: "post1",
       image:
-        "https://images.unsplash.com/photo-1609599006353-e629aaab31fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://picsum.photos/1200/600?random=0",
       category: "islamic",
       author: "Sheikh Abdullah",
       title: t("post1.title"),
@@ -100,7 +100,7 @@ export const getBlogPosts = (t: (key: string) => string): Record<string, BlogPos
       id: "3",
       key: "post3",
       image:
-        "https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://picsum.photos/1200/600?random=1",
       category: "parenting",
       author: "Dr. Fatima",
       title: t("post3.title"),
@@ -179,7 +179,7 @@ export const getBlogPosts = (t: (key: string) => string): Record<string, BlogPos
       excerpt:
         "Sparking curiosity in young minds using simple circuits and invisible forces.",
       image:
-        "https://images.unsplash.com/photo-1620846506306-69680370d03b?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       content: `
         <p class="mb-6 text-xl leading-relaxed font-serif text-midnight/90 dark:text-cream/90">From the lightning in the sky to the spark plugs in a car, electricity is a force that shapes our world.</p>
         
@@ -253,7 +253,7 @@ export const getBlogPosts = (t: (key: string) => string): Record<string, BlogPos
       excerpt:
         "Connecting the dots between sacred geometry, art history, and modern mathematical concepts.",
       image:
-        "https://images.unsplash.com/photo-1542259649-43cc767421ac?auto=format&fit=crop&w=1200&q=80",
+        "https://picsum.photos/1200/600?random=2",
       content: `
         <p class="mb-6 text-xl leading-relaxed font-serif text-midnight/90 dark:text-cream/90">Connecting the dots between sacred geometry, art history, and modern mathematical concepts.</p>
         
