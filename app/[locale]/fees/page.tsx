@@ -3,16 +3,8 @@
 import { createPortal } from "react-dom";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Check,
-  Info,
-  AlertTriangle,
-  X,
-  CreditCard,
-  User,
-  Calendar,
-} from "lucide-react";
-import { Link, useRouter } from "@/i18n/routing";
+import { Check, Info, AlertTriangle, X, CreditCard, User } from "lucide-react";
+import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
 
 import { useTranslations } from "next-intl";
@@ -28,9 +20,9 @@ type Plan = {
 export default function FeesPage() {
   const t = useTranslations("Fees");
   const tEnrol = useTranslations("Enrol"); // For shared modal strings
-  const router = useRouter();
+  const tEnrolText = tEnrol as unknown as (key: string) => string;
+  const isBrowser = typeof window !== "undefined";
 
-  const [mounted, setMounted] = useState(false);
   const [modalState, setModalState] = useState<
     "idle" | "register_required" | "payment_config" | "payment_overview"
   >("idle");
@@ -40,22 +32,14 @@ export default function FeesPage() {
     students: 1,
   });
 
-  const [paymentRegistered, setPaymentRegistered] = useState(false);
+  const [paymentRegistered, setPaymentRegistered] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return Boolean(localStorage.getItem("currentUserEmail"));
+  });
   const [verificationEmail, setVerificationEmail] = useState("");
   const [verificationError, setVerificationError] = useState("");
 
   const modalRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    setMounted(true);
-    // Check if user has registered
-    if (typeof window !== "undefined") {
-      const email = localStorage.getItem("currentUserEmail");
-      if (email) {
-        setPaymentRegistered(true);
-      }
-    }
-  }, []);
 
   const handleSelectPlan = (plan: Plan) => {
     setSelectedPlan(plan);
@@ -88,9 +72,8 @@ export default function FeesPage() {
       setModalState("payment_config");
       setVerificationError("");
     } else {
-      // @ts-ignore
       setVerificationError(
-        tEnrol("Modals.registerPrompt.emailNotFound") || "Email not found",
+        tEnrolText("Modals.registerPrompt.emailNotFound") || "Email not found",
       );
     }
   };
@@ -114,7 +97,7 @@ export default function FeesPage() {
   const calculateTotal = () => {
     if (!selectedPlan) return { total: 0, discount: "0%" };
 
-    let base = selectedPlan.price;
+    const base = selectedPlan.price;
     // The price in the plan object is 'per year'.
     // Logic:
     // Annual: price * students * 0.9 (10% off)
@@ -654,7 +637,7 @@ export default function FeesPage() {
       </section>
 
       {/* --- MODALS --- */}
-      {mounted &&
+      {isBrowser &&
         createPortal(
           <AnimatePresence>
             {modalState !== "idle" && (
@@ -691,13 +674,13 @@ export default function FeesPage() {
                       <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 text-gold">
                         <User size={32} />
                       </div>
-                      {/* @ts-ignore */}
+                      {}
                       <h3 className="font-cinzel text-2xl md:text-3xl text-midnight dark:text-cream mb-4">
-                        {tEnrol("Modals.registerPrompt.title")}
+                        {tEnrolText("Modals.registerPrompt.title")}
                       </h3>
-                      {/* @ts-ignore */}
+                      {}
                       <p className="font-sans text-midnight/70 dark:text-cream/70 mb-8 max-w-md mx-auto">
-                        {tEnrol("Modals.registerPrompt.desc")}
+                        {tEnrolText("Modals.registerPrompt.desc")}
                       </p>
 
                       <div className="flex flex-col gap-4">
@@ -705,8 +688,8 @@ export default function FeesPage() {
                           href="/enrol#registration-form"
                           className="w-full bg-gold text-midnight py-3 font-bold uppercase tracking-widest hover:bg-white hover:text-gold border border-transparent hover:border-gold transition-all shadow-lg flex items-center justify-center gap-2"
                         >
-                          {/* @ts-ignore */}
-                          {tEnrol("Modals.registerPrompt.cta")}
+                          {}
+                          {tEnrolText("Modals.registerPrompt.cta")}
                         </Link>
 
                         <div className="relative py-2">
@@ -722,10 +705,10 @@ export default function FeesPage() {
 
                         {/* Email Verification */}
                         <div className="space-y-3 bg-midnight/5 dark:bg-black/20 p-4 rounded-sm">
-                          {/* @ts-ignore */}
+                          {}
                           <label className="text-xs uppercase tracking-widest text-midnight/60 dark:text-cream/60 block text-start mb-1">
-                            {/* @ts-ignore */}
-                            {tEnrol("Modals.registerPrompt.verifyLabel")}
+                            {}
+                            {tEnrolText("Modals.registerPrompt.verifyLabel")}
                           </label>
                           <div className="flex gap-2">
                             <input
@@ -735,8 +718,7 @@ export default function FeesPage() {
                                 setVerificationEmail(e.target.value);
                                 setVerificationError("");
                               }}
-                              /* @ts-ignore */
-                              placeholder={tEnrol(
+                              placeholder={tEnrolText(
                                 "Modals.registerPrompt.verifyExample",
                               )}
                               className="flex-1 px-3 py-2 text-sm border border-midnight/10 dark:border-white/10 rounded-sm bg-white dark:bg-midnight focus:border-gold outline-none"
@@ -745,8 +727,8 @@ export default function FeesPage() {
                               onClick={handleVerifyEmail}
                               className="px-4 py-2 bg-midnight dark:bg-cream text-white dark:text-midnight text-xs font-bold uppercase tracking-widest hover:opacity-90"
                             >
-                              {/* @ts-ignore */}
-                              {tEnrol("Modals.registerPrompt.verifyAction")}
+                              {}
+                              {tEnrolText("Modals.registerPrompt.verifyAction")}
                             </button>
                           </div>
                           {verificationError && (
@@ -760,8 +742,8 @@ export default function FeesPage() {
                           onClick={() => setModalState("idle")}
                           className="text-sm text-midnight/50 hover:text-midnight dark:text-cream/50 dark:hover:text-cream underline transition-colors mt-2"
                         >
-                          {/* @ts-ignore */}
-                          {tEnrol("Modals.registerPrompt.cancel")}
+                          {}
+                          {tEnrolText("Modals.registerPrompt.cancel")}
                         </button>
                       </div>
                     </div>
@@ -769,9 +751,9 @@ export default function FeesPage() {
 
                   {modalState === "payment_config" && selectedPlan && (
                     <div className="text-start">
-                      {/* @ts-ignore */}
+                      {}
                       <h3 className="font-cinzel text-2xl lg:text-3xl text-midnight dark:text-cream mb-2 text-center">
-                        {tEnrol("Modals.paymentConfig.title")}
+                        {tEnrolText("Modals.paymentConfig.title")}
                       </h3>
                       <p className="text-center font-sans text-base lg:text-lg text-midnight/60 dark:text-cream/60 mb-8">
                         {selectedPlan.name}
@@ -779,9 +761,9 @@ export default function FeesPage() {
 
                       <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
                         <div className="space-y-6">
-                          {/* @ts-ignore */}
+                          {}
                           <label className="text-sm font-bold uppercase tracking-widest text-midnight dark:text-cream block mb-4 border-b border-light/10 pb-2">
-                            {tEnrol("Modals.paymentConfig.modeLabel")}
+                            {tEnrolText("Modals.paymentConfig.modeLabel")}
                           </label>
                           <div className="grid grid-cols-1 gap-3">
                             <label
@@ -800,9 +782,11 @@ export default function FeesPage() {
                                   }
                                   className="accent-gold"
                                 />
-                                {/* @ts-ignore */}
+                                {}
                                 <span className="font-sans text-sm font-medium">
-                                  {tEnrol("Modals.paymentConfig.modes.annual")}
+                                  {tEnrolText(
+                                    "Modals.paymentConfig.modes.annual",
+                                  )}
                                 </span>
                               </div>
                               <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
@@ -825,9 +809,9 @@ export default function FeesPage() {
                                   }
                                   className="accent-gold"
                                 />
-                                {/* @ts-ignore */}
+                                {}
                                 <span className="font-sans text-sm font-medium">
-                                  {tEnrol(
+                                  {tEnrolText(
                                     "Modals.paymentConfig.modes.semester",
                                   )}
                                 </span>
@@ -852,9 +836,11 @@ export default function FeesPage() {
                                   }
                                   className="accent-gold"
                                 />
-                                {/* @ts-ignore */}
+                                {}
                                 <span className="font-sans text-sm font-medium">
-                                  {tEnrol("Modals.paymentConfig.modes.monthly")}
+                                  {tEnrolText(
+                                    "Modals.paymentConfig.modes.monthly",
+                                  )}
                                 </span>
                               </div>
                             </label>
@@ -862,9 +848,9 @@ export default function FeesPage() {
                         </div>
 
                         <div className="space-y-6">
-                          {/* @ts-ignore */}
+                          {}
                           <label className="text-sm font-bold uppercase tracking-widest text-midnight dark:text-cream block mb-4 border-b border-light/10 pb-2">
-                            {tEnrol("Modals.paymentConfig.childrenLabel")}
+                            {tEnrolText("Modals.paymentConfig.childrenLabel")}
                           </label>
                           <div className="flex items-center gap-6 justify-center md:justify-start">
                             <button
@@ -910,12 +896,12 @@ export default function FeesPage() {
                       </div>
 
                       <div className="mt-12 flex justify-end">
-                        {/* @ts-ignore */}
+                        {}
                         <button
                           onClick={() => setModalState("payment_overview")}
                           className="w-full md:w-auto px-12 bg-midnight dark:bg-cream text-white dark:text-midnight py-4 font-bold uppercase tracking-widest hover:opacity-90 shadow-lg hover:-translate-y-0.5 transition-all"
                         >
-                          {tEnrol("Modals.paymentConfig.next")}
+                          {tEnrolText("Modals.paymentConfig.next")}
                         </button>
                       </div>
                     </div>
@@ -923,17 +909,17 @@ export default function FeesPage() {
 
                   {modalState === "payment_overview" && selectedPlan && (
                     <div className="text-start">
-                      {/* @ts-ignore */}
+                      {}
                       <h3 className="font-cinzel text-2xl lg:text-3xl text-midnight dark:text-cream mb-8 text-center pb-4 border-b border-light/10">
-                        {tEnrol("Modals.overview.title")}
+                        {tEnrolText("Modals.overview.title")}
                       </h3>
 
                       <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="bg-ivory dark:bg-black/20 p-8 rounded-sm space-y-4 font-sans shadow-inner">
                           <div className="flex justify-between items-center">
-                            {/* @ts-ignore */}
+                            {}
                             <span className="text-midnight/60 dark:text-cream/60">
-                              {tEnrol("Modals.overview.plan")}
+                              {tEnrolText("Modals.overview.plan")}
                             </span>
                             <span className="font-medium text-end text-lg">
                               {selectedPlan.name}
@@ -948,27 +934,27 @@ export default function FeesPage() {
                             </span>
                           </div>
                           <div className="flex justify-between items-center">
-                            {/* @ts-ignore */}
+                            {}
                             <span className="text-midnight/60 dark:text-cream/60">
-                              {tEnrol("Modals.overview.students")}
+                              {tEnrolText("Modals.overview.students")}
                             </span>
                             <span className="font-medium text-lg">
                               {config.students}
                             </span>
                           </div>
                           <div className="flex justify-between items-center">
-                            {/* @ts-ignore */}
+                            {}
                             <span className="text-midnight/60 dark:text-cream/60">
-                              {tEnrol("Modals.overview.discount")}
+                              {tEnrolText("Modals.overview.discount")}
                             </span>
                             <span className="font-medium text-green-600">
                               -{totals.discount}
                             </span>
                           </div>
                           <div className="border-t border-midnight/10 dark:border-white/10 pt-4 flex justify-between items-center mt-4">
-                            {/* @ts-ignore */}
+                            {}
                             <span className="font-bold text-midnight dark:text-cream uppercase tracking-wider text-lg">
-                              {tEnrol("Modals.overview.total")}
+                              {tEnrolText("Modals.overview.total")}
                             </span>
                             <span className="font-cormorant text-4xl font-bold text-gold">
                               ${totals.total.toLocaleString()}
@@ -980,7 +966,7 @@ export default function FeesPage() {
                         </div>
 
                         <div className="space-y-4">
-                          {/* @ts-ignore */}
+                          {}
                           <button
                             onClick={() => alert("Redirecting to Paystack...")}
                             className="w-full bg-gold text-midnight py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-gold border border-transparent hover:border-gold transition-all shadow-xl flex items-center justify-center gap-3 text-lg group"
@@ -989,14 +975,14 @@ export default function FeesPage() {
                               size={20}
                               className="group-hover:scale-110 transition-transform"
                             />
-                            {/* @ts-ignore */}
-                            {tEnrol("Modals.overview.proceed")}
+                            {}
+                            {tEnrolText("Modals.overview.proceed")}
                           </button>
                           <button
                             onClick={() => setModalState("payment_config")}
                             className="w-full py-3 text-sm text-midnight/50 hover:text-midnight dark:text-cream/50 dark:hover:text-cream uppercase tracking-widest transition-colors flex items-center justify-center gap-2"
                           >
-                            ← {tEnrol("Modals.overview.cancel")}
+                            ← {tEnrolText("Modals.overview.cancel")}
                           </button>
                         </div>
                       </div>
