@@ -14,6 +14,10 @@ type LevelCardProps = {
   topics: string[];
 };
 
+type LevelConfig = Omit<LevelCardProps, "title"> & {
+  titleKey: string;
+};
+
 function LevelCard({
   levelNumber,
   title,
@@ -230,6 +234,69 @@ function Level4Card() {
 export default function DetailedCourseSection() {
   const t = useTranslations("ProgHadith");
 
+  const levelConfigs: LevelConfig[] = [
+    {
+      levelNumber: "1",
+      titleKey: "t17",
+      hadithCount: "71 Short Hadiths",
+      duration: "16 Weeks",
+      classDuration: "40 Minutes per Session",
+      aim: "To build a strong foundation in belief, worship, noble character, and Islamic identity, nurturing sincere young Muslims who practice Islam with understanding and good manners.",
+      topics: [
+        "Purification of the Heart",
+        "Following the Sunnah",
+        "Establishing Prayer",
+        "Connection with the Qurʼaan",
+        "Noble Character Development",
+        "Refinement of Speech",
+        "Social Manners & Brotherhood",
+        "Mercy & Compassion",
+        "Islamic Etiquette (Daily Sunnah Practices)",
+        "Personal Responsibility & Integrity",
+      ],
+    },
+    {
+      levelNumber: "2",
+      titleKey: "t20",
+      hadithCount: "50 Hadiths",
+      duration: "16 Weeks",
+      classDuration: "40 Minutes per Session",
+      aim: "To deepen students' understanding of worship, self-purification, accountability, and social responsibility, strengthening their spiritual awareness and commitment to righteous action.",
+      topics: [
+        "Perfecting Purification & Prayer",
+        "Mosque Etiquette & Congregational Worship",
+        "Guarding the Tongue & Avoiding Major Sins",
+        "Repentance & Signs of Hypocrisy",
+        "Brotherhood & Muslim Rights",
+        "Charity & Serving Society",
+        "Dhikr & Spiritual Growth",
+        "Virtue of Hajj, Ramadān & Voluntary Worship",
+        "Accountability After Death",
+        "Seeking Knowledge & Loving for Allah's Sake",
+      ],
+    },
+    {
+      levelNumber: "3",
+      titleKey: "t66",
+      hadithCount: "50 Hadiths",
+      duration: "16 Weeks",
+      classDuration: "40 Minutes per Session",
+      aim: "To cultivate mature understanding of Islamic principles, accountability before Allah, refined character, and readiness for advanced hadith study.",
+      topics: [
+        "Protecting Tawheed & Avoiding Shirk",
+        "The Danger of Abandoning Prayer",
+        "Avoiding Religious Innovation (Bidʼah)",
+        "Advanced Sunnah Practices",
+        "Consistency in Worship",
+        "Patience During Trials",
+        "Living as a Stranger in This World (Al-Ghurbah)",
+        "Accountability on the Day of Judgement",
+        "Brotherhood & Social Leadership",
+        "Ongoing Charity & Lasting Deeds",
+      ],
+    },
+  ];
+
   return (
     <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-20">
@@ -240,69 +307,18 @@ export default function DetailedCourseSection() {
       </div>
 
       <div className="space-y-24">
-        <LevelCard
-          levelNumber="1"
-          title={t("t17")}
-          hadithCount="71 Short Hadiths"
-          duration="16 Weeks"
-          classDuration="40 Minutes per Session"
-          aim="To build a strong foundation in belief, worship, noble character, and Islamic identity, nurturing sincere young Muslims who practice Islam with understanding and good manners."
-          topics={[
-            "Purification of the Heart",
-            "Following the Sunnah",
-            "Establishing Prayer",
-            "Connection with the Qurʼaan",
-            "Noble Character Development",
-            "Refinement of Speech",
-            "Social Manners & Brotherhood",
-            "Mercy & Compassion",
-            "Islamic Etiquette (Daily Sunnah Practices)",
-            "Personal Responsibility & Integrity",
-          ]}
-        />
-
-        <LevelCard
-          levelNumber="2"
-          title={t("t20")}
-          hadithCount="50 Hadiths"
-          duration="16 Weeks"
-          classDuration="40 Minutes per Session"
-          aim="To deepen students' understanding of worship, self-purification, accountability, and social responsibility, strengthening their spiritual awareness and commitment to righteous action."
-          topics={[
-            "Perfecting Purification & Prayer",
-            "Mosque Etiquette & Congregational Worship",
-            "Guarding the Tongue & Avoiding Major Sins",
-            "Repentance & Signs of Hypocrisy",
-            "Brotherhood & Muslim Rights",
-            "Charity & Serving Society",
-            "Dhikr & Spiritual Growth",
-            "Virtue of Hajj, Ramadān & Voluntary Worship",
-            "Accountability After Death",
-            "Seeking Knowledge & Loving for Allah's Sake",
-          ]}
-        />
-
-        <LevelCard
-          levelNumber="3"
-          title={t("t66")}
-          hadithCount="50 Hadiths"
-          duration="16 Weeks"
-          classDuration="40 Minutes per Session"
-          aim="To cultivate mature understanding of Islamic principles, accountability before Allah, refined character, and readiness for advanced hadith study."
-          topics={[
-            "Protecting Tawheed & Avoiding Shirk",
-            "The Danger of Abandoning Prayer",
-            "Avoiding Religious Innovation (Bidʼah)",
-            "Advanced Sunnah Practices",
-            "Consistency in Worship",
-            "Patience During Trials",
-            "Living as a Stranger in This World (Al-Ghurbah)",
-            "Accountability on the Day of Judgement",
-            "Brotherhood & Social Leadership",
-            "Ongoing Charity & Lasting Deeds",
-          ]}
-        />
-
+        {levelConfigs.map((level) => (
+          <LevelCard
+            key={level.levelNumber}
+            levelNumber={level.levelNumber}
+            title={t(level.titleKey)}
+            hadithCount={level.hadithCount}
+            duration={level.duration}
+            classDuration={level.classDuration}
+            aim={level.aim}
+            topics={level.topics}
+          />
+        ))}
         <Level4Card />
       </div>
     </section>

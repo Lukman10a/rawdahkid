@@ -10,6 +10,21 @@ type WeekPlan = {
   content: string;
 };
 
+type WeekType = "memo" | "rev" | "exam";
+
+type TermConfig = {
+  number: string;
+  titleKey: string;
+  subtitleKey: string;
+  arabicKey: string;
+  totalSurahsKey: string;
+  durationKey: string;
+  structureKey: string;
+  objectiveKey: string;
+  noteKey?: string;
+  weekTypes: WeekType[];
+};
+
 type TermCardProps = {
   number: string;
   title: string;
@@ -140,6 +155,98 @@ function TermCard({
 export default function DetailedCourseSection() {
   const t = useTranslations("ProgQuran");
 
+  const termConfigs: TermConfig[] = [
+    {
+      number: "1",
+      titleKey: "t13",
+      subtitleKey: "term1.subtitle",
+      arabicKey: "term1.arabic",
+      totalSurahsKey: "t26",
+      durationKey: "term1.duration",
+      structureKey: "term1.structure",
+      objectiveKey: "term1.objective",
+      weekTypes: [
+        "memo",
+        "memo",
+        "memo",
+        "memo",
+        "rev",
+        "memo",
+        "memo",
+        "exam",
+      ],
+    },
+    {
+      number: "2",
+      titleKey: "t11",
+      subtitleKey: "term2.subtitle",
+      arabicKey: "term2.arabic",
+      totalSurahsKey: "t27",
+      durationKey: "term2.duration",
+      structureKey: "term2.structure",
+      objectiveKey: "term2.objective",
+      weekTypes: [
+        "memo",
+        "memo",
+        "memo",
+        "memo",
+        "rev",
+        "memo",
+        "memo",
+        "exam",
+      ],
+    },
+    {
+      number: "3",
+      titleKey: "t7",
+      subtitleKey: "term3.subtitle",
+      arabicKey: "term3.arabic",
+      totalSurahsKey: "t30",
+      durationKey: "term3.duration",
+      structureKey: "term3.structure",
+      objectiveKey: "term3.objective",
+      noteKey: "term3.note",
+      weekTypes: [
+        "memo",
+        "memo",
+        "memo",
+        "memo",
+        "rev",
+        "memo",
+        "memo",
+        "exam",
+      ],
+    },
+    {
+      number: "4",
+      titleKey: "t12",
+      subtitleKey: "term4.subtitle",
+      arabicKey: "term4.arabic",
+      totalSurahsKey: "t31",
+      durationKey: "term4.duration",
+      structureKey: "term4.structure",
+      objectiveKey: "term4.objective",
+      noteKey: "term4.note",
+      weekTypes: [
+        "memo",
+        "memo",
+        "memo",
+        "memo",
+        "memo",
+        "memo",
+        "memo",
+        "exam",
+      ],
+    },
+  ];
+
+  const buildWeeks = (termNumber: string, weekTypes: WeekType[]): WeekPlan[] =>
+    weekTypes.map((type, index) => ({
+      w: index + 1,
+      type,
+      content: t(`term${termNumber}.w${index + 1}`),
+    }));
+
   return (
     <section className="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-20">
@@ -150,91 +257,21 @@ export default function DetailedCourseSection() {
       </div>
 
       <div className="space-y-24">
-        <TermCard
-          number="1"
-          title={t("t13")}
-          subtitle={t("term1.subtitle")}
-          arabic={t("term1.arabic")}
-          totalSurahs={t("t26")}
-          duration={t("term1.duration")}
-          structure={t("term1.structure")}
-          objective={t("term1.objective")}
-          weeks={[
-            { w: 1, type: "memo", content: t("term1.w1") },
-            { w: 2, type: "memo", content: t("term1.w2") },
-            { w: 3, type: "memo", content: t("term1.w3") },
-            { w: 4, type: "memo", content: t("term1.w4") },
-            { w: 5, type: "rev", content: t("term1.w5") },
-            { w: 6, type: "memo", content: t("term1.w6") },
-            { w: 7, type: "memo", content: t("term1.w7") },
-            { w: 8, type: "exam", content: t("term1.w8") },
-          ]}
-        />
-
-        <TermCard
-          number="2"
-          title={t("t11")}
-          subtitle={t("term2.subtitle")}
-          arabic={t("term2.arabic")}
-          totalSurahs={t("t27")}
-          duration={t("term2.duration")}
-          structure={t("term2.structure")}
-          objective={t("term2.objective")}
-          weeks={[
-            { w: 1, type: "memo", content: t("term2.w1") },
-            { w: 2, type: "memo", content: t("term2.w2") },
-            { w: 3, type: "memo", content: t("term2.w3") },
-            { w: 4, type: "memo", content: t("term2.w4") },
-            { w: 5, type: "rev", content: t("term2.w5") },
-            { w: 6, type: "memo", content: t("term2.w6") },
-            { w: 7, type: "memo", content: t("term2.w7") },
-            { w: 8, type: "exam", content: t("term2.w8") },
-          ]}
-        />
-
-        <TermCard
-          number="3"
-          title={t("t7")}
-          subtitle={t("term3.subtitle")}
-          arabic={t("term3.arabic")}
-          totalSurahs={t("t30")}
-          duration={t("term3.duration")}
-          structure={t("term3.structure")}
-          objective={t("term3.objective")}
-          note={t("term3.note")}
-          weeks={[
-            { w: 1, type: "memo", content: t("term3.w1") },
-            { w: 2, type: "memo", content: t("term3.w2") },
-            { w: 3, type: "memo", content: t("term3.w3") },
-            { w: 4, type: "memo", content: t("term3.w4") },
-            { w: 5, type: "rev", content: t("term3.w5") },
-            { w: 6, type: "memo", content: t("term3.w6") },
-            { w: 7, type: "memo", content: t("term3.w7") },
-            { w: 8, type: "exam", content: t("term3.w8") },
-          ]}
-        />
-
-        <TermCard
-          number="4"
-          title={t("t12")}
-          subtitle={t("term4.subtitle")}
-          arabic={t("term4.arabic")}
-          totalSurahs={t("t31")}
-          duration={t("term4.duration")}
-          structure={t("term4.structure")}
-          objective={t("term4.objective")}
-          note={t("term4.note")}
-          weeks={[
-            { w: 1, type: "memo", content: t("term4.w1") },
-            { w: 2, type: "memo", content: t("term4.w2") },
-            { w: 3, type: "memo", content: t("term4.w3") },
-            { w: 4, type: "memo", content: t("term4.w4") },
-            { w: 5, type: "memo", content: t("term4.w5") },
-            { w: 6, type: "memo", content: t("term4.w6") },
-            { w: 7, type: "memo", content: t("term4.w7") },
-            { w: 8, type: "exam", content: t("term4.w8") },
-          ]}
-        />
+        {termConfigs.map((term) => (
+          <TermCard
+            key={term.number}
+            number={term.number}
+            title={t(term.titleKey)}
+            subtitle={t(term.subtitleKey)}
+            arabic={t(term.arabicKey)}
+            totalSurahs={t(term.totalSurahsKey)}
+            duration={t(term.durationKey)}
+            structure={t(term.structureKey)}
+            objective={t(term.objectiveKey)}
+            note={term.noteKey ? t(term.noteKey) : undefined}
+            weeks={buildWeeks(term.number, term.weekTypes)}
+          />
+        ))}
       </div>
     </section>
   );
