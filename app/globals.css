@@ -121,3 +121,36 @@ html {
     :where(strong) { color: var(--color-gold); }
   }
 }
+
+/* Admin rich text editor experience */
+.admin-rich-editor .tiptap {
+  min-height: 20rem;
+  color: var(--color-midnight);
+  outline: none;
+  border: 0;
+}
+
+.dark .admin-rich-editor .tiptap {
+  color: var(--color-cream);
+}
+
+.admin-rich-editor .tiptap:focus,
+.admin-rich-editor .tiptap:focus-visible,
+.admin-rich-editor .tiptap *:focus,
+.admin-rich-editor .tiptap *:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.admin-rich-editor .tiptap p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: color-mix(in srgb, var(--color-muted) 70%, transparent);
+  opacity: 0.55;
+  pointer-events: none;
+  float: left;
+  height: 0;
+}
+
+.dark .admin-rich-editor .tiptap p.is-editor-empty:first-child::before {
+  color: color-mix(in srgb, var(--color-cream) 70%, transparent);
+}

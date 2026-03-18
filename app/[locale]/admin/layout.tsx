@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "@/i18n/routing";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export default function AdminLayout({
   children,
@@ -12,6 +13,7 @@ export default function AdminLayout({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <h1 className="text-xl font-bold text-gold">Rawdah Admin</h1>
           <div className="flex gap-3 items-center">
+            <ThemeToggle />
             <Link
               href="/"
               className="px-4 py-2 border border-gold/30 text-cream rounded font-semibold hover:bg-gold/10 transition-colors"

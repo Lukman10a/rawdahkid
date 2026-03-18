@@ -5,7 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { postSchema, PostFormData } from "@/lib/admin/schema";
 import { PostData } from "@/lib/admin/types";
 import { RichEditor } from "./RichEditor";
-import { useState } from "react";
+import { useState, useRef, ChangeEvent } from "react";
+import { Upload } from "lucide-react";
 
 interface PostFormProps {
   initialData?: PostData;
@@ -19,6 +20,7 @@ export function PostForm({
   isLoading = false,
 }: PostFormProps) {
   const [preview, setPreview] = useState(false);
+  const coverImageFileInputRef = useRef<HTMLInputElement | null>(null);
   const {
     control,
     register,
@@ -49,6 +51,37 @@ export function PostForm({
   const content = useWatch({ control, name: "content" }) || "";
   const seoTitle = useWatch({ control, name: "seoTitle" }) || "";
   const seoDescription = useWatch({ control, name: "seoDescription" }) || "";
+
+  const handleCoverImageUpload = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+      window.alert("Please choose an image file.");
+      event.target.value = "";
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      const src = reader.result;
+      if (typeof src === "string") {
+        // Update the hidden input directly
+        const coverImageInput = document.querySelector(
+          'input[name="coverImage"]',
+        ) as HTMLInputElement;
+        if (coverImageInput) {
+          coverImageInput.value = src;
+          // Trigger change event for react-hook-form to detect the change
+          coverImageInput.dispatchEvent(new Event("input", { bubbles: true }));
+        }
+      }
+    };
+    reader.readAsDataURL(file);
+
+    // Allow selecting the same file again
+    event.target.value = "";
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
@@ -184,16 +217,34 @@ export function PostForm({
               <label className="block text-sm font-semibold mb-2 text-midnight dark:text-cream">
                 Cover Image URL *
               </label>
-              <input
-                {...register("coverImage")}
-                className="w-full px-4 py-2 border border-midnight/10 dark:border-white/10 rounded bg-white dark:bg-[#12221b] text-midnight dark:text-cream focus:border-gold focus:outline-none"
-                placeholder="https://example.com/image.jpg"
-              />
+              <div className="flex gap-2">
+                <input
+                  {...register("coverImage")}
+                  className="w-full px-4 py-2 border border-midnight/10 dark:border-white/10 rounded bg-white dark:bg-[#12221b] text-midnight dark:text-cream focus:border-gold focus:outline-none"
+                  placeholder="https://example.com/image.jpg"
+                />
+                <button
+                  type="button"
+                  onClick={() => coverImageFileInputRef.current?.click()}
+                  className="px-4 py-2 bg-gold/20 hover:bg-gold/30 text-midnight dark:text-cream rounded font-semibold transition-colors flex items-center gap-2 whitespace-nowrap"
+                  title="Upload image file"
+                >
+                  <Upload size={18} />
+                  Upload
+                </button>
+              </div>
               {errors.coverImage && (
                 <p className="text-red-500 text-sm mt-1">
                   {errors.coverImage.message}
                 </p>
               )}
+              <input
+                ref={coverImageFileInputRef}
+                type="file"
+                accept="image/*"
+                className="hidden"
+                onChange={handleCoverImageUpload}
+              />
             </div>
           </div>
 

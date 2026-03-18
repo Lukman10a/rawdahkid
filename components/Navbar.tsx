@@ -137,7 +137,8 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center gap-2">
+              <ThemeToggle />
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
                 className="p-2 text-midnight dark:text-cream hover:text-gold transition-colors"
@@ -221,6 +222,7 @@ export default function Navbar() {
 
           <div className="flex space-x-6 items-center">
             <LanguageSwitcher />
+            <ThemeToggle />
           </div>
           <div className="pt-8 w-full max-w-xs">
             <Link

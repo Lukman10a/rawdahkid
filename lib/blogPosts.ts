@@ -100,7 +100,7 @@ export const getBlogPosts = (t: (key: string) => string): Record<string, BlogPos
       id: "3",
       key: "post3",
       image:
-        "https://picsum.photos/1200/600?random=1",
+        "https://picsum.photos/1200/600?random=3",
       category: "parenting",
       author: "Dr. Fatima",
       title: t("post3.title"),

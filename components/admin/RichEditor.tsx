@@ -6,9 +6,11 @@ import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
 import Color from "@tiptap/extension-color";
 import { TextStyle } from "@tiptap/extension-text-style";
+import Placeholder from "@tiptap/extension-placeholder";
 import { Table } from "@tiptap/extension-table";
 import { TableRow } from "@tiptap/extension-table-row";
 import { TableCell } from "@tiptap/extension-table-cell";
+import { TableHeader } from "@tiptap/extension-table-header";
 import {
   Bold,
   Italic,
@@ -23,9 +25,10 @@ import {
   Code,
   Link as LinkIcon,
   Image as ImageIcon,
+  Upload,
   Table as TableIcon,
 } from "lucide-react";
-import { useCallback } from "react";
+import { ChangeEvent, useCallback, useRef } from "react";
 
 interface RichEditorProps {
   value: string;
@@ -34,6 +37,8 @@ interface RichEditorProps {
 }
 
 export function RichEditor({ value, onChange, placeholder }: RichEditorProps) {
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+
   const editor = useEditor({
     immediatelyRender: false,
     extensions: [
@@ -49,15 +54,20 @@ export function RichEditor({ value, onChange, placeholder }: RichEditorProps) {
         openOnClick: false,
         autolink: true,
       }),
+      Placeholder.configure({
+        placeholder: placeholder || "Start typing...",
+        emptyEditorClass: "is-editor-empty",
+      }),
       Color,
       TextStyle,
       Table.configure({
         resizable: true,
       }),
       TableRow,
+      TableHeader,
       TableCell,
     ],
-    content: value || `<p>${placeholder || "Start writing..."}</p>`,
+    content: value || "",
     onUpdate: ({ editor }) => {
       onChange(editor.getHTML());
     },
@@ -93,6 +103,38 @@ export function RichEditor({ value, onChange, placeholder }: RichEditorProps) {
       .run();
   }, [editor]);
 
+  const openImageFilePicker = useCallback(() => {
+    fileInputRef.current?.click();
+  }, []);
+
+  const handleImageFileChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      if (!editor) return;
+
+      const file = event.target.files?.[0];
+      if (!file) return;
+
+      if (!file.type.startsWith("image/")) {
+        window.alert("Please choose an image file.");
+        event.target.value = "";
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = () => {
+        const src = reader.result;
+        if (typeof src === "string") {
+          editor.chain().focus().setImage({ src, alt: file.name }).run();
+        }
+      };
+      reader.readAsDataURL(file);
+
+      // Allow selecting the same file again.
+      event.target.value = "";
+    },
+    [editor],
+  );
+
   if (!editor)
     return (
       <div className="p-4 text-center text-gray-500">Loading editor...</div>
@@ -101,7 +143,7 @@ export function RichEditor({ value, onChange, placeholder }: RichEditorProps) {
   return (
     <div className="border border-midnight/10 dark:border-white/10 rounded-lg overflow-hidden">
       {/* Toolbar */}
-      <div className="flex flex-wrap gap-1 bg-ivory dark:bg-[#12221b] p-3 border-b border-midnight/10 dark:border-white/10">
+      <div className="flex flex-wrap items-center gap-1 bg-ivory dark:bg-[#12221b] p-3 border-b border-midnight/10 dark:border-white/10">
         {/* Text Formatting */}
         <ToolbarButton
           icon={<Bold size={16} />}
@@ -219,11 +261,27 @@ export function RichEditor({ value, onChange, placeholder }: RichEditorProps) {
           disabled={!editor.can().redo()}
           title="Redo"
         />
+
+        <div className="ml-auto flex items-center gap-1">
+          <div className="w-px h-7 bg-midnight/10 dark:bg-white/10" />
+          <ToolbarButton
+            icon={<Upload size={16} />}
+            onClick={openImageFilePicker}
+            title="Upload Image"
+          />
+        </div>
       </div>
 
       {/* Editor */}
       <div className="prose prose-lg dark:prose-invert max-w-none p-4 bg-white dark:bg-midnight min-h-96">
-        <EditorContent editor={editor} />
+        <EditorContent editor={editor} className="admin-rich-editor" />
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept="image/*"
+          className="hidden"
+          onChange={handleImageFileChange}
+        />
       </div>
     </div>
   );
