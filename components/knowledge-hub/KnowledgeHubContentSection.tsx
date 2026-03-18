@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, BookOpen, Calendar, Clock } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import {
@@ -11,12 +11,41 @@ import {
   getHubCategories,
   getHubPosts,
 } from "./listingData";
-import type { HubCategoryId } from "./types";
+import { getPublishedAdminPosts } from "@/lib/admin/clientPostAdapter";
+import type { HubCategoryId, HubPost } from "./types";
 
 export function KnowledgeHubContentSection() {
   const t = useTranslations("KnowledgeHub");
-  const tUnsafe = (key: string) => t(key as never);
   const [activeCategory, setActiveCategory] = useState<HubCategoryId>("all");
+  const [posts, setPosts] = useState<HubPost[]>([]);
+
+  const tUnsafe = useCallback((key: string) => t(key as never), [t]);
+
+  useEffect(() => {
+    async function loadPosts() {
+      // Get mock posts
+      const mockPosts = getHubPosts(tUnsafe);
+
+      // Get admin posts
+      const adminPosts = await getPublishedAdminPosts();
+      const adminHubPosts: HubPost[] = adminPosts.map((post) => ({
+        id: post.slug, // Use slug as id for routing
+        image: post.coverImage,
+        category: post.category,
+        categoryLabel: tUnsafe(`categories.${post.category}`) || "General",
+        author: post.author,
+        title: post.title,
+        excerpt: post.excerpt,
+        date: post.publishedAt || post.createdAt || "",
+        readTime: post.readTime || "5 min read",
+      }));
+
+      // Merge: admin posts first, then mock posts
+      setPosts([...adminHubPosts, ...mockPosts]);
+    }
+
+    loadPosts();
+  }, [tUnsafe]);
 
   const getAuthorInitials = (author: string) =>
     author
@@ -27,7 +56,6 @@ export function KnowledgeHubContentSection() {
       .toUpperCase();
 
   const categories = getHubCategories(tUnsafe);
-  const posts = getHubPosts(tUnsafe);
   const filteredPosts = getFilteredHubPosts(posts, activeCategory);
   const featuredPost = posts[0];
 
@@ -77,13 +105,15 @@ export function KnowledgeHubContentSection() {
               <Link href={`/knowledge-hub/${featuredPost.id}`}>
                 <div className="group relative w-full h-125 md:h-150 rounded-sm overflow-hidden shadow-2xl cursor-pointer">
                   <div className="absolute inset-0 bg-midnight">
-                    <Image
-                      src={featuredPost.image}
-                      alt={featuredPost.title}
-                      className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-105"
-                      fill
-                      sizes="100vw"
-                    />
+                    {featuredPost.image && (
+                      <Image
+                        src={featuredPost.image}
+                        alt={featuredPost.title}
+                        className="w-full h-full object-cover opacity-90 transition-transform duration-1000 group-hover:scale-105"
+                        fill
+                        sizes="100vw"
+                      />
+                    )}
                   </div>
 
                   <div className="absolute inset-0 bg-linear-to-t from-midnight/95 via-midnight/50 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-80"></div>
@@ -160,13 +190,15 @@ export function KnowledgeHubContentSection() {
                       <div className="absolute top-0 left-0 right-0 h-1 bg-gold z-30 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
 
                       <div className="absolute inset-0 bg-midnight/10 group-hover:bg-transparent transition-colors z-10"></div>
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
+                      {post.image && (
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                      )}
                       <div className="absolute bottom-4 left-4 z-20">
                         <span className="bg-white/90 dark:bg-midnight/90 backdrop-blur-md px-3 py-1 text-[10px] font-cinzel font-bold tracking-[0.2em] uppercase text-midnight dark:text-gold border border-gold/20">
                           {post.categoryLabel}

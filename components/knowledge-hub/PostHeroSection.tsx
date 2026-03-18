@@ -14,13 +14,15 @@ export function PostHeroSection({ post }: PostHeroSectionProps) {
   return (
     <section className="relative h-[70vh] min-h-125 flex items-end pb-20 justify-center overflow-hidden">
       <div className="absolute inset-0 z-0 bg-midnight">
-        <Image
-          src={post.image}
-          alt={post.title}
-          fill
-          sizes="100vw"
-          className="w-full h-full object-cover opacity-60 mix-blend-overlay"
-        />
+        {post.image && (
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            sizes="100vw"
+            className="w-full h-full object-cover opacity-60 mix-blend-overlay"
+          />
+        )}
         <div className="absolute inset-0 bg-linear-to-t from-midnight via-midnight/60 to-transparent"></div>
       </div>
 
