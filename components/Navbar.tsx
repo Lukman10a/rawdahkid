@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -10,18 +11,28 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export default function Navbar() {
   const t = useTranslations("Navigation");
+  const pathname = usePathname();
+  const isAdminRoute = Boolean(pathname && /\/admin(?:\/|$)/.test(pathname));
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProgrammesOpen, setIsProgrammesOpen] = useState(false);
 
   useEffect(() => {
+    if (isAdminRoute) {
+      return;
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isAdminRoute]);
+
+  if (isAdminRoute) {
+    return null;
+  }
 
   return (
     <>
