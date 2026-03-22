@@ -5,27 +5,27 @@ import { motion } from "framer-motion";
 import { BundlesSection } from "@/components/fees/BundlesSection";
 import { AlaCarteSection } from "@/components/fees/AlaCarteSection";
 import { FeesModals } from "@/components/fees/FeesModals";
-import type { ModalState, PaymentConfig, Plan } from "@/components/fees/types";
+import type { ModalState, Plan } from "@/components/fees/types";
+import {
+  getRecordByEmail,
+  getRegisteredEmails,
+  normalizeEmail,
+  saveSelectedPlanInDraft,
+  setCurrentUserEmail,
+} from "@/lib/enrolmentStorage";
 
 import { useTranslations } from "next-intl";
+import { useRouter } from "@/i18n/routing";
 
 export default function FeesPage() {
   const t = useTranslations("Fees");
   const tEnrol = useTranslations("Enrol"); // For shared modal strings
+  const router = useRouter();
   const tText = t as unknown as (key: string) => string;
   const tEnrolText = tEnrol as unknown as (key: string) => string;
 
   const [modalState, setModalState] = useState<ModalState>("idle");
   const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
-  const [config, setConfig] = useState<PaymentConfig>({
-    frequency: "monthly",
-    students: 1,
-  });
-
-  const [paymentRegistered, setPaymentRegistered] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return Boolean(localStorage.getItem("currentUserEmail"));
-  });
   const [verificationEmail, setVerificationEmail] = useState("");
   const [verificationError, setVerificationError] = useState("");
 
@@ -34,74 +34,52 @@ export default function FeesPage() {
 
   const handleSelectPlan = (plan: Plan) => {
     setSelectedPlan(plan);
-    if (!paymentRegistered) {
-      setModalState("register_required");
-      setVerificationEmail("");
-      setVerificationError("");
-    } else {
-      setModalState("payment_config");
+    setModalState("register_required");
+    setVerificationEmail("");
+    setVerificationError("");
+  };
+
+  const handleStartRegistration = () => {
+    if (selectedPlan) {
+      saveSelectedPlanInDraft(selectedPlan);
     }
+    setModalState("idle");
+    router.push("/enrol#registration-form");
+  };
+
+  const handleContinuePayment = () => {
+    if (selectedPlan) {
+      saveSelectedPlanInDraft(selectedPlan);
+    }
+    setModalState("idle");
+    router.push("/enrol?resume=payment#registration-form");
   };
 
   const handleVerifyEmail = () => {
-    if (!verificationEmail.trim()) {
+    const normalizedEmail = normalizeEmail(verificationEmail);
+    if (!normalizedEmail) {
       setVerificationError("Please enter your email");
       return;
     }
 
-    const registeredEmailsParam = localStorage.getItem("registeredEmails");
-    const registeredEmails: string[] = registeredEmailsParam
-      ? JSON.parse(registeredEmailsParam)
-      : [];
+    const registeredEmails = getRegisteredEmails();
 
-    if (registeredEmails.includes(verificationEmail.toLowerCase().trim())) {
-      localStorage.setItem(
-        "currentUserEmail",
-        verificationEmail.toLowerCase().trim(),
-      );
-      setPaymentRegistered(true);
-      setModalState("payment_config");
+    if (registeredEmails.includes(normalizedEmail)) {
+      setCurrentUserEmail(normalizedEmail);
       setVerificationError("");
+
+      const record = getRecordByEmail(normalizedEmail);
+      if (record && !record.paymentCompleted) {
+        setModalState("resume_payment");
+      } else {
+        handleStartRegistration();
+      }
     } else {
       setVerificationError(
         tEnrolText("Modals.registerPrompt.emailNotFound") || "Email not found",
       );
     }
   };
-
-  const calculateTotal = () => {
-    if (!selectedPlan) return { total: 0, discount: "0%" };
-
-    const base = selectedPlan.price;
-    // The price in the plan object is 'per year'.
-    // Logic:
-    // Annual: price * students * 0.9 (10% off)
-    // Semester: (price / 2) * students * 0.95 (5% off) * 2 semesters? Or just pay for 1 semester now? usually pay for 1 semester first.
-    // Monthly: (price / 10 or 12?) Let's assume 10 months academic year. price / 10 * students.
-
-    // Let's simplify for the demo and "Amount Due Now".
-
-    let amountDue = 0;
-    let discountMsg = "";
-
-    if (config.frequency === "annual") {
-      amountDue = base * config.students;
-      discountMsg = "0%";
-    } else if (config.frequency === "semester") {
-      amountDue = (base / 2) * config.students;
-      discountMsg = "0%";
-    } else {
-      amountDue = (base / 12) * config.students;
-      discountMsg = "0%";
-    }
-
-    return {
-      total: Math.round(amountDue),
-      discount: discountMsg,
-    };
-  };
-
-  const totals = calculateTotal();
 
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-cream text-midnight pt-24 relative">
@@ -136,16 +114,15 @@ export default function FeesPage() {
       <FeesModals
         modalState={modalState}
         selectedPlan={selectedPlan}
-        config={config}
-        totals={totals}
         verificationEmail={verificationEmail}
         verificationError={verificationError}
         tEnrolText={tEnrolText}
         setModalState={setModalState}
-        setConfig={setConfig}
         setVerificationEmail={setVerificationEmail}
         setVerificationError={setVerificationError}
         handleVerifyEmail={handleVerifyEmail}
+        handleStartRegistration={handleStartRegistration}
+        handleContinuePayment={handleContinuePayment}
       />
     </div>
   );

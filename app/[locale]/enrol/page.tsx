@@ -10,10 +10,24 @@ import {
   Loader2,
   CheckCircle,
   AlertTriangle,
+  CreditCard,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Link, useRouter } from "@/i18n/routing";
+import { useSearchParams } from "next/navigation";
 import { countries } from "@/lib/countries";
+import type { PaymentConfig, Plan } from "@/components/fees/types";
+import {
+  calculatePaymentTotals,
+  defaultPaymentConfig,
+  getCurrentUserEmail,
+  getDraft,
+  getRecordByEmail,
+  normalizeEmail,
+  saveDraft,
+  saveRegisteredEmail,
+  setCurrentUserEmail,
+  upsertRecord,
+} from "@/lib/enrolmentStorage";
 
 // --- Types ---
 type FormData = {
@@ -34,29 +48,46 @@ type FormErrors = Partial<Record<keyof FormData, string>>;
 export default function EnrolPage() {
   const t = useTranslations("Enrol");
   const tUnsafe = (key: string) => t(key as never);
-  const router = useRouter();
+  const searchParams = useSearchParams();
+  const draft = getDraft();
+  const shouldResumePayment = searchParams.get("resume") === "payment";
+  const currentUserEmail = getCurrentUserEmail();
+  const resumeRecord = shouldResumePayment
+    ? getRecordByEmail(currentUserEmail)
+    : null;
+  const initialRecord =
+    resumeRecord &&
+    resumeRecord.registrationCompleted &&
+    !resumeRecord.paymentCompleted
+      ? resumeRecord
+      : null;
 
   // --- State ---
-  const [formData, setFormData] = useState<FormData>({
-    parentName: "",
-    parentEmail: "",
-    parentPhone: "",
-    parentCity: "",
-    parentCountry: "GB",
-    studentName: "",
-    studentAge: "",
-    programme: "",
-    classFormat: "",
-    additionalInfo: "",
-  });
+  const [formData, setFormData] = useState<FormData>(
+    () => initialRecord?.formData || draft.formData,
+  );
 
   const [errors, setErrors] = useState<FormErrors>({});
-  const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [modalState, setModalState] = useState<"idle" | "success" | "failure">(
-    "idle",
+  const [selectedCourses, setSelectedCourses] = useState<string[]>(
+    () => initialRecord?.selectedCourses || draft.selectedCourses,
   );
+  const [selectedPlan, setSelectedPlan] = useState<Plan | null>(
+    () => initialRecord?.selectedPlan || draft.selectedPlan,
+  );
+  const [paymentConfig, setPaymentConfig] = useState<PaymentConfig>(
+    () => initialRecord?.paymentConfig || draft.paymentConfig,
+  );
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [modalState, setModalState] = useState<
+    | "idle"
+    | "success"
+    | "failure"
+    | "details_summary"
+    | "payment_config"
+    | "payment_overview"
+  >(initialRecord ? "details_summary" : "idle");
   const modalRef = useRef<HTMLDivElement>(null);
+  const [existingEmailForResume, setExistingEmailForResume] = useState("");
 
   useEffect(() => {
     if (modalState !== "idle" && modalRef.current) {
@@ -67,6 +98,15 @@ export default function EnrolPage() {
     }
   }, [modalState]);
   const [failureReason, setFailureReason] = useState("");
+
+  useEffect(() => {
+    saveDraft({
+      formData,
+      selectedCourses,
+      selectedPlan,
+      paymentConfig,
+    });
+  }, [formData, selectedCourses, selectedPlan, paymentConfig]);
 
   // --- Handlers ---
   const toggleCourse = (course: string) => {
@@ -83,6 +123,9 @@ export default function EnrolPage() {
     >,
   ) => {
     const { name, value } = e.target;
+    if (name === "programme" && value !== "individual") {
+      setSelectedCourses([]);
+    }
     setFormData((prev) => ({ ...prev, [name]: value }));
 
     // Clear error on change
@@ -151,33 +194,67 @@ export default function EnrolPage() {
 
     // Simulate API Call
     setTimeout(() => {
-      // Check for duplicate email in localStorage (Simulated Backend)
-      const registeredEmailsParam = localStorage.getItem("registeredEmails");
-      const registeredEmails: string[] = registeredEmailsParam
-        ? JSON.parse(registeredEmailsParam)
-        : [];
+      const normalizedEmail = normalizeEmail(formData.parentEmail);
+      const existingRecord = getRecordByEmail(normalizedEmail);
 
-      if (registeredEmails.includes(formData.parentEmail.toLowerCase())) {
+      if (
+        existingRecord?.registrationCompleted &&
+        existingRecord.paymentCompleted
+      ) {
         setIsSubmitting(false);
         setFailureReason(t("form.errors.emailExists"));
+        setExistingEmailForResume(normalizedEmail);
         setModalState("failure");
-      } else {
-        // Success
-        registeredEmails.push(formData.parentEmail.toLowerCase());
-        localStorage.setItem(
-          "registeredEmails",
-          JSON.stringify(registeredEmails),
-        );
-        // Also set 'currentUserEmail' session akin to logging in
-        localStorage.setItem(
-          "currentUserEmail",
-          formData.parentEmail.toLowerCase(),
-        );
-
-        setIsSubmitting(false);
-        setModalState("success");
+        return;
       }
+
+      saveRegisteredEmail(normalizedEmail);
+      setCurrentUserEmail(normalizedEmail);
+
+      upsertRecord({
+        email: normalizedEmail,
+        formData,
+        selectedCourses,
+        selectedPlan,
+        paymentConfig,
+        registrationCompleted: true,
+        paymentCompleted: existingRecord?.paymentCompleted || false,
+        updatedAt: new Date().toISOString(),
+      });
+
+      setIsSubmitting(false);
+      setModalState("success");
     }, 1500);
+  };
+
+  const totals = calculatePaymentTotals(selectedPlan, paymentConfig);
+
+  const upsertCurrentRecord = (paymentCompleted = false) => {
+    const normalizedEmail = normalizeEmail(formData.parentEmail);
+    if (!normalizedEmail) return;
+
+    upsertRecord({
+      email: normalizedEmail,
+      formData,
+      selectedCourses,
+      selectedPlan,
+      paymentConfig,
+      registrationCompleted: true,
+      paymentCompleted,
+      updatedAt: new Date().toISOString(),
+    });
+    setCurrentUserEmail(normalizedEmail);
+  };
+
+  const handleProceedToPayment = () => {
+    upsertCurrentRecord(false);
+    setModalState("details_summary");
+  };
+
+  const handleFinalizePayment = () => {
+    upsertCurrentRecord(true);
+    setModalState("idle");
+    alert("Payment step confirmed. You can now complete checkout integration.");
   };
 
   const isFormValid =
@@ -683,7 +760,7 @@ export default function EnrolPage() {
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
-                className="bg-white dark:bg-[#1a2c42] w-full max-w-lg p-8 md:p-12 rounded-sm shadow-2xl relative border-t-4 border-gold text-center outline-none"
+                className={`bg-white dark:bg-[#1a2c42] w-full ${modalState === "payment_config" || modalState === "payment_overview" || modalState === "details_summary" ? "max-w-3xl" : "max-w-lg"} p-8 md:p-12 rounded-sm shadow-2xl relative border-t-4 border-gold text-center outline-none`}
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="absolute top-4 right-4">
@@ -706,13 +783,12 @@ export default function EnrolPage() {
                     <p className="font-sans text-midnight/70 dark:text-cream/70 mb-8">
                       {tUnsafe("Modals.success.desc")}
                     </p>
-                    <Link
-                      href="/fees#bundles"
-                      onClick={() => setModalState("idle")}
+                    <button
+                      onClick={handleProceedToPayment}
                       className="btn-primary w-full bg-gold text-midnight py-3 font-bold uppercase tracking-widest hover:bg-amber-400 transition-colors inline-block leading-12"
                     >
                       {tUnsafe("Modals.success.proceed")}
-                    </Link>
+                    </button>
                   </div>
                 )}
 
@@ -731,10 +807,26 @@ export default function EnrolPage() {
                     {failureReason === tUnsafe("form.errors.emailExists") ? (
                       <div className="w-full space-y-3">
                         <button
-                          onClick={() => router.push("/fees#bundles")}
+                          onClick={() => {
+                            const record = getRecordByEmail(
+                              existingEmailForResume,
+                            );
+                            if (!record) {
+                              setModalState("idle");
+                              return;
+                            }
+
+                            setFormData(record.formData);
+                            setSelectedCourses(record.selectedCourses || []);
+                            setSelectedPlan(record.selectedPlan || null);
+                            setPaymentConfig(
+                              record.paymentConfig || defaultPaymentConfig,
+                            );
+                            setModalState("details_summary");
+                          }}
                           className="w-full bg-midnight dark:bg-cream text-white dark:text-midnight py-3 font-bold uppercase tracking-widest hover:opacity-90 transition-opacity"
                         >
-                          Proceed to Payment
+                          Continue Existing Enrollment
                         </button>
                         <button
                           onClick={() => setModalState("idle")}
@@ -751,6 +843,340 @@ export default function EnrolPage() {
                         {tUnsafe("Modals.failure.retry")}
                       </button>
                     )}
+                  </div>
+                )}
+
+                {modalState === "details_summary" && (
+                  <div className="text-start">
+                    <h3 className="font-cinzel text-2xl lg:text-3xl text-midnight dark:text-cream mb-8 text-center pb-4 border-b border-light/10">
+                      Registration Summary
+                    </h3>
+
+                    <div className="grid md:grid-cols-2 gap-8 items-start">
+                      <div className="bg-ivory dark:bg-black/20 p-6 rounded-sm space-y-4 font-sans shadow-inner">
+                        <div className="flex justify-between items-center gap-4">
+                          <span className="text-midnight/60 dark:text-cream/60">
+                            Parent
+                          </span>
+                          <span className="font-medium text-end">
+                            {formData.parentName || "-"}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center gap-4">
+                          <span className="text-midnight/60 dark:text-cream/60">
+                            Email
+                          </span>
+                          <span className="font-medium text-end">
+                            {formData.parentEmail || "-"}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center gap-4">
+                          <span className="text-midnight/60 dark:text-cream/60">
+                            Student
+                          </span>
+                          <span className="font-medium text-end">
+                            {formData.studentName || "-"}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center gap-4">
+                          <span className="text-midnight/60 dark:text-cream/60">
+                            Selected package
+                          </span>
+                          <span className="font-medium text-end">
+                            {selectedPlan?.name || "Not selected from fees"}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center gap-4">
+                          <span className="text-midnight/60 dark:text-cream/60">
+                            Courses
+                          </span>
+                          <span className="font-medium text-end">
+                            {selectedCourses.length > 0
+                              ? `${selectedCourses.length} selected`
+                              : "-"}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="space-y-6">
+                        <div>
+                          <label className="text-sm font-bold uppercase tracking-widest text-midnight dark:text-cream block mb-2">
+                            Programme
+                          </label>
+                          <select
+                            name="programme"
+                            value={formData.programme}
+                            onChange={handleInputChange}
+                            className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-midnight rounded-sm"
+                          >
+                            <option value="dual">
+                              {t("form.student.progDual")}
+                            </option>
+                            <option value="islamic">
+                              {t("form.student.progIslamic")}
+                            </option>
+                            <option value="western">
+                              {t("form.student.progWestern")}
+                            </option>
+                            <option value="individual">
+                              {t("form.student.progIndividual")}
+                            </option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="text-sm font-bold uppercase tracking-widest text-midnight dark:text-cream block mb-2">
+                            Class format
+                          </label>
+                          <select
+                            name="classFormat"
+                            value={formData.classFormat}
+                            onChange={handleInputChange}
+                            className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-midnight rounded-sm"
+                          >
+                            <option value="group">
+                              {t("form.student.formatGroup")}
+                            </option>
+                            <option value="one-on-one">
+                              {t("form.student.formatOneOnOne")}
+                            </option>
+                          </select>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-3">
+                          <button
+                            onClick={() => {
+                              setModalState("idle");
+                              document
+                                .getElementById("registration-form")
+                                ?.scrollIntoView({ behavior: "smooth" });
+                            }}
+                            className="w-full py-3 text-sm text-midnight/60 hover:text-midnight dark:text-cream/60 dark:hover:text-cream uppercase tracking-wider border border-midnight/10 dark:border-white/10"
+                          >
+                            Edit Full Form
+                          </button>
+                          <button
+                            onClick={() => {
+                              upsertCurrentRecord(false);
+                              setModalState("payment_config");
+                            }}
+                            className="w-full bg-midnight dark:bg-cream text-white dark:text-midnight py-3 font-bold uppercase tracking-widest hover:opacity-90"
+                          >
+                            Continue to Payment Options
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {modalState === "payment_config" && selectedPlan && (
+                  <div className="text-start">
+                    <h3 className="font-cinzel text-2xl lg:text-3xl text-midnight dark:text-cream mb-2 text-center">
+                      {tUnsafe("Modals.paymentConfig.title")}
+                    </h3>
+                    <p className="text-center font-sans text-base lg:text-lg text-midnight/60 dark:text-cream/60 mb-8">
+                      {selectedPlan.name}
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+                      <div className="space-y-6">
+                        <label className="text-sm font-bold uppercase tracking-widest text-midnight dark:text-cream block mb-4 border-b border-light/10 pb-2">
+                          {tUnsafe("Modals.paymentConfig.modeLabel")}
+                        </label>
+                        <div className="grid grid-cols-1 gap-3">
+                          <label
+                            className={`flex items-center justify-between border p-3 rounded-sm cursor-pointer transition-all ${paymentConfig.frequency === "annual" ? "border-gold bg-gold/5" : "border-midnight/10 dark:border-white/10"}`}
+                          >
+                            <div className="flex items-center gap-3">
+                              <input
+                                type="radio"
+                                name="freq"
+                                checked={paymentConfig.frequency === "annual"}
+                                onChange={() =>
+                                  setPaymentConfig((prev) => ({
+                                    ...prev,
+                                    frequency: "annual",
+                                  }))
+                                }
+                                className="accent-gold"
+                              />
+                              <span className="font-sans text-sm font-medium">
+                                {tUnsafe("Modals.paymentConfig.modes.annual")}
+                              </span>
+                            </div>
+                          </label>
+                          <label
+                            className={`flex items-center justify-between border p-3 rounded-sm cursor-pointer transition-all ${paymentConfig.frequency === "semester" ? "border-gold bg-gold/5" : "border-midnight/10 dark:border-white/10"}`}
+                          >
+                            <div className="flex items-center gap-3">
+                              <input
+                                type="radio"
+                                name="freq"
+                                checked={paymentConfig.frequency === "semester"}
+                                onChange={() =>
+                                  setPaymentConfig((prev) => ({
+                                    ...prev,
+                                    frequency: "semester",
+                                  }))
+                                }
+                                className="accent-gold"
+                              />
+                              <span className="font-sans text-sm font-medium">
+                                {tUnsafe("Modals.paymentConfig.modes.semester")}
+                              </span>
+                            </div>
+                          </label>
+                          <label
+                            className={`flex items-center justify-between border p-3 rounded-sm cursor-pointer transition-all ${paymentConfig.frequency === "monthly" ? "border-gold bg-gold/5" : "border-midnight/10 dark:border-white/10"}`}
+                          >
+                            <div className="flex items-center gap-3">
+                              <input
+                                type="radio"
+                                name="freq"
+                                checked={paymentConfig.frequency === "monthly"}
+                                onChange={() =>
+                                  setPaymentConfig((prev) => ({
+                                    ...prev,
+                                    frequency: "monthly",
+                                  }))
+                                }
+                                className="accent-gold"
+                              />
+                              <span className="font-sans text-sm font-medium">
+                                {tUnsafe("Modals.paymentConfig.modes.monthly")}
+                              </span>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div className="space-y-6">
+                        <label className="text-sm font-bold uppercase tracking-widest text-midnight dark:text-cream block mb-4 border-b border-light/10 pb-2">
+                          {tUnsafe("Modals.paymentConfig.childrenLabel")}
+                        </label>
+                        <div className="flex items-center gap-6 justify-center md:justify-start">
+                          <button
+                            onClick={() =>
+                              setPaymentConfig((prev) => ({
+                                ...prev,
+                                students: Math.max(1, prev.students - 1),
+                              }))
+                            }
+                            className="w-12 h-12 border border-midnight/20 hover:border-gold rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition-all text-xl"
+                          >
+                            -
+                          </button>
+                          <span className="font-cormorant text-4xl w-12 text-center">
+                            {paymentConfig.students}
+                          </span>
+                          <button
+                            onClick={() =>
+                              setPaymentConfig((prev) => ({
+                                ...prev,
+                                students: prev.students + 1,
+                              }))
+                            }
+                            className="w-12 h-12 border border-midnight/20 hover:border-gold rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition-all text-xl"
+                          >
+                            +
+                          </button>
+                        </div>
+                        <div className="bg-ivory dark:bg-black/20 p-6 rounded-sm mt-8">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="font-sans text-midnight/60 dark:text-cream/60">
+                              Estimated Total
+                            </span>
+                            <span className="font-cormorant text-2xl font-bold text-gold">
+                              ${totals.total.toLocaleString()}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-12 flex justify-end">
+                      <button
+                        onClick={() => {
+                          upsertCurrentRecord(false);
+                          setModalState("payment_overview");
+                        }}
+                        className="w-full md:w-auto px-12 bg-midnight dark:bg-cream text-white dark:text-midnight py-4 font-bold uppercase tracking-widest hover:opacity-90 shadow-lg hover:-translate-y-0.5 transition-all"
+                      >
+                        {tUnsafe("Modals.paymentConfig.next")}
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {modalState === "payment_overview" && selectedPlan && (
+                  <div className="text-start">
+                    <h3 className="font-cinzel text-2xl lg:text-3xl text-midnight dark:text-cream mb-8 text-center pb-4 border-b border-light/10">
+                      {tUnsafe("Modals.overview.title")}
+                    </h3>
+
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                      <div className="bg-ivory dark:bg-black/20 p-8 rounded-sm space-y-4 font-sans shadow-inner">
+                        <div className="flex justify-between items-center">
+                          <span className="text-midnight/60 dark:text-cream/60">
+                            {tUnsafe("Modals.overview.plan")}
+                          </span>
+                          <span className="font-medium text-end text-lg">
+                            {selectedPlan.name}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-midnight/60 dark:text-cream/60 text-sm italic">
+                            Billing Frequency
+                          </span>
+                          <span className="bg-gold/10 text-gold px-3 py-1 rounded-full uppercase tracking-wider text-xs font-bold">
+                            {paymentConfig.frequency}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-midnight/60 dark:text-cream/60">
+                            {tUnsafe("Modals.overview.students")}
+                          </span>
+                          <span className="font-medium text-lg">
+                            {paymentConfig.students}
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-midnight/60 dark:text-cream/60">
+                            {tUnsafe("Modals.overview.discount")}
+                          </span>
+                          <span className="font-medium text-green-600">
+                            -{totals.discount}
+                          </span>
+                        </div>
+                        <div className="border-t border-midnight/10 dark:border-white/10 pt-4 flex justify-between items-center mt-4">
+                          <span className="font-bold text-midnight dark:text-cream uppercase tracking-wider text-lg">
+                            {tUnsafe("Modals.overview.total")}
+                          </span>
+                          <span className="font-cormorant text-4xl font-bold text-gold">
+                            ${totals.total.toLocaleString()}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div className="space-y-4">
+                        <button
+                          onClick={handleFinalizePayment}
+                          className="w-full bg-gold text-midnight py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-gold border border-transparent hover:border-gold transition-all shadow-xl flex items-center justify-center gap-3 text-lg group"
+                        >
+                          <CreditCard
+                            size={20}
+                            className="group-hover:scale-110 transition-transform"
+                          />
+                          {tUnsafe("Modals.overview.proceed")}
+                        </button>
+                        <button
+                          onClick={() => setModalState("payment_config")}
+                          className="w-full py-3 text-sm text-midnight/50 hover:text-midnight dark:text-cream/50 dark:hover:text-cream uppercase tracking-widest transition-colors flex items-center justify-center gap-2"
+                        >
+                          ← {tUnsafe("Modals.overview.cancel")}
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 )}
               </motion.div>

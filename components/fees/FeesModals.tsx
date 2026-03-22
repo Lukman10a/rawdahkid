@@ -3,46 +3,36 @@
 import { createPortal } from "react-dom";
 import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { AlertTriangle, X, CreditCard, User } from "lucide-react";
+import { AlertTriangle, X, User, Clock3 } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import type {
-  ModalState,
-  PaymentConfig,
-  PaymentTotals,
-  Plan,
-  Translator,
-} from "@/components/fees/types";
+import type { ModalState, Plan, Translator } from "@/components/fees/types";
 
 type FeesModalsProps = {
   modalState: ModalState;
   selectedPlan: Plan | null;
-  config: PaymentConfig;
-  totals: PaymentTotals;
   verificationEmail: string;
   verificationError: string;
   tEnrolText: Translator;
   setModalState: (state: ModalState) => void;
-  setConfig: (
-    updater: PaymentConfig | ((prev: PaymentConfig) => PaymentConfig),
-  ) => void;
   setVerificationEmail: (value: string) => void;
   setVerificationError: (value: string) => void;
   handleVerifyEmail: () => void;
+  handleStartRegistration: () => void;
+  handleContinuePayment: () => void;
 };
 
 export function FeesModals({
   modalState,
   selectedPlan,
-  config,
-  totals,
   verificationEmail,
   verificationError,
   tEnrolText,
   setModalState,
-  setConfig,
   setVerificationEmail,
   setVerificationError,
   handleVerifyEmail,
+  handleStartRegistration,
+  handleContinuePayment,
 }: FeesModalsProps) {
   const isBrowser = typeof window !== "undefined";
   const isModalOpen = modalState !== "idle";
@@ -111,12 +101,12 @@ export function FeesModals({
                 </p>
 
                 <div className="flex flex-col gap-4">
-                  <Link
-                    href="/enrol#registration-form"
+                  <button
+                    onClick={handleStartRegistration}
                     className="w-full bg-gold text-midnight py-3 font-bold uppercase tracking-widest hover:bg-white hover:text-gold border border-transparent hover:border-gold transition-all shadow-lg flex items-center justify-center gap-2"
                   >
                     {tEnrolText("Modals.registerPrompt.cta")}
-                  </Link>
+                  </button>
 
                   <div className="relative py-2">
                     <div className="absolute inset-0 flex items-center">
@@ -170,222 +160,38 @@ export function FeesModals({
               </div>
             )}
 
-            {modalState === "payment_config" && selectedPlan && (
-              <div className="text-start">
-                <h3 className="font-cinzel text-2xl lg:text-3xl text-midnight dark:text-cream mb-2 text-center">
-                  {tEnrolText("Modals.paymentConfig.title")}
+            {modalState === "resume_payment" && (
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 text-gold">
+                  <Clock3 size={32} />
+                </div>
+                <h3 className="font-cinzel text-2xl md:text-3xl text-midnight dark:text-cream mb-4">
+                  Continue Your Enrollment
                 </h3>
-                <p className="text-center font-sans text-base lg:text-lg text-midnight/60 dark:text-cream/60 mb-8">
-                  {selectedPlan.name}
+                <p className="font-sans text-midnight/70 dark:text-cream/70 mb-2 max-w-md mx-auto">
+                  We found your registration details and an unfinished payment.
                 </p>
+                {selectedPlan && (
+                  <p className="font-sans text-sm text-midnight/60 dark:text-cream/60 mb-8">
+                    Selected package:{" "}
+                    <span className="font-semibold">{selectedPlan.name}</span>
+                  </p>
+                )}
 
-                <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-                  <div className="space-y-6">
-                    <label className="text-sm font-bold uppercase tracking-widest text-midnight dark:text-cream block mb-4 border-b border-light/10 pb-2">
-                      {tEnrolText("Modals.paymentConfig.modeLabel")}
-                    </label>
-                    <div className="grid grid-cols-1 gap-3">
-                      <label
-                        className={`flex items-center justify-between border p-3 rounded-sm cursor-pointer transition-all ${config.frequency === "annual" ? "border-gold bg-gold/5" : "border-midnight/10 dark:border-white/10"}`}
-                      >
-                        <div className="flex items-center gap-3">
-                          <input
-                            type="radio"
-                            name="freq"
-                            checked={config.frequency === "annual"}
-                            onChange={() =>
-                              setConfig({
-                                ...config,
-                                frequency: "annual",
-                              })
-                            }
-                            className="accent-gold"
-                          />
-                          <span className="font-sans text-sm font-medium">
-                            {tEnrolText("Modals.paymentConfig.modes.annual")}
-                          </span>
-                        </div>
-                        <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
-                          -10%
-                        </span>
-                      </label>
-                      <label
-                        className={`flex items-center justify-between border p-3 rounded-sm cursor-pointer transition-all ${config.frequency === "semester" ? "border-gold bg-gold/5" : "border-midnight/10 dark:border-white/10"}`}
-                      >
-                        <div className="flex items-center gap-3">
-                          <input
-                            type="radio"
-                            name="freq"
-                            checked={config.frequency === "semester"}
-                            onChange={() =>
-                              setConfig({
-                                ...config,
-                                frequency: "semester",
-                              })
-                            }
-                            className="accent-gold"
-                          />
-                          <span className="font-sans text-sm font-medium">
-                            {tEnrolText("Modals.paymentConfig.modes.semester")}
-                          </span>
-                        </div>
-                        <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
-                          -5%
-                        </span>
-                      </label>
-                      <label
-                        className={`flex items-center justify-between border p-3 rounded-sm cursor-pointer transition-all ${config.frequency === "monthly" ? "border-gold bg-gold/5" : "border-midnight/10 dark:border-white/10"}`}
-                      >
-                        <div className="flex items-center gap-3">
-                          <input
-                            type="radio"
-                            name="freq"
-                            checked={config.frequency === "monthly"}
-                            onChange={() =>
-                              setConfig({
-                                ...config,
-                                frequency: "monthly",
-                              })
-                            }
-                            className="accent-gold"
-                          />
-                          <span className="font-sans text-sm font-medium">
-                            {tEnrolText("Modals.paymentConfig.modes.monthly")}
-                          </span>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div className="space-y-6">
-                    <label className="text-sm font-bold uppercase tracking-widest text-midnight dark:text-cream block mb-4 border-b border-light/10 pb-2">
-                      {tEnrolText("Modals.paymentConfig.childrenLabel")}
-                    </label>
-                    <div className="flex items-center gap-6 justify-center md:justify-start">
-                      <button
-                        onClick={() =>
-                          setConfig((prev) => ({
-                            ...prev,
-                            students: Math.max(1, prev.students - 1),
-                          }))
-                        }
-                        className="w-12 h-12 border border-midnight/20 hover:border-gold rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition-all text-xl"
-                      >
-                        -
-                      </button>
-                      <span className="font-cormorant text-4xl w-12 text-center">
-                        {config.students}
-                      </span>
-                      <button
-                        onClick={() =>
-                          setConfig((prev) => ({
-                            ...prev,
-                            students: prev.students + 1,
-                          }))
-                        }
-                        className="w-12 h-12 border border-midnight/20 hover:border-gold rounded-full flex items-center justify-center hover:bg-gold hover:text-white transition-all text-xl"
-                      >
-                        +
-                      </button>
-                    </div>
-                    <div className="bg-ivory dark:bg-black/20 p-6 rounded-sm mt-8">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-sans text-midnight/60 dark:text-cream/60">
-                          Estimated Total
-                        </span>
-                        <span className="font-cormorant text-2xl font-bold text-gold">
-                          ${totals.total.toLocaleString()}
-                        </span>
-                      </div>
-                      <p className="text-xs text-midnight/40 dark:text-cream/40 italic">
-                        Final summary on next step
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-12 flex justify-end">
+                <div className="flex flex-col gap-4">
                   <button
-                    onClick={() => setModalState("payment_overview")}
-                    className="w-full md:w-auto px-12 bg-midnight dark:bg-cream text-white dark:text-midnight py-4 font-bold uppercase tracking-widest hover:opacity-90 shadow-lg hover:-translate-y-0.5 transition-all"
+                    onClick={handleContinuePayment}
+                    className="w-full bg-gold text-midnight py-3 font-bold uppercase tracking-widest hover:bg-white hover:text-gold border border-transparent hover:border-gold transition-all shadow-lg"
                   >
-                    {tEnrolText("Modals.paymentConfig.next")}
+                    Continue From Where You Stopped
                   </button>
-                </div>
-              </div>
-            )}
 
-            {modalState === "payment_overview" && selectedPlan && (
-              <div className="text-start">
-                <h3 className="font-cinzel text-2xl lg:text-3xl text-midnight dark:text-cream mb-8 text-center pb-4 border-b border-light/10">
-                  {tEnrolText("Modals.overview.title")}
-                </h3>
-
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div className="bg-ivory dark:bg-black/20 p-8 rounded-sm space-y-4 font-sans shadow-inner">
-                    <div className="flex justify-between items-center">
-                      <span className="text-midnight/60 dark:text-cream/60">
-                        {tEnrolText("Modals.overview.plan")}
-                      </span>
-                      <span className="font-medium text-end text-lg">
-                        {selectedPlan.name}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-midnight/60 dark:text-cream/60 text-sm italic">
-                        Billing Frequency
-                      </span>
-                      <span className="bg-gold/10 text-gold px-3 py-1 rounded-full uppercase tracking-wider text-xs font-bold">
-                        {config.frequency}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-midnight/60 dark:text-cream/60">
-                        {tEnrolText("Modals.overview.students")}
-                      </span>
-                      <span className="font-medium text-lg">
-                        {config.students}
-                      </span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-midnight/60 dark:text-cream/60">
-                        {tEnrolText("Modals.overview.discount")}
-                      </span>
-                      <span className="font-medium text-green-600">
-                        -{totals.discount}
-                      </span>
-                    </div>
-                    <div className="border-t border-midnight/10 dark:border-white/10 pt-4 flex justify-between items-center mt-4">
-                      <span className="font-bold text-midnight dark:text-cream uppercase tracking-wider text-lg">
-                        {tEnrolText("Modals.overview.total")}
-                      </span>
-                      <span className="font-cormorant text-4xl font-bold text-gold">
-                        ${totals.total.toLocaleString()}
-                      </span>
-                    </div>
-                    <p className="text-xs text-center text-midnight/30 dark:text-cream/30 pt-2">
-                      * Secure payment simulation
-                    </p>
-                  </div>
-
-                  <div className="space-y-4">
-                    <button
-                      onClick={() => alert("Redirecting to Paystack...")}
-                      className="w-full bg-gold text-midnight py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-gold border border-transparent hover:border-gold transition-all shadow-xl flex items-center justify-center gap-3 text-lg group"
-                    >
-                      <CreditCard
-                        size={20}
-                        className="group-hover:scale-110 transition-transform"
-                      />
-                      {tEnrolText("Modals.overview.proceed")}
-                    </button>
-                    <button
-                      onClick={() => setModalState("payment_config")}
-                      className="w-full py-3 text-sm text-midnight/50 hover:text-midnight dark:text-cream/50 dark:hover:text-cream uppercase tracking-widest transition-colors flex items-center justify-center gap-2"
-                    >
-                      ← {tEnrolText("Modals.overview.cancel")}
-                    </button>
-                  </div>
+                  <Link
+                    href="/enrol#registration-form"
+                    className="w-full py-3 text-sm text-midnight/60 hover:text-midnight dark:text-cream/60 dark:hover:text-cream uppercase tracking-widest transition-colors border border-midnight/10 dark:border-white/10"
+                  >
+                    Open Registration
+                  </Link>
                 </div>
               </div>
             )}
