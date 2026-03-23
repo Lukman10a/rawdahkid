@@ -9,8 +9,7 @@ export type Plan = {
 export type ModalState =
   | "idle"
   | "register_required"
-  | "payment_config"
-  | "payment_overview";
+  | "resume_payment";
 
 export type PaymentConfig = {
   frequency: "monthly" | "semester" | "annual";
