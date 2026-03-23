@@ -9,6 +9,7 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { AppProviders } from "@/components/providers/AppProviders";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import "../globals.css";
@@ -57,13 +58,15 @@ export default async function RootLayout({
         className={`${playfair.variable} ${cinzel.variable} ${dmSans.variable} ${amiri.variable} ${cormorant.variable} antialiased bg-ivory dark:bg-midnight text-midnight dark:text-cream min-h-screen flex flex-col transition-colors duration-300`}
       >
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            <Navbar />
-            <main className="grow w-full min-w-0 overflow-x-hidden">
-              {children}
-            </main>
-            <Footer />
-          </ThemeProvider>
+          <AppProviders>
+            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+              <Navbar />
+              <main className="grow w-full min-w-0 overflow-x-hidden">
+                {children}
+              </main>
+              <Footer />
+            </ThemeProvider>
+          </AppProviders>
         </NextIntlClientProvider>
       </body>
     </html>
