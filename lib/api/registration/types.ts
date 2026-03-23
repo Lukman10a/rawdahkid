@@ -87,6 +87,34 @@ const classFormatLabelMap: Record<string, string> = {
   "one-on-one": "One-on-One Class",
 };
 
+function normalizeKey(value: string) {
+  return value.trim().toLowerCase().replace(/\s+/g, " ");
+}
+
+function toProgrammeInterest(value: string) {
+  const key = normalizeKey(value);
+  return programmeLabelMap[key] || value.trim();
+}
+
+function toClassFormat(value: string) {
+  const key = normalizeKey(value);
+
+  if (key === "group" || key === "group class" || key === "group class (max 5 students)") {
+    return "Group Class";
+  }
+
+  if (
+    key === "one-on-one" ||
+    key === "one on one" ||
+    key === "one-on-one class" ||
+    key === "one-on-one class (max 5 students)"
+  ) {
+    return "One-on-One Class";
+  }
+
+  return classFormatLabelMap[key] || value.trim();
+}
+
 export function mapFormDataToRegisterPayload(
   formData: FormData,
   selectedCourses: string[],
@@ -100,10 +128,8 @@ export function mapFormDataToRegisterPayload(
     cityCountry: formData.parentCity.trim(),
     childName: formData.studentName.trim(),
     childAge: Number.isNaN(parsedAge) ? 0 : parsedAge,
-    programmeInterest:
-      programmeLabelMap[formData.programme] || formData.programme || "",
-    classFormat:
-      classFormatLabelMap[formData.classFormat] || formData.classFormat || "",
+    programmeInterest: toProgrammeInterest(formData.programme || ""),
+    classFormat: toClassFormat(formData.classFormat || ""),
     selectedCourses,
     additionalInfo: formData.additionalInfo.trim(),
   };
