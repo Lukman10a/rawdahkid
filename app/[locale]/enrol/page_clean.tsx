@@ -60,6 +60,7 @@ export default function EnrolPage() {
         selectedPlanName={flow.selectedPlan?.name}
         paymentConfig={flow.paymentConfig}
         totals={flow.totals}
+        isFinalizingPayment={flow.isInitializingPayment}
         onClose={() => flow.setModalState("idle")}
         onProceedToPayment={() => {
           flow.upsertCurrentRecord(false);
@@ -100,11 +101,7 @@ export default function EnrolPage() {
         }
         onGoToPaymentOverview={() => flow.setModalState("payment_overview")}
         onBackToPaymentConfig={() => flow.setModalState("payment_config")}
-        onFinalizePayment={() => {
-          flow.upsertCurrentRecord(true);
-          // TODO: Integrate with payment gateway (Paystack)
-          alert("Payment finalized! Integrate with payment gateway.");
-        }}
+        onFinalizePayment={flow.handleFinalizePayment}
       />
     </div>
   );

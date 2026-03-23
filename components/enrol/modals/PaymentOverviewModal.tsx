@@ -9,6 +9,7 @@ type PaymentOverviewModalProps = {
   totals: EnrolTotals;
   onFinalizePayment: () => void;
   onBackToPaymentConfig: () => void;
+  isFinalizingPayment: boolean;
 };
 
 export function PaymentOverviewModal({
@@ -18,6 +19,7 @@ export function PaymentOverviewModal({
   totals,
   onFinalizePayment,
   onBackToPaymentConfig,
+  isFinalizingPayment,
 }: PaymentOverviewModalProps) {
   return (
     <div className="text-start">
@@ -72,13 +74,16 @@ export function PaymentOverviewModal({
         <div className="space-y-4">
           <button
             onClick={onFinalizePayment}
-            className="w-full bg-gold text-midnight py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-gold border border-transparent hover:border-gold transition-all shadow-xl flex items-center justify-center gap-3 text-lg group"
+            disabled={isFinalizingPayment}
+            className="w-full bg-gold text-midnight py-4 font-bold uppercase tracking-widest hover:bg-white hover:text-gold border border-transparent hover:border-gold transition-all shadow-xl flex items-center justify-center gap-3 text-lg group disabled:opacity-60 disabled:cursor-not-allowed"
           >
             <CreditCard
               size={20}
               className="group-hover:scale-110 transition-transform"
             />
-            {t("Modals.overview.proceed")}
+            {isFinalizingPayment
+              ? "Processing..."
+              : t("Modals.overview.proceed")}
           </button>
           <button
             onClick={onBackToPaymentConfig}

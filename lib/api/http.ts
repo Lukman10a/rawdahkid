@@ -1,7 +1,12 @@
 import axios from "axios";
 
 const API_TIMEOUT_MS = 15000;
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "/api";
+const API_BASE_URL =
+  typeof window === "undefined"
+    ? process.env.API_SERVER_BASE_URL ||
+      process.env.NEXT_PUBLIC_API_BASE_URL ||
+      "https://rawdoh.pxxl.click/api"
+    : "/api";
 
 export const http = axios.create({
   baseURL: API_BASE_URL,

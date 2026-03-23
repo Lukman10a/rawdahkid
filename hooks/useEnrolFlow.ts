@@ -12,6 +12,11 @@ import {
   setCurrentUserEmail,
   upsertRecord,
 } from "@/lib/enrolmentStorage";
+import { toApiError } from "@/lib/api/http";
+import { mapFormDataToRegisterPayload } from "@/lib/api/registration";
+import { getPaymentRedirectUrl } from "@/lib/api/payment";
+import { useRegisterStudentMutation } from "@/hooks/api/useRegisterStudentMutation";
+import { useInitializePaymentMutation } from "@/hooks/api/useInitializePaymentMutation";
 import type {
   EnrolModalState,
   FormData,
@@ -20,6 +25,8 @@ import type {
 
 export function useEnrolFlow() {
   const searchParams = useSearchParams();
+  const registerStudentMutation = useRegisterStudentMutation();
+  const initializePaymentMutation = useInitializePaymentMutation();
 
   const draft = getDraft();
   const shouldResumePayment = searchParams.get("resume") === "payment";
@@ -48,6 +55,7 @@ export function useEnrolFlow() {
     () => initialRecord?.paymentConfig || draft.paymentConfig,
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isInitializingPayment, setIsInitializingPayment] = useState(false);
   const [modalState, setModalState] = useState<EnrolModalState>(
     initialRecord ? "details_summary" : "idle",
   );
@@ -166,26 +174,25 @@ export function useEnrolFlow() {
     setCurrentUserEmail(normalizedEmail);
   };
 
-  const handleSubmit = (e: React.FormEvent, tText: (key: string) => string) => {
+  const handleSubmit = async (
+    e: React.FormEvent,
+    tText: (key: string) => string,
+  ) => {
     e.preventDefault();
     if (!validateForm(tText)) return;
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
+    try {
+      const payload = mapFormDataToRegisterPayload(formData, selectedCourses);
+      const response = await registerStudentMutation.mutateAsync(payload);
+
+      if (!response.success) {
+        throw new Error(response.message || "Registration failed. Please try again.");
+      }
+
       const normalizedEmail = normalizeEmail(formData.parentEmail);
       const existingRecord = getRecordByEmail(normalizedEmail);
-
-      if (
-        existingRecord?.registrationCompleted &&
-        existingRecord.paymentCompleted
-      ) {
-        setIsSubmitting(false);
-        setFailureReason(tText("form.errors.emailExists"));
-        setExistingEmailForResume(normalizedEmail);
-        setModalState("failure");
-        return;
-      }
 
       saveRegisteredEmail(normalizedEmail);
       setCurrentUserEmail(normalizedEmail);
@@ -201,9 +208,74 @@ export function useEnrolFlow() {
         updatedAt: new Date().toISOString(),
       });
 
-      setIsSubmitting(false);
       setModalState("success");
-    }, 1500);
+    } catch (error) {
+      const apiError = toApiError(error);
+      const message = apiError.message || "Registration failed. Please try again.";
+      const isDuplicateEmail = /already|exist|duplicate/i.test(message);
+
+      if (isDuplicateEmail) {
+        const normalizedEmail = normalizeEmail(formData.parentEmail);
+        setFailureReason(tText("form.errors.emailExists"));
+        setExistingEmailForResume(normalizedEmail);
+      } else {
+        setFailureReason(message);
+      }
+
+      setModalState("failure");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleFinalizePayment = async () => {
+    if (isInitializingPayment) return;
+
+    const email = normalizeEmail(formData.parentEmail);
+    const amount = Math.max(0, Math.round(totals.total));
+
+    if (!email) {
+      setFailureReason("Please provide a valid email before payment.");
+      setModalState("failure");
+      return;
+    }
+
+    if (amount <= 0) {
+      setFailureReason("Payment amount is invalid. Please review your selection.");
+      setModalState("failure");
+      return;
+    }
+
+    setIsInitializingPayment(true);
+
+    try {
+      const response = await initializePaymentMutation.mutateAsync({
+        email,
+        amount,
+      });
+
+      if (!response.success) {
+        throw new Error(response.message || "Unable to initialize payment.");
+      }
+
+      upsertCurrentRecord(true);
+
+      const redirectUrl = getPaymentRedirectUrl(response.data);
+      if (redirectUrl && typeof window !== "undefined") {
+        window.location.assign(redirectUrl);
+        return;
+      }
+
+      if (response.message) {
+        alert(response.message);
+      }
+    } catch (error) {
+      const apiError = toApiError(error);
+      setFailureReason(apiError.message || "Unable to initialize payment.");
+      setModalState("failure");
+    } finally {
+      setIsInitializingPayment(false);
+    }
   };
 
   const totals = calculatePaymentTotals(selectedPlan, paymentConfig);
@@ -226,6 +298,7 @@ export function useEnrolFlow() {
     selectedPlan,
     paymentConfig,
     isSubmitting,
+    isInitializingPayment,
     modalState,
     failureReason,
     existingEmailForResume,
@@ -240,6 +313,7 @@ export function useEnrolFlow() {
     setSelectedPlan,
     setPaymentConfig,
     setIsSubmitting,
+    setIsInitializingPayment,
     setModalState,
     setFailureReason,
     setExistingEmailForResume,
@@ -251,6 +325,7 @@ export function useEnrolFlow() {
     toggleCourse,
     updateFormField,
     upsertCurrentRecord,
+    handleFinalizePayment,
 
     // Utilities
     validateForm,

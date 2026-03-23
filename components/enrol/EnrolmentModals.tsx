@@ -26,6 +26,7 @@ type EnrolmentModalsProps = {
   selectedPlanName?: string;
   paymentConfig: PaymentConfig;
   totals: EnrolTotals;
+  isFinalizingPayment: boolean;
   onClose: () => void;
   onProceedToPayment: () => void;
   onContinueExistingEnrollment: () => void;
@@ -53,6 +54,7 @@ export function EnrolmentModals({
   selectedPlanName,
   paymentConfig,
   totals,
+  isFinalizingPayment,
   onClose,
   onProceedToPayment,
   onContinueExistingEnrollment,
@@ -205,6 +207,7 @@ export function EnrolmentModals({
                 totals={totals}
                 onFinalizePayment={onFinalizePayment}
                 onBackToPaymentConfig={onBackToPaymentConfig}
+                isFinalizingPayment={isFinalizingPayment}
               />
             )}
           </motion.div>
