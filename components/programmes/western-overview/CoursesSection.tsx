@@ -32,11 +32,11 @@ export default function CoursesSection() {
       slug: "programming",
     },
     {
-      name: t("courses.english.name"),
-      icon: BookOpen,
-      desc: t("courses.english.desc"),
-      levels: t("courses.english.levels"),
-      slug: "english",
+      name: t("courses.history.name"),
+      icon: Clock,
+      desc: t("courses.history.desc"),
+      levels: t("courses.history.levels"),
+      slug: "history",
     },
     {
       name: t("courses.english.name"),
@@ -51,13 +51,6 @@ export default function CoursesSection() {
       desc: t("courses.ai.desc"),
       levels: t("courses.ai.levels"),
       slug: "ai",
-    },
-    {
-      name: t("courses.history.name"),
-      icon: Clock,
-      desc: t("courses.history.desc"),
-      levels: t("courses.history.levels"),
-      slug: "history",
     },
   ];
 
