@@ -146,11 +146,6 @@ export function BundlesSection({
                   {t("bundles.labels.group")}
                 </div>
                 <div className="font-cormorant text-4xl text-midnight dark:text-cream">
-                  $4,000
-                  <span className="text-lg text-midnight/60 dark:text-cream/60 font-sans">
-                    {t("bundles.labels.yr")}
-                  </span>
-                <div className="font-cormorant text-4xl text-midnight dark:text-cream">
                   $6,000
                   <span className="text-lg text-midnight/60 dark:text-cream/60 font-sans">
                     {t("bundles.labels.yr")}
@@ -161,11 +156,6 @@ export function BundlesSection({
                 <div className="text-xs font-cinzel text-midnight/60 dark:text-cream/60 tracking-widest uppercase mb-1">
                   {t("bundles.labels.oneOnOne")}
                 </div>
-                <div className="font-cormorant text-2xl text-midnight/80 dark:text-cream/80">
-                  $10,000
-                  <span className="text-sm font-sans text-midnight/60 dark:text-cream/60">
-                    {t("bundles.labels.yr")}
-                  </span>
                 <div className="font-cormorant text-2xl text-midnight/80 dark:text-cream/80">
                   $15,000
                   <span className="text-sm font-sans text-midnight/60 dark:text-cream/60">
@@ -202,7 +192,6 @@ export function BundlesSection({
                     " (" +
                     t("bundles.labels.group") +
                     ")",
-                  price: 4000,
                   period: "yr",
                   price: 6000,
                   type: "group",
@@ -221,7 +210,6 @@ export function BundlesSection({
                     " (" +
                     t("bundles.labels.oneOnOne") +
                     ")",
-                  price: 10000,
                   period: "yr",
                   price: 15000,
                   type: "one-on-one",
@@ -256,11 +244,6 @@ export function BundlesSection({
                   {t("bundles.labels.group")}
                 </div>
                 <div className="font-cormorant text-4xl text-gold">
-                  $8,500
-                  <span className="text-lg text-midnight/60 dark:text-cream/60 font-sans">
-                    {t("bundles.labels.yr")}
-                  </span>
-                <div className="font-cormorant text-4xl text-gold">
                   $8,925
                   <span className="text-lg text-midnight/60 dark:text-cream/60 font-sans">
                     {t("bundles.labels.yr")}
@@ -271,11 +254,6 @@ export function BundlesSection({
                 <div className="text-xs font-cinzel text-midnight/60 dark:text-cream/60 tracking-widest uppercase mb-1">
                   {t("bundles.labels.oneOnOne")}
                 </div>
-                <div className="font-cormorant text-2xl text-midnight/80 dark:text-cream/80">
-                  $14,875
-                  <span className="text-sm font-sans text-midnight/60 dark:text-cream/60">
-                    {t("bundles.labels.yr")}
-                  </span>
                 <div className="font-cormorant text-2xl text-midnight/80 dark:text-cream/80">
                   $19,125
                   <span className="text-sm font-sans text-midnight/60 dark:text-cream/60">
@@ -310,7 +288,6 @@ export function BundlesSection({
                     " (" +
                     t("bundles.labels.group") +
                     ")",
-                  price: 8500,
                   period: "yr",
                   price: 8925,
                   type: "group",
@@ -330,7 +307,6 @@ export function BundlesSection({
                     " (" +
                     t("bundles.labels.oneOnOne") +
                     ")",
-                  price: 14875,
                   period: "yr",
                   price: 19125,
                   type: "one-on-one",
