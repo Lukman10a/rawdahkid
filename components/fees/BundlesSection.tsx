@@ -146,7 +146,7 @@ export function BundlesSection({
                   {t("bundles.labels.group")}
                 </div>
                 <div className="font-cormorant text-4xl text-midnight dark:text-cream">
-                  $3,000
+                  $4,000
                   <span className="text-lg text-midnight/60 dark:text-cream/60 font-sans">
                     {t("bundles.labels.yr")}
                   </span>
@@ -157,7 +157,7 @@ export function BundlesSection({
                   {t("bundles.labels.oneOnOne")}
                 </div>
                 <div className="font-cormorant text-2xl text-midnight/80 dark:text-cream/80">
-                  $7,500
+                  $10,000
                   <span className="text-sm font-sans text-midnight/60 dark:text-cream/60">
                     {t("bundles.labels.yr")}
                   </span>
@@ -192,7 +192,7 @@ export function BundlesSection({
                     " (" +
                     t("bundles.labels.group") +
                     ")",
-                  price: 3000,
+                  price: 4000,
                   period: "yr",
                   type: "group",
                 })
@@ -210,7 +210,7 @@ export function BundlesSection({
                     " (" +
                     t("bundles.labels.oneOnOne") +
                     ")",
-                  price: 7500,
+                  price: 10000,
                   period: "yr",
                   type: "one-on-one",
                 })
@@ -255,7 +255,7 @@ export function BundlesSection({
                   {t("bundles.labels.oneOnOne")}
                 </div>
                 <div className="font-cormorant text-2xl text-midnight/80 dark:text-cream/80">
-                  $12,750
+                  $14,875
                   <span className="text-sm font-sans text-midnight/60 dark:text-cream/60">
                     {t("bundles.labels.yr")}
                   </span>
@@ -307,7 +307,7 @@ export function BundlesSection({
                     " (" +
                     t("bundles.labels.oneOnOne") +
                     ")",
-                  price: 12750,
+                  price: 14875,
                   period: "yr",
                   type: "one-on-one",
                 })

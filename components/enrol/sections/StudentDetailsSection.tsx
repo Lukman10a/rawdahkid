@@ -137,8 +137,8 @@ export function StudentDetailsSection({
                 {t("form.student.formatSelect")}
               </option>
               <option value="group">{t("form.student.formatGroup")}</option>
-              <option value="one-on-one">
-                {t("form.student.formatOneOnOne")}
+              <option value="one-on-one" disabled>
+                {t("form.student.formatOneOnOne")} (currently unavailable)
               </option>
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">

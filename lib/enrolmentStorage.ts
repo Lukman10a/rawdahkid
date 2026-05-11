@@ -209,7 +209,7 @@ export function calculatePaymentTotals(plan: Plan | null, config: PaymentConfig)
   if (config.frequency === "annual") {
     amountDue = base * config.students;
   } else if (config.frequency === "semester") {
-    amountDue = (base / 2) * config.students;
+    amountDue = (base / 3) * config.students;
   } else {
     amountDue = (base / 12) * config.students;
   }

@@ -76,7 +76,7 @@ export function normalizeRegisterStudentResponse(
 }
 
 const programmeLabelMap: Record<string, string> = {
-  dual: "Dual Curriculum (Islamic & Western Bundle) - Best Value",
+  dual: "Dual Curriculum",
   islamic: "Islamic Programme Only",
   western: "Western Programme Only",
   individual: "Individual Specialized Courses",

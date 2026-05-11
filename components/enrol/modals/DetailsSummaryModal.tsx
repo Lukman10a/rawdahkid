@@ -93,8 +93,8 @@ export function DetailsSummaryModal({
               className="w-full border border-midnight/10 dark:border-white/10 px-4 py-3 bg-white dark:bg-midnight rounded-sm"
             >
               <option value="group">{t("form.student.formatGroup")}</option>
-              <option value="one-on-one">
-                {t("form.student.formatOneOnOne")}
+              <option value="one-on-one" disabled>
+                {t("form.student.formatOneOnOne")} (currently unavailable)
               </option>
             </select>
           </div>
