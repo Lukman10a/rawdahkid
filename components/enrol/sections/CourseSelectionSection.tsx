@@ -20,6 +20,7 @@ const WESTERN_COURSES = [
   "form.student.individualCourses.math",
   "form.student.individualCourses.science",
   "form.student.individualCourses.programming",
+  "form.student.individualCourses.english",
 ];
 
 export function CourseSelectionSection({

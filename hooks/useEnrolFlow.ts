@@ -147,6 +147,9 @@ export function useEnrolFlow() {
     }
     if (!formData.classFormat) {
       newErrors.classFormat = tText("form.errors.required");
+    } else if (formData.classFormat === "one-on-one") {
+      newErrors.classFormat =
+        "One-on-One class is currently unavailable for online registration. Please select Group Class or contact support.";
     }
 
     if (Object.keys(newErrors).length > 0) {

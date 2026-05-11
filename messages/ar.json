@@ -93,12 +93,12 @@
       "bundleName": "باقة الدورات الإسلامية كاملة",
       "perYear": "/ سنوياً",
       "perMonth": "/ شهرياً",
-      "perSemester": "/ فصلياً",
+      "perSemester": "/ جلسة كل ٤ أشهر",
       "monthlyEquiv": "يعادل 375 دولاراً / شهرياً بالضبط",
       "yearlyEquivMonthly": "المجموع 4,500 دولار / سنة",
-      "yearlyEquivSemester": "المجموع 4,500 دولار / سنة",
+      "yearlyEquivSemester": "٣ جلسات سنوياً (أبريل-يوليو، أغسطس-نوفمبر، ديسمبر-مارس) • المجموع 4,500 دولار / سنة",
       "monthlyTag": "شهري",
-      "semesterTag": "فصلي",
+      "semesterTag": "جلسة (٤ أشهر)",
       "annualTag": "سنوي",
       "seeGrid": "عرض جدول الرسوم كاملاً"
     },
@@ -426,7 +426,7 @@
         "childrenLabel": "عدد الطلاب",
         "modes": {
           "monthly": "شهري",
-          "semester": "فصلي (خصم ٥٪)",
+          "semester": "لكل جلسة ٤ أشهر (خصم ٥٪)",
           "annual": "سنوي (خصم ١٠٪)"
         },
         "next": "عرض الملخص"

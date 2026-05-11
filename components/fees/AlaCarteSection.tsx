@@ -110,6 +110,11 @@ export function AlaCarteSection({ t }: AlaCarteSectionProps) {
                     group: "$1,500",
                     oneOnOne: "$2,000",
                   },
+                  {
+                    name: t("alacarte.courses.english"),
+                    group: "$1,500",
+                    oneOnOne: "$2,000",
+                  },
                 ].map((course, i) => (
                   <div
                     key={i}

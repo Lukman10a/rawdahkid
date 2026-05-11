@@ -48,7 +48,7 @@
     },
     "story": {
       "quote": "\"We don't just teach children. We nurture the people they are becoming.\"",
-      "p1": "Founded on a simple but profound belief: a Muslim child deserves both a strong Islamic identity AND a rigorous academic education. There should be no compromise between deen and duniya.",
+      "p1": "Founded on a simple but profound belief: a Muslim child deserves both a strong Islamic identity AND a rigorous academic education. There should be no compromise between deen and academics.",
       "p2": "At Rawdatul Atfaal, we demand excellence in both, raising a generation grounded in their faith and fully equipped to navigate and lead in the modern world.",
       "readMore": "Read Full Story"
     },
@@ -88,12 +88,12 @@
       "bundleName": "All Islamic Courses Bundle",
       "perYear": "/ year",
       "perMonth": "/ month",
-      "perSemester": "/ semester",
+      "perSemester": "/ 4-month session",
       "monthlyEquiv": "Equivalent to exactly $375 / month",
       "yearlyEquivMonthly": "Total $4,500 / year",
-      "yearlyEquivSemester": "Total $4,500 / year",
+      "yearlyEquivSemester": "3 sessions/year (Apr-Jul, Aug-Nov, Dec-Mar) • Total $4,500 / year",
       "monthlyTag": "Monthly",
-      "semesterTag": "Semester",
+      "semesterTag": "Session (4 Months)",
       "annualTag": "Annual",
       "seeGrid": "See Full Pricing Grid"
     },
@@ -142,13 +142,13 @@
     },
     "philosophy": {
       "subtitle": "Our Approach",
-      "title": "No Compromise Between Deen & Duniya",
+      "title": "No Compromise Between Deen & Academics",
       "p1": "For too long, Muslim families have been forced into a false dichotomy: choose a rigorous academic school with a secular environment, or choose a traditional Islamic school that lacks academic competitiveness.",
       "p2_prefix": "At ",
       "p2_bold": "Rawdatul Atfaal",
       "p2_suffix": ", we reject this compromise.",
       "p3": "Our dual-curriculum approach ensures that when a child is learning mathematics or programming, they are doing so with the same intensity as when they are memorizing the Qur'an or studying Fiqh. Excellence is not segmented; it is a holistic mindset we cultivate across all disciplines.",
-      "duniya": "DUNIYA",
+      "duniya": "ACADEMICS",
       "deen": "الدين"
     },
     "values": {
@@ -170,7 +170,7 @@
       "quote": "\"Jazaakumullahu Khairan (May Allah reward you all with goodness).\""
     },
     "t0": "We envision a future where our alumni stand as pillars in their communities—possessing deep knowledge of their Deen and demonstrating exceptional competence in worldly sciences.",
-    "t1": "DUNIYA",
+    "t1": "ACADEMICS",
     "origin_story_desc": "was founded circa 2021 as the foundational children's school under the umbrella of Markazul Bayaan. What started as a focused initiative has since blossomed into a global learning community, answering the call of families across the US, UK, Australia, Germany, Canada, India, Nigeria, Ghana, and beyond.",
     "leadership": {
       "title": "Who Are Those Behind Rawdatul Atfaal",
@@ -255,15 +255,15 @@
         "c2": "Physical Sciences",
         "c3": "Biological Sciences",
         "c4": "Programming & CompSci",
-        "c5": "Lab & Practical Sessions",
+        "c5": "English Language",
         "c6": "Project-Based Learning"
       },
       "dual": {
         "bestValue": "Best Value",
         "title": "Dual Curriculum",
-        "desc": "All 9 courses from both the Islamic and Western Programmes (15% off).",
+        "desc": "All 10 courses from both the Islamic and Western Programmes (15% off).",
         "c1": "All 6 Islamic Courses",
-        "c2": "All 3 Western Courses",
+        "c2": "All 4 Western Courses",
         "c3": "Complete holistic education",
         "c4": "Maximum sibling overlap",
         "c5": "15% Bundle Discount applied"
@@ -288,7 +288,8 @@
         "mutoon": "Mutoon",
         "math": "Mathematics",
         "science": "Sciences",
-        "programming": "Programming"
+        "programming": "Programming",
+        "english": "English Language"
       }
     },
     "discounts": {
@@ -303,7 +304,7 @@
       "payment": {
         "title": "Payment Timing",
         "d1": "Annual Upfront: 10% off the total fee",
-        "d2": "Semester Upfront: 5% off the semester fee",
+        "d2": "Per 4-Month Session Upfront: 5% off the session fee (3 sessions per year starting April)",
         "d3": "Monthly Plan: No discount"
       },
       "footerNote": "Note: A non-refundable registration fee of $20 per student is due upon enrolment to cover administrative processing, placement assessments, and baseline learning materials."
@@ -386,7 +387,8 @@
           "mutoon": "Mutoon",
           "math": "Mathematics",
           "science": "Sciences",
-          "programming": "Programming"
+          "programming": "Programming",
+          "english": "English Language"
 
         },
         "additional": "Additional Information / Questions",
@@ -422,7 +424,7 @@
         "childrenLabel": "Number of Students",
         "modes": {
           "monthly": "Monthly",
-          "semester": "Per Semester (5% Off)",
+          "semester": "Per 4-Month Session (5% Off)",
           "annual": "Annually (10% Off)"
         },
         "next": "View Summary"
@@ -516,6 +518,11 @@
         "name": "Programming",
         "desc": "Computational thinking, algorithmic design, and full-stack software development.",
         "levels": "10 Levels"
+      },
+      "english": {
+        "name": "English Language",
+        "desc": "Foundation reading, writing, speaking, and listening skills through engaging literature and composition.",
+        "levels": "8 Levels"
       }
     },
     "investment": {
@@ -523,9 +530,9 @@
       "p1_start": "While Western Programme courses can be taken individually starting from ",
       "p1_end": ", we highly recommend the complete bundle.",
       "bundleTitle": "Full Western Bundle",
-      "bundleDesc": "Mathematics, Sciences, and Programming",
+      "bundleDesc": "Mathematics, Sciences, Programming, and English",
       "perYear": "/ year",
-      "equivalent": "Equivalent to $250 / month",
+      "equivalent": "Equivalent to $333 / month",
       "cta": "View Fee Schedule"
     },
     "t0": "While Western Programme courses can be taken individually starting from",
@@ -2279,6 +2286,68 @@
     "t58": "CS theory & GCSE prep",
     "t59": "JavaScript & React"
   },
+  "ProgEnglish": {
+    "t0": "English Language",
+    "t1": "Reading → Writing → Speaking → Excellence",
+    "t2": "Communication",
+    "t3": "•",
+    "t4": "Literacy",
+    "t5": "•",
+    "t6": "Expression",
+    "t7": "\"English is the gateway to understanding world literature, expressing ideas clearly, and connecting with the global community.\"",
+    "t8": "Programme Overview",
+    "t9": "The English Language curriculum is a comprehensive eight-level programme designed to develop foundational literacy skills and progress toward advanced academic English. Starting from phonics and early reading at age 5, students progress through confident reading and writing, develop critical thinking about texts, and finally master GCSE English Literature and Language by age 14.",
+    "t10": "At every stage, students engage with diverse texts, develop writing skills across multiple genres, and build vocabulary and grammatical understanding through meaningful, enjoyable activities.",
+    "t11": "We produce communicators who read with confidence, write with clarity, and think critically about language.",
+    "t12": "Core Progression",
+    "t13": "English at a Glance",
+    "t14": "Lvl",
+    "t15": "Age",
+    "t16": "Primary Focus",
+    "t17": "Detailed Master Plans",
+    "t18": "Master the Language of Expression",
+    "t19": "From early phonics to GCSE excellence, develop strong communication skills that open doors to academic and professional success.",
+    "t20": "English Language Programme",
+    "t21": "Core",
+    "t22": "GCSE Preparation",
+    "t23": "Advanced Reading & Writing",
+    "t24": "Interactive Learning Activities",
+    "t25": "Enrol Now",
+    "t26": "← Back to Core Programmes",
+    "t27": "Duration / Frequency:",
+    "t28": "Aim:",
+    "t29": "Unit",
+    "t30": "Unit / Topic",
+    "t31": "Key Skills / Outcomes",
+    "t32": "Advanced Secondary English",
+    "t33": "GCSE English Excellence",
+    "t34": "Confident Readers & Young Authors",
+    "t35": "Secondary English Foundations",
+    "t36": "Advanced Reading Comprehension",
+    "t37": "Building Blocks to Reading",
+    "t38": "GCSE Literature & Language",
+    "t39": "Fluent Readers & Young Authors",
+    "t40": "Critical Readers & Proficient Writers",
+    "t41": "Phonics & Early Reading",
+    "t42": "Comprehensive reading and writing development across fiction, non-fiction, poetry, and academic genres.",
+    "t43": "Phonics, sight words, letter recognition, and foundational reading comprehension through interactive activities.",
+    "t44": "GCSE-level literary analysis, Shakespeare, poetry, creative writing, and examination technique.",
+    "t45": "Reading fluency, expanded vocabulary, simple narrative and expository writing skills.",
+    "t46": "Advanced & Capstone (Levels 7–8)",
+    "t47": "GCSE excellence & advanced communication",
+    "t48": "Academic & Secondary English",
+    "t49": "Building Confident Writers",
+    "t50": "Foundations (Levels 1–2)",
+    "t51": "Confident Reading & Writing",
+    "t52": "Core Reading (Levels 3–4)",
+    "t53": "Phonics & Sight Words",
+    "t54": "Advanced Writing & Analysis",
+    "t55": "Foundational Literacy Skills",
+    "t56": "Developing Reader Skills",
+    "t57": "Advanced Comprehension",
+    "t58": "GCSE Exam Mastery",
+    "t59": "Literary Analysis & Composition"
+  },
   "Faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Find answers to common questions about our programmes, admissions, and policies.",
@@ -2308,7 +2377,7 @@
   },
   "KnowledgeHub": {
     "title": "Knowledge Hub",
-    "subtitle": "Insights, educational strategies, and reflections to support your child's journey in Deen and Dunya.",
+    "subtitle": "Insights, educational strategies, and reflections to support your child's journey in Deen and Academics.",
     "featured": "Featured",
     "viewArticle": "Read More",
     "categories": {
