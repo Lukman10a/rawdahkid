@@ -10,7 +10,7 @@ export interface PostData {
   author: string;
   coverImage: string;
   content: string;
-  contentJson?: any;
+  contentJson?: unknown;
   status: PostStatus;
   readTime: string;
   publishedAt?: string;

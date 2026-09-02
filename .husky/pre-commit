@@ -1,0 +1,4 @@
+npm run typecheck
+npm run lint
+# During RED phase, tests fail intentionally — run without coverage, allow failure
+# npm run test -- --runInBand || true

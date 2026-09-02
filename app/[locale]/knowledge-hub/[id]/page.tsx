@@ -15,21 +15,6 @@ import {
 import { getAdminPostBySlug } from "@/lib/admin/clientPostAdapter";
 import type { PostDetails } from "@/components/knowledge-hub/types";
 
-// Fallback post when not found
-const fallbackPost: PostDetails = {
-  id: "1",
-  title: "Article Not Found",
-  date: "",
-  readTime: "",
-  categoryLabel: "Error",
-  excerpt: "",
-  image: "",
-  author: "Admin",
-  authorInitials: "AD",
-  content: "<p>The requested article could not be found.</p>",
-  headings: [],
-};
-
 export default function PostDetailsPage() {
   const t = useTranslations("KnowledgeHub");
   const tUnsafe = useCallback((key: string) => t(key as never), [t]);
@@ -43,7 +28,7 @@ export default function PostDetailsPage() {
   });
 
   // Try to get mock post first
-  let post = getPostInfo(id, tUnsafe);
+  const post = getPostInfo(id, tUnsafe);
   const [adminPost, setAdminPost] = useState<PostDetails | null>(null);
   const [loading, setLoading] = useState(false);
   const [hasAttemptedLoad, setHasAttemptedLoad] = useState(false);

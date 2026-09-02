@@ -6,11 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint --max-warnings 0",
+    "lint:fix": "eslint --fix",
+    "typecheck": "tsc --noEmit",
     "test": "jest --runInBand",
     "test:vitest": "vitest run",
     "test:watch": "jest --watch",
-    "test:ci": "jest --runInBand --coverage"
+    "test:ci": "jest --runInBand --coverage",
+    "prepare": "husky"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -62,6 +65,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "expect-type": "^1.4.0",
+    "husky": "^9.1.7",
     "jest": "^30.5.1",
     "jest-environment-jsdom": "^30.5.1",
     "jsdom": "^30.0.1",

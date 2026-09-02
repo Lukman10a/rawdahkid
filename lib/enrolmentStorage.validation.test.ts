@@ -4,7 +4,8 @@ import type { FormData } from "@/components/enrol/types";
 // For RED, we duplicate the current validateForm logic and assert expected failures
 // Current validateForm only checks trim, not age range or courses
 
-function currentValidateForm(formData: FormData, selectedCourses: string[] = []): Record<string, string> {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function currentValidateForm(formData: FormData, _selectedCourses: string[] = []): Record<string, string> {
   const newErrors: Record<string, string> = {};
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!formData.parentName.trim()) newErrors.parentName = "required";
