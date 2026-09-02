@@ -103,16 +103,22 @@ Fees: [Book a Free Consultation Call (gold, calendly)]  [Pay Now (Stripe/Flutter
 ## Log
 
 - **2026-09-02 — Audited fees/enrol flows, merged `cleanups` western courses (`history`/`ai`/`english`) into `main` (`73548b4`), fixed Arabic UTF-8 mojibake (`152k` vs `304k`), hydration `suppressHydrationWarning`, and initial Book CTA mounting. Created this tracker.**
-- _Next: P0 clarify with owner, then P1 TDD groundwork._
+- **2026-09-02 — Created tracking doc `docs/ENROL_PAYMENT_FINALIZATION.md` and pushed to `main` (`0294bca`) + `cleanups` (`ce29902`). Generated 5 GitHub issues from phases.**
+- **2026-09-02 — Issues created: #14 Phase 0 Clarify, #15 Phase 1 TDD Groundwork, #16 Phase 2 Payment abstraction, #17 Phase 3 Simplify UI, #18 Phase 5 Hardening. Doc will be updated after each phase (check boxes + dated log).**
+- _Next: Await owner answers on Phase 0 (one-time vs recurring, Paystack pain, provider choice), then proceed to Phase 1 TDD red tests._
 
 ---
 
 ## Issues
 
-Track in GitHub via `gh issue create`. Example:
-```bash
-gh issue create --title "TDD: calculatePaymentTotals discounts" --body "Red test for annual 10% etc. See docs/ENROL_PAYMENT_FINALIZATION.md Phase 1" --label "tdd,phase-1"
-```
+Created via `gh` on `Lukman10a/rawdahkid`:
+- **#14** `Phase 0 — Clarify enrol & payment requirements` — https://github.com/Lukman10a/rawdahkid/issues/14
+- **#15** `Phase 1 — TDD Groundwork + Matt Pocock guardrails` — https://github.com/Lukman10a/rawdahkid/issues/15
+- **#16** `Phase 2 — Payment abstraction (Paystack → Stripe/Flutterwave Links)` — https://github.com/Lukman10a/rawdahkid/issues/16
+- **#17** `Phase 3 — Simplify UI: fees/enrol wiring + discounts` — https://github.com/Lukman10a/rawdahkid/issues/17
+- **#18** `Phase 5 — Hardening & Ship (E2E, rate-limit, CI)` — https://github.com/Lukman10a/rawdahkid/issues/18
+
+Track via `gh issue list` or `docs/ENROL_PAYMENT_FINALIZATION.md`. After each step: `check box → append Log → git commit → git push`.
 
 ---
 
