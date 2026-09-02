@@ -50,17 +50,18 @@ Fees: [Book a Free Consultation Call (gold, calendly)]  [Pay Now (Stripe/Flutter
 - [x] Require `parentCountry` dial concat for `phoneNumber` → **Yes full international** (owner: “Yes full international”)
 - [x] **Decisions locked → proceed to Phase 1**
 
-### Phase 1 — TDD Groundwork + Guardrails (1 day)
-- [ ] `npx skills add mattpocock/skills@tdd -g -y`
-- [ ] `npm i -D vitest @testing-library/react @testing-library/jest-dom msw zod`
-- [ ] `vitest.config.ts` (`environment: jsdom`, `setupFiles: ./vitest.setup.ts`), `package.json` scripts `test`, `test:watch`, `test:ci`
-- [ ] Branded types: `type Email = string & {__brand:"Email"}`, `type Cents = number & {__brand:"Cents"}`, `expectTypeOf` in tests
-- [ ] **Red tests (fail):**
-  - [ ] `calculatePaymentTotals` with annual 10%/semester 5%/sibling 10-30%/Dual 15% → currently `0%`
-  - [ ] `mapFormDataToRegisterPayload` phone + country concat, `cityCountry` includes country
-  - [ ] `validateForm` age 5-18, `individual` requires ≥1 course
-  - [ ] `normalizeEmail` trims/lower
-- [ ] **Guardrail:** `tsc --noEmit --strict` + `eslint --max-warnings 0` in CI
+### Phase 1 — TDD Groundwork + Guardrails (1 day) — **RED DONE 2026-09-02**
+- [x] `npx skills add mattpocock/skills@tdd -g -y` → installed to 7 agents (universal) — `.agents/skills/tdd`
+- [x] `npm i -D vitest@2.1.8 vitest@3.2.4 → jest@30 + ts-jest + jest-environment-jsdom + @testing-library/* + msw + jsdom + expect-type` — vitest fails on Windows/Node 24 `compileSourceTextModule` (empty `client-only` ESM), switched to **jest** (`jest.config.js` `preset: ts-jest`, `jsdom`, `setupFilesAfterEnv: jest.setup.ts`, `moduleNameMapper @/*`, `testMatch lib/**/*.test.ts`)
+- [x] `vitest.config.ts/cjs/js` + `vitest.setup.ts` created, then `jest.config.js` + `jest.setup.ts` (minimal, no aria-query) — `package.json` scripts `test` (vitest) + `test:jest` (jest) — `npm run test` currently vitest broken on Windows, `npx jest --runInBand` works
+- [x] Branded types: `lib/types/branded.ts:3` `type Email`, `Cents`, `PlanId`, `toEmail`, `toCents`, `isValidEmail` + `expectTypeOf` via `expect-type`
+- [x] **Red tests (fail as intended — 10 failed / 10 passed, 3 suites failed):**
+  - [x] `lib/enrolmentStorage.test.ts:17` `calculatePaymentTotals` annual 10% (`4500→4050` got `4500`), semester 5% (`1500→1425` got `1500`), sibling <10800 got `12000` — RED
+  - [x] `lib/api/registration/types.test.ts:33` `mapFormDataToRegisterPayload` phone concat `234` got `808...`, cityCountry `NG` got `Lagos` — RED
+  - [x] `lib/enrolmentStorage.validation.test.ts:38` `validateForm` age 3/25/abc + individual courses — expected `toBeDefined` got `undefined` — RED
+  - [x] `lib/api/http.test.ts:6` `toApiError` — 3 passed (guardrail)
+  - [x] `normalizeEmail` covered via `registration/types.test` email lower test (passed)
+- [x] **Guardrail:** `npx tsc --noEmit` passes (0), `npx jest --runInBand` shows RED as expected (20 tests, 10 fail) — next **GREEN** will fix `lib/enrolmentStorage.ts:203` discounts + `registration/types.ts:118` phone/city + `useEnrolFlow.ts:122` validateForm
 
 ### Phase 2 — Payment Abstraction (1 day)
 - [ ] Refactor `lib/api/payment/types.ts` to provider union, keep Paystack legacy
@@ -106,7 +107,7 @@ Fees: [Book a Free Consultation Call (gold, calendly)]  [Pay Now (Stripe/Flutter
 - **2026-09-02 — Created tracking doc `docs/ENROL_PAYMENT_FINALIZATION.md` and pushed to `main` (`0294bca`) + `cleanups` (`ce29902`). Generated 5 GitHub issues from phases.**
 - **2026-09-02 — Issues created: #14 Phase 0 Clarify, #15 Phase 1 TDD Groundwork, #16 Phase 2 Payment abstraction, #17 Phase 3 Simplify UI, #18 Phase 5 Hardening. Doc will be updated after each phase (check boxes + dated log).**
 - **2026-09-02 — Phase 0 DONE: Owner clarified — Both (one-time + recurring), Paystack pain = Setup & KYC → choose Flutterwave/Stripe Payment Links (no-code) + Calendly close, Move to DB (Supabase), Full international phone (`+countryDial + phone`). See #14.**
-- _Next: Phase 1 TDD Groundwork (vitest, msw, branded types, red tests)._
+- **2026-09-02 — Phase 1 RED DONE: Installed `mattpocock/skills@tdd`, vitest 2/3 + jest 30 + jsdom + msw (vitest broken on Windows Node 24 `compileSourceTextModule` empty `client-only`, switched to jest). Created `jest.config.js` + `vitest.config.*` + `lib/types/branded.ts` + 4 RED test suites (20 tests, 10 fail as intended). `npx tsc --noEmit` passes, `npx jest --runInBand` shows RED. Next: Phase 1 GREEN (fix discounts, phone, age). See #15.**
 
 ---
 
