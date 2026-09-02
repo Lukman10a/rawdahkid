@@ -3,18 +3,13 @@ import axios from "axios";
 
 describe("toApiError — guardrail", () => {
   it("should extract message from axios error with response data", () => {
-    const err = {
-      isAxiosError: true,
-      message: "Network Error",
-      response: { status: 400, data: { message: "Already exists" } },
-    } as unknown as Error;
     // Mock axios.isAxiosError
     const spy = jest.spyOn(axios, "isAxiosError").mockReturnValue(true);
     // We need to craft a real axios-like error object with response
     const axiosErr = {
       response: { status: 400, data: { message: "Already exists" } },
       message: "Request failed",
-    } as any;
+    } as unknown as Error;
     // Make isAxiosError return true for this object
     spy.mockReturnValue(true);
     const result = toApiError(axiosErr);

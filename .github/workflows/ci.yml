@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main, cleanups]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck (strict)
+        run: npm run typecheck
+
+      - name: Lint (no warnings)
+        run: npm run lint
+
+      - name: Tests + Coverage (80% on lib/enrolmentStorage.ts)
+        run: npm run test:ci
+
+      - name: Enforce tracker updated when lib/ changes
+        run: |
+          if git diff --name-only origin/main...HEAD | grep -q "^lib/"; then
+            if ! git diff --name-only origin/main...HEAD | grep -q "docs/ENROL_PAYMENT_FINALIZATION.md"; then
+              echo "::error::lib/ changed but docs/ENROL_PAYMENT_FINALIZATION.md not updated. Update Log + checkbox and commit."
+              exit 1
+            fi
+          fi
+          echo "Tracker check passed"
+
+      - name: Enforce Closes keyword
+        run: |
+          if git log --oneline origin/main..HEAD | grep -qE "Closes #[0-9]+"; then
+            echo "Closes keyword found"
+          else
+            echo "::warning::No 'Closes #X' found in commits. Use 'Closes #X' (no parentheses) to auto-close issue."
+          fi
+
+      - name: Build
+        run: npm run build

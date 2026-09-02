@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, Mail, MapPin, Phone, type LucideIcon } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
+import type { ComponentType, SVGProps } from "react";
 
 type InfoCard = {
-  icon: LucideIcon;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
   title: string;
   content: string[];
 };
