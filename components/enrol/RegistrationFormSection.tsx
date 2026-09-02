@@ -1,6 +1,6 @@
 "use client";
 
-import { Loader2 } from "lucide-react";
+import { Loader2, Calendar } from "lucide-react";
 import type {
   EnrolTranslate,
   FormData,
@@ -48,13 +48,27 @@ export function RegistrationFormSection({
         <div className="bg-white dark:bg-navy p-10 md:p-14 shadow-2xl rounded-sm border-t-4 border-t-gold border-x border-b border-midnight/5 dark:border-white/5 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
-          <div className="text-center mb-10 relative z-10">
+          <div className="text-center mb-6 relative z-10">
             <h2 className="font-playfair text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
               {t("form.title")}
             </h2>
-            <p className="font-sans text-midnight/70 dark:text-cream/70">
+            <p className="font-sans text-midnight/70 dark:text-cream/70 mb-4">
               {t("form.desc")}
             </p>
+            <div className="flex flex-col items-center gap-2 py-4 border-y border-gold/20 bg-gold/5 rounded-sm">
+              <p className="font-sans text-sm text-midnight/70 dark:text-cream/70">
+                Prefer to talk to a human? We&apos;d love to help.
+              </p>
+              <a
+                href="https://calendly.com/markazulbayaan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gold text-midnight px-6 py-2 rounded-sm text-sm font-medium tracking-wide hover:bg-amber hover:scale-105 transition-all duration-300 shadow-md"
+              >
+                <Calendar className="w-4 h-4" />
+                Book a Free Consultation Call
+              </a>
+            </div>
           </div>
 
           <form

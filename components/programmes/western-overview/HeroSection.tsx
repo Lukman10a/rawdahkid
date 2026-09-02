@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { Calendar } from "lucide-react";
 
 export default function HeroSection() {
   const t = useTranslations("ProgWestern");
+  const tNav = useTranslations("Navigation");
 
   return (
     <section className="relative py-24 md:py-32 overflow-hidden border-b border-midnight/10 dark:border-white/10">
@@ -21,9 +23,18 @@ export default function HeroSection() {
             {t("hero.title")}
           </h1>
           <div className="w-32 h-px bg-gold mx-auto mb-8"></div>
-          <p className="font-sans text-xl text-midnight/70 dark:text-muted max-w-3xl mx-auto leading-relaxed">
+          <p className="font-sans text-xl text-midnight/70 dark:text-muted max-w-3xl mx-auto leading-relaxed mb-8">
             {t("hero.desc")}
           </p>
+          <a
+            href="https://calendly.com/markazulbayaan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-gold text-midnight px-8 py-3 rounded-sm text-sm font-medium tracking-wide hover:bg-amber hover:scale-105 transition-all duration-300 shadow-lg"
+          >
+            <Calendar className="w-4 h-4" />
+            {tNav("bookCall")}
+          </a>
         </motion.div>
       </div>
     </section>

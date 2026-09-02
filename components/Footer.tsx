@@ -6,6 +6,7 @@ import {
   Instagram,
   Facebook,
   Twitter,
+  Calendar,
 } from "lucide-react";
 
 export default function Footer() {
@@ -57,6 +58,15 @@ export default function Footer() {
             <p className="font-playfair italic text-midnight/ dark:text-cream/ max-w-sm text-lg">
               {t("t0")}
             </p>
+            <a
+              href="https://calendly.com/markazulbayaan"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-gold text-midnight px-6 py-3 rounded-sm text-sm font-medium tracking-wide hover:bg-amber hover:scale-[1.02] transition-all duration-300 shadow-md mt-2"
+            >
+              <Calendar className="w-4 h-4" />
+              {t("bookCall")}
+            </a>
             <div className="flex flex-wrap gap-4 pt-4">
               <a
                 href="#"

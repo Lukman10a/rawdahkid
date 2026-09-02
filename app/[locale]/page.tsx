@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import { ChevronDown, ArrowRight, Quote } from "lucide-react";
+import { ChevronDown, ArrowRight, Quote, Calendar } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 
@@ -106,14 +106,22 @@ export default function Home() {
               </motion.p>
 
               <motion.div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-                <Link href="/programmes/islamic">
+                <a
+                  href="https://calendly.com/markazulbayaan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button variant="primary" className="group flex items-center">
-                    {t("exploreButton")}
+                    <Calendar className="w-4 h-4 me-2" />
+                    {t("bookCallButton")}
                     <ArrowRight className="w-4 h-4 ms-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                </Link>
-                <Link href="/fees">
-                  <Button variant="ghost">{t("downloadFeesButton")}</Button>
+                </a>
+                <Link href="/programmes/islamic">
+                  <Button variant="ghost" className="group flex items-center">
+                    {t("exploreButton")}
+                    <ArrowRight className="w-4 h-4 ms-2 group-hover:translate-x-1 transition-transform opacity-0 group-hover:opacity-100" />
+                  </Button>
                 </Link>
               </motion.div>
             </motion.div>
@@ -551,18 +559,26 @@ export default function Home() {
           <p className="font-sans text-midnight/70 dark:text-muted text-xl mb-12">
             {h("cta.description")}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+            <a
+              href="https://calendly.com/markazulbayaan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="primary" className="px-10 py-4 text-lg flex items-center gap-2">
+                <Calendar className="w-5 h-5" />
+                {t("bookCallButton")}
+              </Button>
+            </a>
             <Link href="/enrol">
-              <Button variant="primary" className="px-10 py-4 text-lg">
+              <Button variant="ghost" className="px-10 py-4 text-lg">
                 {h("cta.enrol")}
               </Button>
             </Link>
-            <Link href="/contact">
-              <Button variant="ghost" className="px-10 py-4 text-lg">
-                {h("cta.contact")}
-              </Button>
-            </Link>
           </div>
+          <p className="mt-6 text-sm text-midnight/50 dark:text-cream/50 font-sans">
+            Prefer email? <Link href="/contact" className="text-gold hover:underline">{h("cta.contact")}</Link>
+          </p>
         </div>
       </section>
     </div>

@@ -14,12 +14,14 @@ import {
   setCurrentUserEmail,
 } from "@/lib/enrolmentStorage";
 
+import { Calendar } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 
 export default function FeesPage() {
   const t = useTranslations("Fees");
   const tEnrol = useTranslations("Enrol"); // For shared modal strings
+  const tNav = useTranslations("Navigation");
   const router = useRouter();
   const tText = t as unknown as (key: string) => string;
   const tEnrolText = tEnrol as unknown as (key: string) => string;
@@ -108,6 +110,24 @@ export default function FeesPage() {
         groupClassButtonClass={groupClassButtonClass}
         onSelectPlan={handleSelectPlan}
       />
+
+      {/* Strong Book a Call CTA — between bundles and à la carte */}
+      <section className="py-10 bg-ivory dark:bg-midnight border-y border-gold/20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="font-sans text-midnight/70 dark:text-cream/70 mb-4 text-lg">
+            Not sure which plan fits your family? Talk to us directly.
+          </p>
+          <a
+            href="https://calendly.com/markazulbayaan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-gold text-midnight px-8 py-3 rounded-sm text-sm font-medium tracking-wide hover:bg-amber hover:scale-105 transition-all duration-300 shadow-lg"
+          >
+            <Calendar className="w-4 h-4" />
+            {tNav("bookCall")}
+          </a>
+        </div>
+      </section>
 
       <AlaCarteSection t={tText} />
 

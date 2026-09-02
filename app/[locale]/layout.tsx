@@ -8,6 +8,7 @@ import {
 } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BookCallFloating from "@/components/BookCallFloating";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { AppProviders } from "@/components/providers/AppProviders";
 import { NextIntlClientProvider } from "next-intl";
@@ -66,6 +67,7 @@ export default async function RootLayout({
                 {children}
               </main>
               <Footer />
+              <BookCallFloating />
             </ThemeProvider>
           </AppProviders>
         </NextIntlClientProvider>

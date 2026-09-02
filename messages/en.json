@@ -7,6 +7,7 @@
     "westernProgramme": "Western Programme",
     "fees": "Fees",
     "enroll": "Enrol Now",
+    "bookCall": "Book a Free Consultation Call",
     "t0": "\"Where the roots of faith and the wings of knowledge grow together.\"",
     "t1": "Enquiries responded to within 24 hours.",
     "t2": "info@rawdahkids.org",
@@ -37,7 +38,8 @@
     "hadithQuote": "\"Seeking knowledge is an obligation upon every Muslim..\" [Hadith]",
     "description": "Rawdatul Atfaal provides structured learning in Qur'an, Hadith, Aqeedah, Fiqh, and essential academic subjects, helping children grow with knowledge, discipline, and Islamic character.",
     "exploreButton": "Explore Our Programmes",
-    "downloadFeesButton": "Download Fees Guide"
+    "downloadFeesButton": "Download Fees Guide",
+    "bookCallButton": "Book a Free Consultation Call"
   },
   "Home": {
     "stats": {
