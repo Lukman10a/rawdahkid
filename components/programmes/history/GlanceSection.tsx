@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 
 export default function GlanceSection() {
-  const t = useTranslations("ProgProgramming");
+  const t = useTranslations("ProgHistory");
 
   const rows = [
     { lvl: "1", age: "6-7", focus: t("t53") },
@@ -14,25 +14,23 @@ export default function GlanceSection() {
     { lvl: "6", age: "11-12", focus: t("t57") },
     { lvl: "7", age: "12-13", focus: t("t59") },
     { lvl: "8", age: "13-14", focus: t("t54") },
-    { lvl: "9", age: "14-15", focus: t("t58") },
-    { lvl: "10", age: "15-16", focus: t("t47") },
   ];
 
   return (
-    <section className="w-full min-w-0 py-20 bg-indigo-50/50 dark:bg-indigo-900/10 border-y border-midnight/5 dark:border-white/5">
+    <section className="w-full min-w-0 py-20 bg-amber-50/50 dark:bg-amber-900/10 border-y border-midnight/5 dark:border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-cinzel text-3xl md:text-4xl text-midnight dark:text-cream mb-4">
             {t("t13")}
           </h2>
-          <div className="w-24 h-px bg-indigo-600/50 dark:bg-indigo-400/50 mx-auto"></div>
+          <div className="w-24 h-px bg-amber-600/50 dark:bg-amber-400/50 mx-auto"></div>
         </div>
 
         <div className="w-full overflow-x-auto">
           <table className="w-full text-start border-collapse min-w-200">
             <thead>
               <tr className="border-b border-midnight/20 dark:border-white/20">
-                <th className="py-4 px-6 font-cinzel text-indigo-700 dark:text-indigo-400 text-lg w-20">
+                <th className="py-4 px-6 font-cinzel text-amber-700 dark:text-amber-400 text-lg w-20">
                   {t("t14")}
                 </th>
                 <th className="py-4 px-6 font-cinzel text-midnight dark:text-cream text-lg w-32">

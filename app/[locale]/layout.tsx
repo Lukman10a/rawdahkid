@@ -55,6 +55,7 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <body
+        suppressHydrationWarning
         className={`${playfair.variable} ${cinzel.variable} ${dmSans.variable} ${amiri.variable} ${cormorant.variable} antialiased bg-ivory dark:bg-midnight text-midnight dark:text-cream min-h-screen flex flex-col transition-colors duration-300`}
       >
         <NextIntlClientProvider messages={messages}>

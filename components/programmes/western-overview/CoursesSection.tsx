@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Calculator, FlaskConical, Code2, BookOpen } from "lucide-react";
+import { motion } from "framer-motion";
+import { Brain, Clock } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
@@ -31,11 +32,25 @@ export default function CoursesSection() {
       slug: "programming",
     },
     {
+      name: t("courses.history.name"),
+      icon: Clock,
+      desc: t("courses.history.desc"),
+      levels: t("courses.history.levels"),
+      slug: "history",
+    },
+    {
       name: t("courses.english.name"),
       icon: BookOpen,
       desc: t("courses.english.desc"),
       levels: t("courses.english.levels"),
       slug: "english",
+    },
+    {
+      name: t("courses.ai.name"),
+      icon: Brain,
+      desc: t("courses.ai.desc"),
+      levels: t("courses.ai.levels"),
+      slug: "ai",
     },
   ];
 
