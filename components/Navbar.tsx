@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Calendar } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -127,13 +127,24 @@ export default function Navbar() {
                 <LanguageSwitcher />
                 <ThemeToggle />
               </div>
-              {/* CTA */}
-              <Link
-                href="/enrol"
-                className="bg-gold text-midnight px-6 py-2 rounded-sm text-sm font-medium tracking-wide hover:bg-amber hover:scale-105 hover:shadow-lg transition-all duration-300"
-              >
-                {t("enroll")}
-              </Link>
+              {/* CTA — Book dominates, Enrol secondary */}
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://calendly.com/markazulbayaan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gold text-midnight px-5 py-2 rounded-sm text-sm font-medium tracking-wide hover:bg-amber hover:scale-105 hover:shadow-lg transition-all duration-300 flex items-center gap-2"
+                >
+                  <Calendar className="w-4 h-4" />
+                  {t("bookCall")}
+                </a>
+                <Link
+                  href="/enrol"
+                  className="border border-gold text-gold px-5 py-2 rounded-sm text-sm font-medium tracking-wide hover:bg-gold hover:text-midnight transition-all duration-300"
+                >
+                  {t("enroll")}
+                </Link>
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -224,11 +235,21 @@ export default function Navbar() {
             <LanguageSwitcher />
             <ThemeToggle />
           </div>
-          <div className="pt-8 w-full max-w-xs">
+          <div className="pt-8 w-full max-w-xs space-y-3">
+            <a
+              href="https://calendly.com/markazulbayaan"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center justify-center gap-2 w-full bg-gold text-midnight text-center py-4 rounded-sm text-lg font-medium tracking-wide hover:bg-amber transition-colors"
+            >
+              <Calendar className="w-5 h-5" />
+              {t("bookCall")}
+            </a>
             <Link
               href="/enrol"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full bg-gold text-midnight text-center py-4 rounded-sm text-lg font-medium tracking-wide hover:bg-amber transition-colors"
+              className="block w-full border border-gold text-gold text-center py-4 rounded-sm text-lg font-medium tracking-wide hover:bg-gold hover:text-midnight transition-colors"
             >
               {t("enroll")}
             </Link>
