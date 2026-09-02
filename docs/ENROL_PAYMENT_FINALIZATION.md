@@ -43,12 +43,12 @@ Fees: [Book a Free Consultation Call (gold, calendly)]  [Pay Now (Stripe/Flutter
 
 ## Phases & Checklists
 
-### Phase 0 — Clarify (1h, needs owner input)
-- [ ] Confirm: one-time per term or recurring monthly subscription?
-- [ ] Paystack pain = KYC/payout vs code? (determines Stripe vs Flutterwave)
-- [ ] Keep `localStorage` draft or move to DB (e.g., Supabase) for cross-device?
-- [ ] Require `parentCountry` dial concat for `phoneNumber`?
-- [ ] **Owner answers before P1**
+### Phase 0 — Clarify (1h, needs owner input) — **DONE 2026-09-02**
+- [x] Confirm: **Both options** — one-time per term **and** recurring monthly (owner: “Both options”)
+- [x] Paystack pain = **Setup & KYC** (owner: “Setup & KYC” → use Stripe/Flutterwave Payment Links, no KYC code, avoid Paystack API)
+- [x] Keep `localStorage` draft or move to **DB (Supabase/Firebase)** for cross-device (owner: “Move to database”)
+- [x] Require `parentCountry` dial concat for `phoneNumber` → **Yes full international** (owner: “Yes full international”)
+- [x] **Decisions locked → proceed to Phase 1**
 
 ### Phase 1 — TDD Groundwork + Guardrails (1 day)
 - [ ] `npx skills add mattpocock/skills@tdd -g -y`
@@ -105,7 +105,8 @@ Fees: [Book a Free Consultation Call (gold, calendly)]  [Pay Now (Stripe/Flutter
 - **2026-09-02 — Audited fees/enrol flows, merged `cleanups` western courses (`history`/`ai`/`english`) into `main` (`73548b4`), fixed Arabic UTF-8 mojibake (`152k` vs `304k`), hydration `suppressHydrationWarning`, and initial Book CTA mounting. Created this tracker.**
 - **2026-09-02 — Created tracking doc `docs/ENROL_PAYMENT_FINALIZATION.md` and pushed to `main` (`0294bca`) + `cleanups` (`ce29902`). Generated 5 GitHub issues from phases.**
 - **2026-09-02 — Issues created: #14 Phase 0 Clarify, #15 Phase 1 TDD Groundwork, #16 Phase 2 Payment abstraction, #17 Phase 3 Simplify UI, #18 Phase 5 Hardening. Doc will be updated after each phase (check boxes + dated log).**
-- _Next: Await owner answers on Phase 0 (one-time vs recurring, Paystack pain, provider choice), then proceed to Phase 1 TDD red tests._
+- **2026-09-02 — Phase 0 DONE: Owner clarified — Both (one-time + recurring), Paystack pain = Setup & KYC → choose Flutterwave/Stripe Payment Links (no-code) + Calendly close, Move to DB (Supabase), Full international phone (`+countryDial + phone`). See #14.**
+- _Next: Phase 1 TDD Groundwork (vitest, msw, branded types, red tests)._
 
 ---
 
