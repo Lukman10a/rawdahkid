@@ -1,0 +1,11 @@
+# Ensure JSON and source files are always UTF-8
+*.json text eol=lf working-tree-encoding=UTF-8
+*.ts text eol=lf working-tree-encoding=UTF-8
+*.tsx text eol=lf working-tree-encoding=UTF-8
+*.js text eol=lf working-tree-encoding=UTF-8
+*.css text eol=lf working-tree-encoding=UTF-8
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.svg text
