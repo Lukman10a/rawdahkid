@@ -55,6 +55,13 @@ export default async function RootLayout({
       className="scroll-smooth"
       suppressHydrationWarning
     >
+      <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="c163acfc-3baf-43f0-a3f7-c718b23c828f"
+        />
+      </head>
       <body
         suppressHydrationWarning
         className={`${playfair.variable} ${cinzel.variable} ${dmSans.variable} ${amiri.variable} ${cormorant.variable} antialiased bg-ivory dark:bg-midnight text-midnight dark:text-cream min-h-screen flex flex-col transition-colors duration-300`}
