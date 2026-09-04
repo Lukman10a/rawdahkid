@@ -1,4 +1,5 @@
 import type { FormData } from "@/components/enrol/types";
+import { countries } from "@/lib/countries";
 
 export type RegisterStudentPayload = {
   fullName: string;
@@ -115,17 +116,33 @@ function toClassFormat(value: string) {
   return classFormatLabelMap[key] || value.trim();
 }
 
+function toE164(phone: string, countryCode: string): string {
+  const digits = phone.replace(/[^\d+]/g, "");
+  if (digits.startsWith("+")) return digits;
+  const entry = countries.find((c) => c.code === countryCode);
+  if (entry) {
+    const national = digits.replace(/^0+/, "");
+    return `${entry.dialCode}${national}`;
+  }
+  return digits;
+}
+
 export function mapFormDataToRegisterPayload(
   formData: FormData,
   selectedCourses: string[],
 ): RegisterStudentPayload {
   const parsedAge = Number.parseInt(formData.studentAge, 10);
 
+  const phoneNumber = toE164(formData.parentPhone.trim(), formData.parentCountry);
+  const city = formData.parentCity.trim();
+  const country = formData.parentCountry.trim();
+  const cityCountry = city && country ? `${city}, ${country}` : city || country;
+
   return {
     fullName: formData.parentName.trim(),
     email: formData.parentEmail.trim().toLowerCase(),
-    phoneNumber: formData.parentPhone.trim(),
-    cityCountry: formData.parentCity.trim(),
+    phoneNumber,
+    cityCountry,
     childName: formData.studentName.trim(),
     childAge: Number.isNaN(parsedAge) ? 0 : parsedAge,
     programmeInterest: toProgrammeInterest(formData.programme || ""),

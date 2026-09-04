@@ -27,6 +27,12 @@ export default function AdminLayout({
             >
               New Post
             </Link>
+            <Link
+              href="/admin/registrations"
+              className="px-4 py-2 border border-gold/30 text-cream rounded font-semibold hover:bg-gold/10 transition-colors"
+            >
+              Registrations
+            </Link>
           </div>
         </div>
       </nav>
